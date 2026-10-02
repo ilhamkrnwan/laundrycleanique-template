@@ -1,41 +1,52 @@
-# WordPress Configuration & Secrets
-wp-config.php
+# ==========================================
+# WordPress Core Files & Directories
+# ==========================================
+/wp-admin/
+/wp-includes/
+/wp-*.php
+/xmlrpc.php
+/license.txt
+/readme.html
+/index.php
+/.htaccess
 
-# Debug & Log files
-*.log
-wp-content/debug.log
+# ==========================================
+# WordPress Sensitive & Dynamic Content
+# ==========================================
+/wp-config.php
+/wp-content/debug.log
+/wp-content/uploads/
+/wp-content/upgrade/
+/wp-content/languages/
+/wp-content/cache/
+/wp-content/backups/
+/wp-content/backup-db/
+/wp-content/index.php
 
-# Uploads & Media (user-generated content)
-wp-content/uploads/
+# ==========================================
+# Default WordPress Themes & Plugins
+# ==========================================
+/wp-content/themes/twenty*/
+/wp-content/themes/index.php
+/wp-content/plugins/akismet/
+/wp-content/plugins/hello.php
+/wp-content/plugins/index.php
 
-# WordPress Caching & Upgrade
-wp-content/upgrade/
-wp-content/cache/
-wp-content/backups/
-wp-content/backup-db/
-
-# Operating System Files
+# ==========================================
+# System, IDE & Build Artifacts
+# ==========================================
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
 desktop.ini
-
-# Editor & IDE Directories
-.idea/
+*.log
 .vscode/
+.idea/
 *.sublime-project
 *.sublime-workspace
+.laragon/
 
-# Node & Package Managers
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
-
-# Laragon / Local Server temporary files
-.laragon/
