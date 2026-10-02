@@ -30,6 +30,8 @@ final class Config
         'max_image_weight_kb'    => 200,
         'max_css_files'          => 8,
         'max_js_files'           => 12,
+
+        // Scoring Weights
         'scoring_weights'        => [
             'seo'           => 18,
             'content'       => 15,
@@ -42,6 +44,39 @@ final class Config
             'accessibility' => 5,
             'performance'   => 4,
         ],
+
+        // XML Sitemap Configuration
+        'sitemap_enabled'        => true,
+        'sitemap_post_types'     => ['post', 'page', 'paket_usaha', 'kemitraan'],
+        'sitemap_taxonomies'     => ['category'],
+        'sitemap_include_images' => true,
+        'sitemap_items_per_page' => 1000,
+
+        // Robots.txt & Bot Crawling Optimization
+        'robots_policy'          => 'aeo_geo_max', // 'aeo_geo_max' | 'search_only' | 'custom'
+        'robots_custom_rules'    => '',
+        'robots_allowed_bots'    => [
+            'googlebot'         => true,
+            'bingbot'           => true,
+            'duckduckbot'       => true,
+            'yandexbot'         => true,
+            'gptbot'            => true,
+            'chatgpt_user'      => true,
+            'claudebot'         => true,
+            'anthropic_ai'      => true,
+            'perplexitybot'     => true,
+            'applebot'          => true,
+            'applebot_extended' => true,
+            'google_extended'   => true,
+            'bytespider'        => true,
+            'cohere_ai'         => true,
+        ],
+
+        // Frontend Meta & Verification
+        'enable_frontend_meta'   => true,
+        'enable_json_ld_schema'  => true,
+        'meta_google_verification' => '',
+        'meta_bing_verification'   => '',
     ];
 
     /**

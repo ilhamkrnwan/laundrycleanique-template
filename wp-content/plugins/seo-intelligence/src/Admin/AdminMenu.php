@@ -76,7 +76,17 @@ final class AdminMenu
             callback: [$this, 'renderImages']
         );
 
-        // 6. Submenu: Settings
+        // 6. Submenu: Sitemap & Robots
+        add_submenu_page(
+            parent_slug: 'seo-intelligence',
+            page_title: __('Sitemap XML & Robots.txt — SEO Intelligence', 'seo-intelligence'),
+            menu_title: __('Sitemap & Robots', 'seo-intelligence'),
+            capability: $capability,
+            menu_slug: 'seo-intelligence-sitemap-robots',
+            callback: [$this, 'renderSitemapRobots']
+        );
+
+        // 7. Submenu: Settings
         add_submenu_page(
             parent_slug: 'seo-intelligence',
             page_title: __('Pengaturan & Bobot Skor — SEO Intelligence', 'seo-intelligence'),
@@ -105,6 +115,11 @@ final class AdminMenu
     public function renderImages(): void
     {
         (new ImageInventoryPage($this->container))->render();
+    }
+
+    public function renderSitemapRobots(): void
+    {
+        (new SitemapRobotsPage($this->container))->render();
     }
 
     public function renderSettings(): void

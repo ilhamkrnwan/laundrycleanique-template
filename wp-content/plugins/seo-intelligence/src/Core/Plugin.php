@@ -10,6 +10,9 @@ use SeoIntelligence\Database\Schema;
 use SeoIntelligence\Admin\AdminMenu;
 use SeoIntelligence\REST\AnalysisController;
 use SeoIntelligence\REST\SiteAuditController;
+use SeoIntelligence\Sitemap\SitemapManager;
+use SeoIntelligence\Robots\RobotsManager;
+use SeoIntelligence\Frontend\FrontendMetaManager;
 
 /**
  * Master Plugin Lifecycle Orchestrator.
@@ -50,6 +53,9 @@ final class Plugin
         $this->container->set('admin_menu', new AdminMenu($this->container));
         $this->container->set('rest_analysis', new AnalysisController($this->container));
         $this->container->set('rest_crawler', new SiteAuditController($this->container));
+        $this->container->set('sitemap_manager', new SitemapManager());
+        $this->container->set('robots_manager', new RobotsManager());
+        $this->container->set('frontend_meta', new FrontendMetaManager());
     }
 
     /**
@@ -64,6 +70,19 @@ final class Plugin
 
         // Register default analyzers
         $this->registerAnalyzers();
+
+        // Register XML Sitemap, Robots.txt & Frontend Metadata managers
+        /** @var SitemapManager $sitemapManager */
+        $sitemapManager = $this->container->get('sitemap_manager');
+        $sitemapManager->register();
+
+        /** @var RobotsManager $robotsManager */
+        $robotsManager = $this->container->get('robots_manager');
+        $robotsManager->register();
+
+        /** @var FrontendMetaManager $frontendMeta */
+        $frontendMeta = $this->container->get('frontend_meta');
+        $frontendMeta->register();
 
         // Register Admin Menu & Assets
         if (is_admin()) {
@@ -173,6 +192,7 @@ final class Plugin
     public static function activate(): void
     {
         Schema::createTables();
+        (new SitemapManager())->flushRules();
     }
 
     /**
@@ -180,6 +200,6 @@ final class Plugin
      */
     public static function deactivate(): void
     {
-        // Clear transient caches if any
+        flush_rewrite_rules();
     }
 }
