@@ -13,6 +13,7 @@ use SeoIntelligence\REST\SiteAuditController;
 use SeoIntelligence\Sitemap\SitemapManager;
 use SeoIntelligence\Robots\RobotsManager;
 use SeoIntelligence\Frontend\FrontendMetaManager;
+use SeoIntelligence\Report\ReportGenerator;
 
 /**
  * Master Plugin Lifecycle Orchestrator.
@@ -56,6 +57,7 @@ final class Plugin
         $this->container->set('sitemap_manager', new SitemapManager());
         $this->container->set('robots_manager', new RobotsManager());
         $this->container->set('frontend_meta', new FrontendMetaManager());
+        $this->container->set('report_generator', new ReportGenerator($this->container));
     }
 
     /**
@@ -93,6 +95,7 @@ final class Plugin
             $adminMenu->register();
 
             add_action('admin_enqueue_scripts', [$this, 'enqueueAdminAssets']);
+            add_action('admin_post_seoi_export_report', [$this, 'handleExportReport']);
         }
 
         // Register REST API Endpoints
@@ -105,6 +108,37 @@ final class Plugin
             $restCrawler = $this->container->get('rest_crawler');
             $restCrawler->registerRoutes();
         });
+    }
+
+    /**
+     * Handle on-demand export of OpenSEO-compliant Executive HTML report.
+     */
+    public function handleExportReport(): void
+    {
+        if (!current_user_can('manage_options')) {
+            wp_die(esc_html__('Akses ditolak.', 'seo-intelligence'), 403);
+        }
+
+        $pageId = isset($_GET['page_id']) ? (int) $_GET['page_id'] : 0;
+        if ($pageId <= 0) {
+            wp_die(esc_html__('ID halaman audit tidak valid.', 'seo-intelligence'), 400);
+        }
+
+        /** @var ReportGenerator $generator */
+        $generator = $this->container->get('report_generator');
+        $html = $generator->generateFromPageId($pageId);
+
+        $isDownload = !empty($_GET['download']);
+        $filename = 'seo-audit-report-page-' . $pageId . '-' . date('Y-m-d') . '.html';
+
+        header('Content-Type: text/html; charset=UTF-8');
+        if ($isDownload) {
+            header('Content-Disposition: attachment; filename="' . $filename . '"');
+        }
+        header('Content-Length: ' . (string) strlen($html));
+
+        echo $html;
+        exit;
     }
 
     /**
@@ -177,9 +211,11 @@ final class Plugin
 
         // Pass localized configuration to JS
         wp_localize_script('seoi-admin-script', 'SeoIntelligenceConfig', [
-            'restUrl' => esc_url_raw(rest_url('seo-intelligence/v1/')),
-            'nonce'   => wp_create_nonce('wp_rest'),
-            'i18n'    => [
+            'restUrl'   => esc_url_raw(rest_url('seo-intelligence/v1/')),
+            'adminUrl'  => admin_url(),
+            'exportUrl' => admin_url('admin-post.php?action=seoi_export_report'),
+            'nonce'     => wp_create_nonce('wp_rest'),
+            'i18n'      => [
                 'analyzing'       => esc_html__('Sedang menganalisis halaman...', 'seo-intelligence'),
                 'complete'        => esc_html__('Analisis Selesai', 'seo-intelligence'),
                 'error'           => esc_html__('Terjadi kesalahan saat memproses data.', 'seo-intelligence'),

@@ -153,6 +153,16 @@
         $('#seoi-result-duration').text(data.duration_seconds + 's');
         $('#seoi-result-http-status').text(data.http_status);
 
+        // Update OpenSEO Executive Report Export Buttons
+        if (pageId && config.exportUrl) {
+            $('#seoi-btn-export-report')
+                .attr('href', config.exportUrl + '&page_id=' + pageId + '&download=1')
+                .show();
+            $('#seoi-btn-view-report')
+                .attr('href', config.exportUrl + '&page_id=' + pageId)
+                .show();
+        }
+
         // Counter Badges
         $('#seoi-count-critical').text(scores.critical_count || 0);
         $('#seoi-count-error').text(scores.error_count || 0);

@@ -133,6 +133,23 @@ final class PageAuditPage
                             <span class="seoi-b-label"><?php esc_html_e('Peringatan', 'seo-intelligence'); ?></span>
                         </div>
                     </div>
+                    <div class="seoi-summary-actions" style="display: flex; flex-direction: column; justify-content: center; gap: 8px; margin-left: 20px;">
+                        <a href="<?php echo esc_url(admin_url('admin-post.php?action=seoi_export_report&page_id=' . ($preloadedPage ? $preloadedPage['id'] : 0) . '&download=1')); ?>" 
+                           id="seoi-btn-export-report" 
+                           target="_blank" 
+                           class="seoi-btn seoi-btn-primary" 
+                           title="<?php esc_attr_e('Download dokumen HTML audit eksekutif mandiri siap cetak/kirim klien.', 'seo-intelligence'); ?>"
+                           style="<?php echo $preloadedPage ? '' : 'display: none;'; ?>">
+                            <i class="ri-file-chart-line"></i> <?php esc_html_e('Export Laporan Eksekutif (OpenSEO)', 'seo-intelligence'); ?>
+                        </a>
+                        <a href="<?php echo esc_url(admin_url('admin-post.php?action=seoi_export_report&page_id=' . ($preloadedPage ? $preloadedPage['id'] : 0))); ?>" 
+                           id="seoi-btn-view-report" 
+                           target="_blank" 
+                           class="seoi-btn seoi-btn-ghost seoi-btn-xs" 
+                           style="<?php echo $preloadedPage ? '' : 'display: none;'; ?>">
+                            <i class="ri-external-link-line"></i> <?php esc_html_e('Buka Preview Laporan di Tab Baru', 'seo-intelligence'); ?>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Category Sub-scores Grid -->

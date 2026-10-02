@@ -52,6 +52,9 @@ if (!function_exists('home_url')) {
 if (!function_exists('untrailingslashit')) {
     function untrailingslashit(string $string): string { return rtrim($string, '/\\'); }
 }
+if (!function_exists('wp_parse_url')) {
+    function wp_parse_url(string $url, int $component = -1): mixed { return parse_url($url, $component); }
+}
 
 $passed = 0;
 $failed = 0;
@@ -148,6 +151,66 @@ assertTest("Robots.txt contains Sitemap URL reference", str_contains($robotsTxt,
 echo "\n5. Testing Third-Party SEO Plugin Detector:\n";
 $isThirdParty = \SeoIntelligence\Core\SeoPluginDetector::isThirdPartySeoActive();
 assertTest("Correctly detects no third-party SEO in clean test environment", !$isThirdParty);
+
+// 6. Test OpenSEO-Compliant Executive Report Generator
+echo "\n6. Testing OpenSEO Executive Report Generator:\n";
+$reportGen = new \SeoIntelligence\Report\ReportGenerator();
+$mockReportData = [
+    'url' => 'https://cleaniquelaundry.com/paket-usaha',
+    'title' => 'Paket Usaha Laundry Cleanique',
+    'http_status' => 200,
+    'scores' => [
+        'overall' => 88,
+        'critical_count' => 0,
+        'error_count' => 1,
+        'warning_count' => 2,
+        'categories' => [
+            'seo' => 95,
+            'content' => 85,
+            'readability' => 80,
+            'geo' => 90,
+            'aeo' => 85,
+            'headings' => 90,
+            'images' => 80,
+            'links' => 85,
+            'schema' => 100,
+            'assets' => 90,
+            'ux' => 95,
+        ]
+    ],
+    'all_findings' => [
+        [
+            'analyzer_id' => 'seo',
+            'severity' => 'error',
+            'title' => 'Meta Description Terlalu Pendek',
+            'description' => 'Panjang meta description saat ini hanya 45 karakter.',
+            'why_it_matters' => 'Dapat menurunkan rasio klik tayang (CTR) di hasil pencarian.',
+            'recommendation' => 'Perpanjang deskripsi menjadi 120-160 karakter informatif.',
+            'location' => '<meta name="description">',
+        ],
+        [
+            'analyzer_id' => 'images',
+            'severity' => 'warning',
+            'title' => 'Gambar Tanpa Atribut Alt',
+            'description' => 'Terdapat 2 gambar promosi tanpa alt text.',
+            'why_it_matters' => 'Menghambat pengindeksan Google Image dan aksesibilitas screen reader.',
+            'recommendation' => 'Tambahkan teks deskriptif pada atribut alt.',
+            'location' => '<img>',
+        ]
+    ]
+];
+
+$reportHtml = $reportGen->generateFromAnalysisData($mockReportData, 'Paket Usaha Laundry Cleanique');
+
+assertTest("Report generates valid DOCTYPE and HTML envelope", str_contains($reportHtml, '<!doctype html>') && str_contains($reportHtml, '</html>'));
+assertTest("Report includes OpenSEO Table of Contents rail (.rail)", str_contains($reportHtml, 'class="rail"') && str_contains($reportHtml, 'href="#ringkasan-eksekutif"'));
+assertTest("Report includes OpenSEO Bounded Recommendations (Problem, Change, Expected effect)", str_contains($reportHtml, '<b>Problem:</b>') && str_contains($reportHtml, '<b>Change:</b>') && str_contains($reportHtml, '<b>Expected effect:</b>'));
+assertTest("Report includes 11 dimension performance bars", str_contains($reportHtml, 'Peta Performa 11 Dimensi') && str_contains($reportHtml, 'GEO (Generative AI)'));
+assertTest("Report includes OpenSEO attribution closing section", str_contains($reportHtml, 'id="how-this-report-was-made"') && str_contains($reportHtml, 'https://openseo.so/docs/skills/seo-report'));
+assertTest("Report includes print media optimization stylesheet", str_contains($reportHtml, '@media print'));
+assertTest("Report enforces zero <script> security constraint", !str_contains($reportHtml, '<script'));
+assertTest('Report contains no template literal backticks or ${', !str_contains($reportHtml, '`') && !str_contains($reportHtml, '${'));
+assertTest("Report size is lightweight and well under 80 KB", strlen($reportHtml) < 80000, "Actual size: " . strlen($reportHtml) . " bytes");
 
 echo "\n==================================================\n";
 echo "Results: {$passed} Passed, {$failed} Failed\n";

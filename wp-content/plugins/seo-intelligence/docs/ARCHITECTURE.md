@@ -60,3 +60,14 @@ SEO & AEO Intelligence is an enterprise-grade technical and semantic audit syste
 ### E. Frontend Metadata & Third-Party Compatibility (`src/Frontend/`, `src/Core/SeoPluginDetector.php`)
 - Injects canonical URL, meta description, meta robots, OpenGraph, Twitter Cards, Webmaster verification, and JSON-LD Schema.
 - Automatically detects Yoast SEO, Rank Math, All in One SEO, SEOPress, and The SEO Framework (Section 30 of READABLE.md) and switches to non-colliding compatibility mode.
+
+### F. OpenSEO Executive Report Generator (`src/Report/ReportGenerator.php`)
+- Implements the [OpenSEO `seo-report` standard](file:///c:/laragon/www/cleaniquelaundry/.agents/skills/seo-report/SKILL.md) for generating self-contained, standalone HTML executive reports.
+- **Key Characteristics:**
+  - **Zero External Dependencies:** No external stylesheets, scripts, web fonts, or CDN assets; total size kept strictly under 80 KB.
+  - **Print & PDF Ready:** Full print stylesheet (`@media print`) with page numbering and clean page-break avoidance.
+  - **Bounded Recommendations:** Translates diagnostic findings into actionable executive directives following the *Problem / Change / Expected effect* tri-part framework.
+  - **11-Dimension Visual Bars:** Inline accessible CSS bars illustrating category scores with exact numerical values.
+  - **Full Diagnostic Evidence Table:** Complete tabular findings with severity indicators and code snippet references.
+  - **Direct Export & REST Integration:** Downloadable via `admin-post.php?action=seoi_export_report` or consumed programmatically via REST API `/seo-intelligence/v1/report/(?P<id>\d+)`.
+

@@ -79,6 +79,15 @@ final class AnalysisController extends WP_REST_Controller
                 'permission_callback' => [$this, 'checkPermission'],
             ],
         ]);
+
+        // 5. GET /seo-intelligence/v1/report/(?P<id>\d+)
+        register_rest_route($this->namespace, '/report/(?P<id>\d+)', [
+            [
+                'methods'             => WP_REST_Server::READABLE,
+                'callback'            => [$this, 'handleGetReport'],
+                'permission_callback' => [$this, 'checkPermission'],
+            ],
+        ]);
     }
 
     /**
@@ -184,6 +193,24 @@ final class AnalysisController extends WP_REST_Controller
             'success'  => true,
             'page_id'  => $pageId,
             'findings' => $findings,
+        ], 200);
+    }
+
+    /**
+     * Get standalone OpenSEO-compliant Executive HTML report for a specific page audit.
+     */
+    public function handleGetReport(WP_REST_Request $request): WP_REST_Response
+    {
+        $pageId = (int) $request->get_param('id');
+        /** @var \SeoIntelligence\Report\ReportGenerator $generator */
+        $generator = $this->container->get('report_generator');
+        $html = $generator->generateFromPageId($pageId);
+
+        return new WP_REST_Response([
+            'success'  => true,
+            'page_id'  => $pageId,
+            'html'     => $html,
+            'filename' => 'seo-audit-report-page-' . $pageId . '-' . date('Y-m-d') . '.html',
         ], 200);
     }
 

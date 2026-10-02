@@ -41,6 +41,11 @@ final class DashboardPage
                     <p class="seoi-subtitle"><?php esc_html_e('Audit holistik berbasis explainable diagnosis: SEO Teknis, GEO, AEO, Struktur Heading, dan Keterbacaan Bahasa Indonesia.', 'seo-intelligence'); ?></p>
                 </div>
                 <div class="seoi-header-actions">
+                    <?php if (!empty($recentPages)) : ?>
+                        <a href="<?php echo esc_url(admin_url('admin-post.php?action=seoi_export_report&page_id=' . $recentPages[0]['id'] . '&download=1')); ?>" target="_blank" class="seoi-btn seoi-btn-secondary" title="<?php esc_attr_e('Unduh Laporan Eksekutif OpenSEO HTML Halaman Terakhir', 'seo-intelligence'); ?>">
+                            <i class="ri-file-chart-line"></i> <?php esc_html_e('Export Laporan Eksekutif', 'seo-intelligence'); ?>
+                        </a>
+                    <?php endif; ?>
                     <a href="<?php echo esc_url(admin_url('admin.php?page=seo-intelligence-page-audit')); ?>" class="seoi-btn seoi-btn-secondary">
                         <i class="ri-file-search-line"></i> <?php esc_html_e('Audit Halaman', 'seo-intelligence'); ?>
                     </a>
@@ -144,6 +149,9 @@ final class DashboardPage
                                             <td>
                                                 <a href="<?php echo esc_url(admin_url('admin.php?page=seo-intelligence-page-audit&audit_page_id=' . $p['id'])); ?>" class="seoi-btn seoi-btn-ghost seoi-btn-xs">
                                                     <i class="ri-eye-line"></i> <?php esc_html_e('Rincian', 'seo-intelligence'); ?>
+                                                </a>
+                                                <a href="<?php echo esc_url(admin_url('admin-post.php?action=seoi_export_report&page_id=' . $p['id'] . '&download=1')); ?>" target="_blank" class="seoi-btn seoi-btn-secondary seoi-btn-xs" title="<?php esc_attr_e('Unduh Dokumen Eksekutif HTML', 'seo-intelligence'); ?>">
+                                                    <i class="ri-download-2-line"></i> <?php esc_html_e('Report', 'seo-intelligence'); ?>
                                                 </a>
                                             </td>
                                         </tr>
