@@ -112,12 +112,12 @@ final class FrontendMetaManager
         }
 
         // 6. Search Engine Verification
-        $googleVerify = (string) Config::get('meta_google_verification', '');
+        $googleVerify = self::cleanVerificationToken((string) Config::get('meta_google_verification', ''), 'google');
         if (!empty($googleVerify)) {
             echo '<meta name="google-site-verification" content="' . esc_attr($googleVerify) . '" />' . "\n";
         }
 
-        $bingVerify = (string) Config::get('meta_bing_verification', '');
+        $bingVerify = self::cleanVerificationToken((string) Config::get('meta_bing_verification', ''), 'bing');
         if (!empty($bingVerify)) {
             echo '<meta name="msvalidate.01" content="' . esc_attr($bingVerify) . '" />' . "\n";
         }
@@ -337,8 +337,8 @@ final class FrontendMetaManager
      */
     private function injectMinimalMeta(): void
     {
-        $googleVerify = (string) Config::get('meta_google_verification', '');
-        $bingVerify = (string) Config::get('meta_bing_verification', '');
+        $googleVerify = self::cleanVerificationToken((string) Config::get('meta_google_verification', ''), 'google');
+        $bingVerify = self::cleanVerificationToken((string) Config::get('meta_bing_verification', ''), 'bing');
         $sitemapUrl = untrailingslashit(home_url()) . '/sitemap.xml';
 
         echo "\n<!-- SEO & AEO Intelligence (Compatibility Mode: Third-Party SEO Plugin Detected) -->\n";
@@ -350,5 +350,42 @@ final class FrontendMetaManager
         }
         echo '<link rel="sitemap" type="application/xml" title="Sitemap" href="' . esc_url($sitemapUrl) . '" />' . "\n";
         echo "<!-- / SEO & AEO Intelligence Compatibility Mode -->\n\n";
+    }
+
+    /**
+     * Clean and extract raw verification token from raw string or full HTML tag.
+     * Prevents escaping errors when users paste full `<meta name="..." content="..." />` tag.
+     *
+     * @param string $rawToken Raw user input
+     * @param string $type Verification provider type ('google' | 'bing')
+     * @return string Extracted alphanumeric token
+     */
+    public static function cleanVerificationToken(string $rawToken, string $type = 'google'): string
+    {
+        $rawToken = trim($rawToken);
+        if (empty($rawToken)) {
+            return '';
+        }
+
+        // 1. If full meta tag is pasted: <meta ... content="TOKEN" ... />
+        if (preg_match('/content=[\'"]([^\'"]+)[\'"]/i', $rawToken, $matches)) {
+            return trim($matches[1]);
+        }
+
+        // 2. If unquoted or stripped content attribute: content=TOKEN
+        if (preg_match('/content=([^\s>]+)/i', $rawToken, $matches)) {
+            return trim(trim($matches[1], '\'"/'));
+        }
+
+        // 3. If google verification filename is pasted: google[TOKEN].html
+        if ($type === 'google' && preg_match('/google([a-zA-Z0-9_-]+)\.html/i', $rawToken, $matches)) {
+            return trim($matches[1]);
+        }
+
+        // 4. Strip any stray HTML tags, quotes, slashes
+        $cleaned = strip_tags($rawToken);
+        $cleaned = trim($cleaned, '"\'/ ');
+
+        return $cleaned;
     }
 }

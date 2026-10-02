@@ -6,6 +6,7 @@ namespace SeoIntelligence\Admin;
 
 use SeoIntelligence\Core\Config;
 use SeoIntelligence\Core\Container;
+use SeoIntelligence\Frontend\FrontendMetaManager;
 use SeoIntelligence\Robots\RobotsManager;
 use SeoIntelligence\Sitemap\SitemapManager;
 
@@ -54,9 +55,13 @@ final class SitemapRobotsPage
                 $allowedBots[$key] = isset($_POST['bot_' . $key]);
             }
 
-            // Webmaster tools & meta
-            $googleVerify = sanitize_text_field((string) ($_POST['meta_google_verification'] ?? ''));
-            $bingVerify = sanitize_text_field((string) ($_POST['meta_bing_verification'] ?? ''));
+            // Webmaster tools & meta (auto-clean full meta tags or filenames)
+            $rawGoogle = (string) ($_POST['meta_google_verification'] ?? '');
+            $googleVerify = FrontendMetaManager::cleanVerificationToken($rawGoogle, 'google');
+
+            $rawBing = (string) ($_POST['meta_bing_verification'] ?? '');
+            $bingVerify = FrontendMetaManager::cleanVerificationToken($rawBing, 'bing');
+
             $frontendMeta = isset($_POST['enable_frontend_meta']);
             $jsonLdSchema = isset($_POST['enable_json_ld_schema']);
 
@@ -417,25 +422,92 @@ final class SitemapRobotsPage
                 <!-- Section 3: Webmaster Tools & Frontend Meta ("dan lainya") -->
                 <div class="seoi-card" style="margin-top: 32px;">
                     <div class="seoi-card-header">
-                        <h2><i class="ri-global-line"></i> <?php esc_html_e('Verifikasi Webmaster & Injeksi Metadata Frontend', 'seo-intelligence'); ?></h2>
+                        <h2><i class="ri-global-line"></i> <?php esc_html_e('Verifikasi Google Search Console & Webmaster Tools', 'seo-intelligence'); ?></h2>
                     </div>
                     <p class="seoi-help-text">
                         <?php esc_html_e('Hubungkan website dengan Google Search Console dan Bing Webmaster Tools, serta aktifkan injeksi otomatis Canonical URL, OpenGraph, Twitter Cards, dan Schema JSON-LD.', 'seo-intelligence'); ?>
                     </p>
 
-                    <div class="seoi-form-group" style="margin-bottom: 20px;">
-                        <label for="meta_google_verification" style="font-weight: 700; display: block; margin-bottom: 6px;">
-                            <?php esc_html_e('Google Search Console Verification Code:', 'seo-intelligence'); ?>
-                        </label>
-                        <input type="text" name="meta_google_verification" id="meta_google_verification" class="seoi-input-text" style="max-width: 600px;" value="<?php echo esc_attr($googleVerify); ?>" placeholder="misal: google1234567890abcdef.html atau kode tag HTML" />
-                        <span style="font-size: 11px; color: #64748b;"><?php esc_html_e('Masukkan nilai atribut content pada tag <meta name="google-site-verification" content="..." />', 'seo-intelligence'); ?></span>
+                    <?php
+                    $isBlogPublic = (int) get_option('blog_public', 1);
+                    if ($isBlogPublic === 0) :
+                    ?>
+                        <!-- Critical Warning: Search Engine Discouraged -->
+                        <div style="background: #fef2f2; border: 1px solid #fecaca; border-left: 4px solid #dc2626; padding: 14px 18px; border-radius: 8px; margin-bottom: 24px;">
+                            <h4 style="margin: 0 0 6px 0; color: #991b1b; display: flex; align-items: center; gap: 8px; font-size: 15px;">
+                                <i class="ri-error-warning-fill" style="font-size: 18px;"></i> <?php esc_html_e('Peringatan Kritis: WordPress Memblokir Mesin Pencari (noindex aktif)!', 'seo-intelligence'); ?>
+                            </h4>
+                            <p style="margin: 0; font-size: 13.5px; color: #7f1d1d; line-height: 1.5;">
+                                <?php esc_html_e('WordPress Anda saat ini mengaktifkan opsi "Halangi mesin pencari mengindeks situs ini". Opsi ini menyisipkan tag noindex sehingga Google Search Console menolak pengindeksan.', 'seo-intelligence'); ?><br>
+                                <a href="<?php echo esc_url(admin_url('options-reading.php')); ?>" target="_blank" style="font-weight: 700; color: #dc2626; text-decoration: underline;">
+                                    <?php esc_html_e('Klik di sini untuk membuka Settings > Reading dan hilangkan centang opsi tersebut →', 'seo-intelligence'); ?>
+                                </a>
+                            </p>
+                        </div>
+                    <?php endif; ?>
+
+                    <!-- Step-by-Step GSC Guide -->
+                    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 16px 20px; margin-bottom: 24px;">
+                        <h4 style="margin: 0 0 10px 0; color: #166534; font-size: 15px; display: flex; align-items: center; gap: 8px;">
+                            <i class="ri-lightbulb-flash-line"></i> <?php esc_html_e('Panduan Langkah Demi Langkah Menghubungkan ke Google Search Console:', 'seo-intelligence'); ?>
+                        </h4>
+                        <ol style="margin: 0; padding-left: 20px; font-size: 13.5px; color: #14532d; line-height: 1.65;">
+                            <li><?php echo sprintf(
+                                /* translators: %s: GSC link */
+                                __('Buka %s lalu klik <strong>Tambahkan Properti (Add Property)</strong>.', 'seo-intelligence'),
+                                '<a href="https://search.google.com/search-console" target="_blank" rel="noopener" style="font-weight: 600; text-decoration: underline;">Google Search Console</a>'
+                            ); ?></li>
+                            <li><?php echo sprintf(
+                                /* translators: %s: Site home URL */
+                                __('Pilih kotak sebelah kanan: <strong>Awalan URL (URL Prefix)</strong> dan masukkan URL persis: <code>%s</code> <em>(Jangan pilih "Domain" jika ingin verifikasi cepat tanpa DNS registrar).</em>', 'seo-intelligence'),
+                                esc_html(home_url('/'))
+                            ); ?></li>
+                            <li><?php esc_html_e('Pilih metode verifikasi <strong>Tag HTML (HTML tag)</strong>. Salin kode tag tersebut (contoh: <meta name="google-site-verification" content="abcdef..." />).', 'seo-intelligence'); ?></li>
+                            <li><?php esc_html_e('Tempelkan ke kolom input di bawah ini, lalu klik tombol "Simpan Pengaturan". Sistem kami otomatis mengekstrak token yang valid dan juga mendukung verifikasi File HTML secara otomatis.', 'seo-intelligence'); ?></li>
+                            <li><?php esc_html_e('Kembali ke Google Search Console dan klik tombol <strong>Verifikasi (Verify)</strong>.', 'seo-intelligence'); ?></li>
+                            <li><?php echo sprintf(
+                                /* translators: %s: sitemap filename */
+                                __('Setelah terverifikasi, buka menu <strong>Peta Situs (Sitemaps)</strong> di Google Search Console, ketik <code>%s</code> lalu klik <strong>Kirim (Submit)</strong>.', 'seo-intelligence'),
+                                'sitemap.xml'
+                            ); ?></li>
+                        </ol>
                     </div>
 
-                    <div class="seoi-form-group" style="margin-bottom: 20px;">
+                    <div class="seoi-form-group" style="margin-bottom: 24px;">
+                        <label for="meta_google_verification" style="font-weight: 700; display: block; margin-bottom: 6px;">
+                            <i class="ri-google-fill text-primary"></i> <?php esc_html_e('Google Search Console Verification Code / HTML Tag:', 'seo-intelligence'); ?>
+                        </label>
+                        <input type="text" name="meta_google_verification" id="meta_google_verification" class="seoi-input-text" style="max-width: 650px;" value="<?php echo esc_attr($googleVerify); ?>" placeholder="Tempel seluruh tag HTML <meta ...> atau hanya kodenya saja" />
+                        <span style="font-size: 12px; color: #64748b; display: block; margin-top: 4px;">
+                            <?php esc_html_e('Anda dapat menempelkan seluruh baris <meta name="google-site-verification" content="..." /> atau cukup token kodenya saja. Sistem akan otomatis membersihkannya.', 'seo-intelligence'); ?>
+                        </span>
+
+                        <?php if (!empty($googleVerify)) : ?>
+                            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 10px 14px; margin-top: 10px; font-size: 13px; max-width: 650px;">
+                                <span style="color: #475569; font-weight: 600; display: flex; align-items: center; gap: 6px;">
+                                    <i class="ri-checkbox-circle-fill" style="color: #16a34a;"></i> <?php esc_html_e('Tag Verifikasi Aktif di <head> Halaman Depan:', 'seo-intelligence'); ?>
+                                </span>
+                                <code style="display: block; margin-top: 6px; padding: 6px 10px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 4px; color: #0284c7; word-break: break-all;">
+                                    &lt;meta name="google-site-verification" content="<?php echo esc_attr($googleVerify); ?>" /&gt;
+                                </code>
+                                <div style="margin-top: 8px; display: flex; gap: 14px; align-items: center;">
+                                    <a href="<?php echo esc_url(home_url('/')); ?>" target="_blank" class="seoi-link-action" style="font-size: 12px;">
+                                        <i class="ri-external-link-line"></i> <?php esc_html_e('Buka Halaman Depan', 'seo-intelligence'); ?>
+                                    </a>
+                                    <span style="color: #cbd5e1;">|</span>
+                                    <a href="<?php echo esc_url(home_url('/google' . $googleVerify . '.html')); ?>" target="_blank" class="seoi-link-action" style="font-size: 12px;">
+                                        <i class="ri-file-text-line"></i> <?php echo esc_html(sprintf(__('Tes File Verifikasi (/google%s.html)', 'seo-intelligence'), substr($googleVerify, 0, 8) . '...')); ?>
+                                    </a>
+                                </div>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+
+                    <div class="seoi-form-group" style="margin-bottom: 24px;">
                         <label for="meta_bing_verification" style="font-weight: 700; display: block; margin-bottom: 6px;">
                             <?php esc_html_e('Bing Webmaster Verification Code:', 'seo-intelligence'); ?>
                         </label>
-                        <input type="text" name="meta_bing_verification" id="meta_bing_verification" class="seoi-input-text" style="max-width: 600px;" value="<?php echo esc_attr($bingVerify); ?>" placeholder="misal: 1234567890ABCDEF1234567890ABCDEF" />
+                        <input type="text" name="meta_bing_verification" id="meta_bing_verification" class="seoi-input-text" style="max-width: 650px;" value="<?php echo esc_attr($bingVerify); ?>" placeholder="misal: 1234567890ABCDEF1234567890ABCDEF" />
                     </div>
 
                     <div class="seoi-form-group" style="margin-bottom: 12px;">

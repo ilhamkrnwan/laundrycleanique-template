@@ -40,6 +40,7 @@ final class SitemapManager
         $vars[] = 'seoi_sitemap';
         $vars[] = 'seoi_sitemap_type';
         $vars[] = 'seoi_sitemap_xsl';
+        $vars[] = 'seoi_google_verify';
         return $vars;
     }
 
@@ -52,6 +53,7 @@ final class SitemapManager
         add_rewrite_rule('^sitemap_index\.xml$', 'index.php?seoi_sitemap=1&seoi_sitemap_type=index', 'top');
         add_rewrite_rule('^sitemap-([a-zA-Z0-9_-]+)\.xml$', 'index.php?seoi_sitemap=1&seoi_sitemap_type=$matches[1]', 'top');
         add_rewrite_rule('^sitemap\.xsl$', 'index.php?seoi_sitemap_xsl=1', 'top');
+        add_rewrite_rule('^google([a-zA-Z0-9_-]+)\.html$', 'index.php?seoi_google_verify=$matches[1]', 'top');
     }
 
     /**
@@ -83,6 +85,12 @@ final class SitemapManager
             $this->renderType($matches[1]);
             exit;
         }
+
+        // Google Search Console HTML File Verification Handler
+        if (preg_match('#/google([a-zA-Z0-9_-]+)\.html$#', $path, $matches)) {
+            $this->renderGoogleVerification($matches[1]);
+            exit;
+        }
     }
 
     /**
@@ -90,6 +98,12 @@ final class SitemapManager
      */
     public function handleTemplateRedirect(): void
     {
+        $googleVerify = (string) get_query_var('seoi_google_verify');
+        if (!empty($googleVerify)) {
+            $this->renderGoogleVerification($googleVerify);
+            exit;
+        }
+
         $isXsl = (bool) get_query_var('seoi_sitemap_xsl');
         if ($isXsl) {
             $this->renderXsl();
@@ -105,6 +119,33 @@ final class SitemapManager
                 $this->renderType($type);
             }
             exit;
+        }
+    }
+
+    /**
+     * Render dynamic Google Search Console HTML verification file.
+     */
+    private function renderGoogleVerification(string $hash): void
+    {
+        $saved = \SeoIntelligence\Frontend\FrontendMetaManager::cleanVerificationToken(
+            (string) Config::get('meta_google_verification', ''),
+            'google'
+        );
+
+        // If user configured a verification token and it matches
+        if (!empty($saved) && (str_contains($saved, $hash) || str_contains($hash, $saved))) {
+            header('Content-Type: text/html; charset=utf-8');
+            header('X-Robots-Tag: noindex, nofollow');
+            echo 'google-site-verification: google' . esc_html($hash) . '.html';
+            exit;
+        }
+
+        // Fallback: If no token configured or mismatch, let WordPress 404 naturally
+        global $wp_query;
+        if (is_object($wp_query)) {
+            $wp_query->set_404();
+            status_header(404);
+            nocache_headers();
         }
     }
 

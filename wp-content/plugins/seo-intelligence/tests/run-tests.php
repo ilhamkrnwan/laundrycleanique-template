@@ -212,6 +212,24 @@ assertTest("Report enforces zero <script> security constraint", !str_contains($r
 assertTest('Report contains no template literal backticks or ${', !str_contains($reportHtml, '`') && !str_contains($reportHtml, '${'));
 assertTest("Report size is lightweight and well under 80 KB", strlen($reportHtml) < 80000, "Actual size: " . strlen($reportHtml) . " bytes");
 
+// 7. Test Google Search Console Verification Token Sanitizer
+echo "\n7. Testing Google Search Console Verification Sanitizer:\n";
+$fullTag = '<meta name="google-site-verification" content="4zN_79s3q1xSAMPLE_TOKEN" />';
+$cleanedTag = \SeoIntelligence\Frontend\FrontendMetaManager::cleanVerificationToken($fullTag, 'google');
+assertTest("Extracts token from full Google meta tag", $cleanedTag === '4zN_79s3q1xSAMPLE_TOKEN', "Result: '{$cleanedTag}'");
+
+$fileName = 'google4zN_79s3q1xSAMPLE_TOKEN.html';
+$cleanedFile = \SeoIntelligence\Frontend\FrontendMetaManager::cleanVerificationToken($fileName, 'google');
+assertTest("Extracts token from Google verification filename", $cleanedFile === '4zN_79s3q1xSAMPLE_TOKEN', "Result: '{$cleanedFile}'");
+
+$bareToken = '4zN_79s3q1xSAMPLE_TOKEN';
+$cleanedBare = \SeoIntelligence\Frontend\FrontendMetaManager::cleanVerificationToken($bareToken, 'google');
+assertTest("Preserves clean bare verification token", $cleanedBare === '4zN_79s3q1xSAMPLE_TOKEN');
+
+$bingTag = '<meta name="msvalidate.01" content="BING_VERIFY_999" />';
+$cleanedBing = \SeoIntelligence\Frontend\FrontendMetaManager::cleanVerificationToken($bingTag, 'bing');
+assertTest("Extracts token from Bing meta tag", $cleanedBing === 'BING_VERIFY_999', "Result: '{$cleanedBing}'");
+
 echo "\n==================================================\n";
 echo "Results: {$passed} Passed, {$failed} Failed\n";
 echo "==================================================\n";
