@@ -33,8 +33,8 @@ final class AnalysisManager
     public function getAnalyzers(): array
     {
         /** @var array<string, AnalyzerInterface> $filtered */
-        $filtered = apply_filters('seoi_registered_analyzers', $this->analyzers);
-        return $filtered;
+        $filtered = apply_filters('seo_intelligence_analyzers', $this->analyzers);
+        return apply_filters('seoi_registered_analyzers', $filtered);
     }
 
     /**
@@ -57,6 +57,7 @@ final class AnalysisManager
         $results = [];
         $allFindings = [];
 
+        do_action('seo_intelligence_before_analysis', $context);
         do_action('seoi_before_analysis', $context);
 
         foreach ($this->getAnalyzers() as $id => $analyzer) {

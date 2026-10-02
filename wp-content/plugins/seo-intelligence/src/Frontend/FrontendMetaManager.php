@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace SeoIntelligence\Frontend;
 
 use SeoIntelligence\Core\Config;
+use SeoIntelligence\Core\SeoPluginDetector;
 
 /**
  * Frontend Meta Tag & Structured Data Injector ("dan lainya").
@@ -34,6 +35,11 @@ final class FrontendMetaManager
      */
     public function filterTitleParts(array $parts): array
     {
+        // If third-party SEO is active and we do not override, let them handle title
+        if (SeoPluginDetector::isThirdPartySeoActive() && !Config::get('override_third_party_seo', false)) {
+            return $parts;
+        }
+
         if (is_front_page()) {
             $parts['title'] = get_bloginfo('name') ?: 'Cleanique Laundry';
             $parts['tagline'] = get_bloginfo('description') ?: 'Paket Usaha Laundry & Aplikasi Kasir POS Cerdas';
@@ -47,6 +53,12 @@ final class FrontendMetaManager
     public function injectHeadMeta(): void
     {
         if (!Config::get('enable_frontend_meta', true)) {
+            return;
+        }
+
+        // Section 30 of READABLE.md: Check for third-party SEO plugins
+        if (SeoPluginDetector::isThirdPartySeoActive() && !Config::get('override_third_party_seo', false)) {
+            $this->injectMinimalMeta();
             return;
         }
 
@@ -317,5 +329,26 @@ final class FrontendMetaManager
         echo '<script type="application/ld+json">' . "\n";
         echo wp_json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) . "\n";
         echo '</script>' . "\n";
+    }
+
+    /**
+     * Inject minimal safe meta when a third-party SEO plugin is active.
+     * Prevents duplicate title, meta description, and schema tags.
+     */
+    private function injectMinimalMeta(): void
+    {
+        $googleVerify = (string) Config::get('meta_google_verification', '');
+        $bingVerify = (string) Config::get('meta_bing_verification', '');
+        $sitemapUrl = untrailingslashit(home_url()) . '/sitemap.xml';
+
+        echo "\n<!-- SEO & AEO Intelligence (Compatibility Mode: Third-Party SEO Plugin Detected) -->\n";
+        if (!empty($googleVerify)) {
+            echo '<meta name="google-site-verification" content="' . esc_attr($googleVerify) . '" />' . "\n";
+        }
+        if (!empty($bingVerify)) {
+            echo '<meta name="msvalidate.01" content="' . esc_attr($bingVerify) . '" />' . "\n";
+        }
+        echo '<link rel="sitemap" type="application/xml" title="Sitemap" href="' . esc_url($sitemapUrl) . '" />' . "\n";
+        echo "<!-- / SEO & AEO Intelligence Compatibility Mode -->\n\n";
     }
 }

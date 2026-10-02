@@ -86,6 +86,8 @@ final class Plugin
 
         // Register Admin Menu & Assets
         if (is_admin()) {
+            \SeoIntelligence\Core\SeoPluginDetector::registerNotice();
+
             /** @var AdminMenu $adminMenu */
             $adminMenu = $this->container->get('admin_menu');
             $adminMenu->register();

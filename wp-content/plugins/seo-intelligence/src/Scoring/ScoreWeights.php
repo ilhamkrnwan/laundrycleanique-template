@@ -40,6 +40,8 @@ final class ScoreWeights
         }
 
         // Allow third-party filter
-        return apply_filters('seoi_scoring_weights', array_merge(self::DEFAULT_WEIGHTS, $saved));
+        $merged = array_merge(self::DEFAULT_WEIGHTS, $saved);
+        $filtered = apply_filters('seo_intelligence_score_weights', $merged);
+        return apply_filters('seoi_scoring_weights', $filtered);
     }
 }

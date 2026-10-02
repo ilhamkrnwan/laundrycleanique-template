@@ -168,7 +168,8 @@ final class AnalysisContext
             // Suppress HTML5 parsing warnings
             libxml_use_internal_errors(true);
             if (!empty($this->rawHtml)) {
-                $this->dom->loadHTML(mb_convert_encoding($this->rawHtml, 'HTML-ENTITIES', 'UTF-8'));
+                $encodedHtml = mb_encode_numericentity($this->rawHtml, [0x80, 0x10FFFF, 0, 0x1FFFFF], 'UTF-8');
+                $this->dom->loadHTML($encodedHtml);
             }
             libxml_clear_errors();
         }
