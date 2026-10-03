@@ -34,7 +34,7 @@ while (have_posts()) : the_post();
       <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: var(--cq-sp-16);">
         <div style="display: flex; align-items: center; gap: 10px;">
           <span class="cq-badge-pill cq-badge-accent">
-            <i class="ri-store-2-fill" aria-hidden="true"></i> Paket Usaha Kemitraan
+            Paket Usaha Kemitraan
           </span>
           <?php if (!empty($badge)) : ?>
             <span class="cq-badge-pill cq-badge-warning"><?php echo esc_html($badge); ?></span>

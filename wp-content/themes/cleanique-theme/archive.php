@@ -25,7 +25,6 @@ $categories = get_categories(['hide_empty' => true]);
     <div class="cq-container">
       <div class="cq-blog-hero-inner">
         <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-16); background: rgba(255, 255, 255, 0.9); border: 1px solid var(--sky-200);">
-          <i class="ri-folder-open-line" style="color: var(--mint-cta); font-size: 15px;" aria-hidden="true"></i>
           Arsip Topik Edukasi &bull; PT Indotech Berkah Abadi
         </div>
         <h1 class="cq-blog-title">

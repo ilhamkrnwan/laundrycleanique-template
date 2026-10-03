@@ -41,6 +41,7 @@ $reading_time = cleanique_get_reading_time($current_id);
 ?>
 
 <main id="main-content" class="cq-single-article-page" itemscope itemtype="https://schema.org/BlogPosting">
+  <!-- Schema.org microdata: required for Google rich results -->
   <meta itemprop="mainEntityOfPage" content="<?php echo esc_url($current_url); ?>">
   <meta itemprop="datePublished" content="<?php echo esc_attr($published_iso); ?>">
   <meta itemprop="dateModified" content="<?php echo esc_attr($modified_iso); ?>">
@@ -90,7 +91,6 @@ $reading_time = cleanique_get_reading_time($current_id);
         <div class="cq-single-hero-inner">
           <!-- Category Pill -->
           <div class="cq-badge-pill cq-badge-accent cq-hero-cat-badge">
-            <i class="ri-price-tag-3-line" aria-hidden="true"></i>
             <a href="<?php echo esc_url($cat_url); ?>"><?php echo esc_html($cat_name); ?></a>
           </div>
 
@@ -99,15 +99,15 @@ $reading_time = cleanique_get_reading_time($current_id);
             <?php the_title(); ?>
           </h1>
 
-          <!-- Excerpt / Summary -->
-          <?php if (has_excerpt()) : ?>
+          <!-- Excerpt / Summary — plugin SEO (Yoast/RankMath) akan inject meta description di <head> -->
+          <?php
+          // Ambil excerpt: gunakan excerpt manual jika ada, atau auto-generate dari konten
+          $seo_excerpt = has_excerpt() ? get_the_excerpt() : wp_trim_words(strip_tags(get_the_content()), 30, '...');
+          ?>
+          <?php if (!empty($seo_excerpt)) : ?>
             <div class="cq-single-excerpt" itemprop="description">
-              <?php the_excerpt(); ?>
+              <?php echo esc_html($seo_excerpt); ?>
             </div>
-          <?php else : ?>
-            <p class="cq-single-excerpt" itemprop="description">
-              Panduan mendalam operasional, perhitungan HPP, strategi pemilihan mesin laundry komersial, dan sistem digitalisasi outlet dari tim ahli PT Indotech Berkah Abadi.
-            </p>
           <?php endif; ?>
 
           <!-- Meta Row: Author, Dates, Reading Time -->
@@ -195,7 +195,8 @@ $reading_time = cleanique_get_reading_time($current_id);
         <!-- ========================================================
              SECTION 4: ARTICLE CONTENT
              ======================================================== -->
-        <article class="cq-single-main" itemprop="articleBody">
+        <!-- post_class() membuat plugin SEO (Yoast/RankMath) dapat menambahkan class mereka -->
+        <article <?php post_class('cq-single-main'); ?> itemprop="articleBody">
 
           <?php
           $raw_content = get_the_content();
@@ -557,7 +558,7 @@ HPP_Chemical = (Deterjen_ml * Harga_ml) + (Softener_ml * Harga_ml) + (Parfum_ml 
                 <div class="cq-author-header-line">
                   <h4 class="cq-author-heading-name">Tim Riset &amp; Edukasi PT Indotech Berkah Abadi</h4>
                   <span class="cq-badge-pill cq-badge-verified">
-                    <i class="ri-verified-badge-fill" aria-hidden="true"></i> Verified Industry Expert
+                    Verified Industry Expert
                   </span>
                 </div>
                 <p class="cq-author-bio">
@@ -857,7 +858,7 @@ HPP_Chemical = (Deterjen_ml * Harga_ml) + (Softener_ml * Harga_ml) + (Parfum_ml 
           <!-- Promo Widget 1: Free Trial POS Promo Card -->
           <div class="cq-sidebar-card is-promo-pos">
             <span class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12); font-size: 11px;">
-              <i class="ri-flashlight-line" aria-hidden="true"></i> Free Trial 7 Hari
+              Free Trial 7 Hari
             </span>
             <h3 class="cq-sidebar-title">
               <i class="ri-smartphone-line" style="color: var(--mint-cta);" aria-hidden="true"></i>
@@ -880,7 +881,7 @@ HPP_Chemical = (Deterjen_ml * Harga_ml) + (Softener_ml * Harga_ml) + (Parfum_ml 
           <!-- Promo Widget 2: Paket Usaha Turnkey -->
           <div class="cq-sidebar-card is-promo-paket">
             <span class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12); font-size: 11px; background: rgba(0, 119, 182, 0.12); color: var(--brand-deep); border-color: rgba(0, 119, 182, 0.25);">
-              <i class="ri-store-2-line" aria-hidden="true"></i> 100% Hak Milik
+              100% Hak Milik
             </span>
             <h3 class="cq-sidebar-title">
               <i class="ri-store-2-fill" style="color: var(--brand-deep);" aria-hidden="true"></i>
@@ -983,9 +984,6 @@ HPP_Chemical = (Deterjen_ml * Harga_ml) + (Softener_ml * Harga_ml) + (Parfum_ml 
   <section class="cq-section cq-section-alt cq-related-section" aria-labelledby="related-articles-title">
     <div class="cq-container">
       <div class="cq-section-header">
-        <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12);">
-          <i class="ri-compass-line"></i> Rekomendasi Terkait
-        </div>
         <h2 id="related-articles-title" class="cq-section-title">Artikel &amp; Panduan Pilihan Lainnya</h2>
         <p class="cq-section-desc">Perluas pengetahuan operasional dan strategi pertumbuhan bisnis laundry Anda melalui artikel pilihan redaksi Indotech.</p>
       </div>
@@ -1163,7 +1161,7 @@ HPP_Chemical = (Deterjen_ml * Harga_ml) + (Softener_ml * Harga_ml) + (Parfum_ml 
           <!-- Left: E-Book & Guide Offer -->
           <div class="cq-newsletter-offer">
             <span class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12); background: rgba(255, 255, 255, 0.2); color: #ffffff; border-color: rgba(255, 255, 255, 0.3);">
-              <i class="ri-download-cloud-line"></i> Free E-Book &amp; Kalkulator Excel
+              Free E-Book &amp; Kalkulator Excel
             </span>
             <h2 id="newsletter-cta-title" class="cq-newsletter-title">
               Unduh SOP Lengkap Outlet Laundry &amp; Kalkulator Simulasi BEP
@@ -1188,7 +1186,7 @@ HPP_Chemical = (Deterjen_ml * Harga_ml) + (Softener_ml * Harga_ml) + (Parfum_ml 
           <!-- Right: Fast WhatsApp Consultation Card -->
           <div class="cq-newsletter-wa-card">
             <div class="cq-wa-card-badge">
-              <i class="ri-customer-service-2-fill"></i> Layanan Konsultasi Cepat
+              Layanan Konsultasi Cepat
             </div>
             <h3 class="cq-wa-card-heading">Punya Rencana Buka Outlet Bulan Ini?</h3>
             <p class="cq-wa-card-text">

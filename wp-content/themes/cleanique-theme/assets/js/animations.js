@@ -720,7 +720,9 @@ document.addEventListener('DOMContentLoaded', () => {
         );
       }
 
-      const cards = section.querySelectorAll('.cq-corp-card, .cq-kemitraan-card, .cq-corp-article-card');
+      const cards = section.querySelectorAll(
+        '.cq-corp-card, .cq-kemitraan-card, .cq-corp-article-card, .cq-eco-card, .cq-machinery-card, .cq-testi-card, .cq-compare-wrap'
+      );
       if (cards.length) {
         gsap.fromTo(cards,
           { y: 35, opacity: 0 },
@@ -742,5 +744,108 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* ==========================================================================
+     3. VERTICAL TIMELINE / KURIKULUM PELATIHAN ANIMATIONS
+     ========================================================================== */
+  const timelineSection = document.querySelector('.cq-timeline-section');
+  if (timelineSection && typeof ScrollTrigger !== 'undefined') {
+    // 3.1 Watermark subtle parallax
+    const watermark = timelineSection.querySelector('.cq-timeline-watermark');
+    if (watermark) {
+      gsap.fromTo(watermark,
+        { x: -40, opacity: 0.2 },
+        {
+          scrollTrigger: {
+            trigger: timelineSection,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 1
+          },
+          x: 20,
+          opacity: 0.45,
+          ease: 'none'
+        }
+      );
+    }
+
+    // 3.2 Vertical Track Line growth with Scroll Scrub
+    const trackLine = timelineSection.querySelector('.cq-timeline-track');
+    if (trackLine) {
+      gsap.fromTo(trackLine,
+        { scaleY: 0, transformOrigin: 'top center' },
+        {
+          scrollTrigger: {
+            trigger: '.cq-timeline-wrap',
+            start: 'top 75%',
+            end: 'bottom 85%',
+            scrub: 0.6
+          },
+          scaleY: 1,
+          ease: 'none'
+        }
+      );
+    }
+
+    // 3.3 Timeline Items Staggered Entrance
+    const timelineItems = timelineSection.querySelectorAll('.cq-timeline-item');
+    timelineItems.forEach((item, idx) => {
+      const node = item.querySelector('.cq-timeline-node');
+      const badge = item.querySelector('.cq-timeline-badge-pill');
+      const card = item.querySelector('.cq-timeline-card');
+
+      const itemTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: item,
+          start: 'top 85%',
+          toggleActions: 'play none none none'
+        }
+      });
+
+      if (node) {
+        itemTl.fromTo(node,
+          { scale: 0, opacity: 0 },
+          { scale: 1, opacity: 1, duration: 0.5, ease: 'back.out(2)' }
+        );
+      }
+
+      if (badge) {
+        itemTl.fromTo(badge,
+          { y: -10, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.4, ease: 'power2.out' },
+          '-=0.25'
+        );
+      }
+
+      if (card) {
+        itemTl.fromTo(card,
+          { x: 30, opacity: 0 },
+          { x: 0, opacity: 1, duration: 0.65, ease: 'power3.out', clearProps: 'transform,opacity' },
+          '-=0.3'
+        );
+      }
+    });
+  }
+
+  /* ==========================================================================
+     4. NUMBER TICKER ON CORPORATE HERO STATS
+     ========================================================================== */
+  const statNumbers = document.querySelectorAll('.cq-corp-stat-val');
+  if (statNumbers.length && typeof ScrollTrigger !== 'undefined') {
+    ScrollTrigger.create({
+      trigger: '.cq-corp-stats-row',
+      start: 'top 85%',
+      onEnter: () => {
+        statNumbers.forEach(el => {
+          gsap.fromTo(el,
+            { scale: 0.85, opacity: 0.5 },
+            { scale: 1, opacity: 1, duration: 0.6, ease: 'back.out(1.7)' }
+          );
+        });
+      },
+      once: true
+    });
+  }
+
   console.info('[Cleanique Motion] GSAP & ScrollTrigger animations initialized successfully.');
 });
+

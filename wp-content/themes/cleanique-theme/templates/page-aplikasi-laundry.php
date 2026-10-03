@@ -9,6 +9,15 @@
  */
 
 get_header();
+
+// ── SEO Plugin Compatibility ────────────────────────────────────────────────
+// Plugin SEO (Yoast/RankMath/AIOSEO) memerlukan the_post() dari main loop
+// untuk menginject title, meta description, canonical, dan OG tags ke <head>.
+if (have_posts()) {
+    the_post();
+}
+// ────────────────────────────────────────────────────────────────────────────
+
 $wa_trial_url = cleanique_get_whatsapp_url('aplikasi_trial');
 ?>
 
@@ -62,9 +71,6 @@ $wa_trial_url = cleanique_get_whatsapp_url('aplikasi_trial');
   <section class="cq-payno-problems-section" id="masalah">
     <div class="cq-container">
       <div class="cq-section-header" style="text-align: center; max-width: 840px; margin: 0 auto;">
-        <span class="cq-badge-pill" style="background: rgba(254, 242, 242, 0.9); border: 1px solid #FECACA; color: #DC2626; margin-bottom: var(--cq-sp-16); display: inline-flex; align-items: center; padding: 6px 14px; border-radius: 999px; font-size: 13px; font-weight: 600;">
-          Jebakan Sistem Kasir Manual
-        </span>
         <h2 style="font-family: var(--cq-font-heading); font-weight: 300; font-size: clamp(2rem, 1.6rem + 1.6vw, 3.2rem); line-height: 1.2; letter-spacing: -0.03em; color: var(--ink); margin-bottom: var(--cq-sp-16); word-break: normal; hyphens: none; -webkit-hyphens: none;">
           6 Masalah Fatal yang <span style="white-space: nowrap;">Diam-Diam</span><br>
           <span class="cq-text-blue">Menggerus Keuntungan Laundry Anda</span>
@@ -533,9 +539,6 @@ $wa_trial_url = cleanique_get_whatsapp_url('aplikasi_trial');
   <!-- 8. BOTTOM CTA SECTION WITH SKY GRADIENT & COUNTDOWN 30 OKTOBER -->
   <section class="cq-sky-canvas cq-section" style="padding: var(--cq-sp-64) 0 var(--cq-sp-80); text-align: center;">
     <div class="cq-container" style="max-width: 740px;">
-      <div class="cq-badge-pill cq-badge-warning" style="margin-bottom: var(--cq-sp-16); background: rgba(255, 255, 255, 0.9); border: 1px solid var(--sky-200);">
-        Promo Kuartal Berakhir 30 Oktober
-      </div>
       <h2 style="font-family: var(--cq-font-heading); font-weight: 300; font-size: clamp(2.2rem, 1.8rem + 2.2vw, 3.6rem); line-height: 1.15; letter-spacing: -0.035em; color: var(--ink); margin-bottom: var(--cq-sp-16);">
         Mulai Modernisasi Laundry Anda <span class="cq-text-blue">Hari Ini</span>
       </h2>

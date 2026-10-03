@@ -288,11 +288,12 @@
 
 /* ==========================================================================
    5. ACCORDION FAQ (.cq-accordion)
+   Modern Card Style with Smooth Micro-interactions
    ========================================================================== */
 .cq-accordion {
   display: flex;
   flex-direction: column;
-  gap: var(--cq-sp-12);
+  gap: var(--cq-sp-12, 14px);
   width: 100%;
   max-width: 820px;
   margin-left: auto;
@@ -300,61 +301,101 @@
 }
 
 .cq-accordion-item {
-  background: var(--cq-bg-surface);
-  border: 1px solid var(--cq-border-light);
-  border-radius: var(--cq-rad-md);
+  background: #ffffff;
+  border: 1.5px solid var(--cq-border-light, #e2e8f0);
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: var(--cq-shadow-sm);
-  transition: border-color var(--cq-ease-fast), box-shadow var(--cq-ease-fast);
+  box-shadow: 0 4px 15px -3px rgba(15, 23, 42, 0.04);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.cq-accordion-item:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 6px 20px -4px rgba(15, 23, 42, 0.07);
 }
 
 .cq-accordion-item.is-open {
-  border-color: var(--cq-primary);
-  box-shadow: var(--cq-shadow-md);
+  border-color: var(--brand-deep, #0284c7);
+  box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.08), 0 0 0 1px rgba(2, 132, 199, 0.15);
 }
 
-.cq-accordion-trigger {
+.cq-accordion-trigger,
+.cq-accordion-header {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--cq-sp-16) var(--cq-sp-20);
+  gap: 16px;
+  padding: 18px 22px;
   background: transparent;
   border: none;
-  font-family: var(--cq-font-heading);
-  font-size: var(--cq-fs-base);
+  font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 1.05rem;
   font-weight: 700;
-  color: var(--cq-dark-navy);
+  color: var(--cq-dark-navy, #0f172a);
   text-align: left;
   cursor: pointer;
-  min-height: 48px;
+  min-height: 52px;
+  transition: color 0.2s ease, background 0.2s ease;
+  line-height: 1.4;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
-.cq-accordion-trigger:focus-visible {
-  outline: 3px solid var(--cq-primary);
-  outline-offset: -3px;
+.cq-accordion-trigger:hover,
+.cq-accordion-header:hover {
+  color: var(--brand-deep, #0284c7);
+  background: rgba(248, 250, 252, 0.7);
+}
+
+.cq-accordion-trigger:focus-visible,
+.cq-accordion-header:focus-visible {
+  outline: 2px solid var(--brand-deep, #0284c7);
+  outline-offset: -2px;
 }
 
 .cq-accordion-icon {
-  font-size: 1.25rem;
-  color: var(--cq-primary-dark);
-  transition: transform var(--cq-ease-base);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(2, 132, 199, 0.08);
+  color: var(--brand-deep, #0284c7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
   flex-shrink: 0;
-  margin-left: var(--cq-sp-12);
+  margin-left: 12px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, color 0.2s ease;
 }
 
 .cq-accordion-item.is-open .cq-accordion-icon {
   transform: rotate(180deg);
+  background: var(--brand-deep, #0284c7);
+  color: #ffffff;
 }
 
-.cq-accordion-content {
-  padding: 0 var(--cq-sp-20) var(--cq-sp-16);
-  font-size: var(--cq-fs-sm);
-  color: var(--cq-text-muted);
-  line-height: 1.65;
+.cq-accordion-content,
+.cq-accordion-body {
+  padding: 0 22px 20px 22px;
+  font-family: var(--cq-font-body, 'Inter', sans-serif);
+  font-size: 14.5px;
+  color: var(--navy-700, #334155);
+  line-height: 1.7;
 }
 
-.cq-accordion-item:not(.is-open) .cq-accordion-content {
+.cq-accordion-content p,
+.cq-accordion-body p {
+  margin: 0;
+}
+
+.cq-accordion-content p + p,
+.cq-accordion-body p + p {
+  margin-top: 10px;
+}
+
+.cq-accordion-item:not(.is-open) .cq-accordion-content,
+.cq-accordion-item:not(.is-open) .cq-accordion-body {
   display: none;
 }
 
@@ -739,3 +780,70 @@
     opacity: 0;
   }
 }
+
+/* ==========================================================================
+   8. UNIFIED SEARCHBAR SYSTEM (Modal, Blog, Drawer)
+   Eliminates inner blue border, outlines & glowing rings across all searchbars
+   ========================================================================== */
+.cq-search-modal-input-wrap,
+.cq-blog-search-pill,
+.cq-drawer-search-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1.5px solid var(--cq-border-light, #e2e8f0);
+  border-radius: 9999px;
+  box-shadow: 0 2px 10px -2px rgba(15, 23, 42, 0.05);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cq-search-modal-input-wrap:focus-within,
+.cq-blog-search-pill:focus-within,
+.cq-drawer-search-form:focus-within {
+  border-color: #94a3b8 !important;
+  box-shadow: 0 4px 18px -2px rgba(15, 23, 42, 0.08) !important;
+  background: #ffffff !important;
+}
+
+/* Universal Search Input Reset: No blue focus ring/border inside search bars */
+input[type="search"].cq-search-modal-input,
+input[type="search"].cq-blog-search-input,
+input[type="search"].cq-drawer-search-input,
+.cq-search-modal-input-wrap input[type="search"],
+.cq-blog-search-pill input[type="search"],
+.cq-drawer-search-form input[type="search"] {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="search"].cq-search-modal-input:focus,
+input[type="search"].cq-search-modal-input:active,
+input[type="search"].cq-search-modal-input:focus-visible,
+input[type="search"].cq-blog-search-input:focus,
+input[type="search"].cq-blog-search-input:active,
+input[type="search"].cq-blog-search-input:focus-visible,
+input[type="search"].cq-drawer-search-input:focus,
+input[type="search"].cq-drawer-search-input:active,
+input[type="search"].cq-drawer-search-input:focus-visible,
+.cq-search-modal-input-wrap input[type="search"]:focus,
+.cq-blog-search-pill input[type="search"]:focus,
+.cq-drawer-search-form input[type="search"]:focus {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/* Hide native webkit search cancel/clear icon clutter */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+

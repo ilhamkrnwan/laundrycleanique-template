@@ -31,7 +31,6 @@ $is_landing_page = $is_paket_usaha || $is_aplikasi_laundry;
       <!-- Brand Logo -->
       <a href="<?php echo esc_url(home_url('/')); ?>" class="cq-brand" aria-label="Cleanique Laundry Beranda">
         <?php echo cleanique_get_site_logo(); ?>
-        <span class="cq-brand-badge">by Indotech.id</span>
       </a>
 
       <?php if ($is_aplikasi_laundry) : ?>
@@ -95,8 +94,8 @@ $is_landing_page = $is_paket_usaha || $is_aplikasi_laundry;
               </a>
             </li>
             <li role="none">
-              <a href="<?php echo esc_url(home_url('/berita/')); ?>" class="cq-nav-link <?php echo (!is_front_page() && (is_home() || is_singular('post') || is_archive() || is_category() || is_page('berita') || is_page('artikel'))) ? 'active' : ''; ?>" role="menuitem">
-                Berita
+              <a href="<?php echo esc_url(home_url('/artikel/')); ?>" class="cq-nav-link <?php echo (!is_front_page() && (is_home() || is_singular('post') || is_archive() || is_category() || is_page('berita') || is_page('artikel'))) ? 'active' : ''; ?>" role="menuitem">
+                Artikel
               </a>
             </li>
             <li role="none">
@@ -170,8 +169,8 @@ $is_landing_page = $is_paket_usaha || $is_aplikasi_laundry;
             </a>
           </li>
           <li>
-            <a href="<?php echo esc_url(home_url('/berita/')); ?>" class="cq-drawer-link <?php echo (!is_front_page() && (is_home() || is_singular('post') || is_archive() || is_category() || is_page('berita') || is_page('artikel'))) ? 'active' : ''; ?>">
-              <i class="ri-newspaper-line"></i> Berita &amp; Artikel
+            <a href="<?php echo esc_url(home_url('/artikel/')); ?>" class="cq-drawer-link <?php echo (!is_front_page() && (is_home() || is_singular('post') || is_archive() || is_category() || is_page('berita') || is_page('artikel'))) ? 'active' : ''; ?>">
+              <i class="ri-newspaper-line"></i> Artikel &amp; Edukasi
             </a>
           </li>
           <li>

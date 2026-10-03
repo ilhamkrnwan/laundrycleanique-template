@@ -8,8 +8,17 @@
  */
 
 get_header();
+
+// ── SEO Plugin Compatibility ────────────────────────────────────────────────
+// Plugin SEO (Yoast/RankMath/AIOSEO) memerlukan the_post() dari main loop
+// untuk menginject title, meta description, canonical, dan OG tags ke <head>.
+if (have_posts()) {
+    the_post();
+}
+// ────────────────────────────────────────────────────────────────────────────
+
 $wa_url = cleanique_get_whatsapp_url('general');
-$office_addr = get_theme_mod('cleanique_office_address', 'PT Indotech Berkah Abadi - Sleman, D.I. Yogyakarta, Indonesia');
+$office_addr = get_theme_mod('cleanique_office_address', 'Jalan Jongke Kidul Tengah No. 30, RT.01/RW.23, Jongke Tengah, Sendangadi, Kec. Mlati, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55285');
 $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
 ?>
 
@@ -24,7 +33,6 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
       <div class="cq-payno-hero-top">
         <div>
           <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-16); background: rgba(255, 255, 255, 0.9); border: 1px solid var(--sky-200);">
-            <i class="ri-customer-service-2-line" style="color: var(--mint-cta); font-size: 15px;" aria-hidden="true"></i>
             Pusat Informasi &amp; Showroom Resmi &bull; Sleman, D.I. Yogyakarta
           </div>
           <h1 class="cq-payno-heading">
@@ -46,14 +54,11 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
           </div>
 
           <div class="cq-payno-hero-actions">
-            <a href="#form-konsultasi" class="cq-btn cq-btn-primary cq-btn-pill">
-              <i class="ri-mail-send-line" aria-hidden="true"></i> Isi Form Konsultasi
-            </a>
-            <a href="<?php echo esc_url($wa_url); ?>" target="_blank" rel="noopener" class="cq-btn cq-btn-accent cq-btn-pill">
+            <a href="<?php echo esc_url($wa_url); ?>" target="_blank" rel="noopener" class="cq-btn cq-btn-primary cq-btn-pill">
               <i class="ri-whatsapp-line" aria-hidden="true"></i> Chat WhatsApp CS
             </a>
-            <a href="https://maps.google.com/?q=PT+Indotech+Berkah+Abadi+Sleman" target="_blank" rel="noopener" class="cq-btn cq-btn-white-pill cq-btn-pill">
-              <i class="ri-map-pin-line" aria-hidden="true"></i> Petunjuk Google Maps
+            <a href="#form-konsultasi" class="cq-btn cq-btn-white-pill cq-btn-pill">
+              <i class="ri-mail-send-line" aria-hidden="true"></i> Isi Form Konsultasi
             </a>
           </div>
         </div>
@@ -69,7 +74,6 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
       <div class="cq-grid-2" style="align-items: flex-start; gap: var(--cq-sp-40);">
         <!-- Kolom Kiri: Info Kantor & Workshop Sleman -->
         <div>
-          <span class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12);">Informasi Resmi</span>
           <h2 style="font-family: var(--cq-font-heading); font-size: clamp(1.8rem, 1.4rem + 1vw, 2.4rem); font-weight: 800; color: var(--cq-dark-navy); margin-bottom: var(--cq-sp-20);">
             Kantor Operasional &amp; Showroom
           </h2>
@@ -148,9 +152,6 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
         <div>
           <div class="cq-peluang-card" style="border: 1.5px solid var(--cq-border-light); border-radius: 32px; box-shadow: 0 12px 40px -4px rgba(15, 23, 42, 0.08); padding: clamp(24px, 4vw, 36px);">
             <div style="margin-bottom: var(--cq-sp-20);">
-              <span class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12);">
-                <i class="ri-flashlight-line" aria-hidden="true"></i> Fast Response Form
-              </span>
               <h3 style="font-family: var(--cq-font-heading); font-size: 1.35rem; font-weight: 800; color: var(--cq-dark-navy); margin-bottom: 6px;">
                 Formulir Konsultasi &amp; Penawaran
               </h3>
@@ -211,32 +212,89 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
   <section class="cq-section cq-section-alt" id="lokasi-workshop">
     <div class="cq-container">
       <div class="cq-section-header">
-        <span class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12);">Akses &amp; Rute</span>
+        <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12); display: inline-flex; align-items: center; gap: 6px;">
+          <i class="ri-map-pin-2-fill text-brand" aria-hidden="true"></i> Peta Lokasi Workshop &amp; Kantor Resmi
+        </div>
         <h2 class="cq-section-title">Lokasi Workshop &amp; Pusat Layanan Sleman</h2>
         <p class="cq-section-desc">
-          Berada di lokasi strategis Sleman, D.I. Yogyakarta dengan kemudahan akses kendaraan roda empat, area parkir luas, dan fasilitas bongkar muat mesin.
+          Kunjungi kantor pusat operasional dan fasilitas workshop PT Indotech Berkah Abadi di Sleman, D.I. Yogyakarta. Akses mudah dijangkau dengan kendaraan roda empat, area parkir luas, dan fasilitas bongkar muat mesin laundry.
         </p>
       </div>
 
-      <div class="cq-peluang-stage" style="margin-top: 0;">
-        <div class="cq-peluang-frame" style="aspect-ratio: 21/9; min-height: 280px; background: #e2e8f0; display: flex; align-items: center; justify-content: center; position: relative;">
-          <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/indotech-team.jpg'); ?>" alt="Kantor &amp; Workshop PT Indotech Berkah Abadi Sleman" style="opacity: 0.85;">
+      <div class="cq-maps-card" style="max-width: 1060px; margin: 0 auto; background: #ffffff; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 45px -12px rgba(15, 23, 42, 0.12), 0 0 0 1px rgba(226, 232, 240, 0.8);">
+        
+        <!-- Live Google Maps Embed Frame -->
+        <div class="cq-maps-frame" style="position: relative; width: 100%; height: clamp(340px, 45vh, 480px); background: #f1f5f9;">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.308726526848!2d110.3658101!3d-7.7320403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNDMnNTUuMyJTIDExMMKwMjInMDQuOCJF!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+            width="100%" 
+            height="100%" 
+            style="border: 0; display: block;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Peta Google Maps PT Indotech Berkah Abadi Sleman">
+          </iframe>
           
-          <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15, 23, 42, 0.4) 0%, rgba(15, 23, 42, 0.8) 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px; text-align: center; color: #ffffff;">
-            <div style="width: 56px; height: 56px; border-radius: 50%; background: var(--brand-deep); display: flex; align-items: center; justify-content: center; font-size: 26px; margin-bottom: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
-              <i class="ri-map-pin-user-line" aria-hidden="true"></i>
-            </div>
-            <h3 style="font-family: var(--cq-font-heading); font-size: clamp(1.2rem, 1rem + 1vw, 1.8rem); font-weight: 800; margin-bottom: 8px;">
-              PT Indotech Berkah Abadi — Sleman, Yogyakarta
-            </h3>
-            <p style="font-size: 14px; max-width: 540px; margin-bottom: 16px; color: #e2e8f0;">
-              <?php echo esc_html($office_addr); ?>
-            </p>
-            <a href="https://maps.google.com/?q=PT+Indotech+Berkah+Abadi+Sleman" target="_blank" rel="noopener" class="cq-btn cq-btn-accent cq-btn-pill">
-              <i class="ri-external-link-line" aria-hidden="true"></i> Buka Navigasi Google Maps
-            </a>
+          <!-- Badge overlay di pojok peta -->
+          <div style="position: absolute; top: 16px; left: 16px; background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(8px); padding: 8px 16px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.12); border: 1px solid rgba(226, 232, 240, 0.9); display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; color: var(--navy-900);">
+            <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #10b981; box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);"></span>
+            PT Indotech Berkah Abadi — Sleman
           </div>
         </div>
+
+        <!-- Detail Alamat & Tombol Aksi Langsung -->
+        <div class="cq-maps-info" style="padding: clamp(20px, 3vw, 32px); border-top: 1px solid var(--sky-200); background: #ffffff;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; align-items: center;">
+            
+            <!-- Kolom Informasi Alamat -->
+            <div>
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                <div style="width: 38px; height: 38px; border-radius: 10px; background: rgba(14, 165, 233, 0.12); color: var(--brand-deep); display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0;">
+                  <i class="ri-building-line" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--navy-900); margin: 0; line-height: 1.2;">
+                    PT Indotech Berkah Abadi
+                  </h3>
+                  <span style="font-size: 12px; font-weight: 600; color: var(--brand-deep);">Kantor Pusat &amp; Workshop Pabrik Chemical (Orchid Brand)</span>
+                </div>
+              </div>
+
+              <p style="font-size: 14px; line-height: 1.6; color: var(--navy-700); margin: 0 0 12px 0;">
+                <i class="ri-map-pin-fill" style="color: var(--brand-deep); margin-right: 4px;" aria-hidden="true"></i>
+                <?php echo esc_html($office_addr); ?>
+              </p>
+
+              <div style="display: flex; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--navy-600);">
+                <span style="display: inline-flex; align-items: center; gap: 5px;">
+                  <i class="ri-time-line text-brand" aria-hidden="true"></i> <strong>Jam Buka:</strong> Sen – Sab, 08.00 – 17.00 WIB
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 5px;">
+                  <i class="ri-parking-box-line text-brand" aria-hidden="true"></i> <strong>Akses:</strong> Parkir Mobil/Truk &amp; Bongkar Muat
+                </span>
+              </div>
+            </div>
+
+            <!-- Kolom Tombol Aksi Navigasi -->
+            <div style="display: flex; flex-direction: column; gap: 10px; justify-content: center;">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=-7.7320403,110.3679988" target="_blank" rel="noopener" class="cq-btn cq-btn-accent cq-btn-pill" style="justify-content: center; padding: 12px 24px; font-weight: 700;">
+                <i class="ri-navigation-fill" aria-hidden="true"></i> Petunjuk Arah Google Maps
+              </a>
+              
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px;">
+                <a href="https://www.google.com/maps/search/?api=1&query=-7.7320403,110.3679988" target="_blank" rel="noopener" class="cq-btn cq-btn-outline cq-btn-pill" style="justify-content: center; padding: 10px 16px; font-size: 13px;">
+                  <i class="ri-external-link-line" aria-hidden="true"></i> Buka Titik Maps
+                </a>
+                <a href="<?php echo esc_url($wa_url); ?>&text=Halo%20Admin%20Indotech%20Sleman%2C%20saya%20berencana%20berkunjung%20ke%20kantor%2Fworkshop.%20Apakah%20bisa%20buat%20janji%20temu%3F" target="_blank" rel="noopener" class="cq-btn cq-btn-outline cq-btn-pill" style="justify-content: center; padding: 10px 16px; font-size: 13px; color: #16a34a; border-color: #86efac; background: #f0fdf4;">
+                  <i class="ri-whatsapp-line" aria-hidden="true"></i> Janji Kunjungan
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -247,39 +305,61 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
   <section class="cq-section" id="faq-kontak">
     <div class="cq-container">
       <div class="cq-section-header">
-        <span class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12);">Tanya Jawab</span>
-        <h2 class="cq-section-title">Pertanyaan Umum Seputar Konsultasi</h2>
-        <p class="cq-section-desc">Hal-hal yang sering ditanyakan oleh calon mitra sebelum berkunjung atau berdiskusi dengan tim kami.</p>
+        <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12); display: inline-flex; align-items: center; gap: 6px;">
+          <i class="ri-question-line text-brand" aria-hidden="true"></i> Tanya Jawab Seputar Konsultasi
+        </div>
+        <h2 class="cq-section-title">Pertanyaan Umum Seputar Konsultasi &amp; Kunjungan</h2>
+        <p class="cq-section-desc">Hal-hal yang sering ditanyakan oleh calon mitra sebelum berkunjung atau berdiskusi langsung dengan tim ahli kami.</p>
       </div>
 
-      <div class="cq-accordion">
-        <div class="cq-accordion-item">
-          <button type="button" class="cq-accordion-header" aria-expanded="false">
+      <div class="cq-accordion" style="max-width: 820px; margin: 0 auto;">
+        <div class="cq-accordion-item is-open">
+          <button type="button" class="cq-accordion-trigger" aria-expanded="true">
             <span>Apakah saya perlu membuat janji temu sebelum berkunjung ke showroom?</span>
-            <i class="ri-add-line cq-accordion-icon" aria-hidden="true"></i>
+            <i class="ri-arrow-down-s-line cq-accordion-icon" aria-hidden="true"></i>
           </button>
-          <div class="cq-accordion-body">
-            <p>Untuk memastikan tim teknisi dan konsultan kami siap mendampingi serta menyiapkan demonstrasi mesin yang Anda minati, kami sangat menyarankan untuk konfirmasi janji temu terlebih dahulu melalui WhatsApp minimal 1 hari sebelumnya.</p>
+          <div class="cq-accordion-content">
+            <p>Untuk memastikan tim teknisi dan konsultan bisnis kami siap mendampingi serta menyiapkan demonstrasi unit mesin yang Anda minati, kami sangat menyarankan untuk konfirmasi janji temu terlebih dahulu melalui WhatsApp minimal 1 hari sebelumnya.</p>
           </div>
         </div>
 
         <div class="cq-accordion-item">
-          <button type="button" class="cq-accordion-header" aria-expanded="false">
+          <button type="button" class="cq-accordion-trigger" aria-expanded="false">
             <span>Apakah konsultasi dan estimasi modal paket usaha dikenakan biaya?</span>
-            <i class="ri-add-line cq-accordion-icon" aria-hidden="true"></i>
+            <i class="ri-arrow-down-s-line cq-accordion-icon" aria-hidden="true"></i>
           </button>
-          <div class="cq-accordion-body">
-            <p>Sama sekali <strong>gratis 100%</strong>. Anda bebas berdiskusi mengenai proyeksi balik modal (BEP), pemilihan set mesin, rekomendasi layout outlet, hingga takaran chemical tanpa kewajiban apapun.</p>
+          <div class="cq-accordion-content">
+            <p>Sama sekali <strong>gratis 100%</strong>. Anda bebas berdiskusi mengenai proyeksi balik modal (BEP), pemilihan paket mesin, rekomendasi layout outlet, hingga formula chemical tanpa kewajiban komitmen apapun.</p>
           </div>
         </div>
 
         <div class="cq-accordion-item">
-          <button type="button" class="cq-accordion-header" aria-expanded="false">
+          <button type="button" class="cq-accordion-trigger" aria-expanded="false">
             <span>Bagaimana jika lokasi usaha saya berada di luar D.I. Yogyakarta?</span>
-            <i class="ri-add-line cq-accordion-icon" aria-hidden="true"></i>
+            <i class="ri-arrow-down-s-line cq-accordion-icon" aria-hidden="true"></i>
           </button>
-          <div class="cq-accordion-body">
-            <p>PT Indotech Berkah Abadi melayani pengiriman paket mesin, instalasi plumbing &amp; kelistrikan, serta pendampingan SOP ke seluruh wilayah Indonesia (Jawa, Sumatera, Kalimantan, Sulawesi, Bali, hingga Papua) dengan ekspedisi cargo terpercaya dan teknisi onsite.</p>
+          <div class="cq-accordion-content">
+            <p>PT Indotech Berkah Abadi melayani pengiriman paket mesin lengkap, instalasi plumbing &amp; kelistrikan, serta pendampingan SOP ke seluruh wilayah Indonesia (Jawa, Sumatera, Kalimantan, Sulawesi, Bali, NTB/NTT, hingga Papua) dengan ekspedisi kargo terpercaya dan teknisi onsite berpengalaman.</p>
+          </div>
+        </div>
+
+        <div class="cq-accordion-item">
+          <button type="button" class="cq-accordion-trigger" aria-expanded="false">
+            <span>Fasilitas dan perlengkapan apa saja yang bisa dicoba langsung di showroom?</span>
+            <i class="ri-arrow-down-s-line cq-accordion-icon" aria-hidden="true"></i>
+          </button>
+          <div class="cq-accordion-content">
+            <p>Di showroom dan workshop Sleman, Anda dapat melihat unit display mesin cuci &amp; dryer komersial heavy duty (stack), menguji demo formula chemical pembersih &amp; parfum laundry Orchid Brand, simulasi operasional aplikasi POS kasir Cleanique, serta konsultasi blueprint denah instalasi outlet.</p>
+          </div>
+        </div>
+
+        <div class="cq-accordion-item">
+          <button type="button" class="cq-accordion-trigger" aria-expanded="false">
+            <span>Bagaimana prosedur pemesanan paket usaha setelah survei atau konsultasi?</span>
+            <i class="ri-arrow-down-s-line cq-accordion-icon" aria-hidden="true"></i>
+          </button>
+          <div class="cq-accordion-content">
+            <p>Setelah jenis paket usaha disepakati, tim kami akan menerbitkan invoice resmi dan perjanjian kemitraan mandiri (tanpa royalti). Mesin akan dipersiapkan untuk quality control (QC), dikirim ke lokasi Anda, dan tim teknisi kami akan menjadwalkan instalasi serta training tuntas di tempat.</p>
           </div>
         </div>
       </div>
@@ -291,9 +371,6 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
        ======================================================== -->
   <section class="cq-section cq-section-dark cq-banner-cta-section">
     <div class="cq-container cq-section-header">
-      <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-16); background: rgba(255, 255, 255, 0.12); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.25);">
-        <i class="ri-customer-service-2-line" aria-hidden="true"></i> Konsultasi Kemitraan Tanpa Royalti
-      </div>
       <h2 class="cq-banner-cta-title">
         Wujudkan Impian Memiliki Usaha Laundry Modern Mandiri
       </h2>

@@ -8,6 +8,15 @@
  */
 
 get_header();
+
+// ── SEO Plugin Compatibility ────────────────────────────────────────────────
+// Plugin SEO (Yoast/RankMath/AIOSEO) memerlukan the_post() dari main loop
+// untuk menginject title, meta description, canonical, dan OG tags ke <head>.
+if (have_posts()) {
+    the_post();
+}
+// ────────────────────────────────────────────────────────────────────────────
+
 $wa_url = cleanique_get_whatsapp_url('chemical');
 ?>
 
@@ -22,7 +31,6 @@ $wa_url = cleanique_get_whatsapp_url('chemical');
       <div class="cq-payno-hero-top">
         <div>
           <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-16); background: rgba(255, 255, 255, 0.9); border: 1px solid var(--sky-200);">
-            <i class="ri-flask-line" style="color: var(--mint-cta); font-size: 15px;" aria-hidden="true"></i>
             Fasilitas Manufaktur &amp; Formulasi &bull; Sleman, D.I. Yogyakarta
           </div>
           <h1 class="cq-payno-heading">
@@ -47,10 +55,7 @@ $wa_url = cleanique_get_whatsapp_url('chemical');
             <a href="<?php echo esc_url($wa_url); ?>" target="_blank" rel="noopener" class="cq-btn cq-btn-primary cq-btn-pill">
               <i class="ri-whatsapp-line" aria-hidden="true"></i> Pesan Chemical via WhatsApp
             </a>
-            <a href="https://indotech.id" target="_blank" rel="noopener" class="cq-btn cq-btn-white-pill cq-btn-pill">
-              <i class="ri-external-link-line" aria-hidden="true"></i> Situs Resmi Indotech.id
-            </a>
-            <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-accent cq-btn-pill">
+            <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill">
               <i class="ri-store-2-line" aria-hidden="true"></i> Termasuk di Paket Usaha
             </a>
           </div>
@@ -138,7 +143,6 @@ $wa_url = cleanique_get_whatsapp_url('chemical');
   <section class="cq-section" id="keunggulan">
     <div class="cq-container">
       <div class="cq-section-header">
-        <span class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12);">Keunggulan Formulasi</span>
         <h2 class="cq-section-title">Mengapa Memilih Chemical dari PT Indotech?</h2>
         <p class="cq-section-desc">Bukan sekadar sabun curah biasa, seluruh formulasi diriset secara presisi untuk efisiensi binatu profesional.</p>
       </div>
@@ -177,7 +181,6 @@ $wa_url = cleanique_get_whatsapp_url('chemical');
   <section class="cq-section cq-section-alt" id="katalog">
     <div class="cq-container">
       <div class="cq-section-header">
-        <span class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12);">Katalog Resmi</span>
         <h2 class="cq-section-title">Rangkaian Chemical Laundry Lengkap Orchid Brand</h2>
         <p class="cq-section-desc">Tersedia dalam kemasan jerigen 5 Liter praktis dan drum industri untuk pasokan rutin outlet.</p>
       </div>
@@ -239,9 +242,6 @@ $wa_url = cleanique_get_whatsapp_url('chemical');
        ======================================================== -->
   <section class="cq-section cq-section-dark cq-banner-cta-section">
     <div class="cq-container cq-section-header">
-      <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-16); background: rgba(255, 255, 255, 0.12); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.25);">
-        <i class="ri-factory-line" aria-hidden="true"></i> Pasokan Pabrik Tanpa Perantara
-      </div>
       <h2 class="cq-banner-cta-title">
         Ingin Pasokan Chemical Rutin Langsung dari Pabrik?
       </h2>

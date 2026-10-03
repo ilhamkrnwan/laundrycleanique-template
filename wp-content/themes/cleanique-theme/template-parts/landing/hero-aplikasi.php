@@ -14,8 +14,9 @@ $wa_trial_url = cleanique_get_whatsapp_url('aplikasi_trial');
     <!-- Top Row: Split Headline (Left) & Paragraph + Action (Right) -->
     <div class="cq-payno-hero-top">
       <div>
-        <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-16); background: rgba(255, 255, 255, 0.85); border: 1px solid var(--sky-200);">
-          Simple to Use. Built to Perform.
+        <div class="cq-hero-badge-pill">
+          <span class="cq-hero-badge-dot"></span>
+          <span class="cq-hero-badge-text">Simple to Use &bull; Built to Perform</span>
         </div>
         <h1 class="cq-payno-heading">
           Kelola Mudah, <span class="cq-text-blue">Tumbuh Lebih Terarah.</span>
@@ -44,40 +45,53 @@ $wa_trial_url = cleanique_get_whatsapp_url('aplikasi_trial');
     <!-- Center Stage: CSS Smartphone Mockup & 3 Floating Glass Cards -->
     <div class="cq-payno-stage">
       <!-- Floating Card 1 (Left): Live Omzet & Mini Chart -->
-      <div class="cq-floating-card cq-float-left">
-        <span style="font-size: 10px; color: var(--cq-text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.05em; display: block;">Laporan &amp; Keuangan</span>
-        <div style="font-family: var(--cq-font-heading); font-size: 19px; font-weight: 800; color: var(--ink); margin: 3px 0 2px;">
-          Rp 1.450.000 <span style="font-size: 11px; color: var(--mint-cta); font-weight: 700;">+18% <i class="ri-arrow-right-up-line"></i></span>
+      <div class="cq-floating-card cq-float-left cq-float-card-metric">
+        <div class="cq-float-card-top">
+          <span class="cq-float-card-label">Laporan &amp; Keuangan</span>
+          <span class="cq-float-live-pill"><span class="cq-pulse-dot"></span> Live</span>
         </div>
-        <div style="font-size: 11px; color: var(--brand-deep); display: flex; align-items: center; gap: 4px; font-weight: 600;">
-          <i class="ri-checkbox-circle-fill" style="color: var(--mint-cta);"></i> 42 Transaksi Hari Ini
+        <div class="cq-float-card-value-row">
+          <div class="cq-float-card-value">Rp 1.450.000</div>
+          <span class="cq-float-growth-badge"><i class="ri-arrow-right-up-line"></i> +18%</span>
+        </div>
+        <div class="cq-float-card-meta">
+          <i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
+          <span>42 Transaksi Hari Ini</span>
         </div>
       </div>
 
       <!-- Floating Card 2 (Right): Asisten AI Bisnis (Indotechbot App Core Feature) -->
-      <div class="cq-floating-card cq-float-right" style="max-width: 250px;">
-        <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 2px;">
-          <span class="cq-badge-pill cq-badge-accent" style="font-size: 9px; padding: 2px 8px;">
-            Asisten AI Bisnis
-          </span>
-          <span style="font-size: 9px; color: var(--mint-cta); font-weight: 700;">Aktif 24/7</span>
+      <div class="cq-floating-card cq-float-right cq-float-card-ai">
+        <div class="cq-float-ai-header">
+          <div class="cq-float-ai-title-wrap">
+            <div class="cq-float-ai-icon">
+              <i class="ri-robot-2-line" aria-hidden="true"></i>
+            </div>
+            <span class="cq-float-ai-title">Asisten AI Bisnis</span>
+          </div>
+          <span class="cq-float-status-badge">Aktif 24/7</span>
         </div>
-        <div style="font-size: 11px; font-weight: 600; color: var(--ink); line-height: 1.35; margin: 3px 0;">
-          "Omzet naik 18%! Rekomendasi: kirim promo cuci sprei via WA ke 35 pelanggan lama."
+        <div class="cq-float-ai-bubble">
+          <p class="cq-float-ai-text">
+            &ldquo;Omzet naik 18%! Rekomendasi: kirim promo cuci sprei via WA ke 35 pelanggan lama.&rdquo;
+          </p>
         </div>
-        <div style="font-size: 9.5px; color: var(--brand-deep); font-weight: 700;">
-          Konsultasi finansial &amp; ide promo
+        <div class="cq-float-ai-footer">
+          <i class="ri-lightbulb-line" aria-hidden="true"></i>
+          <span>Konsultasi Finansial &amp; Ide Promo</span>
         </div>
       </div>
 
       <!-- Floating Card 3 (Bottom Left): Notifikasi WhatsApp Otomatis -->
-      <div class="cq-floating-card cq-float-bottom">
-        <div class="cq-screen-avatar-img" style="width: 28px; height: 28px; background: #e8f5e9;">
-          <i class="ri-whatsapp-fill" style="color: #25D366; font-size: 16px;"></i>
+      <div class="cq-floating-card cq-float-bottom cq-float-card-wa">
+        <div class="cq-float-wa-icon-box">
+          <i class="ri-whatsapp-fill" aria-hidden="true"></i>
         </div>
-        <div>
-          <div style="font-size: 11px; font-weight: 700; color: var(--ink); line-height: 1.2;">Notifikasi WhatsApp Otomatis</div>
-          <div style="font-size: 10px; color: var(--cq-text-muted);">Nota &amp; info cucian siap ambil &bull; <span style="color: var(--mint-cta); font-weight: 600;">Terkirim</span></div>
+        <div class="cq-float-wa-info">
+          <div class="cq-float-wa-title">Notifikasi WhatsApp Otomatis</div>
+          <div class="cq-float-wa-sub">
+            Nota &amp; info cucian siap ambil &bull; <span class="cq-wa-sent-tag">Terkirim</span>
+          </div>
         </div>
       </div>
 
@@ -167,9 +181,10 @@ $wa_trial_url = cleanique_get_whatsapp_url('aplikasi_trial');
     <div class="cq-hero-countdown-wrap" data-countdown-deadline="2026-10-30T23:59:59+07:00">
       <div class="cq-glass-card cq-payno-countdown-card">
         <div class="cq-countdown-meta">
-          <span class="cq-countdown-badge is-mint" style="margin-bottom: 6px;">
-            Promo Kuartal Berakhir 30 Oktober
-          </span>
+          <div class="cq-countdown-badge is-mint">
+            <i class="ri-timer-flash-line" aria-hidden="true"></i>
+            <span>Berakhir 30 Oktober</span>
+          </div>
           <div style="font-family: var(--cq-font-heading); font-size: var(--cq-fs-base); font-weight: 700; color: var(--ink); line-height: 1.3;">
             Free Trial 7 Hari (Rp 0) &bull; Setelahnya Hanya Rp 60.000/bln
           </div>

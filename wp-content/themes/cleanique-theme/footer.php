@@ -24,7 +24,7 @@ if ($is_paket_usaha) {
     $wa_label = 'Konsultasi Resmi';
 }
 
-$office_addr = get_theme_mod('cleanique_office_address', 'PT Indotech Berkah Abadi - Sleman, D.I. Yogyakarta, Indonesia');
+$office_addr = get_theme_mod('cleanique_office_address', 'Jalan Jongke Kidul Tengah No. 30, RT.01/RW.23, Jongke Tengah, Sendangadi, Kec. Mlati, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55285');
 ?>
 
 <?php if ($is_landing_page) : ?>
@@ -40,7 +40,6 @@ $office_addr = get_theme_mod('cleanique_office_address', 'PT Indotech Berkah Aba
             <div class="cq-payno-footer-bio">
               <div class="cq-payno-footer-brand">
                 <?php echo cleanique_get_site_logo(); ?>
-                <span class="cq-payno-brand-sub">by Indotech.id</span>
               </div>
               <p class="cq-payno-footer-tagline">
                 Ekosistem bisnis laundry terpadu di bawah naungan <strong>PT Indotech Berkah Abadi</strong> (Sleman, D.I. Yogyakarta). Menyediakan paket kemitraan siap buka 100% tanpa royalti, pasokan bahan kimia standar pabrik, dan aplikasi kasir POS laundry cerdas.
@@ -80,7 +79,7 @@ $office_addr = get_theme_mod('cleanique_office_address', 'PT Indotech Berkah Aba
               <h5 class="cq-payno-nav-title">PERUSAHAAN</h5>
               <ul class="cq-payno-nav-list">
                 <li><a href="<?php echo esc_url(home_url('/tentang-kami/')); ?>">Tentang PT Indotech</a></li>
-                <li><a href="<?php echo esc_url(home_url('/berita/')); ?>">Berita &amp; Artikel</a></li>
+                <li><a href="<?php echo esc_url(home_url('/artikel/')); ?>">Pusat Artikel &amp; Edukasi</a></li>
                 <li><a href="<?php echo esc_url(home_url('/kemitraan/')); ?>">Peluang Kemitraan</a></li>
                 <li><a href="<?php echo esc_url(home_url('/kontak/')); ?>">Kontak &amp; Showroom</a></li>
               </ul>
@@ -135,7 +134,7 @@ $office_addr = get_theme_mod('cleanique_office_address', 'PT Indotech Berkah Aba
           </div>
         </div>
         <div class="cq-corp-cred-item">
-          <div class="cq-corp-cred-icon"><i class="ri-factory-line"></i></div>
+          <div class="cq-corp-cred-icon"><i class="ri-flask-line"></i></div>
           <div class="cq-corp-cred-text">
             <strong>Pabrik Chemical Mandiri</strong>
             <span>Formulasi Resmi Orchid Brand Bersertifikasi</span>
@@ -176,7 +175,7 @@ $office_addr = get_theme_mod('cleanique_office_address', 'PT Indotech Berkah Aba
           <ul class="cq-corp-footer-menu">
             <li><a href="<?php echo esc_url(home_url('/')); ?>"><i class="ri-arrow-right-s-line"></i> Beranda</a></li>
             <li><a href="<?php echo esc_url(home_url('/tentang-kami/')); ?>"><i class="ri-arrow-right-s-line"></i> Tentang Kami</a></li>
-            <li><a href="<?php echo esc_url(home_url('/berita/')); ?>"><i class="ri-arrow-right-s-line"></i> Berita &amp; Artikel</a></li>
+            <li><a href="<?php echo esc_url(home_url('/artikel/')); ?>"><i class="ri-arrow-right-s-line"></i> Artikel &amp; Panduan</a></li>
             <li><a href="<?php echo esc_url(home_url('/kemitraan/')); ?>"><i class="ri-arrow-right-s-line"></i> Peluang Kemitraan</a></li>
             <li><a href="<?php echo esc_url(home_url('/kontak/')); ?>"><i class="ri-arrow-right-s-line"></i> Kontak &amp; Showroom</a></li>
           </ul>

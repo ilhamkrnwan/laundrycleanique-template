@@ -10,6 +10,15 @@
  */
 
 get_header();
+
+// ── SEO Plugin Compatibility ────────────────────────────────────────────────
+// Plugin SEO (Yoast/RankMath/AIOSEO) memerlukan the_post() dari main loop
+// untuk menginject title, meta description, canonical, dan OG tags ke <head>.
+if (have_posts()) {
+    the_post();
+}
+// ────────────────────────────────────────────────────────────────────────────
+
 $wa_url = cleanique_get_whatsapp_url('paket_usaha');
 ?>
 
@@ -25,7 +34,6 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
       <div class="cq-payno-hero-top">
         <div>
           <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-16); background: rgba(255, 255, 255, 0.9); border: 1px solid var(--sky-200);">
-            <i class="ri-shield-check-fill" style="color: var(--mint-cta); font-size: 15px;" aria-hidden="true"></i>
             Pabrikan Resmi: PT Indotech Berkah Abadi &bull; Sleman, DIY
           </div>
           <h1 class="cq-payno-heading">
@@ -105,7 +113,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
                loading="lazy">
           <div class="cq-peluang-frame-overlay">
             <div class="cq-peluang-frame-badge">
-              <i class="ri-store-2-fill" aria-hidden="true"></i> Standar Outlet Kemitraan Cleanique Turnkey
+              Standar Outlet Kemitraan Cleanique Turnkey
             </div>
           </div>
         </div>
@@ -116,7 +124,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
         <div class="cq-countdown-flex">
           <div class="cq-countdown-meta">
             <span class="cq-countdown-badge is-warning">
-              <i class="ri-fire-fill" aria-hidden="true"></i> Promo Akhir Tahun Berakhir 31 Desember
+              Promo Akhir Tahun Berakhir 31 Desember
             </span>
             <div class="cq-countdown-title">Subsidi Ongkir &amp; Bonus Lisensi POS 1 Tahun Penuh!</div>
             <p class="cq-countdown-subtitle">Klaim bonus chemical 100 Liter pertama &amp; pendampingan teknisi onsite hingga siap buka.</p>
@@ -188,7 +196,6 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
   <section class="cq-section" id="peluang">
     <div class="cq-container">
       <div class="cq-section-header">
-        <span class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12);">Peluang Emas Bisnis Primer</span>
         <h2 class="cq-section-title">Mengapa Bisnis Laundry Dikatakan "Tidak Ada Matinya"?</h2>
         <p class="cq-section-desc">
           Bukan bisnis musiman atau tren sesaat. Selama manusia masih mengenakan pakaian, kebutuhan mencuci akan selalu ada setiap hari tanpa memandang kondisi ekonomi.
@@ -237,7 +244,6 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
   <section class="cq-section cq-section-alt" id="masalah">
     <div class="cq-container">
       <div class="cq-section-header">
-        <span class="cq-badge-pill cq-badge-warning" style="margin-bottom: var(--cq-sp-12);">Hindari 4 Jebakan Fatal Pemula</span>
         <h2 class="cq-section-title">Mau Buka Sendiri Tapi Bingung &amp; Takut Gagal? Jangan Jadi Korban Trial &amp; Error!</h2>
         <p class="cq-section-desc">
           Banyak orang mencoba merintis laundry sendirian dari nol tanpa panduan. Akhirnya modal puluhan juta habis dalam 6 bulan pertama karena 4 kesalahan fatal ini:
@@ -247,7 +253,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
       <div class="cq-grid-2">
         <div class="cq-peluang-pain-card">
           <div class="cq-peluang-pain-badge">
-            <i class="ri-error-warning-fill" aria-hidden="true"></i> Risiko #1: Mesin Jebol
+            Risiko #1: Mesin Jebol
           </div>
           <h3 class="cq-peluang-pain-title">Tergiur Mesin Rumah Tangga Murahan (3 Bulan Jebol)</h3>
           <p class="cq-card-desc">
@@ -257,7 +263,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
 
         <div class="cq-peluang-pain-card">
           <div class="cq-peluang-pain-badge">
-            <i class="ri-error-warning-fill" aria-hidden="true"></i> Risiko #2: Chemical Abal-Abal
+            Risiko #2: Chemical Abal-Abal
           </div>
           <h3 class="cq-peluang-pain-title">Trial &amp; Error Chemical Bertahun-Tahun (Baju Rusak)</h3>
           <p class="cq-card-desc">
@@ -267,7 +273,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
 
         <div class="cq-peluang-pain-card">
           <div class="cq-peluang-pain-badge">
-            <i class="ri-error-warning-fill" aria-hidden="true"></i> Risiko #3: Instalasi Amatir
+            Risiko #3: Instalasi Amatir
           </div>
           <h3 class="cq-peluang-pain-title">Instalasi Pipa Amatir &amp; Bahaya Kebocoran Gas</h3>
           <p class="cq-card-desc">
@@ -277,7 +283,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
 
         <div class="cq-peluang-pain-card">
           <div class="cq-peluang-pain-badge">
-            <i class="ri-error-warning-fill" aria-hidden="true"></i> Risiko #4: Royalti Membebani
+            Risiko #4: Royalti Membebani
           </div>
           <h3 class="cq-peluang-pain-title">Terjebak Franchise Lain dengan Royalty Fee Seumur Hidup</h3>
           <p class="cq-card-desc">
@@ -294,7 +300,6 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
   <section class="cq-section" id="solusi">
     <div class="cq-container">
       <div class="cq-section-header">
-        <span class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12);">Solusi All-in-One Turnkey</span>
         <h2 class="cq-section-title">Bersama Cleanique, Anda Buka Laundry Tanpa Risiko Gagal</h2>
         <p class="cq-section-desc">
           Kami memberikan paket komplit siap buka (*Turnkey Business*) yang didukung langsung oleh produsen industri mesin dan pabrik chemical resmi PT Indotech Berkah Abadi.
@@ -359,7 +364,6 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
   <section class="cq-section cq-section-alt" id="fasilitas">
     <div class="cq-container">
       <div class="cq-section-header">
-        <span class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12);">Fasilitas &amp; Peralatan Kelas Industri</span>
         <h2 class="cq-section-title">Apa Saja yang Anda Dapatkan dalam Setiap Paket?</h2>
         <p class="cq-section-desc">Peralatan berkualitas tinggi dan siap pakai, dirakit dan diuji langsung oleh teknisi berpengalaman PT Indotech Berkah Abadi.</p>
       </div>
@@ -414,7 +418,6 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
   <section class="cq-section" id="pilihan-paket">
     <div class="cq-container">
       <div class="cq-section-header">
-        <span class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12);">Pilihan Investasi Kemitraan</span>
         <h2 class="cq-section-title">Paket Usaha Siap Buka Sesuai Budget Anda</h2>
         <p class="cq-section-desc">
           Pilih paket yang paling cocok dengan lokasi dan modal Anda. Amankan kuota subsidi ongkir &amp; bonus lisensi POS sebelum 31 Desember!
@@ -539,7 +542,6 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
   <section class="cq-section cq-section-alt" id="kalkulator">
     <div class="cq-container">
       <div class="cq-section-header">
-        <span class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12);">Simulasi Balik Modal (ROI)</span>
         <h2 class="cq-section-title">Hitung Potensi Keuntungan Usaha Laundry Anda</h2>
         <p class="cq-section-desc">Gunakan kalkulator interaktif di bawah ini untuk melihat proyeksi omzet bulanan dan estimasi balik modal.</p>
       </div>
@@ -581,7 +583,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
 
           <div class="cq-calc-result-card">
             <div class="cq-calc-result-badge">
-              <i class="ri-time-line" aria-hidden="true"></i> Estimasi Balik Modal: 4 – 8 Bulan
+              Estimasi Balik Modal: 4 – 8 Bulan
             </div>
 
             <div class="cq-calc-metric-lbl">Proyeksi Omzet Bulanan (30 Hari)</div>
@@ -655,7 +657,6 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
   <section class="cq-section cq-section-alt" id="faq">
     <div class="cq-container">
       <div class="cq-section-header">
-        <span class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12);">FAQ Kemitraan</span>
         <h2 class="cq-section-title">Pertanyaan Seputar Kemitraan Laundry Cleanique</h2>
       </div>
 
@@ -718,9 +719,6 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
        ======================================================== -->
   <section class="cq-section cq-section-dark cq-banner-cta-section">
     <div class="cq-container cq-section-header">
-      <div class="cq-badge-pill cq-badge-warning" style="margin-bottom: var(--cq-sp-16);">
-        <i class="ri-time-fill" aria-hidden="true"></i> Kuota Promo Kemitraan Berakhir 31 Desember
-      </div>
       <h2 class="cq-banner-cta-title">
         Siap Membuka Usaha Laundry Sukses Anda?
       </h2>

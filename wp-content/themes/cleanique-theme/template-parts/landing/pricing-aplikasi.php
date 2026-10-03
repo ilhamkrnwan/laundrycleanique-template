@@ -85,7 +85,7 @@ $wa_trial_url = cleanique_get_whatsapp_url('aplikasi_trial');
         </div>
 
         <a href="#trial-form" class="cq-btn cq-btn-white-pill cq-btn-block" style="margin-bottom: var(--cq-sp-24);">
-          <i class="ri-rocket-2-line"></i> Mulai Free Trial 7 Hari
+          Mulai Free Trial 7 Hari
         </a>
 
         <div class="cq-pricing-sep">Fitur Unggulan</div>

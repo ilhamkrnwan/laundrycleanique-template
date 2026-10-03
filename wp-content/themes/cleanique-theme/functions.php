@@ -10,7 +10,7 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
 
-define('CLEANIQUE_VERSION', '1.2.1');
+define('CLEANIQUE_VERSION', '1.2.9');
 define('CLEANIQUE_DIR', get_template_directory());
 define('CLEANIQUE_URI', get_template_directory_uri());
 
@@ -60,12 +60,28 @@ function cleanique_theme_setup() {
 add_action('after_setup_theme', 'cleanique_theme_setup');
 
 /**
- * Helper: Ambil logo situs (Customizer WordPress atau fallback otomatis ke root /logo/)
+ * Helper: Ambil logo situs Cleanique Laundry
+ * Default utama menggunakan logo/laundry-cleanique-outline.png (transparan tanpa background putih)
  *
  * @param string $extra_class Class tambahan untuk tag img/span
  * @return string HTML tag logo
  */
 function cleanique_get_site_logo($extra_class = '') {
+    // 1. Prioritas utama & default: Logo outline transparan (logo/laundry-cleanique-outline.png)
+    $outline_logo_rel  = 'logo/laundry-cleanique-outline.png';
+    $outline_logo_path = ABSPATH . $outline_logo_rel;
+    $outline_logo_url  = home_url('/' . $outline_logo_rel);
+
+    if (file_exists($outline_logo_path)) {
+        return sprintf(
+            '<img src="%s" alt="%s" class="cq-brand-logo-img %s" height="42" loading="eager" decoding="async">',
+            esc_url($outline_logo_url),
+            esc_attr(get_bloginfo('name') . ' - Cleanique Laundry'),
+            esc_attr($extra_class)
+        );
+    }
+
+    // 2. Custom logo dari WordPress Customizer (jika outline tidak tersedia)
     $custom_logo_id = get_theme_mod('custom_logo');
     if ($custom_logo_id) {
         $logo_data = wp_get_attachment_image_src($custom_logo_id, 'full');
@@ -82,21 +98,7 @@ function cleanique_get_site_logo($extra_class = '') {
         }
     }
 
-    // Fallback otomatis ke root folder /logo/
-    $root_logo_rel  = 'logo/laundry-cleanique.png';
-    $root_logo_path = ABSPATH . $root_logo_rel;
-    $root_logo_url  = home_url('/' . $root_logo_rel);
-
-    if (file_exists($root_logo_path)) {
-        return sprintf(
-            '<img src="%s" alt="%s" class="cq-brand-logo-img %s" height="42">',
-            esc_url($root_logo_url),
-            esc_attr(get_bloginfo('name') . ' - Cleanique Laundry'),
-            esc_attr($extra_class)
-        );
-    }
-
-    // Secondary fallback ke /logo/logo.png
+    // 3. Fallback ke icon logo transparan /logo/logo.png
     $fallback_logo_path = ABSPATH . 'logo/logo.png';
     if (file_exists($fallback_logo_path)) {
         return sprintf(
@@ -107,7 +109,7 @@ function cleanique_get_site_logo($extra_class = '') {
         );
     }
 
-    // Default text fallback jika tidak ada gambar
+    // 4. Default text fallback jika tidak ada gambar
     return '<span class="cq-brand-logo-text ' . esc_attr($extra_class) . '">Cleanique<span class="cq-brand-accent">Laundry</span></span>';
 }
 
@@ -180,7 +182,7 @@ function cleanique_enqueue_assets() {
         CLEANIQUE_VERSION
     );
 
-    // 3. Components Stylesheet (Button, Card, Badge, Form, Accordion, Floating)
+    // 3. Components Stylesheet (Button, Badge, Form, Accordion, Floating)
     wp_enqueue_style(
         'cleanique-components-style',
         CLEANIQUE_URI . '/assets/css/components.css',
@@ -188,15 +190,55 @@ function cleanique_enqueue_assets() {
         CLEANIQUE_VERSION
     );
 
-    // 4. Company Profile & Bento Grid Stylesheet
+    // 4. Unified Card System Stylesheet (All Card Foundations, Equal Heights, Flex Actions)
     wp_enqueue_style(
-        'cleanique-compro-style',
-        CLEANIQUE_URI . '/assets/css/compro.css',
+        'cleanique-cards-style',
+        CLEANIQUE_URI . '/assets/css/cards.css',
         ['cleanique-components-style'],
         CLEANIQUE_VERSION
     );
 
-    // 5. Landing Pages Stylesheet (Hero LP, Pricing Matrix, Comparison, Kalkulator)
+    // 5. Vertical Roadmap SOP & Timeline Stylesheet
+    wp_enqueue_style(
+        'cleanique-timeline-style',
+        CLEANIQUE_URI . '/assets/css/timeline.css',
+        ['cleanique-cards-style'],
+        CLEANIQUE_VERSION
+    );
+
+    // 6. ROI & Financial Turnover Simulator Stylesheet
+    wp_enqueue_style(
+        'cleanique-calculator-style',
+        CLEANIQUE_URI . '/assets/css/calculator.css',
+        ['cleanique-cards-style'],
+        CLEANIQUE_VERSION
+    );
+
+    // 7. Kemitraan Catalog & Comparison Matrix Stylesheet
+    wp_enqueue_style(
+        'cleanique-kemitraan-style',
+        CLEANIQUE_URI . '/assets/css/kemitraan.css',
+        ['cleanique-cards-style'],
+        CLEANIQUE_VERSION
+    );
+
+    // 8. Company Profile & Bento Grid Stylesheet
+    wp_enqueue_style(
+        'cleanique-compro-style',
+        CLEANIQUE_URI . '/assets/css/compro.css',
+        ['cleanique-cards-style'],
+        CLEANIQUE_VERSION
+    );
+
+    // 9. Blog, Articles & Knowledge Hub Stylesheet
+    wp_enqueue_style(
+        'cleanique-blog-style',
+        CLEANIQUE_URI . '/assets/css/blog.css',
+        ['cleanique-cards-style'],
+        CLEANIQUE_VERSION
+    );
+
+    // 10. Landing Pages Stylesheet
     wp_enqueue_style(
         'cleanique-landing-style',
         CLEANIQUE_URI . '/assets/css/landing-pages.css',
@@ -274,7 +316,7 @@ function cleanique_customize_register($wp_customize) {
 
     // Alamat Kantor / Pabrik Indotech
     $wp_customize->add_setting('cleanique_office_address', [
-        'default'           => 'PT Indotech Berkah Abadi - Sleman, D.I. Yogyakarta, Indonesia',
+        'default'           => 'Jalan Jongke Kidul Tengah No. 30, RT.01/RW.23, Jongke Tengah, Sendangadi, Kec. Mlati, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55285',
         'sanitize_callback' => 'sanitize_textarea_field',
     ]);
     $wp_customize->add_control('cleanique_office_address', [
@@ -486,4 +528,16 @@ function cleanique_process_content_and_toc($content) {
         'content' => $processed_content,
     ];
 }
+
+/**
+ * Redirect otomatis /berita/ ke halaman kanonik /artikel/
+ */
+add_action('template_redirect', function() {
+    $path = trim(wp_parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH), '/');
+    if ($path === 'cleaniquelaundry/berita' || $path === 'berita') {
+        wp_safe_redirect(home_url('/artikel/'), 301);
+        exit;
+    }
+});
+
 

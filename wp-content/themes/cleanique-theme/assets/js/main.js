@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 6. Accessible FAQ Accordion Toggle
-  document.querySelectorAll('.cq-accordion-trigger').forEach(trigger => {
+  document.querySelectorAll('.cq-accordion-trigger, .cq-accordion-header').forEach(trigger => {
     trigger.addEventListener('click', () => {
       const item = trigger.closest('.cq-accordion-item');
       if (!item) return;
@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
         parent.querySelectorAll('.cq-accordion-item').forEach(other => {
           if (other !== item) {
             other.classList.remove('is-open');
-            other.querySelector('.cq-accordion-trigger')?.setAttribute('aria-expanded', 'false');
+            other.querySelector('.cq-accordion-trigger, .cq-accordion-header')?.setAttribute('aria-expanded', 'false');
           }
         });
       }

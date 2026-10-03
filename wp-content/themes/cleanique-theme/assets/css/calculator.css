@@ -1,0 +1,301 @@
+/**
+ * Cleanique Laundry - ROI & Financial Turnover Simulator (calculator.css)
+ * Description: Modul kalkulator simulasi balik modal (BEP), estimasi omzet,
+ * margin laba bersih harian/bulanan, preset chip, slider dinamis, dan card hasil Fintech.
+ *
+ * @package Cleanique
+ * @version 1.3.0
+ */
+
+/* ==========================================================================
+   1. ROI CALCULATOR BASE CONTAINER
+   ========================================================================== */
+.cq-calc-container,
+.cq-roi-box {
+  background: var(--cq-bg-surface, #ffffff);
+  border-radius: clamp(20px, 3vw, 32px);
+  border: 1.5px solid var(--cq-border-light, #e2e8f0);
+  box-shadow: 0 20px 50px -15px rgba(0, 119, 182, 0.12), 0 4px 16px rgba(15, 23, 42, 0.04);
+  overflow: hidden;
+  padding: clamp(24px, 4vw, 44px);
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* ==========================================================================
+   2. PRESET SELECTION CHIPS
+   ========================================================================== */
+.cq-calc-preset-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: var(--cq-sp-24, 24px);
+  padding-bottom: var(--cq-sp-16, 16px);
+  border-bottom: 1px dashed var(--cq-border-light, #e2e8f0);
+}
+
+.cq-calc-preset-label {
+  font-size: var(--cq-fs-xs, 0.8125rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--cq-text-muted, #64748b);
+  margin-right: 4px;
+}
+
+.cq-calc-preset-chip {
+  background: var(--cq-primary-subtle, #e0f2fe);
+  color: var(--cq-primary-dark, #0284c7);
+  border: 1.5px solid transparent;
+  font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: var(--cq-fs-xs, 0.8125rem);
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: var(--cq-rad-pill, 9999px);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.cq-calc-preset-chip:hover {
+  background: var(--brand-deep, #0077b6);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 119, 182, 0.25);
+}
+
+.cq-calc-preset-chip.is-active {
+  background: var(--brand-deep, #0077b6);
+  color: #ffffff;
+  border-color: var(--cq-dark-navy, #0b132b);
+  box-shadow: 0 4px 14px rgba(0, 119, 182, 0.35);
+}
+
+/* ==========================================================================
+   3. CALCULATOR TWO-COLUMN GRID
+   ========================================================================== */
+.cq-calc-grid,
+.cq-roi-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(24px, 3.5vw, 36px);
+  align-items: stretch;
+}
+
+@media (min-width: 860px) {
+  .cq-calc-grid,
+  .cq-roi-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+}
+
+/* ==========================================================================
+   4. INPUT CONTROLS & RANGE SLIDERS
+   ========================================================================== */
+.cq-calc-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--cq-sp-20, 20px);
+  justify-content: center;
+}
+
+.cq-calc-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cq-calc-field-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cq-calc-label {
+  font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: var(--cq-fs-sm, 0.925rem);
+  font-weight: 700;
+  color: var(--cq-dark-navy, #0b132b);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cq-calc-current-val {
+  font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: var(--cq-fs-base, 1rem);
+  font-weight: 800;
+  color: var(--cq-primary, #0077b6);
+  background: var(--cq-primary-subtle, #e0f2fe);
+  padding: 4px 12px;
+  border-radius: var(--cq-rad-md, 8px);
+}
+
+/* Slider Custom Styling */
+.cq-calc-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 9999px;
+  background: #e2e8f0;
+  outline: none;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.cq-calc-slider:focus-visible {
+  outline: 2px solid var(--cq-primary, #0077b6);
+  outline-offset: 2px;
+}
+
+.cq-calc-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--brand-deep, #0077b6);
+  border: 3px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cq-calc-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  box-shadow: 0 4px 12px rgba(0, 119, 182, 0.4);
+}
+
+.cq-calc-slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--brand-deep, #0077b6);
+  border: 3px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.cq-calc-range-hints {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--cq-text-muted, #64748b);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   5. RESULTS CARD (FINTECH GRADIENT DISPLAY)
+   ========================================================================== */
+.cq-calc-result-card,
+.cq-roi-result {
+  background: linear-gradient(145deg, #0b132b 0%, #1e293b 100%);
+  border-radius: clamp(18px, 2.5vw, 24px);
+  padding: clamp(24px, 3.5vw, 36px);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 20px 45px -10px rgba(15, 23, 42, 0.4);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cq-calc-result-card::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 229, 153, 0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cq-calc-result-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0, 229, 153, 0.16);
+  color: var(--mint-cta, #00e599);
+  border: 1px solid rgba(0, 229, 153, 0.35);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 14px;
+  border-radius: var(--cq-rad-pill, 9999px);
+  margin-bottom: var(--cq-sp-16, 16px);
+  width: fit-content;
+}
+
+.cq-calc-metric-group {
+  margin-bottom: var(--cq-sp-16, 16px);
+  padding-bottom: var(--cq-sp-16, 16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cq-calc-metric-group:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.cq-calc-metric-lbl,
+.cq-roi-metric-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #94a3b8;
+  font-weight: 700;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cq-calc-metric-val,
+.cq-roi-figure-omzet {
+  font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(1.4rem, 1.2rem + 0.6vw, 1.8rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.cq-calc-metric-val.highlight-profit,
+.cq-roi-figure-profit {
+  font-size: clamp(2rem, 1.6rem + 1.2vw, 2.75rem);
+  color: var(--mint-cta, #00e599);
+  text-shadow: 0 2px 14px rgba(0, 229, 153, 0.3);
+}
+
+.cq-calc-bep-val {
+  font-size: clamp(1.1rem, 1rem + 0.3vw, 1.35rem);
+  font-weight: 800;
+  color: #f59e0b;
+}
+
+.cq-calc-disclaimer,
+.cq-roi-disclaimer {
+  font-size: 11px;
+  color: #94a3b8;
+  line-height: 1.55;
+  margin-top: var(--cq-sp-16, 16px);
+  padding-top: var(--cq-sp-12, 12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cq-calc-cta-btn {
+  margin-top: var(--cq-sp-20, 20px);
+  width: 100%;
+}

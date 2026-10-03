@@ -1,0 +1,312 @@
+/**
+ * Cleanique Laundry - Vertical Roadmap & Accreditation SOP Timeline Component (timeline.css)
+ * Description: Komponen timeline kurikulum pelatihan teknis & roadmap SOP kemitraan
+ * dengan double concentric rings ber-pulse glow, watermark outlined typography,
+ * pill badges [🟡 TAHAP 01], square emblem icon box, dan garis konektor vertikal presisi.
+ *
+ * @package Cleanique
+ * @version 1.3.0
+ */
+
+/* ==========================================================================
+   1. SECTION CONTAINER & BLUEPRINT GRID
+   ========================================================================== */
+.cq-timeline-section {
+  position: relative;
+  overflow: hidden;
+  background-color: #fafbfc;
+  background-image: 
+    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+  background-size: 36px 36px;
+  padding: clamp(60px, 8vw, 100px) 0;
+}
+
+/* Giant Outlined Typography Background */
+.cq-timeline-watermark {
+  position: absolute;
+  top: 40px;
+  left: -20px;
+  font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(4rem, 11vw, 10rem);
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(15, 23, 42, 0.08);
+  user-select: none;
+  pointer-events: none;
+  z-index: 1;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+}
+
+.cq-timeline-wrap {
+  position: relative;
+  z-index: 2;
+  max-width: 880px;
+  margin: clamp(32px, 5vw, 48px) auto 0;
+  padding-left: 0;
+}
+
+/* The vertical connecting track */
+.cq-timeline-track {
+  position: absolute;
+  top: 30px;
+  bottom: 40px;
+  left: 36px;
+  width: 2px;
+  background: #cbd5e1;
+  z-index: 1;
+}
+
+.cq-timeline-item {
+  position: relative;
+  z-index: 2;
+  padding-left: 72px;
+  margin-bottom: clamp(36px, 5vw, 54px);
+}
+
+.cq-timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   2. DOUBLE CONCENTRIC RING MILESTONE NODE
+   ========================================================================== */
+.cq-timeline-node {
+  position: absolute;
+  left: 20px;
+  top: 2px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3.5px solid #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  box-shadow: 0 0 0 4px #ffffff, 0 4px 12px rgba(15, 23, 42, 0.12);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  animation: cq-node-pulse 2.8s infinite;
+}
+
+.cq-timeline-node-inner {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #0f172a;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.cq-timeline-item:hover .cq-timeline-node {
+  transform: scale(1.15);
+  border-color: var(--cq-primary-dark, #0284c7);
+}
+
+.cq-timeline-item:hover .cq-timeline-node-inner {
+  background: var(--cq-primary, #0077b6);
+}
+
+/* Stage color accents for milestone nodes */
+.cq-timeline-item:nth-child(2) .cq-timeline-node-inner { background: #f59e0b; }
+.cq-timeline-item:nth-child(2) .cq-timeline-node { box-shadow: 0 0 0 4px #ffffff, 0 0 0 7px rgba(245, 158, 11, 0.2), 0 4px 12px rgba(15, 23, 42, 0.1); }
+
+.cq-timeline-item:nth-child(3) .cq-timeline-node-inner { background: #10b981; }
+.cq-timeline-item:nth-child(3) .cq-timeline-node { box-shadow: 0 0 0 4px #ffffff, 0 0 0 7px rgba(16, 185, 129, 0.2), 0 4px 12px rgba(15, 23, 42, 0.1); }
+
+.cq-timeline-item:nth-child(4) .cq-timeline-node-inner { background: #0284c7; }
+.cq-timeline-item:nth-child(4) .cq-timeline-node { box-shadow: 0 0 0 4px #ffffff, 0 0 0 7px rgba(2, 132, 199, 0.2), 0 4px 12px rgba(15, 23, 42, 0.1); }
+
+.cq-timeline-item:nth-child(5) .cq-timeline-node-inner { background: #8b5cf6; }
+.cq-timeline-item:nth-child(5) .cq-timeline-node { box-shadow: 0 0 0 4px #ffffff, 0 0 0 7px rgba(139, 92, 246, 0.2), 0 4px 12px rgba(15, 23, 42, 0.1); }
+
+.cq-timeline-item:nth-child(6) .cq-timeline-node-inner { background: #ef4444; }
+.cq-timeline-item:nth-child(6) .cq-timeline-node { box-shadow: 0 0 0 4px #ffffff, 0 0 0 7px rgba(239, 68, 68, 0.2), 0 4px 12px rgba(15, 23, 42, 0.1); }
+
+/* Decorative accent ring - hide redundant floating circle so only the centered node sits on the track */
+.cq-timeline-accent-ring {
+  display: none !important;
+}
+
+/* ==========================================================================
+   3. PILL BADGE & CARD
+   ========================================================================== */
+.cq-timeline-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 14px;
+  background: #ffffff;
+  border: 1px solid #334155;
+  border-radius: 4px;
+  font-family: var(--cq-font-heading, sans-serif);
+  font-size: 11px;
+  font-weight: 700;
+  color: #0f172a;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.cq-timeline-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f59e0b;
+  display: inline-block;
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
+}
+
+.cq-timeline-dot.dot-mint {
+  background: #10b981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.25);
+}
+
+.cq-timeline-dot.dot-blue {
+  background: #0284c7;
+  box-shadow: 0 0 0 2px rgba(2, 132, 199, 0.25);
+}
+
+.cq-timeline-card {
+  background: #ffffff;
+  border: 1.5px solid #0f172a;
+  border-radius: 16px;
+  padding: clamp(20px, 3vw, 32px);
+  box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.06);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease;
+}
+
+.cq-timeline-card:hover {
+  transform: translateY(-4px) translateX(2px);
+  box-shadow: 0 20px 45px -10px rgba(15, 23, 42, 0.14);
+  border-color: var(--cq-primary-dark, #0284c7);
+}
+
+.cq-timeline-card-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: var(--cq-sp-16, 16px);
+}
+
+.cq-timeline-icon-box {
+  width: 58px;
+  height: 58px;
+  border-radius: 12px;
+  border: 1.5px solid #0f172a;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: #0f172a;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.cq-timeline-card:hover .cq-timeline-icon-box {
+  transform: scale(1.06) rotate(-2deg);
+  border-color: var(--cq-primary-dark, #0284c7);
+  color: var(--cq-primary-dark, #0284c7);
+}
+
+.cq-timeline-title {
+  font-family: var(--cq-font-heading, sans-serif);
+  font-size: clamp(1.2rem, 1.05rem + 0.5vw, 1.5rem);
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.25;
+  margin: 0 0 4px 0;
+}
+
+.cq-timeline-meta {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cq-timeline-card-desc {
+  font-size: var(--cq-fs-sm, 0.925rem);
+  color: #334155;
+  line-height: 1.7;
+  margin: 0 0 var(--cq-sp-16, 16px) 0;
+}
+
+.cq-timeline-tags-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding-top: var(--cq-sp-12, 12px);
+  border-top: 1px dashed #e2e8f0;
+}
+
+.cq-timeline-tag-item {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  background: #f1f5f9;
+  color: #475569;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ==========================================================================
+   4. ANIMATIONS & RESPONSIVE RULES
+   ========================================================================== */
+@keyframes cq-float-gentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(8deg);
+  }
+}
+
+@keyframes cq-node-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(15, 23, 42, 0.2);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(15, 23, 42, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(15, 23, 42, 0);
+  }
+}
+
+@media (max-width: 640px) {
+  .cq-timeline-wrap {
+    padding-left: 0;
+  }
+  .cq-timeline-track {
+    left: 18px;
+  }
+  .cq-timeline-item {
+    padding-left: 46px;
+  }
+  .cq-timeline-node {
+    left: 3px;
+    width: 32px;
+    height: 32px;
+  }
+  .cq-timeline-card {
+    padding: 20px 16px;
+  }
+  .cq-timeline-icon-box {
+    width: 46px;
+    height: 46px;
+    font-size: 1.4rem;
+  }
+}

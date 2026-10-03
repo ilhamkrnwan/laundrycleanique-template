@@ -8,8 +8,17 @@
  */
 
 get_header();
+
+// ── SEO Plugin Compatibility ────────────────────────────────────────────────
+// Plugin SEO (Yoast/RankMath/AIOSEO) memerlukan the_post() dari main loop
+// untuk menginject title, meta description, canonical, dan OG tags ke <head>.
+if (have_posts()) {
+    the_post();
+}
+// ────────────────────────────────────────────────────────────────────────────
+
 $wa_url = cleanique_get_whatsapp_url('general');
-$office_addr = get_theme_mod('cleanique_office_address', 'PT Indotech Berkah Abadi - Sleman, D.I. Yogyakarta, Indonesia');
+$office_addr = get_theme_mod('cleanique_office_address', 'Jalan Jongke Kidul Tengah No. 30, RT.01/RW.23, Jongke Tengah, Sendangadi, Kec. Mlati, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55285');
 $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
 ?>
 
@@ -24,7 +33,6 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
       <div class="cq-payno-hero-top">
         <div>
           <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-16); background: rgba(255, 255, 255, 0.9); border: 1px solid var(--sky-200);">
-            <i class="ri-building-line" style="color: var(--mint-cta); font-size: 15px;" aria-hidden="true"></i>
             Profil Perusahaan &bull; PT Indotech Berkah Abadi
           </div>
           <h1 class="cq-payno-heading">
@@ -54,9 +62,6 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
             <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill">
               <i class="ri-store-2-line" aria-hidden="true"></i> Paket Usaha Siap Buka
             </a>
-            <a href="<?php echo esc_url(home_url('/kontak/')); ?>" class="cq-btn cq-btn-accent cq-btn-pill">
-              <i class="ri-map-pin-line" aria-hidden="true"></i> Lokasi Kantor &amp; Showroom
-            </a>
           </div>
         </div>
       </div>
@@ -72,7 +77,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
         <!-- Floating Glass Card 1 (Top Left) -->
         <div class="cq-peluang-float-card float-left" style="top: 8%;">
           <div class="cq-peluang-float-icon" style="background: rgba(0, 119, 182, 0.12); color: var(--brand-deep);" aria-hidden="true">
-            <i class="ri-factory-fill"></i>
+            <i class="ri-flask-fill"></i>
           </div>
           <div>
             <div style="font-size: 13px; font-weight: 800; color: var(--ink);">Pabrik Chemical Sendiri</div>
@@ -145,7 +150,6 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
   <section class="cq-section" id="visi-misi">
     <div class="cq-container">
       <div class="cq-section-header">
-        <span class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12);">Arah &amp; Tujuan Kami</span>
         <h2 class="cq-section-title">Visi &amp; Misi PT Indotech Berkah Abadi</h2>
         <p class="cq-section-desc">
           Landasan komitmen kami untuk menghadirkan solusi rantai pasok dan teknologi laundry yang tangguh bagi wirausahawan binatu di seluruh Indonesia.
@@ -202,8 +206,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
   <section class="cq-section cq-section-alt" id="nilai-perusahaan">
     <div class="cq-container">
       <div class="cq-section-header">
-        <span class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12);">Nilai &amp; Komitmen</span>
-        <h2 class="cq-section-title">Mengapa Bermitra dengan Cleanique by Indotech?</h2>
+        <h2 class="cq-section-title">Mengapa Bermitra dengan <span class="cq-text-blue">Cleanique Laundry?</span></h2>
         <p class="cq-section-desc">
           Kami memegang teguh prinsip kemitraan yang jujur, saling menguntungkan, dan mengutamakan ketahanan bisnis jangka panjang mitra.
         </p>
@@ -211,35 +214,51 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
 
       <div class="cq-peluang-grid-4">
         <div class="cq-peluang-card">
-          <div class="cq-peluang-icon-wrap" aria-hidden="true"><i class="ri-hand-coin-line"></i></div>
+          <div class="cq-peluang-icon-wrap is-blue" aria-hidden="true"><i class="ri-hand-coin-line"></i></div>
           <h3 class="cq-peluang-card-title">Amanah &amp; Bebas Royalti</h3>
           <p class="cq-peluang-card-desc">
             Sistem kepemilikan 100% mandiri milik Anda. Tidak ada potongan bagi hasil omzet bulanan, iuran franchise berkala, atau ikatan yang membebani mitra.
           </p>
+          <div class="cq-peluang-card-meta">
+            <i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
+            <span>100% Hak Milik Mitra</span>
+          </div>
         </div>
 
         <div class="cq-peluang-card">
-          <div class="cq-peluang-icon-wrap" aria-hidden="true"><i class="ri-factory-line"></i></div>
+          <div class="cq-peluang-icon-wrap is-teal" aria-hidden="true"><i class="ri-flask-line"></i></div>
           <h3 class="cq-peluang-card-title">Pabrik &amp; Formulasi Sendiri</h3>
           <p class="cq-peluang-card-desc">
             Bukan perantara. Didukung langsung oleh pabrik chemical PT Indotech Berkah Abadi di Sleman, DIY sehingga suplai deterjen dan parfum selalu stabil dengan harga termurah.
           </p>
+          <div class="cq-peluang-card-meta">
+            <i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
+            <span>Suplai Langsung Pabrik Sleman</span>
+          </div>
         </div>
 
         <div class="cq-peluang-card">
-          <div class="cq-peluang-icon-wrap" aria-hidden="true"><i class="ri-code-box-line"></i></div>
+          <div class="cq-peluang-icon-wrap is-indigo" aria-hidden="true"><i class="ri-code-box-line"></i></div>
           <h3 class="cq-peluang-card-title">Teknologi POS In-House</h3>
           <p class="cq-peluang-card-desc">
             Aplikasi kasir laundry Cleanique dirancang langsung oleh tim pengembang kami, dilengkapi pengiriman nota otomatis WhatsApp 1 detik dan pelacakan live status.
           </p>
+          <div class="cq-peluang-card-meta">
+            <i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
+            <span>Nota WA Otomatis &amp; Real-time</span>
+          </div>
         </div>
 
         <div class="cq-peluang-card">
-          <div class="cq-peluang-icon-wrap" aria-hidden="true"><i class="ri-tools-line"></i></div>
+          <div class="cq-peluang-icon-wrap is-amber" aria-hidden="true"><i class="ri-tools-line"></i></div>
           <h3 class="cq-peluang-card-title">Teknisi &amp; Garansi Resmi</h3>
           <p class="cq-peluang-card-desc">
             Dukungan teknisi ahli berpengalaman untuk survei lokasi, instalasi pipa &amp; kelistrikan, garansi suku cadang mesin komersial, dan konsultasi operasional 24/7.
           </p>
+          <div class="cq-peluang-card-meta">
+            <i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
+            <span>Garansi Resmi &amp; Servis 24/7</span>
+          </div>
         </div>
       </div>
     </div>
@@ -257,7 +276,6 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
                loading="lazy">
         </div>
         <div class="cq-visual-split-content">
-          <span class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12);">Kepastian Hukum &amp; Legalitas</span>
           <h2 style="font-family: var(--cq-font-heading); font-size: clamp(1.8rem, 1.4rem + 1.5vw, 2.6rem); font-weight: 800; color: var(--cq-dark-navy); line-height: 1.2; margin-bottom: var(--cq-sp-16);">
             Badan Hukum Resmi, Aman &amp; Berkelanjutan
           </h2>
@@ -296,7 +314,6 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
   <section class="cq-section cq-section-alt" id="layanan-kami">
     <div class="cq-container">
       <div class="cq-section-header">
-        <span class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12);">2 Layanan Utama</span>
         <h2 class="cq-section-title">Pilih Solusi yang Sesuai dengan Kebutuhan Anda</h2>
         <p class="cq-section-desc">Mulai usaha laundry baru atau digitalisasikan operasional outlet yang sudah berjalan bersama Cleanique.</p>
       </div>
@@ -307,7 +324,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
           <div class="cq-portal-gateway-img-wrap">
             <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-outlet.jpg'); ?>" alt="Paket Usaha Laundry Siap Operasi" loading="lazy">
             <div class="cq-portal-gateway-tag is-primary">
-              <i class="ri-store-2-line" aria-hidden="true"></i> Peluang Usaha Turnkey &bull; 100% Milik Anda
+              Peluang Usaha Turnkey &bull; 100% Milik Anda
             </div>
           </div>
           <div class="cq-portal-gateway-body">
@@ -334,7 +351,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
           <div class="cq-portal-gateway-img-wrap">
             <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-pos-app.jpg'); ?>" alt="Aplikasi Kasir POS Laundry Cleanique" loading="lazy">
             <div class="cq-portal-gateway-tag is-accent">
-              <i class="ri-smartphone-line" aria-hidden="true"></i> Digitalisasi POS &bull; Free Trial 7 Hari
+              Digitalisasi POS &bull; Free Trial 7 Hari
             </div>
           </div>
           <div class="cq-portal-gateway-body">
@@ -364,9 +381,6 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
        ======================================================== -->
   <section class="cq-section cq-section-dark cq-banner-cta-section" id="kontak-cta">
     <div class="cq-container cq-section-header">
-      <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-16); background: rgba(255, 255, 255, 0.12); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.25);">
-        <i class="ri-customer-service-2-line" aria-hidden="true"></i> Pusat Informasi &amp; Kemitraan Resmi
-      </div>
       <h2 class="cq-banner-cta-title">
         Siap Membuka Usaha Laundry Mandiri Bersama Kami?
       </h2>

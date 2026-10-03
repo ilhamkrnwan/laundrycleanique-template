@@ -8,6 +8,15 @@
  */
 
 get_header();
+
+// ── SEO Plugin Compatibility ────────────────────────────────────────────────
+// Plugin SEO (Yoast/RankMath/AIOSEO) memerlukan the_post() dari main loop
+// untuk menginject title, meta description, canonical, dan OG tags ke <head>.
+if (have_posts()) {
+    the_post();
+}
+// ────────────────────────────────────────────────────────────────────────────
+
 $wa_url = cleanique_get_whatsapp_url('general');
 ?>
 
@@ -22,7 +31,6 @@ $wa_url = cleanique_get_whatsapp_url('general');
       <div class="cq-payno-hero-top">
         <div>
           <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-16); background: rgba(255, 255, 255, 0.9); border: 1px solid var(--sky-200);">
-            <i class="ri-briefcase-line" style="color: var(--mint-cta); font-size: 15px;" aria-hidden="true"></i>
             Ekosistem Solusi Terpadu &bull; PT Indotech Berkah Abadi
           </div>
           <h1 class="cq-payno-heading">
@@ -44,9 +52,6 @@ $wa_url = cleanique_get_whatsapp_url('general');
           <div class="cq-payno-hero-actions">
             <a href="#solusi-paket" class="cq-btn cq-btn-primary cq-btn-pill">
               <i class="ri-store-2-line" aria-hidden="true"></i> Solusi Paket Usaha
-            </a>
-            <a href="#solusi-pos" class="cq-btn cq-btn-accent cq-btn-pill">
-              <i class="ri-smartphone-line" aria-hidden="true"></i> Solusi Kasir Digital
             </a>
             <a href="<?php echo esc_url($wa_url); ?>" target="_blank" rel="noopener" class="cq-btn cq-btn-white-pill cq-btn-pill">
               <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Tim Ahli
@@ -103,7 +108,6 @@ $wa_url = cleanique_get_whatsapp_url('general');
                loading="lazy">
         </div>
         <div class="cq-visual-split-content">
-          <span class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12);">Solusi 01 — Kemitraan Siap Buka</span>
           <h2 style="font-family: var(--cq-font-heading); font-size: clamp(1.8rem, 1.4rem + 1.2vw, 2.5rem); font-weight: 800; color: var(--cq-dark-navy); line-height: 1.2; margin-bottom: var(--cq-sp-16);">
             Paket Usaha Laundry Lengkap (Turnkey Business)
           </h2>
@@ -144,9 +148,6 @@ $wa_url = cleanique_get_whatsapp_url('general');
                loading="lazy">
         </div>
         <div class="cq-visual-split-content">
-          <span class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12); background: rgba(16, 185, 129, 0.12); color: var(--mint-cta); border-color: rgba(16, 185, 129, 0.25);">
-            Solusi 02 — Digitalisasi &amp; Sistem POS
-          </span>
           <h2 style="font-family: var(--cq-font-heading); font-size: clamp(1.8rem, 1.4rem + 1.2vw, 2.5rem); font-weight: 800; color: var(--cq-dark-navy); line-height: 1.2; margin-bottom: var(--cq-sp-16);">
             Sistem Kasir Digital POS Laundry Modern (Cloud SaaS)
           </h2>
@@ -180,9 +181,6 @@ $wa_url = cleanique_get_whatsapp_url('general');
        ======================================================== -->
   <section class="cq-section cq-section-dark cq-banner-cta-section">
     <div class="cq-container cq-section-header">
-      <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-16); background: rgba(255, 255, 255, 0.12); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.25);">
-        <i class="ri-customer-service-2-line" aria-hidden="true"></i> Konsultasi Kemitraan &amp; Sistem
-      </div>
       <h2 class="cq-banner-cta-title">
         Bingung Menentukan Solusi yang Paling Tepat?
       </h2>
