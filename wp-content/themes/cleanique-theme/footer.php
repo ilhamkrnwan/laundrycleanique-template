@@ -187,7 +187,7 @@ $office_addr = get_theme_mod('cleanique_office_address', 'Jalan Jongke Kidul Ten
           <ul class="cq-corp-footer-menu">
             <li><a href="<?php echo esc_url(home_url('/kemitraan/')); ?>"><i class="ri-arrow-right-s-line"></i> Paket Kemitraan Turnkey</a></li>
             <li><a href="<?php echo esc_url(home_url('/pabrik-chemical/')); ?>"><i class="ri-arrow-right-s-line"></i> Pabrik Chemical Orchid Brand</a></li>
-            <li><a href="<?php echo esc_url(home_url('/aplikasi-laundry/')); ?>"><i class="ri-arrow-right-s-line"></i> Aplikasi Kasir POS (Trial 7 Hari)</a></li>
+            <li><a href="<?php echo esc_url(home_url('/aplikasi-laundry/')); ?>"><i class="ri-arrow-right-s-line"></i> Smart POS Laundry (Langganan)</a></li>
             <li><a href="<?php echo esc_url(home_url('/solusi-kami/')); ?>"><i class="ri-arrow-right-s-line"></i> Solusi Mesin Komersial</a></li>
             <li><a href="https://indotech.id" target="_blank" rel="noopener"><i class="ri-external-link-line"></i> Portal Indotech.id</a></li>
           </ul>

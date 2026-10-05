@@ -588,8 +588,284 @@
     text-align: left;
   }
 
-  .cq-kemitraan-specs-list--full {
-    grid-template-columns: 1fr;
+}
+
+/* ==========================================================================
+   8. DAFTAR MITRA AKTIF SHOWCASE (.cq-mitra-active-*)
+   ========================================================================== */
+.cq-mitra-active-section {
+  padding: clamp(60px, 8vw, 90px) 0;
+  background: #f8fafc;
+  position: relative;
+  overflow: hidden;
+}
+
+.cq-mitra-filter-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: clamp(24px, 4vw, 36px) auto clamp(32px, 5vw, 44px);
+  max-width: 900px;
+}
+
+.cq-mitra-filter-btn {
+  padding: 8px 18px;
+  border-radius: 9999px;
+  border: 1.5px solid #0f172a;
+  background: #ffffff;
+  color: #0f172a;
+  font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  outline: none;
+}
+
+.cq-mitra-filter-btn:hover,
+.cq-mitra-filter-btn.is-active {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15);
+}
+
+.cq-mitra-active-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(20px, 3vw, 28px);
+}
+
+@media (min-width: 680px) {
+  .cq-mitra-active-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
+
+@media (min-width: 1080px) {
+  .cq-mitra-active-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cq-mitra-active-card {
+  background: #ffffff;
+  border: 1.5px solid #0f172a;
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.cq-mitra-active-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 38px -10px rgba(15, 23, 42, 0.14);
+  border-color: var(--cq-primary, #0077b6);
+}
+
+.cq-mitra-active-img-wrap {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  background: #e2e8f0;
+}
+
+.cq-mitra-active-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.cq-mitra-active-card:hover .cq-mitra-active-img {
+  transform: scale(1.05);
+}
+
+.cq-mitra-active-badge-status {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(6px);
+  color: #ffffff;
+  font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  letter-spacing: 0.02em;
+}
+
+.cq-mitra-active-badge-status.is-flagship {
+  background: rgba(0, 119, 182, 0.9);
+}
+
+.cq-mitra-active-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cq-mitra-active-loc {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--cq-primary, #0077b6);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.cq-mitra-active-title {
+  font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.3;
+  margin: 0 0 6px 0;
+}
+
+.cq-mitra-active-owner {
+  font-size: 13px;
+  color: #475569;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.cq-mitra-active-specs-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+  color: #334155;
+}
+
+.cq-mitra-spec-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.cq-mitra-spec-row i {
+  color: var(--cq-primary, #0077b6);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.cq-mitra-active-quote {
+  font-size: 12.5px;
+  font-style: italic;
+  color: #475569;
+  line-height: 1.6;
+  border-left: 2.5px solid #0f172a;
+  padding-left: 10px;
+  margin: 0 0 16px 0;
+  background: #f1f5f9;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 8px;
+  border-radius: 0 6px 6px 0;
+}
+
+.cq-mitra-active-footer {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.cq-mitra-active-footer-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #059669;
+  font-weight: 700;
+}
+
+.cq-mitra-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: clamp(36px, 5vw, 54px);
+  background: #ffffff;
+  border: 1.5px solid #0f172a;
+  border-radius: 20px;
+  padding: clamp(24px, 4vw, 36px);
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.05);
+}
+
+@media (min-width: 900px) {
+  .cq-mitra-stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.cq-mitra-stat-item {
+  text-align: center;
+  padding: 8px;
+}
+
+.cq-mitra-stat-num {
+  font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(2rem, 1.8rem + 1vw, 2.8rem);
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.cq-mitra-stat-lbl {
+  font-size: 13px;
+  font-weight: 700;
+  color: #475569;
+  line-height: 1.4;
+}
+
+.cq-mitra-cta-box {
+  margin-top: clamp(28px, 4vw, 40px);
+  background: #0f172a;
+  color: #ffffff;
+  border-radius: 20px;
+  padding: clamp(28px, 4vw, 44px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 18px;
+}
+
+.cq-mitra-cta-title {
+  font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(1.4rem, 1.2rem + 0.8vw, 1.9rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.cq-mitra-cta-desc {
+  font-size: 14px;
+  color: #94a3b8;
+  max-width: 620px;
+  line-height: 1.6;
+  margin: 0;
+}
+
 

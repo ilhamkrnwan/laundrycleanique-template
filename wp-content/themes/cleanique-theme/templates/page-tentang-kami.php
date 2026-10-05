@@ -265,7 +265,222 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
   </section>
 
   <!-- ========================================================
-       5. LEGALITAS BADAN HUKUM & KANTOR PUSAT SLEMAN
+       5. STANDARDISASI ALUR PENDAMPINGAN & SOP KEMITRAAN (Vertical Timeline)
+       ======================================================== -->
+  <section class="cq-timeline-section" id="alur-pendampingan">
+    <div class="cq-timeline-watermark" aria-hidden="true">SOP ROADMAP</div>
+    
+    <div class="cq-container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto; position: relative; z-index: 2;">
+        <span class="cq-badge-clean" style="margin-bottom: var(--cq-sp-12);">Metodologi &bull; Standard Operating Procedure</span>
+        <h2 style="font-family: var(--cq-font-heading); font-size: clamp(1.8rem, 1.5rem + 1vw, 2.5rem); font-weight: 800; color: #0f172a; margin-bottom: var(--cq-sp-12); line-height: 1.2;">
+          Alur Pendampingan Kemitraan Menuju Outlet Mandiri
+        </h2>
+        <p style="font-size: var(--cq-fs-sm); color: #475569; line-height: 1.65; margin: 0;">
+          Anda tidak memulai bisnis sendirian. Tim insinyur mesin, ahli kimia deterjen, dan pelatih operasional PT Indotech Berkah Abadi mengawal setiap tahap secara terukur.
+        </p>
+      </div>
+
+      <div class="cq-timeline-wrap">
+        <div class="cq-timeline-track" aria-hidden="true"></div>
+
+        <!-- Langkah 1: Konsultasi -->
+        <div class="cq-timeline-item">
+          <div class="cq-timeline-node" aria-hidden="true">
+            <div class="cq-timeline-node-inner"></div>
+          </div>
+          <div class="cq-timeline-badge-pill">
+            <span class="cq-timeline-dot"></span> Tahap 01 &bull; Konsultasi Bisnis
+          </div>
+          <div class="cq-timeline-card">
+            <div class="cq-timeline-card-header">
+              <div class="cq-timeline-icon-box">
+                <i class="ri-chat-smile-3-line" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="cq-timeline-title">Konsultasi Rencana Bisnis &amp; Rekomendasi Paket</h3>
+                <div class="cq-timeline-meta">
+                  <i class="ri-time-line" aria-hidden="true"></i> Estimasi Waktu: 1 – 2 Hari
+                </div>
+              </div>
+            </div>
+            <p class="cq-timeline-card-desc">
+              Diskusi menyeluruh bersama konsultan bisnis mengenai rencana usaha, analisis modal investasi, karakteristik target pelanggan di sekitar calon ruko, serta pemilihan paket mesin yang paling menguntungkan.
+            </p>
+            <div class="cq-timeline-tags-row">
+              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Analisis Anggaran Investasi</span>
+              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Karakteristik Wilayah Pasar</span>
+              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Rekomendasi Paket Mesin</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Langkah 2: Survei -->
+        <div class="cq-timeline-item">
+          <div class="cq-timeline-node" aria-hidden="true">
+            <div class="cq-timeline-node-inner"></div>
+          </div>
+          <div class="cq-timeline-badge-pill">
+            <span class="cq-timeline-dot dot-mint"></span> Tahap 02 &bull; Due Diligence
+          </div>
+          <div class="cq-timeline-card">
+            <div class="cq-timeline-card-header">
+              <div class="cq-timeline-icon-box" style="border-color: #059669; color: #059669;">
+                <i class="ri-map-pin-user-line" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="cq-timeline-title">Survei Lokasi, Kelistrikan &amp; Uji Kualitas Air</h3>
+                <div class="cq-timeline-meta">
+                  <i class="ri-time-line" aria-hidden="true"></i> Estimasi Waktu: 2 – 4 Hari Kerja
+                </div>
+              </div>
+            </div>
+            <p class="cq-timeline-card-desc">
+              Audit teknis lokasi ruko/kios: uji kelayakan tekanan debit air, kadar mineral TDS air tanah/PAM, daya listrik PLN (kVA), dan jalur pembuangan ventilasi dryer gas agar ramah lingkungan dan memenuhi standar keselamatan.
+            </p>
+            <div class="cq-timeline-tags-row">
+              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Audit Kelistrikan PLN</span>
+              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Uji TDS &amp; Debit Air</span>
+              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Zonasi Ruko &amp; Parkir</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Langkah 3: Perancangan -->
+        <div class="cq-timeline-item">
+          <div class="cq-timeline-node" aria-hidden="true">
+            <div class="cq-timeline-node-inner"></div>
+          </div>
+          <div class="cq-timeline-badge-pill">
+            <span class="cq-timeline-dot dot-blue"></span> Tahap 03 &bull; Engineering Layout
+          </div>
+          <div class="cq-timeline-card">
+            <div class="cq-timeline-card-header">
+              <div class="cq-timeline-icon-box" style="border-color: #0284c7; color: #0284c7;">
+                <i class="ri-layout-masonry-line" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="cq-timeline-title">Perancangan Blueprint Tata Letak Higienis &amp; Plumbing</h3>
+                <div class="cq-timeline-meta">
+                  <i class="ri-time-line" aria-hidden="true"></i> Estimasi Waktu: 3 – 5 Hari Kerja
+                </div>
+              </div>
+            </div>
+            <p class="cq-timeline-card-desc">
+              Pembuatan denah kerja tata letak outlet 2D/3D (pemisahan alur kerja cucian kotor dan bersih higienis), skema plumbing pipa PVC tebal, manifold gas LPG otomatis dengan safety valve, dan penataan area setrika uap ergonomis.
+            </p>
+            <div class="cq-timeline-tags-row">
+              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Desain Alur Kerja Higienis</span>
+              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Plumbing Anti-Bocor Terpadu</span>
+              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Manifold Gas Standar Industri</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Langkah 4: Setup -->
+        <div class="cq-timeline-item">
+          <div class="cq-timeline-node" aria-hidden="true">
+            <div class="cq-timeline-node-inner"></div>
+          </div>
+          <div class="cq-timeline-badge-pill">
+            <span class="cq-timeline-dot" style="background: #0284c7;"></span> Tahap 04 &bull; Machinery Setup
+          </div>
+          <div class="cq-timeline-card">
+            <div class="cq-timeline-card-header">
+              <div class="cq-timeline-icon-box" style="border-color: #0284c7; color: #0284c7;">
+                <i class="ri-truck-line" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="cq-timeline-title">Pengiriman Mesin, Instalasi &amp; Commissioning Test</h3>
+                <div class="cq-timeline-meta">
+                  <i class="ri-time-line" aria-hidden="true"></i> Estimasi Waktu: 5 – 7 Hari Kerja
+                </div>
+              </div>
+            </div>
+            <p class="cq-timeline-card-desc">
+              Ekspedisi mesin cuci dan pengering komersial ke lokasi mitra. Teknisi resmi PT Indotech melakukan perakitan unit, kalibrasi putaran RPM, pengujian suhu panas dryer, serta uji kebocoran gas menyeluruh sebelum diserahterimakan.
+            </p>
+            <div class="cq-timeline-tags-row">
+              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Ekspedisi Berasuransi Penuh</span>
+              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Kalibrasi Mesin &amp; Boiler Uap</span>
+              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Sertifikat Uji Laik Operasi</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Langkah 5: Pelatihan -->
+        <div class="cq-timeline-item">
+          <div class="cq-timeline-node" aria-hidden="true">
+            <div class="cq-timeline-node-inner"></div>
+          </div>
+          <div class="cq-timeline-badge-pill">
+            <span class="cq-timeline-dot" style="background: #8b5cf6;"></span> Tahap 05 &bull; Training &amp; SOP
+          </div>
+          <div class="cq-timeline-card">
+            <div class="cq-timeline-card-header">
+              <div class="cq-timeline-icon-box" style="border-color: #7c3aed; color: #7c3aed;">
+                <i class="ri-user-star-line" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="cq-timeline-title">Pelatihan Karyawan, SOP Pencucian &amp; Setup Kasir POS</h3>
+                <div class="cq-timeline-meta">
+                  <i class="ri-time-line" aria-hidden="true"></i> Estimasi Waktu: 2 – 3 Hari Onsite
+                </div>
+              </div>
+            </div>
+            <p class="cq-timeline-card-desc">
+              Pelatihan intensif bagi operator dan owner: teknik identifikasi serat kain, takaran chemical presisi Orchid Brand, teknik spotting noda membandel (darah, minyak, jamur), teknik setrika uap cepat, serta pengoperasian sistem POS Cleanique.
+            </p>
+            <div class="cq-timeline-tags-row">
+              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Modul Kimia &amp; Penghilang Noda</span>
+              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> SOP Pelayanan Kasir Ramah</span>
+              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Dashboard Keuangan di Smartphone Owner</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Langkah 6: Grand Opening -->
+        <div class="cq-timeline-item">
+          <div class="cq-timeline-node" aria-hidden="true">
+            <div class="cq-timeline-node-inner"></div>
+          </div>
+          <div class="cq-timeline-badge-pill">
+            <span class="cq-timeline-dot" style="background: #10b981;"></span> Tahap 06 &bull; Grand Opening
+          </div>
+          <div class="cq-timeline-card">
+            <div class="cq-timeline-card-header">
+              <div class="cq-timeline-icon-box" style="border-color: #059669; color: #059669;">
+                <i class="ri-rocket-2-line" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="cq-timeline-title">Grand Opening &amp; Pendampingan Pemasaran Berkelanjutan</h3>
+                <div class="cq-timeline-meta">
+                  <i class="ri-time-line" aria-hidden="true"></i> Pasca Buka: Pendampingan Seumur Hidup
+                </div>
+              </div>
+            </div>
+            <p class="cq-timeline-card-desc">
+              Peluncuran promosi opening (diskon kiloan / promo cuci gratis perdana), setup titik Google Bisnis Profil (SEO lokal), serta pemantauan operasional hingga outlet stabil menghasilkan laba bersih mandiri.
+            </p>
+            <div class="cq-timeline-tags-row">
+              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Desain Spanduk &amp; Flyer Promo</span>
+              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Setup Google Profil Bisnis (SEO Lokal)</span>
+              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Konsultasi Tim Helpdesk Seumur Hidup</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cq-timeline-cta-row">
+        <a href="<?php echo esc_url(cleanique_get_whatsapp_url('kemitraan')); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
+          <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Program Kemitraan <i class="ri-arrow-right-line" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       6. LEGALITAS BADAN HUKUM & KANTOR PUSAT SLEMAN
        ======================================================== -->
   <section class="cq-section" id="legalitas">
     <div class="cq-container">

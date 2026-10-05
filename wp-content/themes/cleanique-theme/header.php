@@ -57,7 +57,7 @@ $is_landing_page = $is_paket_usaha || $is_aplikasi_laundry;
           <li role="none"><a href="#solusi" class="cq-nav-link" role="menuitem">Solusi</a></li>
           <li role="none"><a href="#fasilitas" class="cq-nav-link" role="menuitem">Fasilitas</a></li>
           <li role="none"><a href="#pilihan-paket" class="cq-nav-link" role="menuitem">Paket</a></li>
-          <li role="none"><a href="#kalkulator" class="cq-nav-link" role="menuitem">Simulasi ROI</a></li>
+          <li role="none"><a href="#mitra-sukses" class="cq-nav-link" role="menuitem">Mitra Sukses</a></li>
           <li role="none"><a href="#faq" class="cq-nav-link" role="menuitem">FAQ</a></li>
         </ul>
         <div class="cq-lp-header-actions">

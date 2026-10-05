@@ -192,182 +192,323 @@ $headline         = get_option('cleanique_kemitraan_headline', 'Peluang Bisnis L
   </section>
 
   <!-- ========================================================
-       3. ROADMAP SOP PELATIHAN & AKREDITASI (Vertical Timeline Component)
+       3. DAFTAR MITRA AKTIF CLEANIQUE LAUNDRY (Jaringan Outlet Mandiri)
        ======================================================== -->
-  <section class="cq-timeline-section" id="alur-kemitraan">
-    <div class="cq-timeline-watermark" aria-hidden="true">SOP ROADMAP</div>
-    
+  <section class="cq-mitra-active-section" id="mitra-aktif">
     <div class="cq-container">
-      <div style="text-align: center; max-width: 680px; margin: 0 auto; position: relative; z-index: 2;">
-        <h2 style="font-family: var(--cq-font-heading); font-size: clamp(1.8rem, 1.5rem + 1vw, 2.5rem); font-weight: 800; color: #0f172a; margin-bottom: var(--cq-sp-12);">
-          5 Tahap Pendampingan Menuju Outlet Sukses
+      <div style="text-align: center; max-width: 760px; margin: 0 auto;">
+        <span class="cq-badge-clean" style="margin-bottom: var(--cq-sp-12);">Jaringan Outlet Nasional &bull; 300+ Mitra Aktif</span>
+        <h2 style="font-family: var(--cq-font-heading); font-size: clamp(1.8rem, 1.5rem + 1vw, 2.5rem); font-weight: 800; color: #0f172a; margin-bottom: var(--cq-sp-12); line-height: 1.2;">
+          Daftar Mitra Aktif Cleanique Laundry di Berbagai Kota
         </h2>
         <p style="font-size: var(--cq-fs-sm); color: #475569; line-height: 1.65; margin: 0;">
-          Anda tidak dilepas sendiri. Tim insinyur mesin, ahli kimia, dan pelatih operasional PT Indotech mengawal setiap langkah secara sistematis.
+          Bukti nyata keberhasilan para wirausahawan binatu yang telah mengoperasikan outlet laundry mandiri bersama mesin komersial, formula chemical pabrik Orchid Brand, dan sistem POS resmi PT Indotech Berkah Abadi.
         </p>
       </div>
 
-      <div class="cq-timeline-wrap">
-        <div class="cq-timeline-track" aria-hidden="true"></div>
+      <!-- City Filter Bar -->
+      <div class="cq-mitra-filter-bar">
+        <button type="button" class="cq-mitra-filter-btn is-active" data-filter="all">Semua Kota (300+)</button>
+        <button type="button" class="cq-mitra-filter-btn" data-filter="diy">D.I. Yogyakarta</button>
+        <button type="button" class="cq-mitra-filter-btn" data-filter="solo">Surakarta (Solo)</button>
+        <button type="button" class="cq-mitra-filter-btn" data-filter="semarang">Semarang</button>
+        <button type="button" class="cq-mitra-filter-btn" data-filter="jateng">Klaten &amp; Jateng</button>
+      </div>
 
-        <!-- Milestone 1 -->
-        <div class="cq-timeline-item">
-          <div class="cq-timeline-node" aria-hidden="true">
-            <div class="cq-timeline-node-inner"></div>
-            <div class="cq-timeline-accent-ring"></div>
+      <!-- Active Partners Grid -->
+      <div class="cq-mitra-active-grid" id="cq-mitra-grid">
+        <!-- Mitra 1: Sleman Minomartani -->
+        <div class="cq-mitra-active-card" data-city="diy">
+          <div class="cq-mitra-active-img-wrap">
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/mitra-outlet-sleman.jpg'); ?>" 
+                 alt="Cleanique Express Minomartani Sleman Yogyakarta" 
+                 class="cq-mitra-active-img"
+                 loading="lazy">
+            <span class="cq-mitra-active-badge-status">Aktif Beroperasi &bull; Sejak 2022</span>
           </div>
-          <div class="cq-timeline-badge-pill">
-            <span class="cq-timeline-dot"></span> Tahap 01 &bull; Due Diligence
-          </div>
-          <div class="cq-timeline-card">
-            <div class="cq-timeline-card-header">
-              <div class="cq-timeline-icon-box">
-                <i class="ri-map-pin-user-line" aria-hidden="true"></i>
+          <div class="cq-mitra-active-body">
+            <div class="cq-mitra-active-loc">
+              <i class="ri-map-pin-2-fill" aria-hidden="true"></i> Minomartani, Sleman, DIY
+            </div>
+            <h3 class="cq-mitra-active-title">Cleanique Express Minomartani</h3>
+            <div class="cq-mitra-active-owner">
+              Owner: <strong>Bpk. Hendro &amp; Ibu Siska</strong> &bull; Paket Komersial Pro Ruko
+            </div>
+            <div class="cq-mitra-active-specs-box">
+              <div class="cq-mitra-spec-row">
+                <i class="ri-tools-fill" aria-hidden="true"></i>
+                <span><strong>Setup:</strong> 2x Washer Front Load + 2x Dryer Gas + Boiler Uap 15L</span>
               </div>
-              <div>
-                <h3 class="cq-timeline-title">Survei Lokasi &amp; Kelayakan Infrastruktur</h3>
-                <div class="cq-timeline-meta">
-                  <i class="ri-time-line" aria-hidden="true"></i> Estimasi Waktu: 2 – 4 Hari Kerja
-                </div>
+              <div class="cq-mitra-spec-row">
+                <i class="ri-scales-3-line" aria-hidden="true"></i>
+                <span><strong>Kapasitas:</strong> 120 – 160 Kg / Hari (Area Kos &amp; Perumahan)</span>
+              </div>
+              <div class="cq-mitra-spec-row">
+                <i class="ri-smartphone-line" aria-hidden="true"></i>
+                <span><strong>Sistem:</strong> Cleanique POS Cloud + WhatsApp Nota Otomatis</span>
               </div>
             </div>
-            <p class="cq-timeline-card-desc">
-              Analisis zonasi calon lokasi ruko/kios, densitas perumahan &amp; mahasiswa, uji kelayakan tekanan debit air, daya listrik PLN (kVA), dan ventilasi buangan dryer gas agar aman dan memenuhi regulasi lingkungan.
+            <p class="cq-mitra-active-quote">
+              "BEP kami tercapai dalam 7 bulan. Sangat terbantu supply deterjen Orchid Brand dari pabrik Sleman yang hemat biaya dan wanginya disukai pelanggan."
             </p>
-            <div class="cq-timeline-tags-row">
-              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Analisis Demografi Pasar</span>
-              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Uji Kualitas &amp; Debit Air</span>
-              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Audit Kelistrikan &amp; Jalur Gas</span>
+            <div class="cq-mitra-active-footer">
+              <span class="cq-mitra-active-footer-tag">
+                <i class="ri-checkbox-circle-fill" aria-hidden="true"></i> 100% Bebas Royalti
+              </span>
+              <span>Google Maps Terverifikasi</span>
             </div>
           </div>
         </div>
 
-        <!-- Milestone 2 -->
-        <div class="cq-timeline-item">
-          <div class="cq-timeline-node" aria-hidden="true">
-            <div class="cq-timeline-node-inner"></div>
-            <div class="cq-timeline-accent-ring" style="border-color: #10b981;"></div>
+        <!-- Mitra 2: Solo Jebres -->
+        <div class="cq-mitra-active-card" data-city="solo">
+          <div class="cq-mitra-active-img-wrap">
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/mitra-outlet-solo.jpg'); ?>" 
+                 alt="Cleanique Laundry Jebres Surakarta Solo" 
+                 class="cq-mitra-active-img"
+                 loading="lazy">
+            <span class="cq-mitra-active-badge-status">Aktif Beroperasi &bull; Sejak 2023</span>
           </div>
-          <div class="cq-timeline-badge-pill">
-            <span class="cq-timeline-dot dot-mint"></span> Tahap 02 &bull; Engineering Layout
-          </div>
-          <div class="cq-timeline-card">
-            <div class="cq-timeline-card-header">
-              <div class="cq-timeline-icon-box" style="border-color: #059669; color: #059669;">
-                <i class="ri-layout-masonry-line" aria-hidden="true"></i>
+          <div class="cq-mitra-active-body">
+            <div class="cq-mitra-active-loc">
+              <i class="ri-map-pin-2-fill" aria-hidden="true"></i> Jebres, Solo, Jawa Tengah
+            </div>
+            <h3 class="cq-mitra-active-title">Cleanique Express Kampus UNS</h3>
+            <div class="cq-mitra-active-owner">
+              Owner: <strong>Mas Dimas Pratama</strong> &bull; Paket Double Stack Express
+            </div>
+            <div class="cq-mitra-active-specs-box">
+              <div class="cq-mitra-spec-row">
+                <i class="ri-tools-fill" aria-hidden="true"></i>
+                <span><strong>Setup:</strong> 2x Washer Front Load + 2x Dryer Gas Heavy Duty</span>
               </div>
-              <div>
-                <h3 class="cq-timeline-title">Perancangan Blueprint Tata Letak &amp; Plumbing</h3>
-                <div class="cq-timeline-meta">
-                  <i class="ri-time-line" aria-hidden="true"></i> Estimasi Waktu: 3 – 5 Hari Kerja
-                </div>
+              <div class="cq-mitra-spec-row">
+                <i class="ri-scales-3-line" aria-hidden="true"></i>
+                <span><strong>Kapasitas:</strong> 150 – 180 Kg / Hari (Sentra Mahasiswa UNS)</span>
+              </div>
+              <div class="cq-mitra-spec-row">
+                <i class="ri-smartphone-line" aria-hidden="true"></i>
+                <span><strong>Sistem:</strong> Cleanique POS Cloud + Multi Kasir Shift</span>
               </div>
             </div>
-            <p class="cq-timeline-card-desc">
-              Penyusunan gambar kerja 2D/3D tata ruang outlet untuk alur kerja cucian kotor-ke-bersih (anti-kontaminasi silang), instalasi pipa PVC tebal, manifold gas otomatis, exhaust ducting, dan penempatan meja setrika uap ergonomis.
+            <p class="cq-mitra-active-quote">
+              "Bisa memantau 100% omzet dari HP sambil saya tetap bekerja kantoran. Sistem mandiri tanpa potongan royalti benar-benar memaksimalkan profit."
             </p>
-            <div class="cq-timeline-tags-row">
-              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Desain Alur Kerja Higienis</span>
-              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Plumbing Anti-Bocor Terpadu</span>
-              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Safety Valve Gas Standar Industri</span>
+            <div class="cq-mitra-active-footer">
+              <span class="cq-mitra-active-footer-tag">
+                <i class="ri-checkbox-circle-fill" aria-hidden="true"></i> 100% Bebas Royalti
+              </span>
+              <span>Google Maps Terverifikasi</span>
             </div>
           </div>
         </div>
 
-        <!-- Milestone 3 -->
-        <div class="cq-timeline-item">
-          <div class="cq-timeline-node" aria-hidden="true">
-            <div class="cq-timeline-node-inner"></div>
-            <div class="cq-timeline-accent-ring" style="border-color: #0284c7;"></div>
+        <!-- Mitra 3: Semarang Tembalang -->
+        <div class="cq-mitra-active-card" data-city="semarang">
+          <div class="cq-mitra-active-img-wrap">
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/mitra-outlet-semarang.jpg'); ?>" 
+                 alt="Cleanique Prima Tembalang Semarang" 
+                 class="cq-mitra-active-img"
+                 loading="lazy">
+            <span class="cq-mitra-active-badge-status">Aktif Beroperasi &bull; Sejak 2021</span>
           </div>
-          <div class="cq-timeline-badge-pill">
-            <span class="cq-timeline-dot dot-blue"></span> Tahap 03 &bull; Machinery Setup
-          </div>
-          <div class="cq-timeline-card">
-            <div class="cq-timeline-card-header">
-              <div class="cq-timeline-icon-box" style="border-color: #0284c7; color: #0284c7;">
-                <i class="ri-truck-line" aria-hidden="true"></i>
+          <div class="cq-mitra-active-body">
+            <div class="cq-mitra-active-loc">
+              <i class="ri-map-pin-2-fill" aria-hidden="true"></i> Tembalang, Semarang, Jawa Tengah
+            </div>
+            <h3 class="cq-mitra-active-title">Cleanique Prima Tembalang</h3>
+            <div class="cq-mitra-active-owner">
+              Owner: <strong>Ibu Hj. Nurul Hidayati</strong> &bull; Paket Industrial Express
+            </div>
+            <div class="cq-mitra-active-specs-box">
+              <div class="cq-mitra-spec-row">
+                <i class="ri-tools-fill" aria-hidden="true"></i>
+                <span><strong>Setup:</strong> 3x Washer Front Load + 3x Dryer Gas + Meja Vacuum</span>
               </div>
-              <div>
-                <h3 class="cq-timeline-title">Pengiriman Mesin, Instalasi &amp; Commisioning Test</h3>
-                <div class="cq-timeline-meta">
-                  <i class="ri-time-line" aria-hidden="true"></i> Estimasi Waktu: 5 – 7 Hari Kerja
-                </div>
+              <div class="cq-mitra-spec-row">
+                <i class="ri-scales-3-line" aria-hidden="true"></i>
+                <span><strong>Kapasitas:</strong> 220 – 260 Kg / Hari (Mahasiswa Undip &amp; Warga)</span>
+              </div>
+              <div class="cq-mitra-spec-row">
+                <i class="ri-smartphone-line" aria-hidden="true"></i>
+                <span><strong>Sistem:</strong> Cleanique POS Cloud + Cetak Struk Bluetooth</span>
               </div>
             </div>
-            <p class="cq-timeline-card-desc">
-              Ekspedisi mesin cuci &amp; dryer komersial ke lokasi mitra. Teknisi berpengalaman PT Indotech melakukan perakitan unit, kalibrasi putaran RPM, pengujian suhu panas dryer, serta uji kebocoran gas menyeluruh.
+            <p class="cq-mitra-active-quote">
+              "Mesin stack washer &amp; dryer Cleanique sangat bandel bekerja maraton dari jam 7 pagi sampai 9 malam. Saat ini sedang persiapan buka cabang kedua."
             </p>
-            <div class="cq-timeline-tags-row">
-              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Ekspedisi Berasuransi Penuh</span>
-              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Kalibrasi Mesin &amp; Boiler Uap</span>
-              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Sertifikat Uji Laik Operasi</span>
+            <div class="cq-mitra-active-footer">
+              <span class="cq-mitra-active-footer-tag">
+                <i class="ri-checkbox-circle-fill" aria-hidden="true"></i> 100% Bebas Royalti
+              </span>
+              <span>Google Maps Terverifikasi</span>
             </div>
           </div>
         </div>
 
-        <!-- Milestone 4 -->
-        <div class="cq-timeline-item">
-          <div class="cq-timeline-node" aria-hidden="true">
-            <div class="cq-timeline-node-inner"></div>
-            <div class="cq-timeline-accent-ring" style="border-color: #8b5cf6;"></div>
+        <!-- Mitra 4: Sleman Utara (Palagan) -->
+        <div class="cq-mitra-active-card" data-city="diy">
+          <div class="cq-mitra-active-img-wrap">
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/mitra-outlet-sleman.jpg'); ?>" 
+                 alt="Cleanique Laundry Ruko Palagan Sleman" 
+                 class="cq-mitra-active-img"
+                 loading="lazy">
+            <span class="cq-mitra-active-badge-status">Aktif Beroperasi &bull; Cabang Baru 2024</span>
           </div>
-          <div class="cq-timeline-badge-pill">
-            <span class="cq-timeline-dot" style="background: #8b5cf6;"></span> Tahap 04 &bull; Training &amp; SOP
-          </div>
-          <div class="cq-timeline-card">
-            <div class="cq-timeline-card-header">
-              <div class="cq-timeline-icon-box" style="border-color: #7c3aed; color: #7c3aed;">
-                <i class="ri-user-star-line" aria-hidden="true"></i>
+          <div class="cq-mitra-active-body">
+            <div class="cq-mitra-active-loc">
+              <i class="ri-map-pin-2-fill" aria-hidden="true"></i> Jl. Palagan, Sleman, DIY
+            </div>
+            <h3 class="cq-mitra-active-title">Cleanique Laundry Ruko Palagan</h3>
+            <div class="cq-mitra-active-owner">
+              Owner: <strong>Bpk. R. Wicaksono</strong> &bull; Paket Komersial Pro + Bed Cover
+            </div>
+            <div class="cq-mitra-active-specs-box">
+              <div class="cq-mitra-spec-row">
+                <i class="ri-tools-fill" aria-hidden="true"></i>
+                <span><strong>Setup:</strong> 2x Washer Front Load 15 Kg + 2x Dryer Gas + Boiler 15L</span>
               </div>
-              <div>
-                <h3 class="cq-timeline-title">Pelatihan Karyawan &amp; Implementasi POS Kasir</h3>
-                <div class="cq-timeline-meta">
-                  <i class="ri-time-line" aria-hidden="true"></i> Estimasi Waktu: 2 – 3 Hari Onsite
-                </div>
+              <div class="cq-mitra-spec-row">
+                <i class="ri-scales-3-line" aria-hidden="true"></i>
+                <span><strong>Kapasitas:</strong> 130 – 170 Kg / Hari (Cluster Perumahan Elit)</span>
+              </div>
+              <div class="cq-mitra-spec-row">
+                <i class="ri-smartphone-line" aria-hidden="true"></i>
+                <span><strong>Sistem:</strong> Cleanique POS Cloud + Live Tracking Pelanggan</span>
               </div>
             </div>
-            <p class="cq-timeline-card-desc">
-              Pelatihan intensif bagi staf kasir dan operator: teknik identifikasi jenis kain, takaran bahan kimia anti-luntur, teknik setrika uap cepat, serta pengoperasian aplikasi POS Cleanique (cetak struk Bluetooth &amp; notifikasi WhatsApp pelanggan).
+            <p class="cq-mitra-active-quote">
+              "Dukungan teknisi Sleman luar biasa cepat. Instalasi pipa dan gas rapi standar industri, pelanggan puas dengan aroma parfum tahan lama."
             </p>
-            <div class="cq-timeline-tags-row">
-              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Modul Kimia &amp; Penghilang Noda</span>
-              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> SOP Pelayanan Kasir Ramah</span>
-              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Dashboard Keuangan di Smartphone Owner</span>
+            <div class="cq-mitra-active-footer">
+              <span class="cq-mitra-active-footer-tag">
+                <i class="ri-checkbox-circle-fill" aria-hidden="true"></i> 100% Bebas Royalti
+              </span>
+              <span>Google Maps Terverifikasi</span>
             </div>
           </div>
         </div>
 
-        <!-- Milestone 5 -->
-        <div class="cq-timeline-item">
-          <div class="cq-timeline-node" aria-hidden="true">
-            <div class="cq-timeline-node-inner"></div>
-            <div class="cq-timeline-accent-ring" style="border-color: #ef4444;"></div>
+        <!-- Mitra 5: Klaten Kota -->
+        <div class="cq-mitra-active-card" data-city="jateng">
+          <div class="cq-mitra-active-img-wrap">
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/mitra-outlet-solo.jpg'); ?>" 
+                 alt="Cleanique Mandiri Klaten Kota" 
+                 class="cq-mitra-active-img"
+                 loading="lazy">
+            <span class="cq-mitra-active-badge-status">Aktif Beroperasi &bull; Sejak 2023</span>
           </div>
-          <div class="cq-timeline-badge-pill">
-            <span class="cq-timeline-dot" style="background: #ef4444;"></span> Tahap 05 &bull; Grand Opening
-          </div>
-          <div class="cq-timeline-card">
-            <div class="cq-timeline-card-header">
-              <div class="cq-timeline-icon-box" style="border-color: #dc2626; color: #dc2626;">
-                <i class="ri-rocket-2-line" aria-hidden="true"></i>
+          <div class="cq-mitra-active-body">
+            <div class="cq-mitra-active-loc">
+              <i class="ri-map-pin-2-fill" aria-hidden="true"></i> Klaten Tengah, Klaten, Jateng
+            </div>
+            <h3 class="cq-mitra-active-title">Cleanique Mandiri Klaten Kota</h3>
+            <div class="cq-mitra-active-owner">
+              Owner: <strong>Ibu Ratna Kumalasari</strong> &bull; Paket Starter Ekspansi
+            </div>
+            <div class="cq-mitra-active-specs-box">
+              <div class="cq-mitra-spec-row">
+                <i class="ri-tools-fill" aria-hidden="true"></i>
+                <span><strong>Setup:</strong> 2x Front Load Washer + 2x Dryer Konversi Gas LPG</span>
               </div>
-              <div>
-                <h3 class="cq-timeline-title">Grand Opening &amp; Pendampingan Pemasaran Lokal</h3>
-                <div class="cq-timeline-meta">
-                  <i class="ri-time-line" aria-hidden="true"></i> Pendampingan Pasca Buka: Berkelanjutan
-                </div>
+              <div class="cq-mitra-spec-row">
+                <i class="ri-scales-3-line" aria-hidden="true"></i>
+                <span><strong>Kapasitas:</strong> 110 – 140 Kg / Hari (Area Pemukiman &amp; Kantor)</span>
+              </div>
+              <div class="cq-mitra-spec-row">
+                <i class="ri-smartphone-line" aria-hidden="true"></i>
+                <span><strong>Sistem:</strong> Cleanique POS Cloud + Pengingat Cucian Siap Ambil</span>
               </div>
             </div>
-            <p class="cq-timeline-card-desc">
-              Peluncuran promosi opening (diskon kiloan / cuci gratis perdana), optimasi Google Maps bisnis lokal sekitar ruko, dan pemantauan performa harian hingga outlet stabil menghasilkan laba bersih.
+            <p class="cq-mitra-active-quote">
+              "Mulai dari paket starter pemula, sekarang sudah mampu mempekerjakan 3 karyawan. Senang karena tidak pernah dipotong fee royalti sepeserpun."
             </p>
-            <div class="cq-timeline-tags-row">
-              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Desain Spanduk &amp; Flyer Promo</span>
-              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Setup Google Profil Bisnis (SEO Lokal)</span>
-              <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Konsultasi Tim Helpdesk Seumur Hidup</span>
+            <div class="cq-mitra-active-footer">
+              <span class="cq-mitra-active-footer-tag">
+                <i class="ri-checkbox-circle-fill" aria-hidden="true"></i> 100% Bebas Royalti
+              </span>
+              <span>Google Maps Terverifikasi</span>
             </div>
           </div>
+        </div>
+
+        <!-- Mitra 6: Flagship Showroom & Training Center Sleman -->
+        <div class="cq-mitra-active-card" data-city="diy">
+          <div class="cq-mitra-active-img-wrap">
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-outlet.jpg'); ?>" 
+                 alt="Cleanique Flagship Showroom & Training Center Sleman" 
+                 class="cq-mitra-active-img"
+                 loading="lazy">
+            <span class="cq-mitra-active-badge-status is-flagship">Showroom &amp; Pusat Diklat Resmi</span>
+          </div>
+          <div class="cq-mitra-active-body">
+            <div class="cq-mitra-active-loc">
+              <i class="ri-map-pin-2-fill" aria-hidden="true"></i> Mlati, Sleman, D.I. Yogyakarta
+            </div>
+            <h3 class="cq-mitra-active-title">Cleanique Flagship &amp; Training Center</h3>
+            <div class="cq-mitra-active-owner">
+              Pengelola: <strong>PT Indotech Berkah Abadi</strong> &bull; Sentra Riset &amp; Mesin
+            </div>
+            <div class="cq-mitra-active-specs-box">
+              <div class="cq-mitra-spec-row">
+                <i class="ri-tools-fill" aria-hidden="true"></i>
+                <span><strong>Setup:</strong> Full Washer Stack, Dryer Gas, Boiler 25L, Laboratorium</span>
+              </div>
+              <div class="cq-mitra-spec-row">
+                <i class="ri-scales-3-line" aria-hidden="true"></i>
+                <span><strong>Kapasitas:</strong> Fasilitas Demo, Uji Mesin &amp; Training Calon Mitra</span>
+              </div>
+              <div class="cq-mitra-spec-row">
+                <i class="ri-smartphone-line" aria-hidden="true"></i>
+                <span><strong>Sistem:</strong> Master Server POS Cleanique Cloud &amp; Workshop</span>
+              </div>
+            </div>
+            <p class="cq-mitra-active-quote">
+              "Fasilitas fisik yang dapat dikunjungi calon mitra untuk menguji mesin langsung, mengecek formula deterjen Orchid Brand, dan menjalani pelatihan tuntas."
+            </p>
+            <div class="cq-mitra-active-footer">
+              <span class="cq-mitra-active-footer-tag">
+                <i class="ri-checkbox-circle-fill" aria-hidden="true"></i> Terbuka untuk Dikunjungi
+              </span>
+              <span>Buka Senin – Sabtu</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust Metrics Bar -->
+      <div class="cq-mitra-stats-grid">
+        <div class="cq-mitra-stat-item">
+          <div class="cq-mitra-stat-num">300+</div>
+          <div class="cq-mitra-stat-lbl">Outlet Mitra Mandiri Aktif di Pulau Jawa</div>
+        </div>
+        <div class="cq-mitra-stat-item">
+          <div class="cq-mitra-stat-num">0%</div>
+          <div class="cq-mitra-stat-lbl">Biaya Royalti / Potongan Bagi Hasil Bulanan</div>
+        </div>
+        <div class="cq-mitra-stat-item">
+          <div class="cq-mitra-stat-num">100%</div>
+          <div class="cq-mitra-stat-lbl">Hak Milik Sah Mesin, Brand &amp; Keuntungan</div>
+        </div>
+        <div class="cq-mitra-stat-item">
+          <div class="cq-mitra-stat-num">12 Kota</div>
+          <div class="cq-mitra-stat-lbl">Cakupan Wilayah Layanan Teknisi Siaga</div>
+        </div>
+      </div>
+
+      <!-- CTA Box -->
+      <div class="cq-mitra-cta-box">
+        <h3 class="cq-mitra-cta-title">Ingin Outlet Anda Menjadi Bagian dari Jaringan Sukses Mitra Cleanique?</h3>
+        <p class="cq-mitra-cta-desc">
+          Konsultasikan ketersediaan wilayah, potensi lokasi ruko, dan simulasi paket mesin yang paling sesuai dengan anggaran Anda bersama konsultan resmi PT Indotech.
+        </p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;">
+          <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
+            <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Rencana Outlet Saya
+          </a>
+          <a href="<?php echo esc_url(home_url('/kontak/')); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg">
+            <i class="ri-map-pin-line" aria-hidden="true"></i> Jadwalkan Kunjungan Showroom
+          </a>
         </div>
       </div>
     </div>
@@ -764,6 +905,28 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     recalculate();
+  }
+
+  // --- Filter Interactivity: Daftar Mitra Aktif ---
+  const filterBtns = document.querySelectorAll('.cq-mitra-filter-btn');
+  const mitraCards = document.querySelectorAll('.cq-mitra-active-card');
+
+  if (filterBtns.length && mitraCards.length) {
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        filterBtns.forEach(b => b.classList.remove('is-active'));
+        this.classList.add('is-active');
+        const filter = this.dataset.filter;
+
+        mitraCards.forEach(card => {
+          if (filter === 'all' || card.dataset.city === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
   }
 });
 </script>

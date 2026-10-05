@@ -196,43 +196,59 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
   <section class="cq-section" id="peluang">
     <div class="cq-container">
       <div class="cq-section-header">
+        <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12);">
+          <i class="ri-line-chart-line"></i> Potensi Pasar &amp; Kestabilan Bisnis
+        </div>
         <h2 class="cq-section-title">Mengapa Bisnis Laundry Dikatakan "Tidak Ada Matinya"?</h2>
         <p class="cq-section-desc">
           Bukan bisnis musiman atau tren sesaat. Selama manusia masih mengenakan pakaian, kebutuhan mencuci akan selalu ada setiap hari tanpa memandang kondisi ekonomi.
         </p>
+        <div class="cq-mobile-swipe-indicator"><i class="ri-arrow-left-right-line" aria-hidden="true"></i> Geser ke samping &rarr;</div>
       </div>
 
       <div class="cq-peluang-grid-4">
         <div class="cq-peluang-card">
-          <div class="cq-peluang-icon-wrap" aria-hidden="true"><i class="ri-shirt-line"></i></div>
+          <div class="cq-peluang-icon-wrap is-blue" aria-hidden="true"><i class="ri-shirt-line"></i></div>
           <h3 class="cq-peluang-card-title">Kebutuhan Pokok Harian</h3>
           <p class="cq-peluang-card-desc">
             Pakaian kotor diproduksi setiap hari oleh setiap individu. Keluarga sibuk, mahasiswa, dan pekerja kantoran tidak sempat mencuci sendiri dan selalu membutuhkan jasa laundry.
           </p>
+          <div class="cq-peluang-card-meta">
+            <i class="ri-checkbox-circle-fill"></i> Kebutuhan Primer Non-Stop
+          </div>
         </div>
 
         <div class="cq-peluang-card">
-          <div class="cq-peluang-icon-wrap" aria-hidden="true"><i class="ri-money-dollar-circle-line"></i></div>
+          <div class="cq-peluang-icon-wrap is-emerald" aria-hidden="true"><i class="ri-money-dollar-circle-line"></i></div>
           <h3 class="cq-peluang-card-title">Cash Flow Harian Nyata</h3>
           <p class="cq-peluang-card-desc">
             Bebas piutang macet berbulan-bulan. Pelanggan membayar lunas saat pakaian ditimbang atau diambil. Uang kas berputar cepat dan dapat Anda nikmati setiap hari.
           </p>
+          <div class="cq-peluang-card-meta">
+            <i class="ri-checkbox-circle-fill"></i> Bayar Lunas di Muka / Kas Cepat
+          </div>
         </div>
 
         <div class="cq-peluang-card">
-          <div class="cq-peluang-icon-wrap" aria-hidden="true"><i class="ri-repeat-line"></i></div>
+          <div class="cq-peluang-icon-wrap is-indigo" aria-hidden="true"><i class="ri-repeat-line"></i></div>
           <h3 class="cq-peluang-card-title">Tingkat Repeat Order 75%+</h3>
           <p class="cq-peluang-card-desc">
             Pelanggan mencuci secara rutin setiap 3 sampai 7 hari sekali. Begitu cocok dengan kebersihan dan keharuman outlet Anda, mereka menjadi pelanggan setia bertahun-tahun.
           </p>
+          <div class="cq-peluang-card-meta">
+            <i class="ri-checkbox-circle-fill"></i> Siklus Cuci Rutin 3 - 7 Hari
+          </div>
         </div>
 
         <div class="cq-peluang-card">
-          <div class="cq-peluang-icon-wrap" aria-hidden="true"><i class="ri-percent-line"></i></div>
+          <div class="cq-peluang-icon-wrap is-teal" aria-hidden="true"><i class="ri-percent-line"></i></div>
           <h3 class="cq-peluang-card-title">Margin Laba Bersih 50–65%</h3>
           <p class="cq-peluang-card-desc">
             Karena pasokan bahan kimia disuplai langsung dari pabrik PT Indotech Berkah Abadi tanpa perantara distributor, HPP cuci Anda sangat terjangkau dan profit bersih maksimal.
           </p>
+          <div class="cq-peluang-card-meta">
+            <i class="ri-checkbox-circle-fill"></i> HPP Murah Direct Pabrik
+          </div>
         </div>
       </div>
     </div>
@@ -244,51 +260,87 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
   <section class="cq-section cq-section-alt" id="masalah">
     <div class="cq-container">
       <div class="cq-section-header">
+        <div class="cq-badge-pill cq-badge-warning" style="margin-bottom: var(--cq-sp-12);">
+          <i class="ri-alarm-warning-line"></i> Analisis Risiko &amp; Solusi Pencegahan
+        </div>
         <h2 class="cq-section-title">Mau Buka Sendiri Tapi Bingung &amp; Takut Gagal? Jangan Jadi Korban Trial &amp; Error!</h2>
         <p class="cq-section-desc">
           Banyak orang mencoba merintis laundry sendirian dari nol tanpa panduan. Akhirnya modal puluhan juta habis dalam 6 bulan pertama karena 4 kesalahan fatal ini:
         </p>
+        <div class="cq-mobile-swipe-indicator"><i class="ri-arrow-left-right-line" aria-hidden="true"></i> Geser ke samping &rarr;</div>
       </div>
 
       <div class="cq-grid-2">
         <div class="cq-peluang-pain-card">
-          <div class="cq-peluang-pain-badge">
-            Risiko #1: Mesin Jebol
+          <div class="cq-pain-top-row">
+            <div class="cq-pain-icon-wrap" aria-hidden="true">
+              <i class="ri-tools-fill"></i>
+            </div>
+            <div class="cq-peluang-pain-badge">
+              <i class="ri-error-warning-fill"></i> Risiko #1: Mesin Jebol
+            </div>
           </div>
           <h3 class="cq-peluang-pain-title">Tergiur Mesin Rumah Tangga Murahan (3 Bulan Jebol)</h3>
           <p class="cq-card-desc">
             Membeli mesin cuci rumahan biasa karena harganya tampak murah. Padahal mesin rumahan tidak dirancang berputar 12 jam/hari. Dalam 3 bulan dinamo terbakar, garansi hangus karena pemakaian komersial, dan outlet terpaksa tutup.
           </p>
+          <div class="cq-pain-safe-guard">
+            <i class="ri-shield-check-fill"></i> <span><strong>Proteksi Cleanique:</strong> Paket include unit washer &amp; dryer commercial heavy-duty bergaransi resmi pabrik.</span>
+          </div>
         </div>
 
         <div class="cq-peluang-pain-card">
-          <div class="cq-peluang-pain-badge">
-            Risiko #2: Chemical Abal-Abal
+          <div class="cq-pain-top-row">
+            <div class="cq-pain-icon-wrap" aria-hidden="true">
+              <i class="ri-test-tube-fill"></i>
+            </div>
+            <div class="cq-peluang-pain-badge">
+              <i class="ri-error-warning-fill"></i> Risiko #2: Kimia Abal-Abal
+            </div>
           </div>
           <h3 class="cq-peluang-pain-title">Trial &amp; Error Chemical Bertahun-Tahun (Baju Rusak)</h3>
           <p class="cq-card-desc">
             Mencoba meracik deterjen dan parfum sendiri atau membeli curah tanpa izin edar. Hasilnya: baju pelanggan apek saat musim hujan, serat kain sobek, atau luntur. Pelanggan komplain keras dan meminta ganti rugi.
           </p>
+          <div class="cq-pain-safe-guard">
+            <i class="ri-shield-check-fill"></i> <span><strong>Proteksi Cleanique:</strong> Suplai chemical standar industri berizin edar resmi langsung dari pabrik PT Indotech.</span>
+          </div>
         </div>
 
         <div class="cq-peluang-pain-card">
-          <div class="cq-peluang-pain-badge">
-            Risiko #3: Instalasi Amatir
+          <div class="cq-pain-top-row">
+            <div class="cq-pain-icon-wrap" aria-hidden="true">
+              <i class="ri-fire-fill"></i>
+            </div>
+            <div class="cq-peluang-pain-badge">
+              <i class="ri-error-warning-fill"></i> Risiko #3: Instalasi Amatir
+            </div>
           </div>
           <h3 class="cq-peluang-pain-title">Instalasi Pipa Amatir &amp; Bahaya Kebocoran Gas</h3>
           <p class="cq-card-desc">
             Menyuruh tukang bangunan umum memasang instalasi dryer konversi gas dan pompa air tanpa SOP sertifikasi. Tekanan air sering drop, mesin cepat berkerak, dan rawan bahaya kebakaran gas.
           </p>
+          <div class="cq-pain-safe-guard">
+            <i class="ri-shield-check-fill"></i> <span><strong>Proteksi Cleanique:</strong> Dipandu dan disupervisi teknisi profesional bersertifikat dengan standar safety ketat.</span>
+          </div>
         </div>
 
         <div class="cq-peluang-pain-card">
-          <div class="cq-peluang-pain-badge">
-            Risiko #4: Royalti Membebani
+          <div class="cq-pain-top-row">
+            <div class="cq-pain-icon-wrap" aria-hidden="true">
+              <i class="ri-hand-coin-fill"></i>
+            </div>
+            <div class="cq-peluang-pain-badge">
+              <i class="ri-error-warning-fill"></i> Risiko #4: Royalti Tercekik
+            </div>
           </div>
           <h3 class="cq-peluang-pain-title">Terjebak Franchise Lain dengan Royalty Fee Seumur Hidup</h3>
           <p class="cq-card-desc">
             Mengambil franchise merk lain yang memotong 5% - 10% omzet setiap bulan. Bekerja keras banting tulang setiap hari, tetapi sebagian besar keuntungan bersih habis disetor ke kantor pusat waralaba.
           </p>
+          <div class="cq-pain-safe-guard">
+            <i class="ri-shield-check-fill"></i> <span><strong>Proteksi Cleanique:</strong> 100% kemitraan mandiri murni: Tanpa bagi hasil, tanpa royalty fee seumur hidup.</span>
+          </div>
         </div>
       </div>
     </div>
@@ -300,15 +352,19 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
   <section class="cq-section" id="solusi">
     <div class="cq-container">
       <div class="cq-section-header">
+        <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12);">
+          <i class="ri-checkbox-circle-line"></i> Turnkey Business Model
+        </div>
         <h2 class="cq-section-title">Bersama Cleanique, Anda Buka Laundry Tanpa Risiko Gagal</h2>
         <p class="cq-section-desc">
           Kami memberikan paket komplit siap buka (*Turnkey Business*) yang didukung langsung oleh produsen industri mesin dan pabrik chemical resmi PT Indotech Berkah Abadi.
         </p>
+        <div class="cq-mobile-swipe-indicator"><i class="ri-arrow-left-right-line" aria-hidden="true"></i> Geser ke samping &rarr;</div>
       </div>
 
       <div class="cq-grid-3">
         <div class="cq-peluang-solusi-card">
-          <div class="cq-peluang-solusi-icon" aria-hidden="true"><i class="ri-medal-line"></i></div>
+          <div class="cq-peluang-solusi-icon" aria-hidden="true"><i class="ri-award-fill"></i></div>
           <h3 class="cq-peluang-card-title">100% Milik Anda (Tanpa Royalti)</h3>
           <p class="cq-peluang-card-desc">
             Cleanique adalah konsep kemitraan mandiri murni. Tidak ada biaya franchise tahunan, tidak ada potongan bagi hasil. Seluruh laba bersih dari keringat Anda 100% masuk ke kantong Anda sendiri.
@@ -316,7 +372,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
         </div>
 
         <div class="cq-peluang-solusi-card">
-          <div class="cq-peluang-solusi-icon" aria-hidden="true"><i class="ri-settings-4-line"></i></div>
+          <div class="cq-peluang-solusi-icon" aria-hidden="true"><i class="ri-cpu-line"></i></div>
           <h3 class="cq-peluang-card-title">Mesin Heavy Duty Bergaransi Resmi</h3>
           <p class="cq-peluang-card-desc">
             Unit washer dan dryer komersial berkualitas industri yang dirancang mampu bekerja maraton terus-menerus dengan konsumsi listrik dan gas hemat. Garansi servis dan spare part terjamin.
@@ -324,7 +380,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
         </div>
 
         <div class="cq-peluang-solusi-card">
-          <div class="cq-peluang-solusi-icon" aria-hidden="true"><i class="ri-community-line"></i></div>
+          <div class="cq-peluang-solusi-icon" aria-hidden="true"><i class="ri-flask-fill"></i></div>
           <h3 class="cq-peluang-card-title">Suplai Chemical Langsung Pabrik</h3>
           <p class="cq-peluang-card-desc">
             Diproduksi langsung oleh pabrik kami di Sleman. Deterjen rendah busa, pelembut &amp; parfum microcapsule wangi tahan 30 hari, serta penghilang noda darah/minyak/karat dengan harga grosir termurah.
@@ -332,7 +388,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
         </div>
 
         <div class="cq-peluang-solusi-card">
-          <div class="cq-peluang-solusi-icon" aria-hidden="true"><i class="ri-book-read-line"></i></div>
+          <div class="cq-peluang-solusi-icon" aria-hidden="true"><i class="ri-graduation-cap-fill"></i></div>
           <h3 class="cq-peluang-card-title">SOP Higienis &amp; Training Onsite</h3>
           <p class="cq-peluang-card-desc">
             Anda dan staf diajarkan teknik pencucian berbagai jenis kain, takaran chemical presisi, teknik setrika uap licin seketika, packing rapi, hingga pelayanan kasir prima sampai mandiri.
@@ -348,7 +404,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
         </div>
 
         <div class="cq-peluang-solusi-card">
-          <div class="cq-peluang-solusi-icon" aria-hidden="true"><i class="ri-compass-3-line"></i></div>
+          <div class="cq-peluang-solusi-icon" aria-hidden="true"><i class="ri-team-line"></i></div>
           <h3 class="cq-peluang-card-title">Pendampingan Sampai Hari Buka</h3>
           <p class="cq-peluang-card-desc">
             Tim teknisi dan konsultan kami mendampingi perancangan denah layout ruangan, setting pipa pembuangan, instalasi kelistrikan aman, hingga strategi promosi grand opening outlet Anda.
@@ -366,6 +422,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
       <div class="cq-section-header">
         <h2 class="cq-section-title">Apa Saja yang Anda Dapatkan dalam Setiap Paket?</h2>
         <p class="cq-section-desc">Peralatan berkualitas tinggi dan siap pakai, dirakit dan diuji langsung oleh teknisi berpengalaman PT Indotech Berkah Abadi.</p>
+        <div class="cq-mobile-swipe-indicator"><i class="ri-arrow-left-right-line" aria-hidden="true"></i> Geser ke samping &rarr;</div>
       </div>
 
       <div class="cq-grid-4">
@@ -422,6 +479,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
         <p class="cq-section-desc">
           Pilih paket yang paling cocok dengan lokasi dan modal Anda. Amankan kuota subsidi ongkir &amp; bonus lisensi POS sebelum 31 Desember!
         </p>
+        <div class="cq-mobile-swipe-indicator"><i class="ri-arrow-left-right-line" aria-hidden="true"></i> Geser ke samping &rarr;</div>
       </div>
 
       <div class="cq-grid-3">
@@ -457,7 +515,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
               <?php endforeach; ?>
             </ul>
             <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn <?php echo $featured ? 'cq-btn-primary' : 'cq-btn-outline'; ?> cq-btn-pill cq-btn-block" target="_blank" rel="noopener">
-              <i class="ri-cursor-fill" aria-hidden="true"></i> Klik Segera Daftar <?php the_title(); ?>
+              <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Paket <?php the_title(); ?>
             </a>
           </div>
         <?php
@@ -482,7 +540,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
             <li class="checked">Gratis Lisensi Aplikasi Kasir Cleanique 3 Bulan</li>
           </ul>
           <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-block" target="_blank" rel="noopener">
-            <i class="ri-cursor-fill" aria-hidden="true"></i> Klik Segera Daftar Starter
+            <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Paket Starter
           </a>
         </div>
 
@@ -506,7 +564,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
             <li class="checked">Training Karyawan Onsite &amp; Pendampingan Buka</li>
           </ul>
           <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-block" target="_blank" rel="noopener">
-            <i class="ri-cursor-fill" aria-hidden="true"></i> Klik Segera Daftar Commercial Pro
+            <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Paket Commercial Pro
           </a>
         </div>
 
@@ -528,7 +586,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
             <li class="checked">Konsultasi Bisnis Eksklusif langsung bersama Tim Ahli</li>
           </ul>
           <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-block" target="_blank" rel="noopener">
-            <i class="ri-cursor-fill" aria-hidden="true"></i> Klik Segera Daftar Industrial
+            <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Paket Industrial
           </a>
         </div>
         <?php endif; ?>
@@ -537,69 +595,172 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
   </section>
 
   <!-- ========================================================
-       8. SIMULASI PROFIT & BALIK MODAL (ROI FINTECH CALCULATOR)
+       8. SHOWCASE KEMITRAAN SUKSES & TESTIMONI MITRA
        ======================================================== -->
-  <section class="cq-section cq-section-alt" id="kalkulator">
+  <section class="cq-section cq-section-alt" id="mitra-sukses">
     <div class="cq-container">
       <div class="cq-section-header">
-        <h2 class="cq-section-title">Hitung Potensi Keuntungan Usaha Laundry Anda</h2>
-        <p class="cq-section-desc">Gunakan kalkulator interaktif di bawah ini untuk melihat proyeksi omzet bulanan dan estimasi balik modal.</p>
+        <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12);">
+          <i class="ri-shield-star-line"></i> Bukti Nyata Hasil Kemitraan
+        </div>
+        <h2 class="cq-section-title">Kemitraan yang Telah Berjalan &amp; Menikmati Hasil Nyata</h2>
+        <p class="cq-section-desc">
+          Bukan sekadar janji di atas kertas. Simak cerita langsung dari para mitra Cleanique di berbagai kota yang telah sukses membuka dan menjalankan usaha laundry mandiri mereka bersama PT Indotech Berkah Abadi.
+        </p>
+        <div class="cq-mobile-swipe-indicator"><i class="ri-arrow-left-right-line" aria-hidden="true"></i> Geser ke samping &rarr;</div>
       </div>
 
-      <div class="cq-calc-container">
-        <!-- Preset quick buttons -->
-        <div style="margin-bottom: var(--cq-sp-20);">
-          <div style="font-size: var(--cq-fs-xs); font-weight: 700; color: var(--cq-text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Pilihan Cepat Target Cucian Harian:</div>
-          <div class="cq-calc-preset-bar">
-            <button type="button" class="cq-calc-preset-chip" data-kg="40">40 Kg / hari (Rumahan)</button>
-            <button type="button" class="cq-calc-preset-chip is-active" data-kg="60">60 Kg / hari (Standar Ruko)</button>
-            <button type="button" class="cq-calc-preset-chip" data-kg="100">100 Kg / hari (Ramai Kampus)</button>
-            <button type="button" class="cq-calc-preset-chip" data-kg="150">150 Kg / hari (Super Outlet)</button>
+      <div class="cq-story-grid">
+        <!-- Mitra 1: Sleman, DIY -->
+        <article class="cq-success-story-card">
+          <div class="cq-story-img-container">
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/mitra-outlet-sleman.jpg'); ?>" 
+                 alt="Outlet Mitra Cleanique Express Minomartani Sleman" 
+                 class="cq-story-img" loading="lazy">
+            <div class="cq-story-img-badge">
+              <i class="ri-map-pin-2-fill"></i> Minomartani, Sleman, DIY
+            </div>
+            <div class="cq-story-paket-tag">Commercial Pro</div>
           </div>
+          <div class="cq-story-body">
+            <div class="cq-story-rating" aria-label="Rating 5 dari 5 bintang">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <span class="cq-story-rating-text">5.0 &bull; Mitra Terverifikasi</span>
+            </div>
+            <blockquote class="cq-story-quote">
+              &ldquo;Awalnya kami ragu karena sama sekali belum pernah bisnis laundry. Untung didampingi teknisi Indotech dari perancangan pipa, kelistrikan sampai training takaran chemical. Deterjen dan parfumnya wangi tahan lama dan hemat banget karena suplai langsung pabrik. Dalam 6 bulan modal kami sudah balik!&rdquo;
+            </blockquote>
+            <div class="cq-story-author-box">
+              <div class="cq-story-avatar-initial">H&amp;S</div>
+              <div class="cq-story-author-info">
+                <div class="cq-story-author-name">Pak Hendro &amp; Ibu Siska</div>
+                <div class="cq-story-outlet-name">Owner Cleanique Express Minomartani</div>
+              </div>
+            </div>
+            <div class="cq-story-metrics">
+              <div class="cq-story-metric-item">
+                <span class="cq-metric-label">Cucian Harian</span>
+                <span class="cq-metric-val">110+ Kg/Hari</span>
+              </div>
+              <div class="cq-story-metric-divider"></div>
+              <div class="cq-story-metric-item">
+                <span class="cq-metric-label">Balik Modal</span>
+                <span class="cq-metric-val cq-highlight-metric">Bulan ke-6</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Mitra 2: Solo, Jawa Tengah -->
+        <article class="cq-success-story-card">
+          <div class="cq-story-img-container">
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/mitra-outlet-solo.jpg'); ?>" 
+                 alt="Outlet Mitra Cleanique Laundry Solo Jebres" 
+                 class="cq-story-img" loading="lazy">
+            <div class="cq-story-img-badge">
+              <i class="ri-map-pin-2-fill"></i> Jebres, Solo, Jawa Tengah
+            </div>
+            <div class="cq-story-paket-tag">Commercial Pro</div>
+          </div>
+          <div class="cq-story-body">
+            <div class="cq-story-rating" aria-label="Rating 5 dari 5 bintang">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <span class="cq-story-rating-text">5.0 &bull; Mitra Terverifikasi</span>
+            </div>
+            <blockquote class="cq-story-quote">
+              &ldquo;Yang paling memuaskan adalah sistem aplikasi kasir Cleanique POS-nya. Nota langsung terkirim WhatsApp ke pelanggan, omzet harian bisa dipantau langsung dari HP sambil saya tetap bekerja kantor. Dan yang luar biasa: 100% keuntungan bersih masuk kantong saya sendiri tanpa royalti fee!&rdquo;
+            </blockquote>
+            <div class="cq-story-author-box">
+              <div class="cq-story-avatar-initial">DP</div>
+              <div class="cq-story-author-info">
+                <div class="cq-story-author-name">Mas Dimas Pratama</div>
+                <div class="cq-story-outlet-name">Owner Cleanique Laundry Solo</div>
+              </div>
+            </div>
+            <div class="cq-story-metrics">
+              <div class="cq-story-metric-item">
+                <span class="cq-metric-label">Cucian Harian</span>
+                <span class="cq-metric-val">95 Kg/Hari</span>
+              </div>
+              <div class="cq-story-metric-divider"></div>
+              <div class="cq-story-metric-item">
+                <span class="cq-metric-label">Balik Modal</span>
+                <span class="cq-metric-val cq-highlight-metric">Bulan ke-5</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Mitra 3: Semarang, Jawa Tengah -->
+        <article class="cq-success-story-card">
+          <div class="cq-story-img-container">
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/mitra-outlet-semarang.jpg'); ?>" 
+                 alt="Outlet Mitra Cleanique Laundry Tembalang Semarang" 
+                 class="cq-story-img" loading="lazy">
+            <div class="cq-story-img-badge">
+              <i class="ri-map-pin-2-fill"></i> Tembalang, Semarang, Jawa Tengah
+            </div>
+            <div class="cq-story-paket-tag">Industrial Premium</div>
+          </div>
+          <div class="cq-story-body">
+            <div class="cq-story-rating" aria-label="Rating 5 dari 5 bintang">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <span class="cq-story-rating-text">5.0 &bull; Mitra Terverifikasi</span>
+            </div>
+            <blockquote class="cq-story-quote">
+              &ldquo;Mesin komersial stack washer &amp; dryer Cleanique benar-benar bandel, bekerja maraton dari pagi sampai malam mesin tetap stabil dan hemat gas. Tim teknisi PT Indotech gerak cepat saat pendampingan instalasi. Sekarang kami sedang persiapan membuka cabang kedua!&rdquo;
+            </blockquote>
+            <div class="cq-story-author-box">
+              <div class="cq-story-avatar-initial">NH</div>
+              <div class="cq-story-author-info">
+                <div class="cq-story-author-name">Ibu Hj. Nurul Hidayati</div>
+                <div class="cq-story-outlet-name">Owner Cleanique Tembalang Premium</div>
+              </div>
+            </div>
+            <div class="cq-story-metrics">
+              <div class="cq-story-metric-item">
+                <span class="cq-metric-label">Cucian Harian</span>
+                <span class="cq-metric-val">200+ Kg/Hari</span>
+              </div>
+              <div class="cq-story-metric-divider"></div>
+              <div class="cq-story-metric-item">
+                <span class="cq-metric-label">Ekspansi Bisnis</span>
+                <span class="cq-metric-val cq-highlight-metric">Buka Cabang ke-2</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Trust Badges Strip -->
+      <div class="cq-mitra-trust-strip">
+        <div class="cq-trust-stat-box">
+          <div class="cq-trust-stat-val">35+</div>
+          <div class="cq-trust-stat-lbl">Gerai Mitra Beroperasi</div>
         </div>
-
-        <div class="cq-roi-grid">
-          <div>
-            <div class="cq-form-group">
-              <label for="calc-kg">Estimasi Cucian per Hari (Kg):</label>
-              <input type="number" id="calc-kg" class="cq-input" value="60" min="10" max="500">
-            </div>
-            <div class="cq-form-group">
-              <label for="calc-price">Tarif Laundry per Kg (Rp):</label>
-              <input type="number" id="calc-price" class="cq-input" value="7000" step="500">
-            </div>
-            <div class="cq-form-group">
-              <label for="calc-cost-pct">Estimasi Biaya Operasional (Chemical + Listrik + Gaji):</label>
-              <select id="calc-cost-pct" class="cq-input">
-                <option value="30">30% (Sangat Hemat - Pakai Chemical Pabrik Indotech)</option>
-                <option value="35" selected>35% (Rata-rata Normal)</option>
-                <option value="40">40% (Termasuk Alokasi Sewa Ruko)</option>
-              </select>
-            </div>
-            <button type="button" id="cq-calc-btn" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-block">
-              <i class="ri-calculator-line" aria-hidden="true"></i> Hitung Ulang Estimasi
-            </button>
-          </div>
-
-          <div class="cq-calc-result-card">
-            <div class="cq-calc-result-badge">
-              Estimasi Balik Modal: 4 – 8 Bulan
-            </div>
-
-            <div class="cq-calc-metric-lbl">Proyeksi Omzet Bulanan (30 Hari)</div>
-            <div id="calc-result-omzet" class="cq-calc-metric-val">
-              Rp 12.600.000
-            </div>
-
-            <div class="cq-calc-metric-lbl">Estimasi Profit Bersih Bulanan</div>
-            <div id="calc-result-profit" class="cq-calc-metric-val highlight-profit">
-              Rp 8.190.000
-            </div>
-
-            <p style="font-size: 11px; color: #94A3B8; line-height: 1.5; margin: 0;">
-              *Estimasi dihitung berdasarkan 30 hari operasional. Nilai riil di lapangan dapat bervariasi bergantung pada lokasi, kepadatan penduduk, dan efisiensi pengelolaan outlet Anda.
-            </p>
-          </div>
+        <div class="cq-trust-stat-box">
+          <div class="cq-trust-stat-val">100%</div>
+          <div class="cq-trust-stat-lbl">Bebas Royalti Fee Selamanya</div>
+        </div>
+        <div class="cq-trust-stat-box">
+          <div class="cq-trust-stat-val">4 - 8 Bln</div>
+          <div class="cq-trust-stat-lbl">Rata-rata Waktu Balik Modal</div>
+        </div>
+        <div class="cq-trust-stat-box">
+          <div class="cq-trust-stat-val">Langsung Pabrik</div>
+          <div class="cq-trust-stat-lbl">Jaminan Mesin &amp; Kimia Resmi</div>
         </div>
       </div>
     </div>
@@ -723,14 +884,14 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
         Siap Membuka Usaha Laundry Sukses Anda?
       </h2>
       <p class="cq-banner-cta-desc">
-        Jangan biarkan rasa takut gagal dan kebingungan menunda mimpi Anda. Bergabunglah bersama puluhan mitra sukses Cleanique dan PT Indotech Berkah Abadi hari ini.
+        Jangan biarkan rasa takut gagal dan kebingungan menunda langkah Anda. Amankan kuota promo kemitraan dan konsultasikan lokasi usaha Anda bersama tim ahli Cleanique hari ini.
       </p>
       <div class="cq-banner-cta-actions">
         <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
-          <i class="ri-cursor-fill" aria-hidden="true"></i> Klik Segera Daftar via WhatsApp
+          <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Kemitraan via WhatsApp
         </a>
-        <a href="#daftar-promo" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-lg">
-          <i class="ri-file-text-line" aria-hidden="true"></i> Minta Brosur &amp; Proposal Lengkap
+        <a href="#daftar-promo" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg">
+          <i class="ri-file-download-line" aria-hidden="true"></i> Minta Brosur &amp; Proposal Lengkap
         </a>
       </div>
     </div>

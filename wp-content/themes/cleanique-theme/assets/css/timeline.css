@@ -121,12 +121,22 @@
 .cq-timeline-item:nth-child(5) .cq-timeline-node-inner { background: #8b5cf6; }
 .cq-timeline-item:nth-child(5) .cq-timeline-node { box-shadow: 0 0 0 4px #ffffff, 0 0 0 7px rgba(139, 92, 246, 0.2), 0 4px 12px rgba(15, 23, 42, 0.1); }
 
-.cq-timeline-item:nth-child(6) .cq-timeline-node-inner { background: #ef4444; }
-.cq-timeline-item:nth-child(6) .cq-timeline-node { box-shadow: 0 0 0 4px #ffffff, 0 0 0 7px rgba(239, 68, 68, 0.2), 0 4px 12px rgba(15, 23, 42, 0.1); }
+.cq-timeline-item:nth-child(6) .cq-timeline-node-inner { background: #8b5cf6; }
+.cq-timeline-item:nth-child(6) .cq-timeline-node { box-shadow: 0 0 0 4px #ffffff, 0 0 0 7px rgba(139, 92, 246, 0.2), 0 4px 12px rgba(15, 23, 42, 0.1); }
+
+.cq-timeline-item:nth-child(7) .cq-timeline-node-inner { background: #10b981; }
+.cq-timeline-item:nth-child(7) .cq-timeline-node { box-shadow: 0 0 0 4px #ffffff, 0 0 0 7px rgba(16, 185, 129, 0.25), 0 4px 12px rgba(15, 23, 42, 0.1); }
 
 /* Decorative accent ring - hide redundant floating circle so only the centered node sits on the track */
 .cq-timeline-accent-ring {
   display: none !important;
+}
+
+.cq-timeline-cta-row {
+  margin-top: clamp(36px, 5vw, 52px);
+  text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 /* ==========================================================================

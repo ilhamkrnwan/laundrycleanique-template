@@ -73,14 +73,16 @@
   --cq-fs-4xl: clamp(2.2rem, 1.8rem + 1.8vw, 3.15rem);           /* 35.2px - 50.4px */
   --cq-fs-hero: clamp(2.4rem, 1.9rem + 2.5vw, 3.85rem);          /* 38.4px - 61.6px */
 
-  /* Spacing Scale (4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96px) */
+  /* Spacing Scale (4, 8, 12, 16, 20, 24, 32, 36, 40, 48, 64, 80, 96px) */
   --cq-sp-4: 0.25rem;
   --cq-sp-8: 0.5rem;
   --cq-sp-12: 0.75rem;
   --cq-sp-16: 1rem;
   --cq-sp-20: 1.25rem;
   --cq-sp-24: 1.5rem;
+  --cq-sp-28: 1.75rem;
   --cq-sp-32: 2rem;
+  --cq-sp-36: 2.25rem;
   --cq-sp-40: 2.5rem;
   --cq-sp-48: 3rem;
   --cq-sp-64: 4rem;

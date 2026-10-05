@@ -1012,3 +1012,703 @@ section.cq-section {
   margin-top: auto;
 }
 
+/* ==========================================================================
+   10. LANDING PAGE REVAMP: BENTO CARDS, TESTIMONIALS & CTA ENHANCEMENTS
+   ========================================================================== */
+
+/* Universal Scroll Margin for Sticky Header Safety */
+section[id],
+.cq-section[id],
+#peluang,
+#masalah,
+#solusi,
+#fasilitas,
+#pilihan-paket,
+#mitra-sukses,
+#faq,
+#daftar-promo {
+  scroll-margin-top: 96px;
+}
+
+/* 1. Peluang Usaha Bento Cards Polishing */
+.cq-peluang-grid-4 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--cq-sp-24, 24px);
+  align-items: stretch;
+}
+
+@media (min-width: 640px) {
+  .cq-peluang-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .cq-peluang-grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--cq-sp-24, 24px);
+  }
+}
+
+.cq-peluang-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px 24px 24px;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04), 0 2px 6px -1px rgba(15, 23, 42, 0.02);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.cq-peluang-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #0077b6, #00a8e8);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cq-peluang-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 35px -10px rgba(0, 119, 182, 0.12), 0 8px 16px -4px rgba(15, 23, 42, 0.04);
+  border-color: rgba(0, 168, 232, 0.4);
+}
+
+.cq-peluang-card:hover::before {
+  opacity: 1;
+}
+
+.cq-peluang-icon-wrap {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.cq-peluang-card:hover .cq-peluang-icon-wrap {
+  transform: scale(1.08) rotate(2deg);
+}
+
+.cq-peluang-icon-wrap.is-blue {
+  background: linear-gradient(135deg, rgba(224, 242, 254, 0.95) 0%, rgba(186, 230, 253, 0.7) 100%);
+  color: #0284c7;
+}
+
+.cq-peluang-icon-wrap.is-emerald {
+  background: linear-gradient(135deg, rgba(209, 250, 229, 0.95) 0%, rgba(167, 243, 208, 0.7) 100%);
+  color: #059669;
+}
+
+.cq-peluang-icon-wrap.is-indigo {
+  background: linear-gradient(135deg, rgba(224, 231, 255, 0.95) 0%, rgba(199, 210, 254, 0.7) 100%);
+  color: #4f46e5;
+}
+
+.cq-peluang-icon-wrap.is-teal {
+  background: linear-gradient(135deg, rgba(204, 251, 241, 0.95) 0%, rgba(153, 246, 228, 0.7) 100%);
+  color: #0d9488;
+}
+
+.cq-peluang-card-title {
+  font-family: var(--cq-font-heading, "Plus Jakarta Sans", sans-serif);
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--cq-dark-navy, #0b132b);
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.cq-peluang-card-desc {
+  font-size: 0.925rem;
+  color: #64748b;
+  line-height: 1.62;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.cq-peluang-card-meta {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid rgba(241, 245, 249, 1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #0369a1;
+}
+
+.cq-peluang-card-meta i {
+  color: #10b981;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+/* 2. Risiko Anti-Gagal (Pain Points) Threat Cards */
+.cq-peluang-pain-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 28px 26px 24px;
+  border: 1px solid rgba(239, 68, 68, 0.18);
+  box-shadow: 0 4px 18px rgba(239, 68, 68, 0.04);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.cq-peluang-pain-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -8px rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.38);
+}
+
+.cq-pain-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.cq-pain-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #fee2e2;
+  color: #dc2626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.cq-peluang-pain-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #fef2f2;
+  color: #dc2626;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.cq-peluang-pain-title {
+  font-family: var(--cq-font-heading, "Plus Jakarta Sans", sans-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--cq-dark-navy, #0b132b);
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.cq-pain-safe-guard {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(226, 232, 240, 0.9);
+  font-size: 12px;
+  line-height: 1.5;
+  color: #047857;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.cq-pain-safe-guard i {
+  color: #10b981;
+  font-size: 15px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* 3. Solusi Cleanique Bento Cards */
+.cq-peluang-solusi-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 28px 24px 24px;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.cq-peluang-solusi-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -10px rgba(0, 119, 182, 0.12);
+  border-color: #0077b6;
+}
+
+.cq-peluang-solusi-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(224, 242, 254, 0.9) 0%, rgba(186, 230, 253, 0.6) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  color: #0077b6;
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.cq-peluang-solusi-card:hover .cq-peluang-solusi-icon {
+  transform: scale(1.08);
+}
+
+/* 4. Showcase Kemitraan Sukses & Testimonial Cards */
+.cq-story-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--cq-sp-28, 28px);
+  align-items: stretch;
+}
+
+@media (min-width: 768px) {
+  .cq-story-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .cq-story-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cq-success-story-card {
+  background: #ffffff;
+  border-radius: 24px;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 6px 24px -4px rgba(15, 23, 42, 0.06);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease;
+}
+
+.cq-success-story-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px -12px rgba(0, 119, 182, 0.16);
+  border-color: rgba(0, 119, 182, 0.4);
+}
+
+.cq-story-img-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #f1f5f9;
+}
+
+.cq-story-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cq-success-story-card:hover .cq-story-img {
+  transform: scale(1.05);
+}
+
+.cq-story-img-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(15, 23, 42, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cq-story-img-badge i {
+  color: #38bdf8;
+}
+
+.cq-story-paket-tag {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #0369a1;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(186, 230, 253, 0.8);
+}
+
+.cq-story-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cq-story-rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-bottom: 14px;
+  color: #f59e0b;
+  font-size: 14px;
+}
+
+.cq-story-rating-text {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #475569;
+  margin-left: 6px;
+}
+
+.cq-story-quote {
+  font-size: 0.925rem;
+  line-height: 1.65;
+  color: #334155;
+  font-style: italic;
+  margin: 0 0 20px;
+  flex-grow: 1;
+}
+
+.cq-story-author-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.cq-story-avatar-initial {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0077b6 0%, #00a8e8 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0, 119, 182, 0.25);
+}
+
+.cq-story-author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.cq-story-author-name {
+  font-family: var(--cq-font-heading, "Plus Jakarta Sans", sans-serif);
+  font-weight: 700;
+  font-size: 14.5px;
+  color: var(--cq-dark-navy, #0b132b);
+}
+
+.cq-story-outlet-name {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.cq-story-metrics {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cq-story-metric-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.cq-story-metric-divider {
+  width: 1px;
+  height: 28px;
+  background: #cbd5e1;
+}
+
+.cq-metric-label {
+  font-size: 10.5px;
+  color: #64748b;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.cq-metric-val {
+  font-family: var(--cq-font-heading, "Plus Jakarta Sans", sans-serif);
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--cq-dark-navy, #0b132b);
+}
+
+.cq-highlight-metric {
+  color: #059669;
+}
+
+/* 5. Trust Statistics Strip */
+.cq-mitra-trust-strip {
+  margin-top: clamp(40px, 5vw, 56px);
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
+  padding: clamp(20px, 3vw, 28px) clamp(16px, 3vw, 32px);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .cq-mitra-trust-strip {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+}
+
+.cq-trust-stat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cq-trust-stat-val {
+  font-family: var(--cq-font-heading, "Plus Jakarta Sans", sans-serif);
+  font-size: clamp(1.4rem, 1.2rem + 0.6vw, 1.85rem);
+  font-weight: 800;
+  color: #0077b6;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.cq-trust-stat-lbl {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+/* 6. High Contrast CTA Banner Enhancements */
+.cq-banner-cta-section {
+  position: relative;
+  background: linear-gradient(135deg, #0b132b 0%, #1c2541 60%, #0f172a 100%) !important;
+  color: #ffffff;
+  overflow: hidden;
+  padding: clamp(60px, 8vw, 96px) 0;
+}
+
+.cq-banner-cta-section::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(0, 168, 232, 0.15) 0%, rgba(0, 119, 182, 0) 70%);
+  pointer-events: none;
+}
+
+.cq-banner-cta-title {
+  color: #ffffff;
+  font-size: clamp(1.8rem, 1.5rem + 1vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+.cq-banner-cta-desc {
+  color: #cbd5e1;
+  font-size: clamp(1rem, 0.95rem + 0.2vw, 1.15rem);
+  max-width: 680px;
+  margin: 0 auto 32px;
+  line-height: 1.6;
+}
+
+.cq-banner-cta-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cq-banner-cta-actions .cq-btn-accent {
+  background: #10b981;
+  color: #ffffff;
+  border: 1px solid #059669;
+  box-shadow: 0 4px 18px rgba(16, 185, 129, 0.35);
+  font-weight: 700;
+  padding: 14px 28px;
+}
+
+.cq-banner-cta-actions .cq-btn-accent:hover {
+  background: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.45);
+}
+
+.cq-banner-cta-actions .cq-btn-white-pill {
+  background: #ffffff !important;
+  color: #0b132b !important;
+  border: 1px solid #ffffff !important;
+  box-shadow: 0 4px 18px rgba(255, 255, 255, 0.15);
+  font-weight: 700;
+  padding: 14px 28px;
+}
+
+.cq-banner-cta-actions .cq-btn-white-pill:hover {
+  background: #f8fafc !important;
+  color: #0077b6 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.25);
+}
+
+/* ==========================================================================
+   11. MOBILE HORIZONTAL CAROUSEL / SLIDE SYSTEM ("Geser ke Samping")
+   Transforms vertical card stacks into smooth touch scroll-snap sliders (< 768px)
+   ========================================================================== */
+.cq-mobile-swipe-indicator {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .cq-mobile-swipe-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #0369a1;
+    background: rgba(224, 242, 254, 0.85);
+    padding: 4px 12px;
+    border-radius: 9999px;
+    margin: 8px auto 16px;
+    border: 1px solid rgba(186, 230, 253, 0.9);
+    letter-spacing: 0.02em;
+  }
+
+  .cq-mobile-swipe-indicator i {
+    font-size: 13px;
+    color: #0284c7;
+  }
+
+  /* Horizontal Slider Containers */
+  .cq-peluang-grid-4,
+  #masalah .cq-grid-2,
+  #solusi .cq-grid-3,
+  #fasilitas .cq-grid-4,
+  #pilihan-paket .cq-grid-3,
+  .cq-story-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 16px !important;
+    width: auto !important;
+    margin-left: -16px !important;
+    margin-right: -16px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    padding-top: 8px !important;
+    padding-bottom: 24px !important;
+    scrollbar-width: none !important; /* Firefox */
+  }
+
+  .cq-peluang-grid-4::-webkit-scrollbar,
+  #masalah .cq-grid-2::-webkit-scrollbar,
+  #solusi .cq-grid-3::-webkit-scrollbar,
+  #fasilitas .cq-grid-4::-webkit-scrollbar,
+  #pilihan-paket .cq-grid-3::-webkit-scrollbar,
+  .cq-story-grid::-webkit-scrollbar {
+    display: none !important; /* Chrome, Safari, Edge */
+  }
+
+  /* Slide Items */
+  .cq-peluang-grid-4 > *,
+  #masalah .cq-grid-2 > *,
+  #solusi .cq-grid-3 > *,
+  #fasilitas .cq-grid-4 > *,
+  #pilihan-paket .cq-grid-3 > *,
+  .cq-story-grid > * {
+    flex: 0 0 85% !important;
+    width: 85% !important;
+    min-width: 275px !important;
+    max-width: 320px !important;
+    scroll-snap-align: start !important;
+    scroll-snap-stop: normal !important;
+    box-sizing: border-box !important;
+    margin-bottom: 0 !important;
+    height: auto !important;
+  }
+
+  /* Specific padding on mobile slider cards */
+  .cq-peluang-card,
+  .cq-peluang-pain-card,
+  .cq-peluang-solusi-card {
+    padding: 26px 20px 22px !important;
+  }
+
+  .cq-invest-card {
+    padding: 30px 22px !important;
+  }
+
+  .cq-success-story-card .cq-story-body {
+    padding: 20px 18px 20px !important;
+  }
+}
+
+
+

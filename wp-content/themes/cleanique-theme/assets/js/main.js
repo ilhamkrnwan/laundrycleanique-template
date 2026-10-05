@@ -144,28 +144,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (calcBtn) {
     calcBtn.addEventListener('click', runCalculator);
-  }
 
-  // Real-time reactive update on input/change
-  [calcKg, calcPrice, calcCostPct].forEach(input => {
-    if (input) {
-      input.addEventListener('input', runCalculator);
-      input.addEventListener('change', runCalculator);
-    }
-  });
-
-  // Preset chips (40 kg, 60 kg, 100 kg, 150 kg)
-  document.querySelectorAll('.cq-calc-preset-chip').forEach(chip => {
-    chip.addEventListener('click', () => {
-      document.querySelectorAll('.cq-calc-preset-chip').forEach(c => c.classList.remove('is-active'));
-      chip.classList.add('is-active');
-      const val = chip.getAttribute('data-kg');
-      if (val && calcKg) {
-        calcKg.value = val;
-        runCalculator();
+    // Real-time reactive update on input/change
+    [calcKg, calcPrice, calcCostPct].forEach(input => {
+      if (input) {
+        input.addEventListener('input', runCalculator);
+        input.addEventListener('change', runCalculator);
       }
     });
-  });
+
+    // Preset chips (40 kg, 60 kg, 100 kg, 150 kg)
+    document.querySelectorAll('.cq-calc-preset-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        document.querySelectorAll('.cq-calc-preset-chip').forEach(c => c.classList.remove('is-active'));
+        chip.classList.add('is-active');
+        const val = chip.getAttribute('data-kg');
+        if (val && calcKg) {
+          calcKg.value = val;
+          runCalculator();
+        }
+      });
+    });
+  }
 
   // Proposal / Lead Booking Form on Paket Usaha
   const proposalForm = document.querySelector('#cq-proposal-form');

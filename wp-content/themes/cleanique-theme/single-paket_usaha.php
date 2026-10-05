@@ -85,8 +85,8 @@ while (have_posts()) : the_post();
         <a href="<?php echo esc_url($wa_paket_url); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
           <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi &amp; Booking <?php the_title(); ?> via WhatsApp
         </a>
-        <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/#kalkulator')); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg">
-          <i class="ri-calculator-line" aria-hidden="true"></i> Simulasi Balik Modal
+        <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/#mitra-sukses')); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg">
+          <i class="ri-user-star-line" aria-hidden="true"></i> Bukti Mitra Sukses
         </a>
       </div>
     </div>

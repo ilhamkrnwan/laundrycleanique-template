@@ -183,50 +183,157 @@
       </div>
     </div>
 
-    <!-- 3 Langkah Memulai Operasional (Onboarding dari laundry.indotechbot.my.id) -->
-    <div style="margin-top: var(--cq-sp-64); background: #ffffff; border-radius: var(--cq-rad-24); border: 1px solid var(--sky-200); padding: clamp(24px, 4vw, 48px); box-shadow: 0 10px 30px -10px rgba(0, 119, 182, 0.08);">
-      <div style="text-align: center; max-width: 620px; margin: 0 auto var(--cq-sp-32);">
-        <span class="cq-section-subtitle">Proses Cepat &amp; Praktis</span>
-        <h3 style="font-family: var(--cq-font-heading); font-weight: 300; font-size: clamp(1.6rem, 1.3rem + 1.2vw, 2.4rem); letter-spacing: -0.02em; color: var(--ink); margin-bottom: 6px;">
+    <!-- 3 Langkah Memulai Operasional (Split Layout: Poin Garis Kiri & Image Kanan) -->
+    <div class="cq-onboarding-section-wrap">
+      <div class="cq-onboarding-header">
+        <span class="cq-badge-clean" style="margin-bottom: var(--cq-sp-12);">Proses Cepat &amp; Praktis</span>
+        <h3 class="cq-onboarding-title">
           3 Langkah Mudah <span class="cq-text-blue">Mulai Operasional</span>
         </h3>
-        <p style="font-size: var(--cq-fs-sm); color: var(--cq-text-muted); margin: 0;">
-          Daftarkan outlet Anda dalam 2 menit. Nikmati kasir modern, notifikasi WhatsApp, dan laporan keuangan terpadu.
+        <p class="cq-onboarding-desc">
+          Daftarkan outlet Anda dalam beberapa menit. Nikmati kasir modern berbasis cloud, notifikasi WhatsApp otomatis, dan laporan keuangan terpadu.
         </p>
       </div>
 
-      <div class="cq-grid-3" style="gap: var(--cq-sp-24);">
-        <!-- Step 1 -->
-        <div style="background: var(--sky-50); border: 1px solid var(--sky-200); border-radius: 18px; padding: var(--cq-sp-24); text-align: center;">
-          <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--brand); color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px; margin: 0 auto var(--cq-sp-16);">
-            1
+      <div class="cq-onboarding-split">
+        <!-- Kolom Kiri: Poin-poin dengan Garis Vertikal (Timeline Style Kemitraan) -->
+        <div class="cq-onboarding-timeline">
+          <div class="cq-timeline-track" aria-hidden="true"></div>
+
+          <!-- Langkah 01 -->
+          <div class="cq-timeline-item">
+            <div class="cq-timeline-node" aria-hidden="true">
+              <div class="cq-timeline-node-inner" style="background: #0284c7;"></div>
+            </div>
+            <div class="cq-timeline-badge-pill">
+              <span class="cq-timeline-dot dot-blue"></span> Tahap 01 &bull; Registrasi Akun
+            </div>
+            <div class="cq-timeline-card">
+              <div class="cq-timeline-card-header">
+                <div class="cq-timeline-icon-box" style="border-color: #0284c7; color: #0284c7;">
+                  <i class="ri-user-add-line" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <h4 class="cq-timeline-title">Pendaftaran &amp; Setup Outlet</h4>
+                  <div class="cq-timeline-meta">
+                    <i class="ri-time-line" aria-hidden="true"></i> Estimasi Waktu: 2 – 3 Menit
+                  </div>
+                </div>
+              </div>
+              <p class="cq-timeline-card-desc">
+                Daftarkan data outlet, identitas bisnis, dan pilih paket langganan Smart POS Cleanique. Akses kasir berbasis cloud langsung aktif dan siap dikonfigurasi tanpa beban instalasi server rumit.
+              </p>
+              <div class="cq-timeline-tags-row">
+                <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Setup Cloud Instan</span>
+                <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Multi-User Kasir &amp; Owner</span>
+                <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Database Terenkripsi Aman</span>
+              </div>
+            </div>
           </div>
-          <h4 style="font-size: var(--cq-fs-base); font-weight: 700; color: var(--ink); margin-bottom: 8px;">Kirim Formulir Pendaftaran</h4>
-          <p style="font-size: var(--cq-fs-xs); color: var(--cq-text-muted); line-height: 1.5; margin: 0;">
-            Isi nama outlet, nama pemilik, dan nomor WhatsApp toko Anda. Akses free trial langsung aktif dalam 2 menit.
-          </p>
+
+          <!-- Langkah 02 -->
+          <div class="cq-timeline-item">
+            <div class="cq-timeline-node" aria-hidden="true">
+              <div class="cq-timeline-node-inner" style="background: #10b981;"></div>
+            </div>
+            <div class="cq-timeline-badge-pill">
+              <span class="cq-timeline-dot dot-mint"></span> Tahap 02 &bull; WA Gateway
+            </div>
+            <div class="cq-timeline-card">
+              <div class="cq-timeline-card-header">
+                <div class="cq-timeline-icon-box" style="border-color: #059669; color: #059669;">
+                  <i class="ri-whatsapp-line" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <h4 class="cq-timeline-title">Scan WhatsApp Resmi Outlet</h4>
+                  <div class="cq-timeline-meta">
+                    <i class="ri-time-line" aria-hidden="true"></i> Estimasi Waktu: 1 – 2 Menit
+                  </div>
+                </div>
+              </div>
+              <p class="cq-timeline-card-desc">
+                Hubungkan nomor WhatsApp resmi outlet Anda melalui scan QR code ringkas pada menu pengaturan aplikasi. Sistem otomatis terhubung untuk pengiriman nota digital &amp; status cucian real-time.
+              </p>
+              <div class="cq-timeline-tags-row">
+                <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Scan QR Sekali Klik</span>
+                <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Nomor WhatsApp Toko Sendiri</span>
+                <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> E-Nota Digital Otomatis</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Langkah 03 -->
+          <div class="cq-timeline-item">
+            <div class="cq-timeline-node" aria-hidden="true">
+              <div class="cq-timeline-node-inner" style="background: #0077b6;"></div>
+            </div>
+            <div class="cq-timeline-badge-pill">
+              <span class="cq-timeline-dot dot-blue"></span> Tahap 03 &bull; Go Operasional
+            </div>
+            <div class="cq-timeline-card">
+              <div class="cq-timeline-card-header">
+                <div class="cq-timeline-icon-box" style="border-color: #0077b6; color: #0077b6;">
+                  <i class="ri-store-2-line" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <h4 class="cq-timeline-title">Input Layanan &amp; Mulai Transaksi</h4>
+                  <div class="cq-timeline-meta">
+                    <i class="ri-time-line" aria-hidden="true"></i> Estimasi Waktu: 5 Menit
+                  </div>
+                </div>
+              </div>
+              <p class="cq-timeline-card-desc">
+                Atur daftar tarif kiloan dan satuan outlet Anda. Timbang cucian pelanggan, terima pesanan perdana, kirim e-nota langsung ke WhatsApp pelanggan, dan pantau rekap keuangan kasir secara rapi.
+              </p>
+              <div class="cq-timeline-tags-row">
+                <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Kasir Kiloan &amp; Satuan</span>
+                <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Cetak Thermal &amp; Nota WA</span>
+                <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Rekap Kas &amp; Laporan Harian</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- Step 2 -->
-        <div style="background: var(--sky-50); border: 1px solid var(--sky-200); border-radius: 18px; padding: var(--cq-sp-24); text-align: center;">
-          <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--brand-deep); color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px; margin: 0 auto var(--cq-sp-16);">
-            2
+        <!-- Kolom Kanan: Image Pendukung (Mockup Tablet POS & E-Nota) -->
+        <div class="cq-onboarding-visual-col">
+          <div class="cq-onboarding-visual-sticky">
+            <div class="cq-onboarding-visual-card">
+              <div class="cq-onboarding-visual-topbar">
+                <div class="cq-onboarding-visual-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="cq-onboarding-visual-badge">
+                  <span class="cq-onboarding-pulse-dot"></span> Cleanique POS &bull; Cloud Dashboard
+                </div>
+              </div>
+              <div class="cq-onboarding-img-wrapper">
+                <img 
+                  src="<?php echo esc_url(CLEANIQUE_URI . '/assets/images/hero-pos-app.jpg'); ?>" 
+                  alt="Tampilan Antarmuka POS Cleanique dan Nota Digital WhatsApp" 
+                  class="cq-onboarding-img"
+                  loading="lazy"
+                  width="1280"
+                  height="720"
+                />
+              </div>
+              <div class="cq-onboarding-visual-caption">
+                <div class="cq-onboarding-caption-item">
+                  <i class="ri-smartphone-line" aria-hidden="true"></i>
+                  <div>
+                    <strong>Multi-Device</strong>
+                    <span>Akses dari Tablet, HP, &amp; Laptop</span>
+                  </div>
+                </div>
+                <div class="cq-onboarding-caption-item">
+                  <i class="ri-shield-check-line" aria-hidden="true"></i>
+                  <div>
+                    <strong>Sistem Cloud Terpadu</strong>
+                    <span>Sinkronisasi Otomatis &amp; Real-Time</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <h4 style="font-size: var(--cq-fs-base); font-weight: 700; color: var(--ink); margin-bottom: 8px;">Scan WhatsApp Outlet</h4>
-          <p style="font-size: var(--cq-fs-xs); color: var(--cq-text-muted); line-height: 1.5; margin: 0;">
-            Hubungkan nomor WhatsApp resmi outlet Anda melalui scan QR code praktis di menu pengaturan aplikasi.
-          </p>
-        </div>
-
-        <!-- Step 3 -->
-        <div style="background: var(--sky-50); border: 1px solid var(--sky-200); border-radius: 18px; padding: var(--cq-sp-24); text-align: center;">
-          <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--mint-cta); color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px; margin: 0 auto var(--cq-sp-16);">
-            3
-          </div>
-          <h4 style="font-size: var(--cq-fs-base); font-weight: 700; color: var(--ink); margin-bottom: 8px;">Mulai Terima Order Perdana</h4>
-          <p style="font-size: var(--cq-fs-xs); color: var(--cq-text-muted); line-height: 1.5; margin: 0;">
-            Atur daftar tarif kiloan/satuan, timbang pakaian pelanggan, dan kirim nota digital perdana secara otomatis.
-          </p>
         </div>
       </div>
     </div>

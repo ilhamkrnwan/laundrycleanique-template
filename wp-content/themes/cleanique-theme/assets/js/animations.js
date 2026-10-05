@@ -688,13 +688,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const gatewayCards = corpHero.querySelectorAll('.cq-corp-gateway-card');
-    if (gatewayCards.length) {
-      corpTl.from(gatewayCards, { y: 40, opacity: 0, duration: 0.8, stagger: 0.15 }, 0.45);
-    }
-
-    const statCards = corpHero.querySelectorAll('.cq-corp-stat-card');
-    if (statCards.length) {
-      corpTl.from(statCards, { y: 30, opacity: 0, duration: 0.7, stagger: 0.1 }, 0.6);
+    if (gatewayCards.length && typeof ScrollTrigger !== 'undefined') {
+      gsap.fromTo(gatewayCards,
+        { y: 30, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: '.cq-corp-gateway-grid',
+            start: 'top 90%',
+            toggleActions: 'play none none none'
+          },
+          y: 0,
+          opacity: 1,
+          duration: 0.7,
+          stagger: 0.15,
+          ease: 'power3.out',
+          clearProps: 'transform,opacity'
+        }
+      );
     }
   }
 
@@ -721,21 +731,21 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       const cards = section.querySelectorAll(
-        '.cq-corp-card, .cq-kemitraan-card, .cq-corp-article-card, .cq-eco-card, .cq-machinery-card, .cq-testi-card, .cq-compare-wrap'
+        '.cq-corp-card, .cq-kemitraan-card, .cq-corp-article-card, .cq-eco-card, .cq-machinery-card, .cq-testi-card, .cq-compare-wrap, .cq-roadmap-col-card, .cq-pos-subscription-card, .cq-kemitraan-catalog-action'
       );
       if (cards.length) {
         gsap.fromTo(cards,
-          { y: 35, opacity: 0 },
+          { y: 20, opacity: 0 },
           {
             scrollTrigger: {
               trigger: section,
-              start: 'top 80%',
+              start: 'top 85%',
               toggleActions: 'play none none none'
             },
             y: 0,
             opacity: 1,
-            duration: 0.8,
-            stagger: 0.12,
+            duration: 0.7,
+            stagger: 0.1,
             ease: 'power3.out',
             clearProps: 'transform,opacity'
           }
