@@ -69,7 +69,7 @@ while (have_posts()) : the_post();
 
       <?php if (!empty($specs)) : ?>
         <div style="background: #F8FAFC; border-radius: 20px; padding: clamp(20px, 3vw, 32px); border: 1px solid var(--cq-border-light); margin-bottom: var(--cq-sp-32);">
-          <h3 style="font-family: var(--cq-font-heading); font-size: var(--cq-fs-lg); font-weight: 700; color: var(--ink); margin-bottom: var(--cq-sp-16);">
+          <h3 style="font-family: var(--cq-font-heading); font-size: var(--cq-fs-lg); font-weight: 500; color: var(--ink); margin-bottom: var(--cq-sp-16);">
             Spesifikasi &amp; Fasilitas yang Didapatkan Mitra:
           </h3>
           <ul class="cq-pricing-list" style="margin-bottom: 0;">

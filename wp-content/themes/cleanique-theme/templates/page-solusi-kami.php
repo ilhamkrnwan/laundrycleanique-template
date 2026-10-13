@@ -108,7 +108,7 @@ $wa_url = cleanique_get_whatsapp_url('general');
                loading="lazy">
         </div>
         <div class="cq-visual-split-content">
-          <h2 style="font-family: var(--cq-font-heading); font-size: clamp(1.8rem, 1.4rem + 1.2vw, 2.5rem); font-weight: 800; color: var(--cq-dark-navy); line-height: 1.2; margin-bottom: var(--cq-sp-16);">
+          <h2 class="cq-section-title" style="margin-bottom: var(--cq-sp-16);">
             Paket Usaha Laundry Lengkap (Turnkey Business)
           </h2>
           <p style="color: var(--cq-text-muted); font-size: 1.05rem; line-height: 1.7; margin-bottom: var(--cq-sp-16);">
@@ -148,7 +148,7 @@ $wa_url = cleanique_get_whatsapp_url('general');
                loading="lazy">
         </div>
         <div class="cq-visual-split-content">
-          <h2 style="font-family: var(--cq-font-heading); font-size: clamp(1.8rem, 1.4rem + 1.2vw, 2.5rem); font-weight: 800; color: var(--cq-dark-navy); line-height: 1.2; margin-bottom: var(--cq-sp-16);">
+          <h2 class="cq-section-title" style="margin-bottom: var(--cq-sp-16);">
             Sistem Kasir Digital POS Laundry Modern (Cloud SaaS)
           </h2>
           <p style="color: var(--cq-text-muted); font-size: 1.05rem; line-height: 1.7; margin-bottom: var(--cq-sp-16);">

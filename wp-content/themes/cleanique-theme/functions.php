@@ -10,7 +10,7 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
 
-define('CLEANIQUE_VERSION', '1.4.1');
+define('CLEANIQUE_VERSION', '1.5.0');
 define('CLEANIQUE_DIR', get_template_directory());
 define('CLEANIQUE_URI', get_template_directory_uri());
 
@@ -161,7 +161,7 @@ function cleanique_enqueue_assets() {
     // 1. Google Fonts: Plus Jakarta Sans & Inter (dengan display=swap)
     wp_enqueue_style(
         'cleanique-fonts',
-        'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap',
+        'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap',
         [],
         null
     );

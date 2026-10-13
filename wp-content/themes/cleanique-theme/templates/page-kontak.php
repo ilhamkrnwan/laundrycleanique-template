@@ -30,8 +30,8 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
         <div class="cq-corp-hero-content">
           <span class="cq-badge-clean">PT Indotech Berkah Abadi &bull; Sleman, D.I. Yogyakarta</span>
           
-          <h1 class="cq-corp-hero-title">
-            Terhubung Langsung dengan Tim Ahli Kami, <span class="cq-text-accent">Mulai Bisnis Laundry Terarah.</span>
+          <h1 class="cq-corp-hero-title cq-payno-heading">
+            Terhubung Langsung dengan Tim Ahli Kami, <span class="cq-text-accent cq-text-blue">Mulai Bisnis Laundry Terarah.</span>
           </h1>
 
           <p class="cq-corp-hero-desc">
@@ -255,7 +255,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
             <!-- Kolom Informasi Alamat -->
             <div>
               <div style="margin-bottom: 8px;">
-                <h3 style="font-size: 1.2rem; font-weight: 800; color: #0f172a; margin: 0 0 4px 0; line-height: 1.2;">
+                <h3 style="font-size: 1.2rem; font-weight: 500; color: #0f172a; margin: 0 0 4px 0; line-height: 1.2;">
                   PT Indotech Berkah Abadi
                 </h3>
                 <span style="font-size: 12.5px; font-weight: 600; color: #0284c7;">Kantor Pusat &amp; Workshop Pabrik Chemical (Orchid Brand)</span>

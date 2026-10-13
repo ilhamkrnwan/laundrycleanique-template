@@ -27,8 +27,8 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
         <div class="cq-corp-hero-content">
           <span class="cq-badge-clean">PT Indotech Berkah Abadi &bull; Sleman, D.I. Yogyakarta</span>
           
-          <h1 class="cq-corp-hero-title">
-            Kembangkan Bisnis Laundry, <span class="cq-text-accent">Dengan Mesin Tangguh, Chemical Pabrik &amp; Sistem Cerdas.</span>
+          <h1 class="cq-corp-hero-title cq-payno-heading">
+            Kembangkan Bisnis Laundry, <span class="cq-text-accent cq-text-blue">Dengan Mesin Tangguh, Chemical Pabrik &amp; Sistem Cerdas.</span>
           </h1>
 
           <p class="cq-corp-hero-desc">
@@ -494,7 +494,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
     <div class="cq-container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto; position: relative; z-index: 2;">
         <span class="cq-badge-clean" style="margin-bottom: var(--cq-sp-12);">SOP &bull; Alur Pendampingan Terstruktur</span>
-        <h2 style="font-family: var(--cq-font-heading); font-size: clamp(1.8rem, 1.5rem + 1vw, 2.5rem); font-weight: 800; color: #0f172a; margin-bottom: var(--cq-sp-12); line-height: 1.2;">
+        <h2 class="cq-section-title" style="margin-bottom: var(--cq-sp-12);">
           6 Langkah Alur Kemitraan Menuju Pembukaan Outlet
         </h2>
         <p style="font-size: var(--cq-fs-sm); color: #475569; line-height: 1.65; margin: 0;">
@@ -703,74 +703,206 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
   <!-- ========================================================
        8. BUKTI NYATA KISAH SUKSES MITRA OUTLET
        ======================================================== -->
-  <section class="cq-section cq-section-alt" id="testimoni">
+  <?php
+  $index_testi_items = [
+      [
+          'name'       => 'Pak Hendro & Ibu Siska',
+          'role'       => 'Owner Cleanique Express • Minomartani, Sleman',
+          'quote'      => 'Awalnya ragu karena kami belum pernah bisnis laundry. Sangat terbantu dengan pendampingan teknisi Indotech dari perancangan pipa, kelistrikan sampai training takaran chemical. Deterjen dan parfumnya wangi tahan lama dan hemat karena suplai langsung pabrik. Dalam 6 bulan modal kami sudah balik!',
+          'initial'    => 'H',
+          'avatar_bg'  => '#0284C7',
+          'avatar_img' => get_template_directory_uri() . '/assets/images/mitra-outlet-sleman.jpg',
+          'badge'      => 'Balik Modal 6 Bln',
+      ],
+      [
+          'name'       => 'Mas Dimas Pratama',
+          'role'       => 'Owner Cleanique Laundry Solo • Jebres, Solo',
+          'quote'      => 'Yang paling memuaskan adalah sistem aplikasi kasir Cleanique POS-nya. Nota langsung terkirim WhatsApp ke pelanggan, omzet harian bisa dipantau langsung dari HP sambil saya tetap bekerja kantor. 100% laba operasional masuk ke kantong sendiri tanpa royalti fee!',
+          'initial'    => 'D',
+          'avatar_bg'  => '#7C3AED',
+          'avatar_img' => get_template_directory_uri() . '/assets/images/mitra-outlet-solo.jpg',
+          'badge'      => 'Balik Modal 5 Bln',
+      ],
+      [
+          'name'       => 'Ibu Hj. Nurul Hidayati',
+          'role'       => 'Owner Cleanique Tembalang • Semarang',
+          'quote'      => 'Mesin komersial stack washer & dryer Cleanique benar-benar bandel, bekerja maraton dari pagi sampai malam mesin tetap stabil dan hemat gas. Tim teknisi PT Indotech responsif saat instalasi. Sekarang kami sedang persiapan membuka cabang kedua.',
+          'initial'    => 'N',
+          'avatar_bg'  => '#059669',
+          'avatar_img' => get_template_directory_uri() . '/assets/images/mitra-outlet-semarang.jpg',
+          'badge'      => 'Ekspansi Cabang 2',
+      ],
+      [
+          'name'       => 'dr. Maya Anggraini',
+          'role'       => 'Owner Royal Laundromat • 4 Cabang, Bandung',
+          'quote'      => 'Mengelola 4 cabang laundry kiloan dan satuan jadi sangat terkontrol dalam satu ekosistem Cleanique. Pasokan chemical pabrik Orchid Brand selalu ready tepat waktu, mesin komersial minim downtime, dan laporan laba rugi terpantau harian dari HP.',
+          'initial'    => 'M',
+          'avatar_bg'  => '#DB2777',
+          'avatar_img' => '',
+          'badge'      => 'Multi Outlet',
+      ],
+      [
+          'name'       => 'Hendra Kusuma',
+          'role'       => 'Owner Barokah Wash • Mertoyudan, Magelang',
+          'quote'      => 'Paket Kemitraan Cleanique benar-benar tanpa embel-embel royalti seumur hidup. Suplai deterjen dan softener langsung dari pabrik Indotech membuat HPP cucian sangat murah dibanding beli eceran. Margin laba bersih outlet kami mencapai 45%.',
+          'initial'    => 'H',
+          'avatar_bg'  => '#2563EB',
+          'avatar_img' => '',
+          'badge'      => 'Margin Laba 45%',
+      ],
+      [
+          'name'       => 'Rina Wijayanti',
+          'role'       => 'Owner Melati Wash Express • Sleman, Yogyakarta',
+          'quote'      => 'Fitur notifikasi WhatsApp otomatis dan nota digital Cleanique membuat pelanggan loyal berlipat ganda. Tidak ada lagi drama nota hilang atau pakaian tertukar. Biaya cetak nota kertas ratusan ribu sebulan sekarang 100% jadi profit bersih!',
+          'initial'    => 'R',
+          'avatar_bg'  => '#7C3AED',
+          'avatar_img' => '',
+          'badge'      => '100% Paperless',
+      ],
+      [
+          'name'       => 'Budi Santoso',
+          'role'       => 'Owner Smart Clean Laundromat • Bantul, Yogyakarta',
+          'quote'      => 'Instalasi boiler setrika uap dan mesin dryer gas dari Indotech sangat rapi dan safety. Karyawan kami bisa bekerja 2x lebih cepat dan hemat tenaga. Layanan purna jual teknisinya sangat sigap saat kami butuh konsultasi sparepart.',
+          'initial'    => 'B',
+          'avatar_bg'  => '#0D9488',
+          'avatar_img' => '',
+          'badge'      => 'Mesin & Boiler Safety',
+      ],
+      [
+          'name'       => 'Siti Nurhaliza',
+          'role'       => 'Owner Fresh Laundry & Setrika • Solo, Jawa Tengah',
+          'quote'      => 'SOP kerja yang diberikan tim Cleanique sangat aplikatif untuk karyawan baru. Takaran chemical presisi menjaga serat kain pelanggan tetap awet dan wangi tahan lama. Outlet kami jadi laundry rujukan di kampus sekitar.',
+          'initial'    => 'S',
+          'avatar_bg'  => '#059669',
+          'avatar_img' => '',
+          'badge'      => 'Mitra Terverifikasi',
+      ],
+      [
+          'name'       => 'I Wayan Gede',
+          'role'       => 'Owner Dewata Clean Laundry • Denpasar, Bali',
+          'quote'      => 'Banyak ekspatriat dan tamu villa langganan di tempat kami. Mereka suka sekali karena nota digital WhatsApp-nya rapi dan mendukung multi-payment QRIS. Kasir melayani antrean 2x lebih cepat dibanding pakai nota manual.',
+          'initial'    => 'W',
+          'avatar_bg'  => '#0891B2',
+          'avatar_img' => '',
+          'badge'      => 'Mitra Terverifikasi',
+      ],
+  ];
+
+  // Merge with CPT testimoni if available
+  $cpt_testi_query = new WP_Query([
+      'post_type'      => 'testimoni',
+      'posts_per_page' => 6,
+      'post_status'    => 'publish',
+  ]);
+  if ($cpt_testi_query->have_posts()) {
+      $cpt_items = [];
+      while ($cpt_testi_query->have_posts()) {
+          $cpt_testi_query->the_post();
+          $city = get_post_meta(get_the_ID(), '_cq_testi_city', true);
+          $biz = get_post_meta(get_the_ID(), '_cq_testi_business', true);
+          $cpt_items[] = [
+              'name'       => get_the_title(),
+              'role'       => ($biz ?: 'Mitra Laundry') . ($city ? ' • ' . $city : ''),
+              'quote'      => wp_strip_all_tags(get_the_content()),
+              'initial'    => strtoupper(substr(get_the_title(), 0, 1)),
+              'avatar_bg'  => '#0284C7',
+              'avatar_img' => has_post_thumbnail() ? get_the_post_thumbnail_url(get_the_ID(), 'thumbnail') : '',
+              'badge'      => 'Mitra Terverifikasi',
+          ];
+      }
+      wp_reset_postdata();
+      if (!empty($cpt_items)) {
+          $index_testi_items = array_merge($cpt_items, $index_testi_items);
+      }
+  }
+  ?>
+  <section class="cq-payno-testi-section" id="testimoni">
     <div class="cq-container">
-      <div class="cq-section-header">
-        <h2 class="cq-section-title">Kisah Sukses Mitra Cleanique Laundry</h2>
-        <p class="cq-section-desc">
+      <div class="cq-section-header" style="text-align: center; max-width: 780px; margin: 0 auto;">
+        <span class="cq-section-subtitle">Kisah Sukses Mitra Laundry</span>
+        <h2 style="font-family: var(--cq-font-heading); font-weight: 300; font-size: clamp(2.2rem, 1.8rem + 2vw, 3.4rem); line-height: 1.15; letter-spacing: -0.03em; color: var(--ink); margin: 0 auto var(--cq-sp-12);">
+          Kisah Sukses Mitra Cleanique Laundry<br>
+          <span class="cq-text-blue">Di Seluruh Indonesia</span>
+        </h2>
+        <p class="cq-section-desc" style="margin: 0 auto; color: #64748B;">
           Simak cerita langsung dari para mitra yang telah menjalankan outlet laundry mandiri mereka bersama ekosistem Cleanique Laundry dan pasokan resmi PT Indotech Berkah Abadi.
         </p>
       </div>
+    </div>
 
-      <div class="cq-bento-grid cq-bento-grid-3">
-        <!-- Mitra 1: Sleman -->
-        <div class="cq-corp-card">
-          <div class="cq-gateway-thumb-wrap" style="height: 190px;">
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/mitra-outlet-sleman.jpg'); ?>" 
-                 alt="Outlet Mitra Cleanique Minomartani Sleman" 
-                 class="cq-gateway-thumb-img" 
-                 loading="lazy">
-          </div>
-          <div class="cq-testi-meta-row">
-            <span class="cq-testi-tag">Minomartani, Sleman, DIY</span>
-          </div>
-          <p class="cq-corp-card-desc" style="font-style: italic;">
-            "Awalnya ragu karena kami belum pernah bisnis laundry. Sangat terbantu dengan pendampingan teknisi Indotech dari perancangan pipa, kelistrikan sampai training takaran chemical. Deterjen dan parfumnya wangi tahan lama dan hemat karena suplai langsung pabrik."
-          </p>
-          <div style="margin-top: auto; padding-top: 14px; border-top: 1px solid #f1f5f9;">
-            <strong style="display: block; font-size: 14px; color: var(--cq-dark-navy);">Pak Hendro &amp; Ibu Siska</strong>
-            <span style="font-size: 12px; color: var(--cq-text-muted);">Owner Cleanique Express Minomartani</span>
-          </div>
+    <!-- Continuous Infinite Carousel Track -->
+    <div class="cq-payno-testi-track-wrap">
+      <div class="cq-payno-testi-track">
+        <!-- Group 1: Original Items -->
+        <div class="cq-testi-group">
+          <?php foreach ($index_testi_items as $item) : ?>
+            <div class="cq-payno-testi-card">
+              <div>
+                <div class="cq-testi-card-header">
+                  <div class="cq-testi-stars">
+                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                  </div>
+                  <span class="cq-testi-badge">
+                    <i class="ri-checkbox-circle-fill"></i> <?php echo esc_html($item['badge'] ?? 'Mitra Terverifikasi'); ?>
+                  </span>
+                </div>
+                <p class="cq-testi-card-quote">
+                  "<?php echo esc_html($item['quote']); ?>"
+                </p>
+              </div>
+              <div class="cq-testi-card-user">
+                <?php if (!empty($item['avatar_img'])) : ?>
+                  <div class="cq-testi-card-avatar" style="overflow: hidden; background: #e2e8f0;">
+                    <img src="<?php echo esc_url($item['avatar_img']); ?>" alt="<?php echo esc_attr($item['name']); ?>" loading="lazy">
+                  </div>
+                <?php else : ?>
+                  <div class="cq-testi-card-avatar" style="background: <?php echo esc_attr($item['avatar_bg']); ?>;">
+                    <?php echo esc_html($item['initial']); ?>
+                  </div>
+                <?php endif; ?>
+                <div class="cq-testi-card-meta">
+                  <div class="cq-testi-card-name"><?php echo esc_html($item['name']); ?></div>
+                  <div class="cq-testi-card-role"><?php echo esc_html($item['role']); ?></div>
+                </div>
+              </div>
+            </div>
+          <?php endforeach; ?>
         </div>
 
-        <!-- Mitra 2: Solo -->
-        <div class="cq-corp-card">
-          <div class="cq-gateway-thumb-wrap" style="height: 190px;">
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/mitra-outlet-solo.jpg'); ?>" 
-                 alt="Outlet Mitra Cleanique Laundry Solo" 
-                 class="cq-gateway-thumb-img" 
-                 loading="lazy">
-          </div>
-          <div class="cq-testi-meta-row">
-            <span class="cq-testi-tag">Jebres, Solo, Jawa Tengah</span>
-          </div>
-          <p class="cq-corp-card-desc" style="font-style: italic;">
-            "Yang paling memuaskan adalah sistem aplikasi kasir Cleanique POS-nya. Nota langsung terkirim WhatsApp ke pelanggan, omzet harian bisa dipantau langsung dari HP sambil saya tetap bekerja kantor. 100% laba operasional masuk ke kantong sendiri."
-          </p>
-          <div style="margin-top: auto; padding-top: 14px; border-top: 1px solid #f1f5f9;">
-            <strong style="display: block; font-size: 14px; color: var(--cq-dark-navy);">Mas Dimas Pratama</strong>
-            <span style="font-size: 12px; color: var(--cq-text-muted);">Owner Cleanique Laundry Solo</span>
-          </div>
-        </div>
-
-        <!-- Mitra 3: Semarang -->
-        <div class="cq-corp-card">
-          <div class="cq-gateway-thumb-wrap" style="height: 190px;">
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/mitra-outlet-semarang.jpg'); ?>" 
-                 alt="Outlet Mitra Cleanique Tembalang Semarang" 
-                 class="cq-gateway-thumb-img" 
-                 loading="lazy">
-          </div>
-          <div class="cq-testi-meta-row">
-            <span class="cq-testi-tag">Tembalang, Semarang, Jawa Tengah</span>
-          </div>
-          <p class="cq-corp-card-desc" style="font-style: italic;">
-            "Mesin komersial stack washer &amp; dryer Cleanique benar-benar bandel, bekerja maraton dari pagi sampai malam mesin tetap stabil dan hemat gas. Tim teknisi PT Indotech responsif saat instalasi. Sekarang kami sedang persiapan membuka cabang kedua."
-          </p>
-          <div style="margin-top: auto; padding-top: 14px; border-top: 1px solid #f1f5f9;">
-            <strong style="display: block; font-size: 14px; color: var(--cq-dark-navy);">Ibu Hj. Nurul Hidayati</strong>
-            <span style="font-size: 12px; color: var(--cq-text-muted);">Owner Cleanique Tembalang Premium</span>
-          </div>
+        <!-- Group 2: Duplicate Items for 100% Seamless Infinite Loop -->
+        <div class="cq-testi-group" aria-hidden="true">
+          <?php foreach ($index_testi_items as $item) : ?>
+            <div class="cq-payno-testi-card">
+              <div>
+                <div class="cq-testi-card-header">
+                  <div class="cq-testi-stars">
+                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                  </div>
+                  <span class="cq-testi-badge">
+                    <i class="ri-checkbox-circle-fill"></i> <?php echo esc_html($item['badge'] ?? 'Mitra Terverifikasi'); ?>
+                  </span>
+                </div>
+                <p class="cq-testi-card-quote">
+                  "<?php echo esc_html($item['quote']); ?>"
+                </p>
+              </div>
+              <div class="cq-testi-card-user">
+                <?php if (!empty($item['avatar_img'])) : ?>
+                  <div class="cq-testi-card-avatar" style="overflow: hidden; background: #e2e8f0;">
+                    <img src="<?php echo esc_url($item['avatar_img']); ?>" alt="<?php echo esc_attr($item['name']); ?>" loading="lazy">
+                  </div>
+                <?php else : ?>
+                  <div class="cq-testi-card-avatar" style="background: <?php echo esc_attr($item['avatar_bg']); ?>;">
+                    <?php echo esc_html($item['initial']); ?>
+                  </div>
+                <?php endif; ?>
+                <div class="cq-testi-card-meta">
+                  <div class="cq-testi-card-name"><?php echo esc_html($item['name']); ?></div>
+                  <div class="cq-testi-card-role"><?php echo esc_html($item['role']); ?></div>
+                </div>
+              </div>
+            </div>
+          <?php endforeach; ?>
         </div>
       </div>
     </div>
@@ -789,7 +921,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
         </div>
         <div class="cq-visual-split-content">
           <span class="cq-badge-clean">Produsen &amp; Pengembang Langsung</span>
-          <h2 style="font-family: var(--cq-font-heading); font-size: clamp(1.6rem, 1.3rem + 1vw, 2.2rem); font-weight: 800; color: var(--cq-dark-navy); line-height: 1.25; margin-bottom: var(--cq-sp-16);">
+          <h2 class="cq-section-title" style="margin-bottom: var(--cq-sp-16);">
             Didukung Pabrik Kimia Sendiri &amp; Tim Ahli di Sleman
           </h2>
           <p style="color: var(--cq-text-muted); line-height: 1.7; margin-bottom: var(--cq-sp-24);">

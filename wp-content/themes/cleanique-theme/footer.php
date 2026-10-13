@@ -1,14 +1,13 @@
 <?php
 /**
  * Cleanique Footer Template
- * Mendukung Company Profile Corporate Footer & Landing Page Promo Footer
+ * Harmonized with Landing Page (Payno Modern Light Card Architecture)
  *
  * @package Cleanique
  */
 
 $is_paket_usaha = is_page_template('templates/page-paket-usaha.php') || is_page('paket-usaha-laundry');
 $is_aplikasi_laundry = is_page_template('templates/page-aplikasi-laundry.php') || is_page('aplikasi-laundry');
-$is_landing_page = $is_paket_usaha || $is_aplikasi_laundry;
 
 if ($is_paket_usaha) {
     $wa_url = cleanique_get_whatsapp_url('paket_usaha');
@@ -23,13 +22,11 @@ if ($is_paket_usaha) {
     $wa_url = cleanique_get_whatsapp_url('general');
     $wa_label = 'Konsultasi Resmi';
 }
-
-$office_addr = get_theme_mod('cleanique_office_address', 'Jalan Jongke Kidul Tengah No. 30, RT.01/RW.23, Jongke Tengah, Sendangadi, Kec. Mlati, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55285');
 ?>
 
-<?php if ($is_landing_page) : ?>
   <!-- ========================================================
-       PROMO LANDING PAGE FOOTER (Payno Style)
+       CLEANIQUE UNIFIED FOOTER (Payno Modern Light Card Architecture)
+       Harmonized for Landing Page & Company Profile
        ======================================================== -->
   <footer class="cq-payno-footer" role="contentinfo">
     <div class="cq-container">
@@ -42,7 +39,7 @@ $office_addr = get_theme_mod('cleanique_office_address', 'Jalan Jongke Kidul Ten
                 <?php echo cleanique_get_site_logo(); ?>
               </div>
               <p class="cq-payno-footer-tagline">
-                Ekosistem bisnis laundry terpadu di bawah naungan <strong>PT Indotech Berkah Abadi</strong> (Sleman, D.I. Yogyakarta). Menyediakan paket kemitraan siap buka 100% tanpa royalti, pasokan bahan kimia standar pabrik, dan aplikasi kasir POS laundry cerdas.
+                Solusi ekosistem bisnis laundry terpadu di bawah naungan <strong>PT Indotech Berkah Abadi</strong> (Sleman, D.I. Yogyakarta). Paket kemitraan 100% tanpa royalti, chemical pabrik, dan sistem kasir POS cerdas.
               </p>
             </div>
 
@@ -63,21 +60,23 @@ $office_addr = get_theme_mod('cleanique_office_address', 'Jalan Jongke Kidul Ten
           <!-- Vertical Divider (Dotted) -->
           <div class="cq-payno-footer-vdiv" aria-hidden="true"></div>
 
-          <!-- Right Column: Navigation Links -->
+          <!-- Right Column: Navigation Links (3 Balanced Columns) -->
           <div class="cq-payno-footer-nav">
             <div class="cq-payno-nav-col">
               <h5 class="cq-payno-nav-title">LAYANAN &amp; PRODUK</h5>
               <ul class="cq-payno-nav-list">
                 <li><a href="<?php echo esc_url(home_url('/kemitraan/')); ?>">Paket Kemitraan Turnkey</a></li>
-                <li><a href="<?php echo esc_url(home_url('/aplikasi-laundry/')); ?>">Aplikasi Kasir POS (Trial)</a></li>
+                <li><a href="<?php echo esc_url(home_url('/aplikasi-laundry/')); ?>">Aplikasi Kasir POS</a></li>
                 <li><a href="<?php echo esc_url(home_url('/pabrik-chemical/')); ?>">Chemical &amp; Parfum Pabrik</a></li>
                 <li><a href="<?php echo esc_url(home_url('/solusi-kami/')); ?>">Solusi Ekosistem Bisnis</a></li>
+                <li><a href="https://indotech.id" target="_blank" rel="noopener">Portal Indotech.id <i class="ri-external-link-line" style="font-size: 11px;"></i></a></li>
               </ul>
             </div>
 
             <div class="cq-payno-nav-col">
               <h5 class="cq-payno-nav-title">PERUSAHAAN</h5>
               <ul class="cq-payno-nav-list">
+                <li><a href="<?php echo esc_url(home_url('/')); ?>">Beranda</a></li>
                 <li><a href="<?php echo esc_url(home_url('/tentang-kami/')); ?>">Tentang PT Indotech</a></li>
                 <li><a href="<?php echo esc_url(home_url('/artikel/')); ?>">Pusat Artikel &amp; Edukasi</a></li>
                 <li><a href="<?php echo esc_url(home_url('/kemitraan/')); ?>">Peluang Kemitraan</a></li>
@@ -89,147 +88,37 @@ $office_addr = get_theme_mod('cleanique_office_address', 'Jalan Jongke Kidul Ten
               <h5 class="cq-payno-nav-title">BANTUAN &amp; LEGAL</h5>
               <ul class="cq-payno-nav-list">
                 <li><a href="<?php echo esc_url(home_url('/aplikasi-laundry/#faq')); ?>">Pusat Bantuan &amp; FAQ</a></li>
-                <li><a href="<?php echo esc_url($wa_url); ?>" target="_blank" rel="noopener">Konsultasi WhatsApp</a></li>
+                <li><a href="<?php echo esc_url($wa_url); ?>" target="_blank" rel="noopener">Hotline WhatsApp Resmi</a></li>
                 <li><a href="<?php echo esc_url(home_url('/kebijakan-privasi/')); ?>">Kebijakan Privasi</a></li>
                 <li><a href="<?php echo esc_url(home_url('/syarat-ketentuan/')); ?>">Syarat &amp; Ketentuan</a></li>
+                <li><a href="<?php echo esc_url(home_url('/kontak/')); ?>">Lokasi Sleman, DIY</a></li>
               </ul>
             </div>
           </div>
         </div>
 
-        <div class="cq-payno-footer-hdiv"></div>
+        <!-- Horizontal Divider (Dotted) -->
+        <div class="cq-payno-footer-hdiv" aria-hidden="true"></div>
 
+        <!-- Subrow (Links + Copyright) -->
         <div class="cq-payno-footer-subrow">
           <div class="cq-payno-sub-legal">
             <a href="<?php echo esc_url(home_url('/kebijakan-privasi/')); ?>">Kebijakan Privasi</a>
             <a href="<?php echo esc_url(home_url('/syarat-ketentuan/')); ?>">Syarat &amp; Ketentuan</a>
+            <a href="<?php echo esc_url(home_url('/kemitraan/')); ?>">Kemitraan 0% Royalty</a>
           </div>
           <div class="cq-payno-sub-copy">
-            &copy; Cleanique <?php echo date('Y'); ?> &bull; PT Indotech Berkah Abadi.
+            &copy; <?php echo date('Y'); ?> <strong>Cleanique Laundry</strong> &bull; PT Indotech Berkah Abadi. All rights reserved.
           </div>
         </div>
 
-        <!-- Giant Watermark Typography -->
+        <!-- Cleanique Giant Watermark Typography (Signature Payno Touch) -->
         <div class="cq-payno-footer-watermark-wrap" aria-hidden="true">
           <span class="cq-payno-footer-watermark">cleanique</span>
         </div>
       </div>
     </div>
   </footer>
-
-<?php else : ?>
-  <!-- ========================================================
-       OFFICIAL COMPANY PROFILE (COMPRO) CORPORATE FOOTER
-       Clean, Authoritative, B2B Trust, PT Indotech Berkah Abadi
-       ======================================================== -->
-  <footer class="cq-corp-footer" role="contentinfo">
-    <div class="cq-container">
-      <!-- Top Credentials Bar -->
-      <div class="cq-corp-footer-credentials">
-        <div class="cq-corp-cred-item">
-          <div class="cq-corp-cred-icon"><i class="ri-shield-check-line"></i></div>
-          <div class="cq-corp-cred-text">
-            <strong>Badan Hukum Resmi PT</strong>
-            <span>PT Indotech Berkah Abadi (Sleman, DIY)</span>
-          </div>
-        </div>
-        <div class="cq-corp-cred-item">
-          <div class="cq-corp-cred-icon"><i class="ri-flask-line"></i></div>
-          <div class="cq-corp-cred-text">
-            <strong>Pabrik Chemical Mandiri</strong>
-            <span>Formulasi Resmi Orchid Brand Bersertifikasi</span>
-          </div>
-        </div>
-        <div class="cq-corp-cred-item">
-          <div class="cq-corp-cred-icon"><i class="ri-hand-coin-line"></i></div>
-          <div class="cq-corp-cred-text">
-            <strong>Kemitraan Tanpa Royalti</strong>
-            <span>100% Keuntungan Milik Mitra Sepenuhnya</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Main Corporate 4-Column Grid -->
-      <div class="cq-corp-footer-grid">
-        <!-- Col 1: Brand & Indotech Company Profile -->
-        <div class="cq-corp-footer-col cq-corp-footer-col-about">
-          <div class="cq-corp-footer-brand">
-            <?php echo cleanique_get_site_logo('cq-footer-logo'); ?>
-          </div>
-          <p class="cq-corp-footer-desc">
-            <strong>Cleanique Laundry</strong> merupakan ekosistem terpadu dari <strong>PT Indotech Berkah Abadi</strong> yang menggabungkan lini produksi bahan kimia industri, penyediaan paket kemitraan usaha laundry turnkey, serta software kasir digital POS berbasis cloud.
-          </p>
-          <div class="cq-corp-footer-contact-quick">
-            <a href="<?php echo esc_url($wa_url); ?>" target="_blank" rel="noopener" class="cq-corp-quick-link">
-              <i class="ri-whatsapp-line"></i> Hotline WhatsApp Resmi
-            </a>
-            <a href="mailto:info@indotech.id" class="cq-corp-quick-link">
-              <i class="ri-mail-line"></i> info@indotech.id
-            </a>
-          </div>
-        </div>
-
-        <!-- Col 2: Navigasi Compro -->
-        <div class="cq-corp-footer-col">
-          <h4 class="cq-corp-footer-heading">Navigasi Utama</h4>
-          <ul class="cq-corp-footer-menu">
-            <li><a href="<?php echo esc_url(home_url('/')); ?>"><i class="ri-arrow-right-s-line"></i> Beranda</a></li>
-            <li><a href="<?php echo esc_url(home_url('/tentang-kami/')); ?>"><i class="ri-arrow-right-s-line"></i> Tentang Kami</a></li>
-            <li><a href="<?php echo esc_url(home_url('/artikel/')); ?>"><i class="ri-arrow-right-s-line"></i> Artikel &amp; Panduan</a></li>
-            <li><a href="<?php echo esc_url(home_url('/kemitraan/')); ?>"><i class="ri-arrow-right-s-line"></i> Peluang Kemitraan</a></li>
-            <li><a href="<?php echo esc_url(home_url('/kontak/')); ?>"><i class="ri-arrow-right-s-line"></i> Kontak &amp; Showroom</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 3: Ekosistem Bisnis -->
-        <div class="cq-corp-footer-col">
-          <h4 class="cq-corp-footer-heading">Lini Bisnis &amp; Solusi</h4>
-          <ul class="cq-corp-footer-menu">
-            <li><a href="<?php echo esc_url(home_url('/kemitraan/')); ?>"><i class="ri-arrow-right-s-line"></i> Paket Kemitraan Turnkey</a></li>
-            <li><a href="<?php echo esc_url(home_url('/pabrik-chemical/')); ?>"><i class="ri-arrow-right-s-line"></i> Pabrik Chemical Orchid Brand</a></li>
-            <li><a href="<?php echo esc_url(home_url('/aplikasi-laundry/')); ?>"><i class="ri-arrow-right-s-line"></i> Smart POS Laundry (Langganan)</a></li>
-            <li><a href="<?php echo esc_url(home_url('/solusi-kami/')); ?>"><i class="ri-arrow-right-s-line"></i> Solusi Mesin Komersial</a></li>
-            <li><a href="https://indotech.id" target="_blank" rel="noopener"><i class="ri-external-link-line"></i> Portal Indotech.id</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 4: Kantor & Workshop Sleman -->
-        <div class="cq-corp-footer-col">
-          <h4 class="cq-corp-footer-heading">Kantor &amp; Workshop</h4>
-          <div class="cq-corp-footer-address">
-            <p>
-              <i class="ri-map-pin-2-line"></i>
-              <span><strong>PT Indotech Berkah Abadi</strong><br><?php echo esc_html($office_addr); ?></span>
-            </p>
-            <p>
-              <i class="ri-time-line"></i>
-              <span>Senin – Sabtu: 08.00 – 17.00 WIB<br><small style="color: #64748b;">Minggu &amp; Libur Nasional tutup</small></span>
-            </p>
-          </div>
-          <div style="margin-top: 16px;">
-            <a href="<?php echo esc_url(home_url('/kontak/')); ?>" class="cq-btn cq-btn-outline cq-btn-sm" style="color: #ffffff; border-color: rgba(255,255,255,0.25);">
-              <i class="ri-navigation-line"></i> Petunjuk Arah &amp; Maps
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Corporate Sub-Footer / Legal Bar -->
-      <div class="cq-corp-footer-bottom">
-        <div class="cq-corp-footer-copy">
-          &copy; <?php echo date('Y'); ?> <strong>Cleanique Laundry</strong>. Unit bisnis resmi dari <strong>PT Indotech Berkah Abadi</strong>. Hak cipta dilindungi undang-undang.
-        </div>
-        <div class="cq-corp-footer-legal-links">
-          <a href="<?php echo esc_url(home_url('/kebijakan-privasi/')); ?>">Kebijakan Privasi</a>
-          <span class="cq-corp-legal-sep">&bull;</span>
-          <a href="<?php echo esc_url(home_url('/syarat-ketentuan/')); ?>">Syarat &amp; Ketentuan</a>
-          <span class="cq-corp-legal-sep">&bull;</span>
-          <a href="<?php echo esc_url(home_url('/kemitraan/')); ?>">Kemitraan 0% Royalty</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-<?php endif; ?>
 
 <!-- Floating WhatsApp Widget with Safe Area Inset -->
 <aside class="cq-floating-wa-wrapper" aria-label="Kontak Cepat">

@@ -28,52 +28,54 @@ $headline         = get_option('cleanique_kemitraan_headline', 'Peluang Bisnis L
   <div id="top"></div>
 
   <!-- ========================================================
-       1. HERO SECTION (Kemitraan Official PT Indotech)
+       1. HERO SECTION (Payno Modern Split Layout)
        ======================================================== -->
-  <section class="cq-kemitraan-hero" id="kemitraan-hero">
+  <section class="cq-sky-canvas cq-payno-hero" id="kemitraan-hero">
     <div class="cq-container">
-      <div class="cq-kemitraan-hero-content">
-        <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-16);">
-          Program Kemitraan Resmi PT Indotech Berkah Abadi
-        </div>
-        <h1 class="cq-kemitraan-hero-title">
-          <?php echo esc_html($headline); ?>
-        </h1>
-        <p class="cq-kemitraan-hero-desc">
-          Mulai usaha laundry komersial dengan risiko terukur. Dapatkan paket turnkey siap jalan: mesin cuci &amp; dryer komersial bergaransi resmi, pasokan chemical Orchid Brand harga tangan pertama dari pabrik Yogyakarta, instalasi plumbing &amp; kelistrikan berstandar industri, serta pelatihan SOP tuntas sampai grand opening.
-        </p>
-
-        <div class="cq-kemitraan-pills-bar">
-          <div class="cq-kemitraan-pill">
-            <i class="ri-shield-check-fill" aria-hidden="true"></i>
-            <span>0% Royalty Fee &bull; 100% Keuntungan Mitra</span>
+      <div class="cq-payno-hero-top">
+        <div>
+          <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-16); background: rgba(255, 255, 255, 0.9); border: 1px solid var(--sky-200);">
+            Program Kemitraan Turnkey &bull; PT Indotech Berkah Abadi
           </div>
-          <div class="cq-kemitraan-pill">
-            <i class="ri-flask-fill" aria-hidden="true"></i>
-            <span>Chemical Langsung Pabrik Sleman DIY</span>
-          </div>
-          <div class="cq-kemitraan-pill">
-            <i class="ri-tools-fill" aria-hidden="true"></i>
-            <span>Garansi Mesin &amp; Teknisi Tersedia</span>
-          </div>
-          <div class="cq-kemitraan-pill">
-            <i class="ri-smartphone-fill" aria-hidden="true"></i>
-            <span>Gratis Software POS Kasir Cleanique</span>
-          </div>
+          <?php if (!empty($headline) && $headline !== 'Peluang Bisnis Laundry Siap Operasi 100% Hak Milik Tanpa Royalti') : ?>
+            <h1 class="cq-payno-heading">
+              <?php echo esc_html($headline); ?>
+            </h1>
+          <?php else : ?>
+            <h1 class="cq-payno-heading">
+              Peluang Bisnis Laundry Mandiri, <span class="cq-text-blue">100% Hak Milik Tanpa Royalti.</span>
+            </h1>
+          <?php endif; ?>
         </div>
 
-        <div style="display: flex; gap: var(--cq-sp-12); justify-content: center; flex-wrap: wrap;">
-          <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-primary cq-btn-pill" target="_blank" rel="noopener">
-            <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Tim Ahli via WhatsApp
-          </a>
-          <a href="#katalog-paket" class="cq-btn cq-btn-outline cq-btn-pill">
-            <i class="ri-arrow-down-line" aria-hidden="true"></i> Lihat 4 Pilihan Paket Usaha
-          </a>
+        <div class="cq-payno-hero-right">
+          <p class="cq-payno-hero-desc">
+            Mulai usaha laundry komersial dengan risiko terukur. Dapatkan paket turnkey siap jalan: mesin cuci &amp; dryer komersial bergaransi resmi, pasokan chemical Orchid Brand harga tangan pertama dari pabrik Yogyakarta, instalasi plumbing &amp; kelistrikan berstandar industri, serta pelatihan SOP tuntas sampai grand opening.
+          </p>
+
+          <div style="font-size: var(--cq-fs-xs); color: var(--ink); font-weight: 600; margin-bottom: var(--cq-sp-16); display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+            <span><i class="ri-checkbox-circle-fill" style="color: var(--mint-cta);" aria-hidden="true"></i> 0% Royalty Fee Selamanya</span>
+            <span>&bull;</span>
+            <span><i class="ri-checkbox-circle-fill" style="color: var(--mint-cta);" aria-hidden="true"></i> Chemical Langsung Pabrik Sleman</span>
+            <span>&bull;</span>
+            <span><i class="ri-checkbox-circle-fill" style="color: var(--mint-cta);" aria-hidden="true"></i> Garansi Mesin &amp; Teknisi Tersedia</span>
+            <span>&bull;</span>
+            <span><i class="ri-checkbox-circle-fill" style="color: var(--mint-cta);" aria-hidden="true"></i> Software POS Kasir Cloud</span>
+          </div>
+
+          <div class="cq-payno-hero-actions">
+            <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-primary cq-btn-pill" target="_blank" rel="noopener">
+              <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Tim Ahli via WhatsApp
+            </a>
+            <a href="#katalog-paket" class="cq-btn cq-btn-white-pill cq-btn-pill">
+              <i class="ri-store-2-line" aria-hidden="true"></i> Lihat 4 Pilihan Paket Usaha
+            </a>
+          </div>
         </div>
       </div>
 
-      <!-- 4 Stats Counter Row -->
-      <div class="cq-corp-stats-row" style="margin-top: clamp(36px, 5vw, 54px);">
+      <!-- 4 Stats Counter Row (Clean Payno Cards) -->
+      <div class="cq-corp-stats-row" style="margin-top: clamp(32px, 4vw, 48px);">
         <div class="cq-corp-stat-card">
           <div class="cq-corp-stat-val">0%</div>
           <div class="cq-corp-stat-label">Royalti Selamanya &bull; Bebas Potongan</div>
@@ -100,7 +102,7 @@ $headline         = get_option('cleanique_kemitraan_headline', 'Peluang Bisnis L
   <section class="cq-section" id="katalog-paket" style="padding: clamp(60px, 8vw, 90px) 0; background: #f8fafc;">
     <div class="cq-container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto clamp(32px, 5vw, 48px);">
-        <h2 style="font-family: var(--cq-font-heading); font-size: clamp(1.8rem, 1.5rem + 1vw, 2.5rem); font-weight: 800; color: var(--cq-dark-navy); margin-bottom: var(--cq-sp-12);">
+        <h2 class="cq-section-title" style="margin-bottom: var(--cq-sp-12);">
           Pilihan Paket Kemitraan Sesuai Skala Bisnis Anda
         </h2>
         <p style="font-size: var(--cq-fs-sm); color: var(--cq-text-muted); line-height: 1.65; margin: 0;">
@@ -198,7 +200,7 @@ $headline         = get_option('cleanique_kemitraan_headline', 'Peluang Bisnis L
     <div class="cq-container">
       <div style="text-align: center; max-width: 760px; margin: 0 auto;">
         <span class="cq-badge-clean" style="margin-bottom: var(--cq-sp-12);">Jaringan Outlet Nasional &bull; 300+ Mitra Aktif</span>
-        <h2 style="font-family: var(--cq-font-heading); font-size: clamp(1.8rem, 1.5rem + 1vw, 2.5rem); font-weight: 800; color: #0f172a; margin-bottom: var(--cq-sp-12); line-height: 1.2;">
+        <h2 class="cq-section-title" style="margin-bottom: var(--cq-sp-12);">
           Daftar Mitra Aktif Cleanique Laundry di Berbagai Kota
         </h2>
         <p style="font-size: var(--cq-fs-sm); color: #475569; line-height: 1.65; margin: 0;">
@@ -520,7 +522,7 @@ $headline         = get_option('cleanique_kemitraan_headline', 'Peluang Bisnis L
   <section class="cq-section" style="padding: clamp(60px, 8vw, 90px) 0; background: #ffffff;">
     <div class="cq-container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto clamp(32px, 5vw, 44px);">
-        <h2 style="font-family: var(--cq-font-heading); font-size: clamp(1.8rem, 1.5rem + 1vw, 2.5rem); font-weight: 800; color: var(--cq-dark-navy); margin-bottom: var(--cq-sp-12);">
+        <h2 class="cq-section-title" style="margin-bottom: var(--cq-sp-12);">
           Mengapa Bermitra dengan Cleanique Jauh Lebih Menguntungkan?
         </h2>
         <p style="font-size: var(--cq-fs-sm); color: var(--cq-text-muted); line-height: 1.65; margin: 0;">
@@ -580,7 +582,7 @@ $headline         = get_option('cleanique_kemitraan_headline', 'Peluang Bisnis L
   <section class="cq-section" style="padding: clamp(60px, 8vw, 90px) 0; background: #f8fafc;" id="kalkulator-roi">
     <div class="cq-container">
       <div style="text-align: center; max-width: 680px; margin: 0 auto clamp(32px, 5vw, 44px);">
-        <h2 style="font-family: var(--cq-font-heading); font-size: clamp(1.8rem, 1.5rem + 1vw, 2.5rem); font-weight: 800; color: var(--cq-dark-navy); margin-bottom: var(--cq-sp-12);">
+        <h2 class="cq-section-title" style="margin-bottom: var(--cq-sp-12);">
           Simulasi Balik Modal (BEP) Usaha Laundry
         </h2>
         <p style="font-size: var(--cq-fs-sm); color: var(--cq-text-muted); line-height: 1.65; margin: 0;">
@@ -637,7 +639,7 @@ $headline         = get_option('cleanique_kemitraan_headline', 'Peluang Bisnis L
             </div>
 
             <div style="background: var(--cq-bg-subtle); border-radius: 14px; padding: 14px 18px; border: 1px solid var(--cq-border-light);">
-              <div style="font-size: 12px; font-weight: 700; color: var(--cq-dark-navy); margin-bottom: 4px;">
+              <div style="font-size: 12px; font-weight: 600; color: var(--cq-dark-navy); margin-bottom: 4px;">
                 <i class="ri-information-line" style="color: var(--cq-primary);"></i> Biaya Operasional Efisien
               </div>
               <div style="font-size: 11px; color: var(--cq-text-muted); line-height: 1.55;">
@@ -686,7 +688,7 @@ $headline         = get_option('cleanique_kemitraan_headline', 'Peluang Bisnis L
   <section class="cq-section" style="padding: clamp(60px, 8vw, 90px) 0; background: #ffffff;">
     <div class="cq-container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto clamp(32px, 5vw, 48px);">
-        <h2 style="font-family: var(--cq-font-heading); font-size: clamp(1.8rem, 1.5rem + 1vw, 2.5rem); font-weight: 800; color: var(--cq-dark-navy); margin-bottom: var(--cq-sp-12);">
+        <h2 class="cq-section-title" style="margin-bottom: var(--cq-sp-12);">
           Pondasi Keberhasilan Outlet Anda Bersama Indotech
         </h2>
         <p style="font-size: var(--cq-fs-sm); color: var(--cq-text-muted); line-height: 1.65; margin: 0;">
@@ -764,7 +766,7 @@ $headline         = get_option('cleanique_kemitraan_headline', 'Peluang Bisnis L
   <section class="cq-section" style="padding: clamp(60px, 8vw, 90px) 0; background: #f8fafc;" id="faq">
     <div class="cq-container">
       <div style="text-align: center; max-width: 680px; margin: 0 auto clamp(32px, 5vw, 44px);">
-        <h2 style="font-family: var(--cq-font-heading); font-size: clamp(1.8rem, 1.5rem + 1vw, 2.5rem); font-weight: 800; color: var(--cq-dark-navy); margin-bottom: var(--cq-sp-12);">
+        <h2 class="cq-section-title" style="margin-bottom: var(--cq-sp-12);">
           Hal yang Kerap Ditanyakan Calon Mitra
         </h2>
         <p style="font-size: var(--cq-fs-sm); color: var(--cq-text-muted); line-height: 1.65; margin: 0;">

@@ -30,46 +30,68 @@ $current_cat_slug = get_query_var('category_name');
   <div id="top"></div>
 
   <!-- ========================================================
-       1. HERO HEADER: Edukasi & Pusat Wawasan Bisnis Laundry
+       1. HERO SECTION (Payno Modern Split Layout)
        ======================================================== -->
-  <section class="cq-blog-hero">
+  <section class="cq-sky-canvas cq-payno-hero" id="artikel-hero">
     <div class="cq-container">
-      <div class="cq-blog-hero-inner">
-        <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-16);">
-          Pusat Edukasi &amp; Riset Bisnis Laundry PT Indotech
-        </div>
-        <h1 class="cq-blog-title">
-          Wawasan Industri, Panduan Bisnis &amp; <span class="cq-text-accent">Inovasi Laundry.</span>
-        </h1>
-        <p class="cq-blog-desc">
-          Kumpulan panduan praktis, kalkulasi balik modal, SOP perawatan mesin komersial, formulasi chemical standar pabrik, serta digitalisasi kasir modern dari para praktisi Cleanique.
-        </p>
-
-        <!-- Search Form & Category Filter Pills -->
-        <div class="cq-blog-filter-bar">
-          <form role="search" method="get" class="cq-blog-search-form" action="<?php echo esc_url(home_url('/artikel/')); ?>">
-            <div class="cq-blog-search-pill">
-              <i class="ri-search-line" style="color: var(--cq-primary); font-size: 18px; margin-right: 8px;" aria-hidden="true"></i>
-              <input type="search" class="cq-blog-search-input" placeholder="Cari tips mesin, formula chemical, nota digital, BEP..." value="<?php echo esc_attr($search_query); ?>" name="s" aria-label="Cari artikel">
-              <button type="submit" class="cq-blog-search-btn">
-                <i class="ri-search-2-line" aria-hidden="true"></i> Cari Panduan
-              </button>
-            </div>
-          </form>
-
-          <!-- Category Filter Pills -->
-          <div class="cq-cat-pills-row" role="navigation" aria-label="Filter Kategori Artikel">
-            <a href="<?php echo esc_url(home_url('/artikel/')); ?>" class="cq-cat-pill <?php echo (empty($current_cat_slug) && empty($search_query)) ? 'is-active' : ''; ?>">
-              Semua Topik
-            </a>
-            <?php if (!empty($categories)) : ?>
-              <?php foreach ($categories as $cat) : ?>
-                <a href="<?php echo esc_url(get_category_link($cat->term_id)); ?>" class="cq-cat-pill <?php echo ($current_cat_slug === $cat->slug) ? 'is-active' : ''; ?>">
-                  <?php echo esc_html($cat->name); ?> (<?php echo esc_html($cat->count); ?>)
-                </a>
-              <?php endforeach; ?>
-            <?php endif; ?>
+      <div class="cq-payno-hero-top">
+        <div>
+          <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-16); background: rgba(255, 255, 255, 0.9); border: 1px solid var(--sky-200);">
+            Pusat Edukasi &amp; Riset Bisnis Laundry &bull; PT Indotech Berkah Abadi
           </div>
+          <h1 class="cq-payno-heading">
+            Wawasan Industri, Panduan Bisnis &amp; <span class="cq-text-blue">Inovasi Laundry.</span>
+          </h1>
+        </div>
+
+        <div class="cq-payno-hero-right">
+          <p class="cq-payno-hero-desc">
+            Kumpulan panduan praktis, kalkulasi balik modal, SOP perawatan mesin komersial, formulasi chemical standar pabrik, serta digitalisasi kasir modern langsung dari para praktisi Cleanique.
+          </p>
+
+          <div style="font-size: var(--cq-fs-xs); color: var(--ink); font-weight: 600; margin-bottom: var(--cq-sp-16); display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+            <span><i class="ri-checkbox-circle-fill" style="color: var(--mint-cta);" aria-hidden="true"></i> Panduan Praktis Siap Terap</span>
+            <span>&bull;</span>
+            <span><i class="ri-checkbox-circle-fill" style="color: var(--mint-cta);" aria-hidden="true"></i> Bedah SOP &amp; Mesin Komersial</span>
+            <span>&bull;</span>
+            <span><i class="ri-checkbox-circle-fill" style="color: var(--mint-cta);" aria-hidden="true"></i> Wawasan Bisnis Terkini</span>
+          </div>
+
+          <div class="cq-payno-hero-actions">
+            <a href="#kumpulan-artikel" class="cq-btn cq-btn-primary cq-btn-pill">
+              <i class="ri-book-open-line" aria-hidden="true"></i> Jelajahi Panduan Terbaru
+            </a>
+            <a href="<?php echo esc_url($wa_url); ?>" target="_blank" rel="noopener" class="cq-btn cq-btn-white-pill cq-btn-pill">
+              <i class="ri-whatsapp-line" aria-hidden="true"></i> Tanya Konsultan Ahli
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search Form & Category Filter Pills Bar -->
+      <div class="cq-blog-filter-bar" style="margin-top: clamp(24px, 3.5vw, 40px);">
+        <form role="search" method="get" class="cq-blog-search-form" action="<?php echo esc_url(home_url('/artikel/')); ?>">
+          <div class="cq-blog-search-pill">
+            <i class="ri-search-line" style="color: var(--cq-primary); font-size: 18px; margin-right: 8px;" aria-hidden="true"></i>
+            <input type="search" class="cq-blog-search-input" placeholder="Cari tips mesin, formula chemical, nota digital, BEP..." value="<?php echo esc_attr($search_query); ?>" name="s" aria-label="Cari artikel">
+            <button type="submit" class="cq-blog-search-btn">
+              <i class="ri-search-2-line" aria-hidden="true"></i> Cari Panduan
+            </button>
+          </div>
+        </form>
+
+        <!-- Category Filter Pills -->
+        <div class="cq-cat-pills-row" role="navigation" aria-label="Filter Kategori Artikel">
+          <a href="<?php echo esc_url(home_url('/artikel/')); ?>" class="cq-cat-pill <?php echo (empty($current_cat_slug) && empty($search_query)) ? 'is-active' : ''; ?>">
+            Semua Topik
+          </a>
+          <?php if (!empty($categories)) : ?>
+            <?php foreach ($categories as $cat) : ?>
+              <a href="<?php echo esc_url(get_category_link($cat->term_id)); ?>" class="cq-cat-pill <?php echo ($current_cat_slug === $cat->slug) ? 'is-active' : ''; ?>">
+                <?php echo esc_html($cat->name); ?> (<?php echo esc_html($cat->count); ?>)
+              </a>
+            <?php endforeach; ?>
+          <?php endif; ?>
         </div>
       </div>
     </div>
@@ -78,32 +100,9 @@ $current_cat_slug = get_query_var('category_name');
   <!-- ========================================================
        2. ARTIKEL CONTENT WRAPPER
        ======================================================== -->
-  <section class="cq-section" style="padding-top: var(--cq-sp-40); padding-bottom: clamp(60px, 8vw, 90px); background: #f8fafc;">
+  <section class="cq-section" id="kumpulan-artikel" style="padding-top: var(--cq-sp-40); padding-bottom: clamp(60px, 8vw, 90px); background: #f8fafc;">
     <div class="cq-container">
       
-      <!-- Trending Topics Bar -->
-      <div class="cq-trending-bar">
-        <div class="cq-trending-badge">
-          Topik Hangat
-        </div>
-        <div class="cq-trending-chips">
-          <a href="<?php echo esc_url(home_url('/kemitraan/')); ?>" class="cq-trending-chip">
-            #KemitraanTanpaRoyalti
-          </a>
-          <a href="<?php echo esc_url(home_url('/kemitraan/#kalkulator-roi')); ?>" class="cq-trending-chip">
-            #SimulasiBEP2026
-          </a>
-          <a href="<?php echo esc_url(home_url('/pabrik-chemical/')); ?>" class="cq-trending-chip">
-            #FormulaWangi30Hari
-          </a>
-          <a href="<?php echo esc_url(home_url('/aplikasi-laundry/')); ?>" class="cq-trending-chip">
-            #NotaWhatsAppDigital
-          </a>
-          <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-trending-chip">
-            #MesinHeavyDuty
-          </a>
-        </div>
-      </div>
 
       <?php
       // 1. Ambil Artikel Sorotan (Post Terbaru / Unggulan) hanya pada Halaman 1 dan tanpa Search
@@ -169,7 +168,7 @@ $current_cat_slug = get_query_var('category_name');
       <!-- Section Title for Latest Articles -->
       <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: var(--cq-sp-24); border-bottom: 1px solid var(--cq-border-light); padding-bottom: var(--cq-sp-16); flex-wrap: wrap; gap: 12px;">
         <div>
-          <h2 style="font-family: var(--cq-font-heading); font-size: clamp(1.4rem, 1.2rem + 0.6vw, 1.8rem); font-weight: 800; color: var(--cq-dark-navy); margin: 0 0 4px 0;">
+          <h2 style="font-family: var(--cq-font-heading); font-size: clamp(1.4rem, 1.2rem + 0.6vw, 1.8rem); font-weight: 400; letter-spacing: -0.02em; color: var(--cq-dark-navy); margin: 0 0 4px 0;">
             <?php
             if (!empty($search_query)) {
                 echo 'Hasil Pencarian: "' . esc_html($search_query) . '"';
@@ -280,7 +279,7 @@ $current_cat_slug = get_query_var('category_name');
       ?>
         <div style="text-align: center; padding: 60px 20px; background: #ffffff; border-radius: 24px; border: 1px solid var(--cq-border-light); grid-column: 1 / -1;">
           <i class="ri-article-line" style="font-size: 3rem; color: var(--cq-text-muted); margin-bottom: 16px; display: inline-block;"></i>
-          <h3 style="font-family: var(--cq-font-heading); font-size: 1.25rem; font-weight: 800; color: var(--cq-dark-navy); margin-bottom: 8px;">
+          <h3 style="font-family: var(--cq-font-heading); font-size: 1.25rem; font-weight: 500; color: var(--cq-dark-navy); margin-bottom: 8px;">
             Belum Ada Artikel yang Sesuai
           </h3>
           <p style="color: var(--cq-text-muted); font-size: var(--cq-fs-sm); max-width: 480px; margin: 0 auto 20px;">

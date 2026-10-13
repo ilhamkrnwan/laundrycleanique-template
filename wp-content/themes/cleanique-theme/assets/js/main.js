@@ -170,6 +170,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // Proposal / Lead Booking Form on Paket Usaha
   const proposalForm = document.querySelector('#cq-proposal-form');
   if (proposalForm) {
+    // 3-Box Package Selector Cards Sync
+    const paketRadios = proposalForm.querySelectorAll('input[name="paket_radio"]');
+    const hiddenPaket = proposalForm.querySelector('#investor-paket');
+    paketRadios.forEach(radio => {
+      radio.addEventListener('change', function() {
+        proposalForm.querySelectorAll('.cq-paket-choice-card').forEach(card => card.classList.remove('is-selected'));
+        this.closest('.cq-paket-choice-card')?.classList.add('is-selected');
+        if (hiddenPaket) {
+          hiddenPaket.value = this.value;
+        }
+      });
+    });
+
     proposalForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const name = document.querySelector('#investor-name')?.value.trim() || '';

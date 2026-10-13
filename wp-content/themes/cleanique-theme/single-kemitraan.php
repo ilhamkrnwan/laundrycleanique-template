@@ -242,7 +242,7 @@ while (have_posts()) : the_post();
         <!-- Terms & Conditions (jika ada) -->
         <?php if (!empty($terms)) : ?>
           <div style="background: #f8fafc; border: 1px solid var(--cq-border-light); border-radius: 14px; padding: 20px 24px; margin-top: var(--cq-sp-36);">
-            <h3 style="font-family: var(--cq-font-heading); font-size: var(--cq-fs-sm); font-weight: 700; color: var(--cq-dark-navy); margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+            <h3 style="font-family: var(--cq-font-heading); font-size: var(--cq-fs-sm); font-weight: 500; color: var(--cq-dark-navy); margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
               <i class="ri-file-text-line" style="color: var(--cq-text-muted);"></i> Syarat & Ketentuan Kemitraan
             </h3>
             <div style="font-size: var(--cq-fs-xs); color: var(--cq-text-muted); line-height: 1.65;">
@@ -282,7 +282,7 @@ while (have_posts()) : the_post();
         <!-- Navigation: Other Packages -->
         <?php if (!empty($other_kemitraan)) : ?>
           <div style="margin-top: var(--cq-sp-48);">
-            <h2 style="font-family: var(--cq-font-heading); font-size: clamp(1.2rem, 1rem + 0.6vw, 1.5rem); font-weight: 800; color: var(--cq-dark-navy); margin-bottom: var(--cq-sp-20);">
+            <h2 style="font-family: var(--cq-font-heading); font-size: clamp(1.2rem, 1rem + 0.6vw, 1.5rem); font-weight: 400; letter-spacing: -0.02em; color: var(--cq-dark-navy); margin-bottom: var(--cq-sp-20);">
               Lihat Paket Kemitraan Lainnya
             </h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px;">
@@ -400,7 +400,7 @@ while (have_posts()) : the_post();
 
           <!-- Mini FAQ Card -->
           <div class="cq-corp-card" style="padding: 20px 24px; margin-top: 16px;">
-            <h3 style="font-family: var(--cq-font-heading); font-size: var(--cq-fs-sm); font-weight: 800; color: var(--cq-dark-navy); margin-bottom: 14px; display: flex; align-items: center; gap: 6px;">
+            <h3 style="font-family: var(--cq-font-heading); font-size: var(--cq-fs-sm); font-weight: 500; color: var(--cq-dark-navy); margin-bottom: 14px; display: flex; align-items: center; gap: 6px;">
               <i class="ri-question-answer-line" style="color: var(--cq-primary);"></i> Pertanyaan Umum
             </h3>
             <div style="display: flex; flex-direction: column; gap: 12px;">

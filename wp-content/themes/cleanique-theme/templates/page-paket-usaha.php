@@ -34,7 +34,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
       <div class="cq-payno-hero-top">
         <div>
           <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-16); background: rgba(255, 255, 255, 0.9); border: 1px solid var(--sky-200);">
-            Pabrikan Resmi: PT Indotech Berkah Abadi &bull; Sleman, DIY
+            PT Indotech Berkah Abadi
           </div>
           <h1 class="cq-payno-heading">
             Bisnis Laundry Selalu Ramai, <span class="cq-text-blue">Buka Usaha Siap Operasi Tanpa Takut Gagal.</span>
@@ -422,47 +422,88 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
       <div class="cq-section-header">
         <h2 class="cq-section-title">Apa Saja yang Anda Dapatkan dalam Setiap Paket?</h2>
         <p class="cq-section-desc">Peralatan berkualitas tinggi dan siap pakai, dirakit dan diuji langsung oleh teknisi berpengalaman PT Indotech Berkah Abadi.</p>
-        <div class="cq-mobile-swipe-indicator"><i class="ri-arrow-left-right-line" aria-hidden="true"></i> Geser ke samping &rarr;</div>
       </div>
 
-      <div class="cq-grid-4">
-        <div class="cq-equip-card-modern">
-          <div class="cq-equip-img-wrap">
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/equip-washer-dryer.jpg'); ?>" alt="Mesin Cuci dan Pengering Stack Komersial" loading="lazy">
-          </div>
-          <div class="cq-equip-body-modern">
-            <h4 class="cq-equip-title-modern">Mesin Cuci &amp; Dryer Stack</h4>
-            <p class="cq-equip-desc-modern">Heavy-duty drum stainless steel hemat listrik &amp; gas, kapasitas cuci sprei tebal dan bed cover.</p>
-          </div>
-        </div>
+      <?php
+      $fasilitas_items = [
+          [
+              'title' => 'Mesin Cuci & Dryer Stack',
+              'desc'  => 'Heavy-duty drum stainless steel hemat listrik & gas, kapasitas cuci sprei tebal dan bed cover.',
+              'image' => get_template_directory_uri() . '/assets/images/equip-washer-dryer.jpg',
+              'alt'   => 'Mesin Cuci dan Pengering Stack Komersial',
+              'tag'   => 'Hardware Utama',
+          ],
+          [
+              'title' => 'Boiler Uap & Meja Vakum',
+              'desc'  => 'Setrika uap licin seketika anti-gosong, lengkap dengan meja hisap uap berdaya sedot tinggi.',
+              'image' => get_template_directory_uri() . '/assets/images/equip-boiler-iron.jpg',
+              'alt'   => 'Setrika Uap Boiler Gas Industri',
+              'tag'   => 'Finishing Rapi',
+          ],
+          [
+              'title' => 'Paket Chemical Pabrik',
+              'desc'  => 'Deterjen rendah busa, pelembut & parfum microcapsule wangi tahan 30 hari dalam lemari.',
+              'image' => get_template_directory_uri() . '/assets/images/chemical-products.jpg',
+              'alt'   => 'Suplai Chemical Pabrik Indotech Orchid Brand',
+              'tag'   => 'Langsung Pabrik',
+          ],
+          [
+              'title' => 'Instalasi & Training Onsite',
+              'desc'  => 'Pemasangan pipa standar aman dan pelatihan karyawan intensif hingga outlet siap buka mandiri.',
+              'image' => get_template_directory_uri() . '/assets/images/indotech-team.jpg',
+              'alt'   => 'Pelatihan dan Instalasi Tim Indotech',
+              'tag'   => 'Teknisi Handal',
+          ],
+          [
+              'title' => 'Smart POS Kasir Digital',
+              'desc'  => 'Aplikasi kasir laundry otomatis kirim nota digital via WhatsApp & pantau omzet real-time dari HP.',
+              'image' => get_template_directory_uri() . '/assets/images/hero-pos-app.jpg',
+              'alt'   => 'Aplikasi Kasir POS Cleanique Laundry',
+              'tag'   => 'Sistem Cerdas',
+          ],
+          [
+              'title' => 'Branding & Signage Outlet',
+              'desc'  => 'Banner promosi, spanduk grand opening, neon box outlet, dan materi marketing profesional.',
+              'image' => get_template_directory_uri() . '/assets/images/hero-outlet.jpg',
+              'alt'   => 'Branding dan Signage Outlet Laundry Cleanique',
+              'tag'   => 'Media Promosi',
+          ],
+      ];
+      ?>
 
-        <div class="cq-equip-card-modern">
-          <div class="cq-equip-img-wrap">
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/equip-boiler-iron.jpg'); ?>" alt="Setrika Uap Boiler Gas Industri" loading="lazy">
+      <!-- Continuous Infinite Carousel Track (Payno Modern Marquee) -->
+      <div class="cq-equip-track-wrap">
+        <div class="cq-equip-track">
+          <!-- Group 1: Original Items -->
+          <div class="cq-equip-group">
+            <?php foreach ($fasilitas_items as $item) : ?>
+              <div class="cq-equip-card-modern">
+                <div class="cq-equip-img-wrap">
+                  <img src="<?php echo esc_url($item['image']); ?>" alt="<?php echo esc_attr($item['alt']); ?>" loading="lazy" width="400" height="200">
+                </div>
+                <div class="cq-equip-body-modern">
+                  <span class="cq-equip-tag"><?php echo esc_html($item['tag']); ?></span>
+                  <h4 class="cq-equip-title-modern"><?php echo esc_html($item['title']); ?></h4>
+                  <p class="cq-equip-desc-modern"><?php echo esc_html($item['desc']); ?></p>
+                </div>
+              </div>
+            <?php endforeach; ?>
           </div>
-          <div class="cq-equip-body-modern">
-            <h4 class="cq-equip-title-modern">Boiler Uap &amp; Meja Vakum</h4>
-            <p class="cq-equip-desc-modern">Setrika uap licin seketika anti-gosong, lengkap dengan meja hisap uap berdaya sedot tinggi.</p>
-          </div>
-        </div>
 
-        <div class="cq-equip-card-modern">
-          <div class="cq-equip-img-wrap">
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/chemical-products.jpg'); ?>" alt="Suplai Chemical Pabrik Indotech Orchid Brand" loading="lazy">
-          </div>
-          <div class="cq-equip-body-modern">
-            <h4 class="cq-equip-title-modern">Paket Chemical Pabrik</h4>
-            <p class="cq-equip-desc-modern">Deterjen rendah busa, pelembut &amp; parfum microcapsule wangi tahan 30 hari dalam lemari.</p>
-          </div>
-        </div>
-
-        <div class="cq-equip-card-modern">
-          <div class="cq-equip-img-wrap">
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/indotech-team.jpg'); ?>" alt="Pelatihan dan Instalasi Tim Indotech" loading="lazy">
-          </div>
-          <div class="cq-equip-body-modern">
-            <h4 class="cq-equip-title-modern">Instalasi &amp; Training Onsite</h4>
-            <p class="cq-equip-desc-modern">Pemasangan pipa standar aman dan pelatihan karyawan intensif hingga outlet siap buka mandiri.</p>
+          <!-- Group 2: Duplicate Items for 100% Seamless Infinite Loop -->
+          <div class="cq-equip-group" aria-hidden="true">
+            <?php foreach ($fasilitas_items as $item) : ?>
+              <div class="cq-equip-card-modern">
+                <div class="cq-equip-img-wrap">
+                  <img src="<?php echo esc_url($item['image']); ?>" alt="<?php echo esc_attr($item['alt']); ?>" loading="lazy" width="400" height="200">
+                </div>
+                <div class="cq-equip-body-modern">
+                  <span class="cq-equip-tag"><?php echo esc_html($item['tag']); ?></span>
+                  <h4 class="cq-equip-title-modern"><?php echo esc_html($item['title']); ?></h4>
+                  <p class="cq-equip-desc-modern"><?php echo esc_html($item['desc']); ?></p>
+                </div>
+              </div>
+            <?php endforeach; ?>
           </div>
         </div>
       </div>
@@ -796,13 +837,55 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
             <input type="text" id="investor-city" class="cq-input" placeholder="Contoh: Sleman, Yogyakarta" required>
           </div>
           <div class="cq-form-group">
-            <label for="investor-paket">Pilihan Paket yang Diminati</label>
-            <select id="investor-paket" class="cq-input">
-              <option value="Paket Commercial Pro (Rp 48 Jt - Paling Populer)" selected>Paket Commercial Pro (Rp 48 Juta - Paling Populer)</option>
-              <option value="Paket Starter UMKM (Rp 25 Jt)">Paket Starter UMKM (Rp 25 Juta)</option>
-              <option value="Paket Industrial Premium (Rp 85 Jt)">Paket Industrial Premium (Rp 85 Juta)</option>
-              <option value="Konsultasi Dulu Sesuai Budget">Konsultasi Dulu Sesuai Budget Saya</option>
-            </select>
+            <label class="cq-form-label" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <span>Pilihan Paket yang Diminati</span>
+              <span style="font-size: 11.5px; color: var(--cq-text-muted); font-weight: 500;">Pilih salah satu</span>
+            </label>
+            <input type="hidden" id="investor-paket" name="paket" value="Paket Commercial Pro (Rp 48 Jt - Paling Populer)">
+
+            <div class="cq-paket-card-selector" role="radiogroup" aria-label="Pilihan Paket yang Diminati">
+              <!-- Card 1: Starter UMKM -->
+              <label class="cq-paket-choice-card" data-paket="Paket Starter UMKM (Rp 25 Jt)">
+                <input type="radio" name="paket_radio" value="Paket Starter UMKM (Rp 25 Jt)" class="cq-paket-radio-native">
+                <div class="cq-paket-choice-top">
+                  <span class="cq-paket-choice-badge">UMKM</span>
+                  <span class="cq-paket-choice-check"><i class="ri-check-line" aria-hidden="true"></i></span>
+                </div>
+                <div class="cq-paket-choice-body">
+                  <span class="cq-paket-choice-name">Starter</span>
+                  <span class="cq-paket-choice-price">Rp 25 Jt</span>
+                  <span class="cq-paket-choice-sub">Modal Hemat &bull; 1 Stack</span>
+                </div>
+              </label>
+
+              <!-- Card 2: Commercial Pro (Default Selected) -->
+              <label class="cq-paket-choice-card is-selected is-popular" data-paket="Paket Commercial Pro (Rp 48 Jt - Paling Populer)">
+                <input type="radio" name="paket_radio" value="Paket Commercial Pro (Rp 48 Jt - Paling Populer)" class="cq-paket-radio-native" checked>
+                <div class="cq-paket-choice-top">
+                  <span class="cq-paket-choice-badge is-popular">Terlaris</span>
+                  <span class="cq-paket-choice-check"><i class="ri-check-line" aria-hidden="true"></i></span>
+                </div>
+                <div class="cq-paket-choice-body">
+                  <span class="cq-paket-choice-name">Commercial Pro</span>
+                  <span class="cq-paket-choice-price">Rp 48 Jt</span>
+                  <span class="cq-paket-choice-sub">2 Stack + POS Smart</span>
+                </div>
+              </label>
+
+              <!-- Card 3: Industrial Premium -->
+              <label class="cq-paket-choice-card" data-paket="Paket Industrial Premium (Rp 85 Jt)">
+                <input type="radio" name="paket_radio" value="Paket Industrial Premium (Rp 85 Jt)" class="cq-paket-radio-native">
+                <div class="cq-paket-choice-top">
+                  <span class="cq-paket-choice-badge">Premium</span>
+                  <span class="cq-paket-choice-check"><i class="ri-check-line" aria-hidden="true"></i></span>
+                </div>
+                <div class="cq-paket-choice-body">
+                  <span class="cq-paket-choice-name">Industrial</span>
+                  <span class="cq-paket-choice-price">Rp 85 Jt</span>
+                  <span class="cq-paket-choice-sub">3 Stack + Boiler Uap</span>
+                </div>
+              </label>
+            </div>
           </div>
           <button type="submit" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-block cq-btn-lg">
             <i class="ri-cursor-fill" aria-hidden="true"></i> Klik Segera Daftar Promo Kemitraan

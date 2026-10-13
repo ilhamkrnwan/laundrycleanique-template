@@ -80,7 +80,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
             <i class="ri-flask-fill"></i>
           </div>
           <div>
-            <div style="font-size: 13px; font-weight: 800; color: var(--ink);">Pabrik Chemical Sendiri</div>
+            <div style="font-size: 13px; font-weight: 600; color: var(--ink);">Pabrik Chemical Sendiri</div>
             <div style="font-size: 11px; color: var(--cq-text-muted);">Formulasi Standar Orchid Brand</div>
           </div>
         </div>
@@ -91,7 +91,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
             <i class="ri-shield-check-fill"></i>
           </div>
           <div>
-            <div style="font-size: 13px; font-weight: 800; color: var(--ink);">Badan Hukum Resmi PT</div>
+            <div style="font-size: 13px; font-weight: 600; color: var(--ink);">Badan Hukum Resmi PT</div>
             <div style="font-size: 11px; color: var(--cq-text-muted);">PT Indotech Berkah Abadi Sleman</div>
           </div>
         </div>
@@ -102,7 +102,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
             <i class="ri-hand-coin-fill"></i>
           </div>
           <div>
-            <div style="font-size: 13px; font-weight: 800; color: var(--ink);">100% Hak Milik Mitra</div>
+            <div style="font-size: 13px; font-weight: 600; color: var(--ink);">100% Hak Milik Mitra</div>
             <div style="font-size: 11px; color: var(--cq-text-muted);">Bebas Royalti &amp; Franchise Fee</div>
           </div>
         </div>
@@ -273,7 +273,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
     <div class="cq-container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto; position: relative; z-index: 2;">
         <span class="cq-badge-clean" style="margin-bottom: var(--cq-sp-12);">Metodologi &bull; Standard Operating Procedure</span>
-        <h2 style="font-family: var(--cq-font-heading); font-size: clamp(1.8rem, 1.5rem + 1vw, 2.5rem); font-weight: 800; color: #0f172a; margin-bottom: var(--cq-sp-12); line-height: 1.2;">
+        <h2 class="cq-section-title" style="margin-bottom: var(--cq-sp-12);">
           Alur Pendampingan Kemitraan Menuju Outlet Mandiri
         </h2>
         <p style="font-size: var(--cq-fs-sm); color: #475569; line-height: 1.65; margin: 0;">
@@ -491,7 +491,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
                loading="lazy">
         </div>
         <div class="cq-visual-split-content">
-          <h2 style="font-family: var(--cq-font-heading); font-size: clamp(1.8rem, 1.4rem + 1.5vw, 2.6rem); font-weight: 800; color: var(--cq-dark-navy); line-height: 1.2; margin-bottom: var(--cq-sp-16);">
+          <h2 class="cq-section-title" style="margin-bottom: var(--cq-sp-16);">
             Badan Hukum Resmi, Aman &amp; Berkelanjutan
           </h2>
           <p style="color: var(--cq-text-muted); line-height: 1.7; margin-bottom: var(--cq-sp-20);">
@@ -502,7 +502,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
             <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--brand-deep); letter-spacing: 0.05em; margin-bottom: 4px;">
               Entitas Hukum Resmi Terdaftar:
             </div>
-            <div style="font-family: var(--cq-font-heading); font-size: 1.15rem; font-weight: 800; color: var(--cq-dark-navy); margin-bottom: 6px;">
+            <div style="font-family: var(--cq-font-heading); font-size: 1.15rem; font-weight: 500; color: var(--cq-dark-navy); margin-bottom: 6px;">
               PT Indotech Berkah Abadi
             </div>
             <p style="font-size: 13px; color: #475569; margin: 0; line-height: 1.6;">

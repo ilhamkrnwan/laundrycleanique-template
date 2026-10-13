@@ -41,11 +41,16 @@
 .cq-kemitraan-hero-title {
   font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
   font-size: clamp(2rem, 1.6rem + 1.8vw, 3.2rem);
-  font-weight: 800;
+  font-weight: 300;
   color: var(--cq-dark-navy, #0b132b);
   line-height: 1.15;
   letter-spacing: -0.02em;
   margin-bottom: var(--cq-sp-16, 16px);
+}
+
+.cq-kemitraan-hero-title strong,
+.cq-kemitraan-hero-title b {
+  font-weight: 500;
 }
 
 .cq-kemitraan-hero-desc {
@@ -138,7 +143,7 @@
 .cq-compare-table thead th {
   font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
   font-size: var(--cq-fs-base, 1rem);
-  font-weight: 800;
+  font-weight: 600;
   color: var(--cq-dark-navy, #0b132b);
   border-bottom: 2px solid var(--cq-dark-navy, #0b132b);
 }
@@ -236,7 +241,7 @@
 .cq-kemitraan-benefit-title {
   font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
   font-size: var(--cq-fs-base, 1rem);
-  font-weight: 700;
+  font-weight: 500;
   color: var(--cq-dark-navy, #0b132b);
   margin-bottom: var(--cq-sp-8, 8px);
 }
@@ -279,12 +284,17 @@
 .cq-kemitraan-cta-title {
   font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
   font-size: clamp(1.8rem, 1.4rem + 1.2vw, 2.5rem);
-  font-weight: 800;
+  font-weight: 300;
   color: #ffffff;
   line-height: 1.2;
   margin-bottom: var(--cq-sp-16, 16px);
   position: relative;
   z-index: 2;
+}
+
+.cq-kemitraan-cta-title strong,
+.cq-kemitraan-cta-title b {
+  font-weight: 500;
 }
 
 .cq-kemitraan-cta-desc {
@@ -344,11 +354,16 @@
 .cq-kemitraan-single-title {
   font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
   font-size: clamp(2rem, 1.6rem + 1.8vw, 3rem);
-  font-weight: 800;
+  font-weight: 300;
   color: var(--cq-dark-navy, #0b132b);
   line-height: 1.15;
   letter-spacing: -0.02em;
   margin-bottom: var(--cq-sp-16, 16px);
+}
+
+.cq-kemitraan-single-title strong,
+.cq-kemitraan-single-title b {
+  font-weight: 500;
 }
 
 .cq-kemitraan-single-subtitle {
@@ -402,7 +417,7 @@
 .cq-kemitraan-price-big {
   font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
   font-size: clamp(1.7rem, 1.3rem + 1.4vw, 2.4rem);
-  font-weight: 800;
+  font-weight: 600;
   color: var(--cq-dark-navy, #0b132b);
 }
 
@@ -441,7 +456,7 @@
   display: block;
   font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
   font-size: var(--cq-fs-sm, 0.925rem);
-  font-weight: 700;
+  font-weight: 500;
   color: var(--cq-dark-navy, #0b132b);
   margin-bottom: 2px;
 }
@@ -465,7 +480,7 @@
 .cq-kemitraan-specs-heading {
   font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
   font-size: var(--cq-fs-lg, 1.15rem);
-  font-weight: 800;
+  font-weight: 500;
   color: var(--cq-dark-navy, #0b132b);
   margin-bottom: var(--cq-sp-16, 16px);
   display: flex;
@@ -527,7 +542,7 @@
 .cq-kemitraan-sidebar-price {
   font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
   font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
-  font-weight: 800;
+  font-weight: 600;
   color: var(--cq-dark-navy, #0b132b);
   line-height: 1.2;
 }
@@ -726,7 +741,7 @@
 .cq-mitra-active-title {
   font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
   font-size: 1.25rem;
-  font-weight: 800;
+  font-weight: 500;
   color: #0f172a;
   line-height: 1.3;
   margin: 0 0 6px 0;
@@ -825,7 +840,7 @@
 .cq-mitra-stat-num {
   font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
   font-size: clamp(2rem, 1.8rem + 1vw, 2.8rem);
-  font-weight: 800;
+  font-weight: 600;
   color: #0f172a;
   line-height: 1.1;
   margin-bottom: 6px;
@@ -854,10 +869,15 @@
 .cq-mitra-cta-title {
   font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
   font-size: clamp(1.4rem, 1.2rem + 0.8vw, 1.9rem);
-  font-weight: 800;
+  font-weight: 300;
   color: #ffffff;
   margin: 0;
   line-height: 1.3;
+}
+
+.cq-mitra-cta-title strong,
+.cq-mitra-cta-title b {
+  font-weight: 500;
 }
 
 .cq-mitra-cta-desc {

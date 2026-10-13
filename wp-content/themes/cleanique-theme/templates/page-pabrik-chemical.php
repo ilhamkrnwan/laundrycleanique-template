@@ -75,7 +75,7 @@ $wa_url = cleanique_get_whatsapp_url('chemical');
             <i class="ri-settings-4-fill"></i>
           </div>
           <div>
-            <div style="font-size: 13px; font-weight: 800; color: var(--ink);">Aman untuk Bearing Mesin</div>
+            <div style="font-size: 13px; font-weight: 600; color: var(--ink);">Aman untuk Bearing Mesin</div>
             <div style="font-size: 11px; color: var(--cq-text-muted);">Busa Rendah (Low Foam)</div>
           </div>
         </div>
@@ -85,7 +85,7 @@ $wa_url = cleanique_get_whatsapp_url('chemical');
             <i class="ri-sparkling-fill"></i>
           </div>
           <div>
-            <div style="font-size: 13px; font-weight: 800; color: var(--ink);">Microcapsule 30 Hari</div>
+            <div style="font-size: 13px; font-weight: 600; color: var(--ink);">Microcapsule 30 Hari</div>
             <div style="font-size: 11px; color: var(--cq-text-muted);">Wangi Mewah Tahan Lama</div>
           </div>
         </div>
@@ -95,7 +95,7 @@ $wa_url = cleanique_get_whatsapp_url('chemical');
             <i class="ri-leaf-fill"></i>
           </div>
           <div>
-            <div style="font-size: 13px; font-weight: 800; color: var(--ink);">Ramah Serat &amp; Kulit</div>
+            <div style="font-size: 13px; font-weight: 600; color: var(--ink);">Ramah Serat &amp; Kulit</div>
             <div style="font-size: 11px; color: var(--cq-text-muted);">Biodegradable &amp; Lembut</div>
           </div>
         </div>

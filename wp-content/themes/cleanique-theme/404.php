@@ -102,10 +102,15 @@ $wa_url = function_exists('cleanique_get_whatsapp_url') ? cleanique_get_whatsapp
     .cq-404-title {
       font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
       font-size: clamp(1.3rem, 2.2vw, 1.75rem);
-      font-weight: 800;
+      font-weight: 300;
       line-height: 1.3;
       color: #0f172a;
       margin: 0 0 10px;
+    }
+
+    .cq-404-title strong,
+    .cq-404-title b {
+      font-weight: 500;
     }
 
     .cq-404-title .cq-text-blue {

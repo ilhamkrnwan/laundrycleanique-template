@@ -19,40 +19,62 @@ $categories = get_categories(['hide_empty' => true]);
   <div id="top"></div>
 
   <!-- ========================================================
-       1. HERO HEADER: Kategori & Arsip Edukasi
+       1. HERO HEADER: Kategori & Arsip Edukasi (Payno Modern Split Layout)
        ======================================================== -->
-  <section class="cq-sky-canvas cq-blog-hero">
+  <section class="cq-sky-canvas cq-payno-hero" id="arsip-hero">
     <div class="cq-container">
-      <div class="cq-blog-hero-inner">
-        <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-16); background: rgba(255, 255, 255, 0.9); border: 1px solid var(--sky-200);">
-          Arsip Topik Edukasi &bull; PT Indotech Berkah Abadi
-        </div>
-        <h1 class="cq-blog-title">
-          <?php echo wp_kses_post($archive_title); ?>
-        </h1>
-        <?php if ($archive_desc) : ?>
-          <div class="cq-blog-desc">
-            <?php echo wp_kses_post($archive_desc); ?>
+      <div class="cq-payno-hero-top">
+        <div>
+          <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-16); background: rgba(255, 255, 255, 0.9); border: 1px solid var(--sky-200);">
+            Arsip Topik Edukasi &bull; PT Indotech Berkah Abadi
           </div>
-        <?php else : ?>
-          <p class="cq-blog-desc">
-            Kumpulan artikel dan panduan praktis terpilih dalam topik ini untuk membantu operasional dan perkembangan bisnis laundry Anda.
-          </p>
-        <?php endif; ?>
-
-        <!-- Category Filter Pills -->
-        <div class="cq-cat-pills-row" style="margin-top: var(--cq-sp-20);" role="navigation" aria-label="Filter Kategori">
-          <a href="<?php echo esc_url(get_permalink(get_option('page_for_posts')) ?: home_url('/artikel/')); ?>" class="cq-cat-pill">
-            <i class="ri-apps-2-line" aria-hidden="true"></i> Semua Kategori
-          </a>
-          <?php if (!empty($categories)) : ?>
-            <?php foreach ($categories as $cat) : ?>
-              <a href="<?php echo esc_url(get_category_link($cat->term_id)); ?>" class="cq-cat-pill <?php echo (is_category($cat->term_id)) ? 'is-active' : ''; ?>">
-                <i class="ri-folder-3-line" aria-hidden="true"></i> <?php echo esc_html($cat->name); ?> (<?php echo esc_html($cat->count); ?>)
-              </a>
-            <?php endforeach; ?>
-          <?php endif; ?>
+          <h1 class="cq-payno-heading">
+            <?php echo wp_kses_post($archive_title); ?>
+          </h1>
         </div>
+
+        <div class="cq-payno-hero-right">
+          <?php if ($archive_desc) : ?>
+            <div class="cq-payno-hero-desc">
+              <?php echo wp_kses_post($archive_desc); ?>
+            </div>
+          <?php else : ?>
+            <p class="cq-payno-hero-desc">
+              Kumpulan artikel dan panduan praktis terpilih dalam topik ini untuk membantu operasional dan perkembangan bisnis laundry Anda.
+            </p>
+          <?php endif; ?>
+
+          <div style="font-size: var(--cq-fs-xs); color: var(--ink); font-weight: 600; margin-bottom: var(--cq-sp-16); display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+            <span><i class="ri-checkbox-circle-fill" style="color: var(--mint-cta);" aria-hidden="true"></i> Panduan Praktis</span>
+            <span>&bull;</span>
+            <span><i class="ri-checkbox-circle-fill" style="color: var(--mint-cta);" aria-hidden="true"></i> Riset Terverifikasi</span>
+            <span>&bull;</span>
+            <span><i class="ri-checkbox-circle-fill" style="color: var(--mint-cta);" aria-hidden="true"></i> Tips Operasional</span>
+          </div>
+
+          <div class="cq-payno-hero-actions">
+            <a href="<?php echo esc_url(get_permalink(get_option('page_for_posts')) ?: home_url('/artikel/')); ?>" class="cq-btn cq-btn-primary cq-btn-pill">
+              <i class="ri-arrow-left-line" aria-hidden="true"></i> Semua Kategori &amp; Topik
+            </a>
+            <a href="<?php echo esc_url($wa_url); ?>" target="_blank" rel="noopener" class="cq-btn cq-btn-white-pill cq-btn-pill">
+              <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="cq-cat-pills-row" style="margin-top: clamp(20px, 3vw, 32px);" role="navigation" aria-label="Filter Kategori">
+        <a href="<?php echo esc_url(get_permalink(get_option('page_for_posts')) ?: home_url('/artikel/')); ?>" class="cq-cat-pill">
+          <i class="ri-apps-2-line" aria-hidden="true"></i> Semua Kategori
+        </a>
+        <?php if (!empty($categories)) : ?>
+          <?php foreach ($categories as $cat) : ?>
+            <a href="<?php echo esc_url(get_category_link($cat->term_id)); ?>" class="cq-cat-pill <?php echo (is_category($cat->term_id)) ? 'is-active' : ''; ?>">
+              <i class="ri-folder-3-line" aria-hidden="true"></i> <?php echo esc_html($cat->name); ?> (<?php echo esc_html($cat->count); ?>)
+            </a>
+          <?php endforeach; ?>
+        <?php endif; ?>
       </div>
     </div>
   </section>

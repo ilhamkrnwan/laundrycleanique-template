@@ -77,7 +77,7 @@
 .cq-corp-card-title {
   font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
   font-size: clamp(1.2rem, 1.1rem + 0.3vw, 1.35rem);
-  font-weight: 700;
+  font-weight: 500;
   color: var(--cq-dark-navy, #0b132b);
   line-height: 1.35;
   margin: 0 0 var(--cq-sp-12, 12px) 0;
@@ -154,7 +154,7 @@
 
 .cq-kemitraan-header .cq-corp-card-title {
   font-size: clamp(1.15rem, 1.05rem + 0.25vw, 1.3rem);
-  font-weight: 800;
+  font-weight: 500;
   margin-bottom: 6px;
   line-height: 1.3;
   min-height: 2.7em;
@@ -330,7 +330,7 @@
 .cq-pricing-title {
   font-family: var(--cq-font-heading, sans-serif);
   font-size: clamp(1.2rem, 1.1rem + 0.3vw, 1.4rem);
-  font-weight: 800;
+  font-weight: 500;
   color: var(--cq-dark-navy, #0b132b);
   margin-bottom: 6px;
   line-height: 1.3;
@@ -469,7 +469,7 @@
 .cq-peluang-card-title {
   font-family: var(--cq-font-heading, sans-serif);
   font-size: clamp(1.15rem, 1.05rem + 0.3vw, 1.3rem);
-  font-weight: 700;
+  font-weight: 500;
   color: var(--cq-dark-navy, #0b132b);
   margin-bottom: var(--cq-sp-8, 8px);
   line-height: 1.35;
@@ -543,7 +543,7 @@
 .cq-peluang-pain-title {
   font-family: var(--cq-font-heading, sans-serif);
   font-size: clamp(1.1rem, 1rem + 0.2vw, 1.25rem);
-  font-weight: 700;
+  font-weight: 500;
   color: var(--cq-dark-navy, #0b132b);
   margin-bottom: var(--cq-sp-8, 8px);
   line-height: 1.35;
@@ -667,7 +667,7 @@
 .cq-article-card-title-v2 {
   font-family: var(--cq-font-heading, sans-serif);
   font-size: clamp(1.05rem, 0.98rem + 0.25vw, 1.2rem);
-  font-weight: 700;
+  font-weight: 500;
   color: var(--cq-dark-navy, #0b132b);
   line-height: 1.38;
   margin: 0 0 8px 0;
@@ -920,7 +920,7 @@
 .cq-equip-title-modern {
   font-family: var(--cq-font-heading, sans-serif);
   font-size: var(--cq-fs-base, 1rem);
-  font-weight: 700;
+  font-weight: 500;
   color: var(--cq-dark-navy, #0b132b);
   margin-bottom: 6px;
 }
@@ -946,9 +946,20 @@ section.cq-section {
   margin-bottom: clamp(32px, 4.5vw, 48px);
 }
 
-.cq-section-title {
+.cq-section-title,
+.cq-section-header h2 {
+  font-family: var(--cq-font-heading);
+  font-weight: 300 !important;
+  letter-spacing: -0.03em;
   margin-bottom: clamp(10px, 2vw, 16px);
-  line-height: 1.22;
+  line-height: 1.18;
+}
+
+.cq-section-title strong,
+.cq-section-title b,
+.cq-section-header h2 strong,
+.cq-section-header h2 b {
+  font-weight: 500 !important;
 }
 
 .cq-section-desc {
@@ -1130,7 +1141,7 @@ section[id],
 .cq-peluang-card-title {
   font-family: var(--cq-font-heading, "Plus Jakarta Sans", sans-serif);
   font-size: 1.18rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--cq-dark-navy, #0b132b);
   margin-bottom: 10px;
   line-height: 1.35;
@@ -1218,7 +1229,7 @@ section[id],
 .cq-peluang-pain-title {
   font-family: var(--cq-font-heading, "Plus Jakarta Sans", sans-serif);
   font-size: 1.15rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--cq-dark-navy, #0b132b);
   margin-bottom: 10px;
   line-height: 1.35;
@@ -1558,16 +1569,30 @@ section[id],
   pointer-events: none;
 }
 
-.cq-banner-cta-title {
-  color: #ffffff;
+.cq-banner-cta-title,
+.cq-banner-cta-section h2,
+.cq-banner-cta-section .cq-section-header h2 {
+  color: #ffffff !important;
+  font-family: var(--cq-font-heading);
   font-size: clamp(1.8rem, 1.5rem + 1vw, 2.5rem);
-  font-weight: 800;
+  font-weight: 300;
+  letter-spacing: -0.03em;
   line-height: 1.25;
   margin-bottom: 16px;
 }
 
-.cq-banner-cta-desc {
-  color: #cbd5e1;
+.cq-banner-cta-title strong,
+.cq-banner-cta-title b,
+.cq-banner-cta-section h2 strong,
+.cq-banner-cta-section h2 b {
+  color: #ffffff !important;
+  font-weight: 500;
+}
+
+.cq-banner-cta-desc,
+.cq-banner-cta-section p,
+.cq-banner-cta-section .cq-section-header p {
+  color: #cbd5e1 !important;
   font-size: clamp(1rem, 0.95rem + 0.2vw, 1.15rem);
   max-width: 680px;
   margin: 0 auto 32px;
