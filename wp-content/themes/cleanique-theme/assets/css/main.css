@@ -719,12 +719,12 @@ ul, ol {
   top: 0 !important;
   right: 0 !important;
   bottom: 0 !important;
-  width: min(88vw, 380px) !important;
+  width: min(84vw, 320px) !important;
   height: 100% !important;
   height: 100dvh !important;
   max-height: 100dvh !important;
   background: var(--cq-bg-surface, #ffffff) !important;
-  box-shadow: -12px 0 40px rgba(0, 0, 0, 0.28) !important;
+  box-shadow: -8px 0 32px rgba(15, 23, 42, 0.22) !important;
   display: flex !important;
   flex-direction: column !important;
   transform: translateX(100%) !important;
