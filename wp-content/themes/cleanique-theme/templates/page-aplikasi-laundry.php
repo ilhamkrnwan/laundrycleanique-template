@@ -182,7 +182,7 @@ $wa_trial_url = cleanique_get_whatsapp_url('aplikasi_trial');
 
   <!-- 5. TESTIMONIAL SECTION (Payno Continuous Infinite Carousel Track) -->
   <?php
-  // Realistic testimonials reflecting https://laundry.indotechbot.my.id/ features (Min 9 items)
+  // Realistic testimonials reflecting https://app.laundrycleanique.com/ features (Min 9 items)
   $testi_items = [
       [
           'name'      => 'Andry Pratama',
@@ -462,7 +462,7 @@ $wa_trial_url = cleanique_get_whatsapp_url('aplikasi_trial');
 
               <div class="cq-trial-card-footer">
                 <div class="cq-trial-login-prompt">
-                  Sudah punya akun? <a href="https://laundry.indotechbot.my.id/" target="_blank" rel="noopener">Masuk ke aplikasi</a>
+                  Sudah punya akun? <a href="https://app.laundrycleanique.com/" target="_blank" rel="noopener">Masuk ke aplikasi</a>
                 </div>
               </div>
             </form>

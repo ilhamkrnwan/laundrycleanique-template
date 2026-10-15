@@ -35,7 +35,7 @@ $wa_trial_url = cleanique_get_whatsapp_url('aplikasi_trial');
           <a href="#trial-form" class="cq-btn cq-btn-primary cq-btn-pill">
             <i class="ri-rocket-2-line" aria-hidden="true"></i> Mulai Trial 7 Hari Gratis
           </a>
-          <a href="https://laundry.indotechbot.my.id/" target="_blank" rel="noopener" class="cq-btn cq-btn-white-pill">
+          <a href="https://app.laundrycleanique.com/" target="_blank" rel="noopener" class="cq-btn cq-btn-white-pill">
             <i class="ri-login-box-line" aria-hidden="true"></i> Masuk ke Aplikasi
           </a>
         </div>
@@ -60,7 +60,7 @@ $wa_trial_url = cleanique_get_whatsapp_url('aplikasi_trial');
         </div>
       </div>
 
-      <!-- Floating Card 2 (Right): Asisten AI Bisnis (Indotechbot App Core Feature) -->
+      <!-- Floating Card 2 (Right): Asisten AI Bisnis (Cleanique App Core Feature) -->
       <div class="cq-floating-card cq-float-right cq-float-card-ai">
         <div class="cq-float-ai-header">
           <div class="cq-float-ai-title-wrap">
@@ -128,7 +128,7 @@ $wa_trial_url = cleanique_get_whatsapp_url('aplikasi_trial');
             </div>
           </div>
 
-          <!-- Quick Actions: 4 Pillars of Indotechbot App -->
+          <!-- Quick Actions: 4 Pillars of Cleanique App -->
           <div class="cq-screen-actions-row">
             <div class="cq-screen-action-btn">
               <i class="ri-scales-3-line"></i>

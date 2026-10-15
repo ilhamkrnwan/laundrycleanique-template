@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ? window.CleaniqueConfig.waNumber 
         : '6281234567890';
 
-      const textMsg = `Halo Tim Cleanique Laundry,\nSaya ingin aktivasi *FREE TRIAL 7 HARI* Aplikasi Kasir Laundry Digital (laundry.indotechbot.my.id).\n\n*Nama Usaha:* ${laundryName}\n*Pemilik:* ${ownerName}\n*No. WA:* ${whatsapp}\n*Email:* ${email}\n*Kota:* ${city}\n\nMohon dibantu pembuatan akun demo trial gratisnya. Terima kasih!`;
+      const textMsg = `Halo Tim Cleanique Laundry,\nSaya ingin aktivasi *FREE TRIAL 7 HARI* Aplikasi Kasir Laundry Digital (app.laundrycleanique.com).\n\n*Nama Usaha:* ${laundryName}\n*Pemilik:* ${ownerName}\n*No. WA:* ${whatsapp}\n*Email:* ${email}\n*Kota:* ${city}\n\nMohon dibantu pembuatan akun demo trial gratisnya. Terima kasih!`;
       
       const encodedUrl = `https://api.whatsapp.com/send?phone=${waNumber}&text=${encodeURIComponent(textMsg)}`;
       
