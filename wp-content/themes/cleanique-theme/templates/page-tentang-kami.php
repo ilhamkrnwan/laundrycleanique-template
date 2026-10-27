@@ -33,7 +33,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
       <div class="cq-payno-hero-top">
         <div>
           <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-16); background: rgba(255, 255, 255, 0.9); border: 1px solid var(--sky-200);">
-            Profil Perusahaan &bull; PT Indotech Berkah Abadi
+            Profil Perusahaan
           </div>
           <h1 class="cq-payno-heading">
             Membangun Ekosistem Laundry Mandiri, <span class="cq-text-blue">Dengan Riset Pabrik, Mesin Tangguh &amp; Kasir Cerdas.</span>
@@ -57,10 +57,10 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
 
           <div class="cq-payno-hero-actions">
             <a href="<?php echo esc_url($wa_url); ?>" target="_blank" rel="noopener" class="cq-btn cq-btn-primary cq-btn-pill">
-              <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Tim Ahli
+              <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi
             </a>
             <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill">
-              <i class="ri-store-2-line" aria-hidden="true"></i> Paket Usaha Siap Buka
+              Pilihan Paket
             </a>
           </div>
         </div>
@@ -272,7 +272,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
     
     <div class="cq-container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto; position: relative; z-index: 2;">
-        <span class="cq-badge-clean" style="margin-bottom: var(--cq-sp-12);">Metodologi &bull; Standard Operating Procedure</span>
+        <span class="cq-badge-clean" style="margin-bottom: var(--cq-sp-12);">Metodologi SOP</span>
         <h2 class="cq-section-title" style="margin-bottom: var(--cq-sp-12);">
           Alur Pendampingan Kemitraan Menuju Outlet Mandiri
         </h2>
@@ -290,7 +290,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
             <div class="cq-timeline-node-inner"></div>
           </div>
           <div class="cq-timeline-badge-pill">
-            <span class="cq-timeline-dot"></span> Tahap 01 &bull; Konsultasi Bisnis
+            <span class="cq-timeline-dot"></span> Tahap 01
           </div>
           <div class="cq-timeline-card">
             <div class="cq-timeline-card-header">
@@ -321,7 +321,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
             <div class="cq-timeline-node-inner"></div>
           </div>
           <div class="cq-timeline-badge-pill">
-            <span class="cq-timeline-dot dot-mint"></span> Tahap 02 &bull; Due Diligence
+            <span class="cq-timeline-dot dot-mint"></span> Tahap 02
           </div>
           <div class="cq-timeline-card">
             <div class="cq-timeline-card-header">
@@ -352,7 +352,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
             <div class="cq-timeline-node-inner"></div>
           </div>
           <div class="cq-timeline-badge-pill">
-            <span class="cq-timeline-dot dot-blue"></span> Tahap 03 &bull; Engineering Layout
+            <span class="cq-timeline-dot dot-blue"></span> Tahap 03
           </div>
           <div class="cq-timeline-card">
             <div class="cq-timeline-card-header">
@@ -383,7 +383,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
             <div class="cq-timeline-node-inner"></div>
           </div>
           <div class="cq-timeline-badge-pill">
-            <span class="cq-timeline-dot" style="background: #0284c7;"></span> Tahap 04 &bull; Machinery Setup
+            <span class="cq-timeline-dot" style="background: #0284c7;"></span> Tahap 04
           </div>
           <div class="cq-timeline-card">
             <div class="cq-timeline-card-header">
@@ -414,7 +414,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
             <div class="cq-timeline-node-inner"></div>
           </div>
           <div class="cq-timeline-badge-pill">
-            <span class="cq-timeline-dot" style="background: #8b5cf6;"></span> Tahap 05 &bull; Training &amp; SOP
+            <span class="cq-timeline-dot" style="background: #8b5cf6;"></span> Tahap 05
           </div>
           <div class="cq-timeline-card">
             <div class="cq-timeline-card-header">
@@ -445,7 +445,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
             <div class="cq-timeline-node-inner"></div>
           </div>
           <div class="cq-timeline-badge-pill">
-            <span class="cq-timeline-dot" style="background: #10b981;"></span> Tahap 06 &bull; Grand Opening
+            <span class="cq-timeline-dot" style="background: #10b981;"></span> Tahap 06
           </div>
           <div class="cq-timeline-card">
             <div class="cq-timeline-card-header">
@@ -473,7 +473,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
 
       <div class="cq-timeline-cta-row">
         <a href="<?php echo esc_url(cleanique_get_whatsapp_url('kemitraan')); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
-          <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Program Kemitraan <i class="ri-arrow-right-line" aria-hidden="true"></i>
+          <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Kemitraan
         </a>
       </div>
     </div>
@@ -512,10 +512,10 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
 
           <div style="display: flex; gap: 12px; flex-wrap: wrap;">
             <a href="<?php echo esc_url(home_url('/kontak/')); ?>" class="cq-btn cq-btn-primary cq-btn-pill">
-              <i class="ri-map-pin-line" aria-hidden="true"></i> Kontak &amp; Lokasi Workshop
+              Kontak Workshop
             </a>
             <a href="https://indotech.id" target="_blank" rel="noopener" class="cq-btn cq-btn-white-pill cq-btn-pill">
-              <i class="ri-external-link-line" aria-hidden="true"></i> Situs Induk Indotech.id
+              Situs Induk
             </a>
           </div>
         </div>
@@ -539,7 +539,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
           <div class="cq-portal-gateway-img-wrap">
             <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-outlet.jpg'); ?>" alt="Paket Usaha Laundry Siap Operasi" loading="lazy">
             <div class="cq-portal-gateway-tag is-primary">
-              Peluang Usaha Turnkey &bull; 100% Milik Anda
+              Peluang Usaha
             </div>
           </div>
           <div class="cq-portal-gateway-body">
@@ -555,7 +555,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
             </p>
             <div class="cq-portal-gateway-action-row">
               <span class="cq-btn cq-btn-primary cq-btn-pill cq-btn-sm">
-                Lihat Detail Paket Usaha <i class="ri-arrow-right-line" aria-hidden="true"></i>
+                Lihat Paket
               </span>
             </div>
           </div>
@@ -566,7 +566,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
           <div class="cq-portal-gateway-img-wrap">
             <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-pos-app.jpg'); ?>" alt="Aplikasi Kasir POS Laundry Cleanique" loading="lazy">
             <div class="cq-portal-gateway-tag is-accent">
-              Digitalisasi POS &bull; Free Trial 7 Hari
+              Smart POS
             </div>
           </div>
           <div class="cq-portal-gateway-body">
@@ -582,7 +582,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
             </p>
             <div class="cq-portal-gateway-action-row">
               <span class="cq-btn cq-btn-accent cq-btn-pill cq-btn-sm">
-                Coba Gratis 7 Hari <i class="ri-arrow-right-line" aria-hidden="true"></i>
+                Coba Gratis
               </span>
             </div>
           </div>
@@ -605,13 +605,13 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
         </p>
         <div class="cq-banner-cta-actions">
           <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
-            <i class="ri-whatsapp-line" aria-hidden="true"></i> Chat WhatsApp Konsultan Kami
+            <i class="ri-whatsapp-line" aria-hidden="true"></i> Hubungi Konsultan
           </a>
           <a href="<?php echo esc_url(home_url('/kontak/')); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-lg">
-            <i class="ri-map-pin-line" aria-hidden="true"></i> Kunjungi Showroom Sleman DIY
+            Kunjungan Showroom
           </a>
           <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg">
-            Pelajari Paket Usaha
+            Pilihan Paket
           </a>
         </div>
       </div>

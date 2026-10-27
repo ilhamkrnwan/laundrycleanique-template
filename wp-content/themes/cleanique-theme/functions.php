@@ -10,7 +10,7 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
 
-define('CLEANIQUE_VERSION', '1.5.3');
+define('CLEANIQUE_VERSION', '1.5.5');
 define('CLEANIQUE_DIR', get_template_directory());
 define('CLEANIQUE_URI', get_template_directory_uri());
 
@@ -451,7 +451,7 @@ function cleanique_comment_callback($comment, $args, $depth) {
                     <span class="cq-comment-author-name">
                         <?php echo get_comment_author_link($comment); ?>
                         <?php if ($is_by_post_author) : ?>
-                            <span class="cq-comment-badge-author"><i class="ri-shield-check-fill"></i> Penulis</span>
+                            <span class="cq-comment-badge-author">Penulis</span>
                         <?php endif; ?>
                     </span>
                     <time class="cq-comment-date" datetime="<?php comment_time('c'); ?>">

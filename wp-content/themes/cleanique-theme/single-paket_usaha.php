@@ -27,7 +27,7 @@ while (have_posts()) : the_post();
     <!-- Breadcrumb & Back Link -->
     <div style="margin-bottom: var(--cq-sp-24);">
       <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-white-pill cq-btn-sm" style="display: inline-flex; align-items: center; gap: 6px;">
-        <i class="ri-arrow-left-line" aria-hidden="true"></i> Kembali ke Landing Page Peluang Usaha
+        Semua Paket
       </a>
     </div>
 
@@ -35,7 +35,7 @@ while (have_posts()) : the_post();
       <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: var(--cq-sp-16);">
         <div style="display: flex; align-items: center; gap: 10px;">
           <span class="cq-badge-pill cq-badge-accent">
-            Paket Usaha Kemitraan
+            Paket Usaha
           </span>
           <?php if (!empty($badge)) : ?>
             <span class="cq-badge-pill cq-badge-warning"><?php echo esc_html($badge); ?></span>
@@ -84,10 +84,10 @@ while (have_posts()) : the_post();
       <!-- Bottom Action Row -->
       <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px; padding-top: var(--cq-sp-24); border-top: 1px solid var(--cq-border-light);">
         <a href="<?php echo esc_url($wa_paket_url); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
-          <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi &amp; Booking <?php the_title(); ?> via WhatsApp
+          <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Paket
         </a>
         <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/#mitra-sukses')); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg">
-          <i class="ri-user-star-line" aria-hidden="true"></i> Bukti Mitra Sukses
+          Mitra Sukses
         </a>
       </div>
     </div>
@@ -107,10 +107,10 @@ while (have_posts()) : the_post();
         </p>
         <div class="cq-banner-cta-actions">
           <a href="<?php echo esc_url($wa_paket_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
-            <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Paket via WhatsApp
+            <i class="ri-whatsapp-line" aria-hidden="true"></i> Hubungi Konsultan
           </a>
           <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg">
-            <i class="ri-store-2-line" aria-hidden="true"></i> Lihat Semua Pilihan Paket
+            Pilihan Paket
           </a>
         </div>
       </div>

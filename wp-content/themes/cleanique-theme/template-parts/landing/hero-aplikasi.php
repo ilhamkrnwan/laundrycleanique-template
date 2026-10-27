@@ -16,7 +16,7 @@ $wa_trial_url = cleanique_get_whatsapp_url('aplikasi_trial');
       <div>
         <div class="cq-hero-badge-pill">
           <span class="cq-hero-badge-dot"></span>
-          <span class="cq-hero-badge-text">Simple to Use &bull; Built to Perform</span>
+          <span class="cq-hero-badge-text">Smart POS</span>
         </div>
         <h1 class="cq-payno-heading">
           Kelola Mudah, <span class="cq-text-blue">Tumbuh Lebih Terarah.</span>
@@ -33,10 +33,10 @@ $wa_trial_url = cleanique_get_whatsapp_url('aplikasi_trial');
         </div>
         <div class="cq-payno-hero-actions">
           <a href="#trial-form" class="cq-btn cq-btn-primary cq-btn-pill">
-            <i class="ri-rocket-2-line" aria-hidden="true"></i> Mulai Trial 7 Hari Gratis
+            Coba Gratis
           </a>
           <a href="https://app.laundrycleanique.com/" target="_blank" rel="noopener" class="cq-btn cq-btn-white-pill">
-            <i class="ri-login-box-line" aria-hidden="true"></i> Masuk ke Aplikasi
+            Masuk Aplikasi
           </a>
         </div>
       </div>
@@ -52,7 +52,7 @@ $wa_trial_url = cleanique_get_whatsapp_url('aplikasi_trial');
         </div>
         <div class="cq-float-card-value-row">
           <div class="cq-float-card-value">Rp 1.450.000</div>
-          <span class="cq-float-growth-badge"><i class="ri-arrow-right-up-line"></i> +18%</span>
+          <span class="cq-float-growth-badge">+18%</span>
         </div>
         <div class="cq-float-card-meta">
           <i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
@@ -182,8 +182,7 @@ $wa_trial_url = cleanique_get_whatsapp_url('aplikasi_trial');
       <div class="cq-glass-card cq-payno-countdown-card">
         <div class="cq-countdown-meta">
           <div class="cq-countdown-badge is-mint">
-            <i class="ri-timer-flash-line" aria-hidden="true"></i>
-            <span>Berakhir 30 Oktober</span>
+            Promo Terbatas
           </div>
           <div style="font-family: var(--cq-font-heading); font-size: var(--cq-fs-base); font-weight: 700; color: var(--ink); line-height: 1.3;">
             Free Trial 7 Hari (Rp 0) &bull; Setelahnya Hanya Rp 60.000/bln
@@ -217,7 +216,7 @@ $wa_trial_url = cleanique_get_whatsapp_url('aplikasi_trial');
 
         <div>
           <a href="#trial-form" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-sm">
-            <i class="ri-rocket-2-line" aria-hidden="true"></i> Ambil Promo Trial <i class="ri-arrow-down-line" aria-hidden="true"></i>
+            Coba Gratis
           </a>
         </div>
       </div>

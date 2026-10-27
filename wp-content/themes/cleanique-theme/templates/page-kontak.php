@@ -28,7 +28,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
     <div class="cq-container">
       <div class="cq-corp-hero-top">
         <div class="cq-corp-hero-content">
-          <span class="cq-badge-clean">PT Indotech Berkah Abadi &bull; Sleman, D.I. Yogyakarta</span>
+          <span class="cq-badge-clean">Kantor Pusat</span>
           
           <h1 class="cq-corp-hero-title cq-payno-heading">
             Terhubung Langsung dengan Tim Ahli Kami, <span class="cq-text-accent cq-text-blue">Mulai Bisnis Laundry Terarah.</span>
@@ -46,10 +46,10 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
 
           <div class="cq-corp-hero-actions">
             <a href="<?php echo esc_url($wa_url); ?>" target="_blank" rel="noopener" class="cq-btn cq-btn-primary cq-btn-pill">
-              <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi via WhatsApp
+              <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi
             </a>
             <a href="#form-konsultasi" class="cq-btn cq-btn-outline cq-btn-pill">
-              Isi Formulir Konsultasi
+              Formulir Konsultasi
             </a>
           </div>
         </div>
@@ -61,7 +61,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
                  class="cq-hero-visual-img" 
                  loading="lazy">
             <div class="cq-hero-visual-caption">
-              Pusat Layanan Kemitraan &amp; Showroom Sleman, D.I. Yogyakarta
+              Showroom Sleman
             </div>
           </div>
         </div>
@@ -77,7 +77,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
       
       <!-- Unified Section Header Across Container (Prevents Header Clipping) -->
       <div class="cq-section-header cq-contact-section-header">
-        <span class="cq-badge-clean">Konsultasi Resmi &bull; Sleman, D.I. Yogyakarta</span>
+        <span class="cq-badge-clean">Konsultasi Resmi</span>
         <h2 class="cq-section-title">Kantor Operasional &amp; Showroom Resmi</h2>
         <p class="cq-section-desc">
           Kunjungi workshop peralatan kami di Sleman untuk melihat langsung unit mesin komersial, atau kirimkan rincian rencana usaha Anda melalui formulir konsultasi terintegrasi WhatsApp di bawah ini.
@@ -98,7 +98,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
             </div>
             
             <div class="cq-contact-info-body">
-              <span class="cq-badge-clean">Kantor &amp; Workshop Resmi</span>
+              <span class="cq-badge-clean">Kantor Resmi</span>
               <h3 class="cq-contact-info-title">PT Indotech Berkah Abadi</h3>
               <p class="cq-contact-info-addr">
                 <i class="ri-map-pin-2-fill" aria-hidden="true"></i>
@@ -106,7 +106,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
               </p>
               <div>
                 <a href="https://maps.google.com/?q=PT+Indotech+Berkah+Abadi+Sleman" target="_blank" rel="noopener" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-sm">
-                  <i class="ri-direction-line" aria-hidden="true"></i> Buka Rute di Google Maps
+                  Buka Rute
                 </a>
               </div>
             </div>
@@ -146,7 +146,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
                 Saksikan demonstrasi kerja mesin cuci komersial, kecepatan dryer gas, dan aroma tahan lama parfum Orchid Brand langsung di Sleman.
               </p>
               <a href="<?php echo esc_url($wa_url); ?>" target="_blank" rel="noopener" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-sm">
-                <i class="ri-calendar-check-line" aria-hidden="true"></i> Jadwalkan Kunjungan
+                Jadwalkan Kunjungan
               </a>
             </div>
           </div>
@@ -201,7 +201,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
               </div>
 
               <button type="submit" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-block cq-btn-lg" style="margin-top: 14px; min-height: 50px;">
-                <i class="ri-whatsapp-line" aria-hidden="true"></i> Kirim &amp; Buka WhatsApp Konsultan
+                <i class="ri-whatsapp-line" aria-hidden="true"></i> Kirim Pesan
               </button>
 
               <div class="cq-contact-form-disclaimer">
@@ -220,7 +220,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
   <section class="cq-section" id="lokasi-workshop">
     <div class="cq-container">
       <div class="cq-section-header">
-        <span class="cq-badge-clean">Peta Lokasi Workshop Sleman</span>
+        <span class="cq-badge-clean">Peta Lokasi</span>
         <h2 class="cq-section-title">Lokasi Workshop &amp; Pusat Layanan Sleman</h2>
         <p class="cq-section-desc">
           Kunjungi kantor pusat operasional dan fasilitas workshop PT Indotech Berkah Abadi di Sleman, D.I. Yogyakarta. Akses mudah dijangkau dengan kendaraan roda empat, area parkir luas, dan fasilitas bongkar muat mesin laundry.
@@ -244,7 +244,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
           
           <!-- Badge overlay di pojok peta (Clean text) -->
           <div style="position: absolute; top: 16px; left: 16px; background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(8px); padding: 6px 14px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid rgba(226, 232, 240, 0.9); font-size: 12px; font-weight: 700; color: #0f172a;">
-            PT Indotech Berkah Abadi &bull; Sleman, DIY
+            Kantor Pusat
           </div>
         </div>
 
@@ -276,7 +276,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
             <!-- Kolom Tombol Aksi Tunggal (Clean, No Multi-Button Clutter) -->
             <div style="display: flex; justify-content: flex-end;">
               <a href="https://www.google.com/maps/dir/?api=1&destination=-7.7320403,110.3679988" target="_blank" rel="noopener" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-lg">
-                <i class="ri-navigation-fill" aria-hidden="true"></i> Petunjuk Arah Google Maps
+                Petunjuk Arah
               </a>
             </div>
 
@@ -293,7 +293,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
   <section class="cq-section cq-section-alt" id="faq-kontak">
     <div class="cq-container">
       <div class="cq-section-header">
-        <span class="cq-badge-clean">Tanya Jawab Konsultasi</span>
+        <span class="cq-badge-clean">FAQ Konsultasi</span>
         <h2 class="cq-section-title">Pertanyaan Umum Seputar Kemitraan &amp; Kunjungan</h2>
         <p class="cq-section-desc">Hal-hal yang sering ditanyakan oleh calon mitra sebelum berkunjung atau berdiskusi langsung dengan tim ahli kami.</p>
       </div>
@@ -366,10 +366,10 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
         </p>
         <div class="cq-banner-cta-actions">
           <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
-            <i class="ri-whatsapp-line" aria-hidden="true"></i> Chat WhatsApp Konsultan Kami
+            <i class="ri-whatsapp-line" aria-hidden="true"></i> Hubungi Konsultan
           </a>
           <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-lg">
-            <i class="ri-store-2-line" aria-hidden="true"></i> Lihat Seluruh Paket Usaha
+            Pilihan Paket
           </a>
         </div>
       </div>

@@ -24,7 +24,7 @@ $categories = get_categories(['hide_empty' => true]);
     <div class="cq-container">
       <div class="cq-blog-hero-inner">
         <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-16); background: rgba(255, 255, 255, 0.9); border: 1px solid var(--sky-200);">
-          <?php echo $is_search ? 'Hasil Pencarian Edukasi' : 'Pusat Edukasi &amp; Wawasan Laundry'; ?>
+          <?php echo $is_search ? 'Pencarian' : 'Pusat Edukasi'; ?>
         </div>
         <h1 class="cq-blog-title">
           <?php if ($is_search) : ?>
@@ -48,7 +48,7 @@ $categories = get_categories(['hide_empty' => true]);
               <i class="ri-search-line" style="color: var(--brand-deep); font-size: 18px; margin-right: 8px;" aria-hidden="true"></i>
               <input type="search" class="cq-blog-search-input" placeholder="Cari tips mesin, chemical, nota digital..." value="<?php echo get_search_query(); ?>" name="s" aria-label="Cari artikel">
               <button type="submit" class="cq-blog-search-btn">
-                <i class="ri-search-2-line" aria-hidden="true"></i> Cari
+                Cari
               </button>
             </div>
           </form>
@@ -85,49 +85,51 @@ $categories = get_categories(['hide_empty' => true]);
               $post_cats = get_the_category();
               $cat_name = !empty($post_cats) ? $post_cats[0]->name : 'Edukasi';
               $reading_time = function_exists('cleanique_get_reading_time') ? cleanique_get_reading_time() : '4 mnt baca';
-              $is_wide_bento = ($post_counter === 1 && !is_paged()) ? 'is-wide-bento' : '';
+
+              // Bento Rhythm: Item 1 & 4 pada tiap blok 4 item menjadi Wide Bento
+              $mod = ($post_counter - 1) % 4;
+              $is_wide_bento = ($mod === 0 || $mod === 3) ? 'is-wide-bento' : '';
           ?>
-            <article class="cq-article-card-bento cq-article-card-v2 <?php echo esc_attr($is_wide_bento); ?>">
-              <div class="cq-bento-card-thumb-wrap cq-article-card-thumb-wrap">
+            <article class="cq-article-bento cq-article-card-bento <?php echo esc_attr($is_wide_bento); ?>">
+              <div class="cq-bento-thumb-wrap cq-bento-card-thumb-wrap">
                 <a href="<?php the_permalink(); ?>" aria-label="<?php the_title_attribute(); ?>">
                   <?php if (has_post_thumbnail()) : ?>
-                    <?php the_post_thumbnail($is_wide_bento ? 'large' : 'cleanique-card', ['loading' => 'lazy', 'alt' => get_the_title()]); ?>
+                    <?php the_post_thumbnail($is_wide_bento ? 'large' : 'cleanique-card', ['loading' => ($post_counter === 1 ? 'eager' : 'lazy'), 'alt' => get_the_title()]); ?>
                   <?php else : ?>
                     <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-outlet.jpg'); ?>" alt="<?php the_title_attribute(); ?>" loading="lazy">
                   <?php endif; ?>
                 </a>
-                <div class="cq-bento-card-badges">
-                  <span class="cq-bento-card-tag cq-article-card-tag">
-                    <i class="ri-price-tag-3-fill" aria-hidden="true"></i>
+                <div class="cq-bento-badges cq-bento-card-badges">
+                  <span class="cq-bento-tag cq-bento-card-tag">
                     <?php echo esc_html($cat_name); ?>
                   </span>
-                  <span class="cq-bento-card-time">
-                    <i class="ri-time-line" aria-hidden="true"></i> <?php echo esc_html($reading_time); ?>
+                  <span class="cq-bento-time cq-bento-card-time">
+                    <?php echo esc_html($reading_time); ?>
                   </span>
                 </div>
               </div>
 
-              <div class="cq-bento-card-body cq-article-card-body-v2">
-                <div class="cq-bento-card-meta cq-article-card-meta-v2">
+              <div class="cq-bento-body cq-bento-card-body">
+                <div class="cq-bento-meta cq-bento-card-meta">
                   <span><i class="ri-calendar-line" aria-hidden="true"></i> <?php echo get_the_date('d M Y'); ?></span>
                   <span class="cq-bento-meta-dot">&bull;</span>
                   <span><i class="ri-shield-check-line" aria-hidden="true"></i> Riset Indotech</span>
                 </div>
 
-                <h3 class="cq-bento-card-title cq-article-card-title-v2">
+                <h3 class="cq-bento-title cq-bento-card-title">
                   <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </h3>
 
-                <p class="cq-bento-card-excerpt cq-article-card-excerpt-v2">
+                <p class="cq-bento-excerpt cq-bento-card-excerpt">
                   <?php echo wp_trim_words(get_the_excerpt(), $is_wide_bento ? 28 : 16, '...'); ?>
                 </p>
 
-                <div class="cq-bento-card-footer cq-article-card-footer-v2">
-                  <div class="cq-bento-card-hub">
+                <div class="cq-bento-footer cq-bento-card-footer">
+                  <div class="cq-bento-hub cq-bento-card-hub">
                     <span class="cq-bento-hub-dot"></span>
                     <span>Indotech Hub</span>
                   </div>
-                  <a href="<?php the_permalink(); ?>" class="cq-bento-card-action cq-article-card-link-v2" aria-label="Baca Panduan <?php the_title_attribute(); ?>">
+                  <a href="<?php the_permalink(); ?>" class="cq-bento-action cq-bento-card-action" aria-label="Baca Panduan <?php the_title_attribute(); ?>">
                     <span>Baca Panduan</span>
                     <span class="cq-bento-action-circle" aria-hidden="true">
                       <i class="ri-arrow-right-up-line"></i>
@@ -158,7 +160,7 @@ $categories = get_categories(['hide_empty' => true]);
             <?php esc_html_e('Kata kunci yang Anda cari belum cocok dengan artikel manapun. Coba cari kata kunci lain seperti "paket", "kasir", atau "parfum".', 'cleanique'); ?>
           </p>
           <a href="<?php echo esc_url(get_permalink(get_option('page_for_posts')) ?: home_url('/artikel/')); ?>" class="cq-btn cq-btn-primary cq-btn-pill">
-            <i class="ri-arrow-left-line" aria-hidden="true"></i> <?php esc_html_e('Kembali ke Semua Artikel', 'cleanique'); ?>
+            Semua Artikel
           </a>
         </div>
       <?php endif; ?>
@@ -179,10 +181,10 @@ $categories = get_categories(['hide_empty' => true]);
         </p>
         <div class="cq-banner-cta-actions">
           <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
-            <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Tim Ahli via WhatsApp
+            <i class="ri-whatsapp-line" aria-hidden="true"></i> Hubungi Konsultan
           </a>
           <a href="<?php echo esc_url(home_url('/kemitraan/')); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg">
-            <i class="ri-store-2-line" aria-hidden="true"></i> Katalog Paket Kemitraan
+            Pilihan Paket
           </a>
         </div>
       </div>

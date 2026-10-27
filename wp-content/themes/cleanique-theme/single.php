@@ -112,7 +112,7 @@ $reading_time = cleanique_get_reading_time($current_id);
 
           <!-- Meta Row: Author, Dates, Reading Time -->
           <div class="cq-single-meta-row">
-            <div class="cq-single-author-badge" itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <div class="cq-single-author-card" itemprop="author" itemscope itemtype="https://schema.org/Person">
               <div class="cq-author-mini-avatar" aria-hidden="true">
                 <i class="ri-user-star-line"></i>
               </div>
@@ -517,13 +517,13 @@ HPP_Chemical = (Deterjen_ml * Harga_ml) + (Softener_ml * Harga_ml) + (Parfum_ml 
                   </p>
                   <div class="cq-in-content-cta-actions">
                     <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-primary cq-btn-pill" target="_blank" rel="noopener">
-                      <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Tim Ahli via WhatsApp
+                      <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi
                     </a>
                     <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill">
-                      <i class="ri-store-2-line" aria-hidden="true"></i> Brosur Paket Usaha
+                      Pilihan Paket
                     </a>
                     <a href="<?php echo esc_url(home_url('/aplikasi-laundry/')); ?>" class="cq-btn cq-btn-accent cq-btn-pill">
-                      <i class="ri-smartphone-line" aria-hidden="true"></i> Free Trial POS (7 Hari)
+                      Coba Gratis
                     </a>
                   </div>
                 </div>
@@ -858,7 +858,7 @@ HPP_Chemical = (Deterjen_ml * Harga_ml) + (Softener_ml * Harga_ml) + (Parfum_ml 
           <!-- Promo Widget 1: Free Trial POS Promo Card -->
           <div class="cq-sidebar-card is-promo-pos">
             <span class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12); font-size: 11px;">
-              Free Trial 7 Hari
+              Coba Gratis
             </span>
             <h3 class="cq-sidebar-title">
               <i class="ri-smartphone-line" style="color: var(--mint-cta);" aria-hidden="true"></i>
@@ -874,7 +874,7 @@ HPP_Chemical = (Deterjen_ml * Harga_ml) + (Softener_ml * Harga_ml) + (Parfum_ml 
               <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> Asisten AI konsultasi laundry 24/7</li>
             </ul>
             <a href="<?php echo esc_url(home_url('/aplikasi-laundry/')); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-block">
-              Coba Gratis 7 Hari <i class="ri-arrow-right-line" aria-hidden="true"></i>
+              Coba Gratis
             </a>
           </div>
 
@@ -911,7 +911,7 @@ HPP_Chemical = (Deterjen_ml * Harga_ml) + (Softener_ml * Harga_ml) + (Parfum_ml 
               Ingin mendiskusikan kelayakan lokasi outlet, racikan kimia noda membandel, atau simulasi modal paket usaha? Tim konsultan kami siap berdiskusi.
             </p>
             <a href="<?php echo esc_url($wa_url); ?>" target="_blank" rel="noopener" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-block">
-              <i class="ri-whatsapp-line" aria-hidden="true"></i> Chat WhatsApp Tim Ahli
+              <i class="ri-whatsapp-line" aria-hidden="true"></i> Hubungi Konsultan
             </a>
           </div>
 
@@ -1020,7 +1020,6 @@ HPP_Chemical = (Deterjen_ml * Harga_ml) + (Softener_ml * Harga_ml) + (Parfum_ml 
                 <?php endif; ?>
               </a>
               <span class="cq-article-card-tag">
-                <i class="ri-price-tag-3-line" aria-hidden="true"></i>
                 <?php
                 $rel_cats = get_the_category();
                 echo !empty($rel_cats) ? esc_html($rel_cats[0]->name) : 'Edukasi';
@@ -1061,7 +1060,7 @@ HPP_Chemical = (Deterjen_ml * Harga_ml) + (Softener_ml * Harga_ml) + (Parfum_ml 
               <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>">
                 <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-outlet.jpg'); ?>" alt="Panduan Usaha Laundry Kiloan Modal Hemat" loading="lazy">
               </a>
-              <span class="cq-article-card-tag"><i class="ri-price-tag-3-line" aria-hidden="true"></i> Panduan Usaha</span>
+              <span class="cq-article-card-tag">Panduan Usaha</span>
             </div>
             <div class="cq-article-card-body-v2">
               <div class="cq-article-card-meta-v2">
@@ -1089,7 +1088,7 @@ HPP_Chemical = (Deterjen_ml * Harga_ml) + (Softener_ml * Harga_ml) + (Parfum_ml 
               <a href="<?php echo esc_url(home_url('/aplikasi-laundry/')); ?>">
                 <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-pos-app.jpg'); ?>" alt="Nota WhatsApp Anti Curang" loading="lazy">
               </a>
-              <span class="cq-article-card-tag" style="color: #059669; border-color: rgba(5, 150, 105, 0.25);"><i class="ri-smartphone-line" aria-hidden="true"></i> Digitalisasi POS</span>
+              <span class="cq-article-card-tag" style="color: #059669; border-color: rgba(5, 150, 105, 0.25);">Digitalisasi POS</span>
             </div>
             <div class="cq-article-card-body-v2">
               <div class="cq-article-card-meta-v2">
@@ -1117,7 +1116,7 @@ HPP_Chemical = (Deterjen_ml * Harga_ml) + (Softener_ml * Harga_ml) + (Parfum_ml 
               <a href="<?php echo esc_url(home_url('/pabrik-chemical/')); ?>">
                 <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/chemical-products.jpg'); ?>" alt="Parfum Laundry Tahan 30 Hari" loading="lazy">
               </a>
-              <span class="cq-article-card-tag" style="color: #d97706; border-color: rgba(217, 119, 6, 0.25);"><i class="ri-flask-line" aria-hidden="true"></i> Chemical Pabrik</span>
+              <span class="cq-article-card-tag" style="color: #d97706; border-color: rgba(217, 119, 6, 0.25);">Chemical Pabrik</span>
             </div>
             <div class="cq-article-card-body-v2">
               <div class="cq-article-card-meta-v2">
@@ -1145,7 +1144,7 @@ HPP_Chemical = (Deterjen_ml * Harga_ml) + (Softener_ml * Harga_ml) + (Parfum_ml 
       <!-- More from Category Button -->
       <div class="cq-related-more-row">
         <a href="<?php echo esc_url($cat_url); ?>" class="cq-btn cq-btn-outline cq-btn-pill">
-          Lihat Semua Artikel di Kategori "<?php echo esc_html($cat_name); ?>" <i class="ri-arrow-right-line"></i>
+          Semua Artikel
         </a>
       </div>
     </div>
@@ -1161,7 +1160,7 @@ HPP_Chemical = (Deterjen_ml * Harga_ml) + (Softener_ml * Harga_ml) + (Parfum_ml 
           <!-- Left: E-Book & Guide Offer -->
           <div class="cq-newsletter-offer">
             <span class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12); background: rgba(255, 255, 255, 0.2); color: #ffffff; border-color: rgba(255, 255, 255, 0.3);">
-              Free E-Book &amp; Kalkulator Excel
+              Free E-Book
             </span>
             <h2 id="newsletter-cta-title" class="cq-newsletter-title">
               Unduh SOP Lengkap Outlet Laundry &amp; Kalkulator Simulasi BEP
@@ -1186,7 +1185,7 @@ HPP_Chemical = (Deterjen_ml * Harga_ml) + (Softener_ml * Harga_ml) + (Parfum_ml 
           <!-- Right: Fast WhatsApp Consultation Card -->
           <div class="cq-newsletter-wa-card">
             <div class="cq-wa-card-badge">
-              Layanan Konsultasi Cepat
+              Konsultasi Cepat
             </div>
             <h3 class="cq-wa-card-heading">Punya Rencana Buka Outlet Bulan Ini?</h3>
             <p class="cq-wa-card-text">
@@ -1194,10 +1193,10 @@ HPP_Chemical = (Deterjen_ml * Harga_ml) + (Softener_ml * Harga_ml) + (Parfum_ml 
             </p>
             <div class="cq-wa-card-actions">
               <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-block" target="_blank" rel="noopener">
-                <i class="ri-whatsapp-line"></i> Chat WhatsApp Konsultan
+                <i class="ri-whatsapp-line"></i> Hubungi Konsultan
               </a>
               <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-block">
-                <i class="ri-store-2-line"></i> Pelajari Paket Usaha
+                Pilihan Paket
               </a>
             </div>
           </div>

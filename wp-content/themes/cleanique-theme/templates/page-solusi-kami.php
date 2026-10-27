@@ -31,7 +31,7 @@ $wa_url = cleanique_get_whatsapp_url('general');
       <div class="cq-payno-hero-top">
         <div>
           <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-16); background: rgba(255, 255, 255, 0.9); border: 1px solid var(--sky-200);">
-            Ekosistem Solusi Terpadu &bull; PT Indotech Berkah Abadi
+            Ekosistem Solusi
           </div>
           <h1 class="cq-payno-heading">
             Solusi Lengkap dari Hulu ke Hilir, <span class="cq-text-blue">Untuk Usaha Laundry Modern Indonesia.</span>
@@ -51,10 +51,10 @@ $wa_url = cleanique_get_whatsapp_url('general');
 
           <div class="cq-payno-hero-actions">
             <a href="#solusi-paket" class="cq-btn cq-btn-primary cq-btn-pill">
-              <i class="ri-store-2-line" aria-hidden="true"></i> Solusi Paket Usaha
+              Pilihan Paket
             </a>
             <a href="<?php echo esc_url($wa_url); ?>" target="_blank" rel="noopener" class="cq-btn cq-btn-white-pill cq-btn-pill">
-              <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Tim Ahli
+              <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi
             </a>
           </div>
         </div>
@@ -125,10 +125,10 @@ $wa_url = cleanique_get_whatsapp_url('general');
 
           <div style="display: flex; gap: var(--cq-sp-12); flex-wrap: wrap;">
             <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-lg">
-              Detail Paket Usaha Laundry <i class="ri-arrow-right-line" aria-hidden="true"></i>
+              Lihat Paket
             </a>
             <a href="<?php echo esc_url(cleanique_get_whatsapp_url('paket_usaha')); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
-              <i class="ri-whatsapp-line" aria-hidden="true"></i> Tanya Paket via WA
+              <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Paket
             </a>
           </div>
         </div>
@@ -165,10 +165,10 @@ $wa_url = cleanique_get_whatsapp_url('general');
 
           <div style="display: flex; gap: var(--cq-sp-12); flex-wrap: wrap;">
             <a href="<?php echo esc_url(home_url('/aplikasi-laundry/')); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg">
-              Coba Gratis POS (Trial 7 Hari) <i class="ri-arrow-right-line" aria-hidden="true"></i>
+              Coba Gratis
             </a>
             <a href="<?php echo esc_url(cleanique_get_whatsapp_url('aplikasi_trial')); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
-              <i class="ri-whatsapp-line" aria-hidden="true"></i> Tanya CS POS via WA
+              <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi POS
             </a>
           </div>
         </div>
@@ -190,13 +190,13 @@ $wa_url = cleanique_get_whatsapp_url('general');
         </p>
         <div class="cq-banner-cta-actions">
           <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
-            <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Gratis via WhatsApp
+            <i class="ri-whatsapp-line" aria-hidden="true"></i> Hubungi Konsultan
           </a>
           <a href="<?php echo esc_url(home_url('/kontak/')); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-lg">
-            <i class="ri-map-pin-line" aria-hidden="true"></i> Lokasi Kantor &amp; Workshop
+            Peta Lokasi
           </a>
           <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg">
-            Katalog Paket Usaha
+            Pilihan Paket
           </a>
         </div>
       </div>

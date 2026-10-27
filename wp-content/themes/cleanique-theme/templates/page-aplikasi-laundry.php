@@ -92,8 +92,7 @@ $wa_trial_url = cleanique_get_whatsapp_url('aplikasi_trial');
             <p class="cq-problem-card-desc">Saat pelanggan datang mengambil pakaian, nota hilang dari tumpukan arsip. Kasir panik mencari pakaian, pelanggan marah, dan Anda terpaksa menanggung ganti rugi pakaian.</p>
           </div>
           <div class="cq-problem-solution-pill">
-            <i class="ri-checkbox-circle-fill"></i>
-            <span>Solusi: Nota digital WhatsApp 1 detik</span>
+            <span>Solusi: E-Nota WhatsApp</span>
           </div>
         </div>
 
@@ -108,8 +107,7 @@ $wa_trial_url = cleanique_get_whatsapp_url('aplikasi_trial');
             <p class="cq-problem-card-desc">Nota manual rawan dicoret, diubah, tidak disetor, atau dibikin fiktif. Tanpa audit sistem yang terkunci, kebocoran uang kasir bisa mencapai jutaan rupiah per bulan.</p>
           </div>
           <div class="cq-problem-solution-pill">
-            <i class="ri-checkbox-circle-fill"></i>
-            <span>Solusi: Audit log kasir anti-fiktif &amp; urut</span>
+            <span>Solusi: Audit Kasir</span>
           </div>
         </div>
 
@@ -124,8 +122,7 @@ $wa_trial_url = cleanique_get_whatsapp_url('aplikasi_trial');
             <p class="cq-problem-card-desc">Tanpa kode rak digital dan pelacakan status cuci-kering-setrika, pakaian sering terselip atau tertukar. Reputasi outlet yang dibangun bertahun-tahun bisa hancur seketika.</p>
           </div>
           <div class="cq-problem-solution-pill">
-            <i class="ri-checkbox-circle-fill"></i>
-            <span>Solusi: Live tracking &amp; nomor rak digital</span>
+            <span>Solusi: Live Tracking</span>
           </div>
         </div>
 
@@ -140,8 +137,7 @@ $wa_trial_url = cleanique_get_whatsapp_url('aplikasi_trial');
             <p class="cq-problem-card-desc">Setiap 10 menit WhatsApp kasir berdering hanya untuk menanyakan status cucian. Karyawan kehabisan waktu produktif membongkar cucian hanya untuk membalas pesan.</p>
           </div>
           <div class="cq-problem-solution-pill">
-            <i class="ri-checkbox-circle-fill"></i>
-            <span>Solusi: Notifikasi WA otomatis saat selesai</span>
+            <span>Solusi: Notifikasi Otomatis</span>
           </div>
         </div>
 
@@ -156,8 +152,7 @@ $wa_trial_url = cleanique_get_whatsapp_url('aplikasi_trial');
             <p class="cq-problem-card-desc">Malam hari seharusnya bersama keluarga, Anda malah harus nongkrong di outlet menghitung recehan di laci, mengecek buku kas berdebu, dan mencari selisih setoran.</p>
           </div>
           <div class="cq-problem-solution-pill">
-            <i class="ri-checkbox-circle-fill"></i>
-            <span>Solusi: Pantau omzet &amp; staf live dari HP</span>
+            <span>Solusi: Monitoring Live</span>
           </div>
         </div>
 
@@ -172,8 +167,7 @@ $wa_trial_url = cleanique_get_whatsapp_url('aplikasi_trial');
             <p class="cq-problem-card-desc">Cetak buku nota berkoli-koli menghabiskan Rp 300.000 – Rp 600.000 setiap bulan. Uang tersebut habis terbakar menjadi sampah kertas yang tidak bisa dianalisis.</p>
           </div>
           <div class="cq-problem-solution-pill">
-            <i class="ri-checkbox-circle-fill"></i>
-            <span>Solusi: 100% paperless hemat jutaan/thn</span>
+            <span>Solusi: 100% Paperless</span>
           </div>
         </div>
       </div>
@@ -456,8 +450,7 @@ $wa_trial_url = cleanique_get_whatsapp_url('aplikasi_trial');
               </div>
 
               <button type="submit" class="cq-btn-trial-submit">
-                <span>Mulai Trial Gratis</span>
-                <i class="ri-arrow-right-line" aria-hidden="true"></i>
+                <span>Coba Gratis</span>
               </button>
 
               <div class="cq-trial-card-footer">
@@ -548,10 +541,10 @@ $wa_trial_url = cleanique_get_whatsapp_url('aplikasi_trial');
 
       <div style="display: flex; justify-content: center; gap: var(--cq-sp-16); flex-wrap: wrap;">
         <a href="#trial-form" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-lg">
-          <i class="ri-rocket-2-line" aria-hidden="true"></i> Aktifkan Trial 7 Hari Gratis Sekarang
+          Coba Gratis
         </a>
         <a href="<?php echo esc_url($wa_trial_url); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
-          <i class="ri-whatsapp-line" aria-hidden="true" style="color: #25D366;"></i> Chat Konsultan via WhatsApp
+          <i class="ri-whatsapp-line" aria-hidden="true" style="color: #25D366;"></i> Chat WhatsApp
         </a>
       </div>
     </div>

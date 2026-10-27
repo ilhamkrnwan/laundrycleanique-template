@@ -31,7 +31,7 @@ $wa_url = cleanique_get_whatsapp_url('chemical');
       <div class="cq-payno-hero-top">
         <div>
           <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-16); background: rgba(255, 255, 255, 0.9); border: 1px solid var(--sky-200);">
-            Fasilitas Manufaktur &amp; Formulasi &bull; Sleman, D.I. Yogyakarta
+            Pabrik Chemical
           </div>
           <h1 class="cq-payno-heading">
             Bahan Kimia Kualitas Pabrik, <span class="cq-text-blue">Dengan HPP Cuci Paling Hemat.</span>
@@ -53,10 +53,10 @@ $wa_url = cleanique_get_whatsapp_url('chemical');
 
           <div class="cq-payno-hero-actions">
             <a href="<?php echo esc_url($wa_url); ?>" target="_blank" rel="noopener" class="cq-btn cq-btn-primary cq-btn-pill">
-              <i class="ri-whatsapp-line" aria-hidden="true"></i> Pesan Chemical via WhatsApp
+              <i class="ri-whatsapp-line" aria-hidden="true"></i> Pesan Chemical
             </a>
             <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill">
-              <i class="ri-store-2-line" aria-hidden="true"></i> Termasuk di Paket Usaha
+              Pilihan Paket
             </a>
           </div>
         </div>
@@ -251,13 +251,13 @@ $wa_url = cleanique_get_whatsapp_url('chemical');
         </p>
         <div class="cq-banner-cta-actions">
           <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
-            <i class="ri-whatsapp-line" aria-hidden="true"></i> Pesan Chemical via WhatsApp
+            <i class="ri-whatsapp-line" aria-hidden="true"></i> Pesan Chemical
           </a>
           <a href="https://indotech.id" target="_blank" rel="noopener" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg">
-            <i class="ri-external-link-line" aria-hidden="true"></i> Kunjungi Situs Indotech.id
+            Situs Induk
           </a>
           <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-lg">
-            <i class="ri-store-2-line" aria-hidden="true"></i> Paket Usaha Laundry
+            Pilihan Paket
           </a>
         </div>
       </div>

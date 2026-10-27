@@ -34,7 +34,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
       <div class="cq-payno-hero-top">
         <div>
           <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-16); background: rgba(255, 255, 255, 0.9); border: 1px solid var(--sky-200);">
-            PT Indotech Berkah Abadi
+            Paket Usaha
           </div>
           <h1 class="cq-payno-heading">
             Bisnis Laundry Selalu Ramai, <span class="cq-text-blue">Buka Usaha Siap Operasi Tanpa Takut Gagal.</span>
@@ -56,10 +56,10 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
 
           <div class="cq-payno-hero-actions">
             <a href="#daftar-promo" class="cq-btn cq-btn-primary cq-btn-pill">
-              <i class="ri-cursor-fill" aria-hidden="true"></i> Klaim Promo Kemitraan
+              Klaim Promo
             </a>
             <a href="<?php echo esc_url($wa_url); ?>" target="_blank" rel="noopener" class="cq-btn cq-btn-white-pill cq-btn-pill">
-              <i class="ri-whatsapp-line" aria-hidden="true"></i> Chat Konsultan Bisnis
+              <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi
             </a>
           </div>
         </div>
@@ -113,7 +113,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
                loading="lazy">
           <div class="cq-peluang-frame-overlay">
             <div class="cq-peluang-frame-badge">
-              Standar Outlet Kemitraan Cleanique Turnkey
+              Standar Outlet
             </div>
           </div>
         </div>
@@ -124,7 +124,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
         <div class="cq-countdown-flex">
           <div class="cq-countdown-meta">
             <span class="cq-countdown-badge is-warning">
-              Promo Akhir Tahun Berakhir 31 Desember
+              Promo Terbatas
             </span>
             <div class="cq-countdown-title">Subsidi Ongkir &amp; Bonus Lisensi POS 1 Tahun Penuh!</div>
             <p class="cq-countdown-subtitle">Klaim bonus chemical 100 Liter pertama &amp; pendampingan teknisi onsite hingga siap buka.</p>
@@ -197,7 +197,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
     <div class="cq-container">
       <div class="cq-section-header">
         <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12);">
-          <i class="ri-line-chart-line"></i> Potensi Pasar &amp; Kestabilan Bisnis
+          Potensi Pasar
         </div>
         <h2 class="cq-section-title">Mengapa Bisnis Laundry Dikatakan "Tidak Ada Matinya"?</h2>
         <p class="cq-section-desc">
@@ -261,7 +261,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
     <div class="cq-container">
       <div class="cq-section-header">
         <div class="cq-badge-pill cq-badge-warning" style="margin-bottom: var(--cq-sp-12);">
-          <i class="ri-alarm-warning-line"></i> Analisis Risiko &amp; Solusi Pencegahan
+          Analisis Risiko
         </div>
         <h2 class="cq-section-title">Mau Buka Sendiri Tapi Bingung &amp; Takut Gagal? Jangan Jadi Korban Trial &amp; Error!</h2>
         <p class="cq-section-desc">
@@ -277,7 +277,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
               <i class="ri-tools-fill"></i>
             </div>
             <div class="cq-peluang-pain-badge">
-              <i class="ri-error-warning-fill"></i> Risiko #1: Mesin Jebol
+              Risiko Mesin
             </div>
           </div>
           <h3 class="cq-peluang-pain-title">Tergiur Mesin Rumah Tangga Murahan (3 Bulan Jebol)</h3>
@@ -295,7 +295,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
               <i class="ri-test-tube-fill"></i>
             </div>
             <div class="cq-peluang-pain-badge">
-              <i class="ri-error-warning-fill"></i> Risiko #2: Kimia Abal-Abal
+              Risiko Kimia
             </div>
           </div>
           <h3 class="cq-peluang-pain-title">Trial &amp; Error Chemical Bertahun-Tahun (Baju Rusak)</h3>
@@ -313,7 +313,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
               <i class="ri-fire-fill"></i>
             </div>
             <div class="cq-peluang-pain-badge">
-              <i class="ri-error-warning-fill"></i> Risiko #3: Instalasi Amatir
+              Risiko Instalasi
             </div>
           </div>
           <h3 class="cq-peluang-pain-title">Instalasi Pipa Amatir &amp; Bahaya Kebocoran Gas</h3>
@@ -331,7 +331,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
               <i class="ri-hand-coin-fill"></i>
             </div>
             <div class="cq-peluang-pain-badge">
-              <i class="ri-error-warning-fill"></i> Risiko #4: Royalti Tercekik
+              Risiko Royalti
             </div>
           </div>
           <h3 class="cq-peluang-pain-title">Terjebak Franchise Lain dengan Royalty Fee Seumur Hidup</h3>
@@ -353,7 +353,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
     <div class="cq-container">
       <div class="cq-section-header">
         <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12);">
-          <i class="ri-checkbox-circle-line"></i> Turnkey Business Model
+          Model Turnkey
         </div>
         <h2 class="cq-section-title">Bersama Cleanique, Anda Buka Laundry Tanpa Risiko Gagal</h2>
         <p class="cq-section-desc">
@@ -556,7 +556,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
               <?php endforeach; ?>
             </ul>
             <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn <?php echo $featured ? 'cq-btn-primary' : 'cq-btn-outline'; ?> cq-btn-pill cq-btn-block" target="_blank" rel="noopener">
-              <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Paket <?php the_title(); ?>
+              <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Paket
             </a>
           </div>
         <?php
@@ -581,13 +581,13 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
             <li class="checked">Gratis Lisensi Aplikasi Kasir Cleanique 3 Bulan</li>
           </ul>
           <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-block" target="_blank" rel="noopener">
-            <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Paket Starter
+            <i class="ri-whatsapp-line" aria-hidden="true"></i> Pilih Starter
           </a>
         </div>
 
         <!-- Fallback Default Paket 2: Commercial Pro (Featured) -->
         <div class="cq-invest-card is-popular">
-          <div class="cq-invest-badge-pill">Paling Direkomendasikan</div>
+          <div class="cq-invest-badge-pill">Rekomendasi</div>
           <h3 class="cq-pricing-title">Paket Commercial Pro</h3>
           <p class="cq-card-desc">Kapasitas menengah ideal untuk ruko strategis, pusat kampus, dan perumahan padat.</p>
           <div class="cq-invest-price-val">
@@ -605,7 +605,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
             <li class="checked">Training Karyawan Onsite &amp; Pendampingan Buka</li>
           </ul>
           <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-block" target="_blank" rel="noopener">
-            <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Paket Commercial Pro
+            <i class="ri-whatsapp-line" aria-hidden="true"></i> Pilih Komersial
           </a>
         </div>
 
@@ -627,7 +627,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
             <li class="checked">Konsultasi Bisnis Eksklusif langsung bersama Tim Ahli</li>
           </ul>
           <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-block" target="_blank" rel="noopener">
-            <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Paket Industrial
+            <i class="ri-whatsapp-line" aria-hidden="true"></i> Pilih Industrial
           </a>
         </div>
         <?php endif; ?>
@@ -642,7 +642,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
     <div class="cq-container">
       <div class="cq-section-header">
         <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-12);">
-          <i class="ri-shield-star-line"></i> Bukti Nyata Hasil Kemitraan
+          Studi Kasus
         </div>
         <h2 class="cq-section-title">Kemitraan yang Telah Berjalan &amp; Menikmati Hasil Nyata</h2>
         <p class="cq-section-desc">
@@ -659,7 +659,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
                  alt="Outlet Mitra Cleanique Express Minomartani Sleman" 
                  class="cq-story-img" loading="lazy">
             <div class="cq-story-img-badge">
-              <i class="ri-map-pin-2-fill"></i> Minomartani, Sleman, DIY
+              Sleman, DIY
             </div>
             <div class="cq-story-paket-tag">Commercial Pro</div>
           </div>
@@ -703,7 +703,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
                  alt="Outlet Mitra Cleanique Laundry Solo Jebres" 
                  class="cq-story-img" loading="lazy">
             <div class="cq-story-img-badge">
-              <i class="ri-map-pin-2-fill"></i> Jebres, Solo, Jawa Tengah
+              Solo, Jateng
             </div>
             <div class="cq-story-paket-tag">Commercial Pro</div>
           </div>
@@ -747,7 +747,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
                  alt="Outlet Mitra Cleanique Laundry Tembalang Semarang" 
                  class="cq-story-img" loading="lazy">
             <div class="cq-story-img-badge">
-              <i class="ri-map-pin-2-fill"></i> Tembalang, Semarang, Jawa Tengah
+              Semarang
             </div>
             <div class="cq-story-paket-tag">Industrial Premium</div>
           </div>
@@ -815,7 +815,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
       <div class="cq-peluang-form-card">
         <div class="cq-card-header-flex" style="margin-bottom: var(--cq-sp-12);">
           <div>
-            <span class="cq-badge-pill cq-badge-warning" style="margin-bottom: 6px;">Batas Promo: 31 Desember</span>
+            <span class="cq-badge-pill cq-badge-warning" style="margin-bottom: 6px;">Promo Terbatas</span>
             <h2 class="cq-hero-card-title" style="margin-bottom: 0;">Daftar &amp; Amankan Slot Promo Kemitraan</h2>
           </div>
         </div>
@@ -888,7 +888,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
             </div>
           </div>
           <button type="submit" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-block cq-btn-lg">
-            <i class="ri-cursor-fill" aria-hidden="true"></i> Klik Segera Daftar Promo Kemitraan
+            Daftar Promo
           </button>
         </form>
       </div>
@@ -972,10 +972,10 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
         </p>
         <div class="cq-banner-cta-actions">
           <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
-            <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Kemitraan via WhatsApp
+            <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Sekarang
           </a>
           <a href="#daftar-promo" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg">
-            <i class="ri-file-download-line" aria-hidden="true"></i> Minta Brosur &amp; Proposal Lengkap
+            Minta Proposal
           </a>
         </div>
       </div>

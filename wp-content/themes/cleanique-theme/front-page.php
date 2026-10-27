@@ -25,7 +25,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
       <!-- Top Row: Corporate Headline & Flagship Outlet Showcase -->
       <div class="cq-corp-hero-top">
         <div class="cq-corp-hero-content">
-          <span class="cq-badge-clean">PT Indotech Berkah Abadi &bull; Sleman, D.I. Yogyakarta</span>
+          <span class="cq-badge-clean">Kantor Pusat</span>
           
           <h1 class="cq-corp-hero-title cq-payno-heading">
             Kembangkan Bisnis Laundry, <span class="cq-text-accent cq-text-blue">Dengan Mesin Tangguh, Chemical Pabrik &amp; Sistem Cerdas.</span>
@@ -37,10 +37,10 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
 
           <div class="cq-corp-hero-actions">
             <a href="<?php echo esc_url($wa_kemitraan_url); ?>" target="_blank" rel="noopener" class="cq-btn cq-btn-primary cq-btn-pill">
-              <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Peluang Usaha
+              <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi
             </a>
             <a href="#kemitraan" class="cq-btn cq-btn-outline cq-btn-pill">
-              Lihat Pilihan Paket
+              Pilihan Paket
             </a>
           </div>
         </div>
@@ -52,7 +52,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
                  class="cq-hero-visual-img" 
                  loading="lazy">
             <div class="cq-hero-visual-caption">
-              Standar Tampilan Outlet Kemitraan Cleanique Turnkey
+              Standar Outlet
             </div>
           </div>
         </div>
@@ -70,7 +70,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
           </div>
           <div class="cq-corp-gateway-header">
             <div>
-              <span class="cq-corp-gateway-sub">Peluang Usaha Baru</span>
+              <span class="cq-corp-gateway-sub">Peluang Usaha</span>
               <h2 class="cq-corp-gateway-title">Paket Usaha Laundry Siap Buka</h2>
             </div>
           </div>
@@ -87,7 +87,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
 
           <div class="cq-gateway-footer">
             <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-block">
-              Lihat Katalog Paket Usaha <i class="ri-arrow-right-line" aria-hidden="true"></i>
+              Lihat Paket
             </a>
           </div>
         </div>
@@ -102,7 +102,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
           </div>
           <div class="cq-corp-gateway-header">
             <div>
-              <span class="cq-corp-gateway-sub" style="color: #059669;">Sistem POS &amp; Cloud Management</span>
+              <span class="cq-corp-gateway-sub" style="color: #059669;">Sistem POS</span>
               <h2 class="cq-corp-gateway-title">Smart Laundry Management POS</h2>
             </div>
           </div>
@@ -119,7 +119,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
 
           <div class="cq-gateway-footer">
             <a href="<?php echo esc_url(home_url('/aplikasi-laundry/')); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-block">
-              Pelajari Sistem &amp; Skema Langganan <i class="ri-arrow-right-line" aria-hidden="true"></i>
+              Detail Sistem
             </a>
           </div>
         </div>
@@ -134,7 +134,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
   <section class="cq-showcase-section" id="ekosistem">
     <div class="cq-container">
       <div class="cq-showcase-header">
-        <span class="cq-badge-clean">Ekosistem Industri Terpadu</span>
+        <span class="cq-badge-clean">Ekosistem Terpadu</span>
         <h2 class="cq-showcase-header-title">
           Dukungan Lengkap dari Mesin, Chemical Pabrik, hingga Sistem Kasir
         </h2>
@@ -165,7 +165,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
             </div>
           </div>
           <div class="cq-showcase-content">
-            <span class="cq-badge-clean">Hardware Tangguh &bull; Kapasitas 10.5 – 20 Kg</span>
+            <span class="cq-badge-clean">Mesin Komersial</span>
             <h3 class="cq-showcase-title">Mesin Komersial Heavy Duty, Tahan Putaran Non-Stop</h3>
             <p class="cq-showcase-lead">
               Bukan mesin cuci rumah tangga biasa yang cepat jebol bila dipaksa bekerja maraton setiap hari. Cleanique menyuplai set mesin front-loading drum stainless steel SUS304 berdaya putar tinggi dan dryer konversi gas bergaransi resmi.
@@ -186,7 +186,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
             </ul>
             <div class="cq-showcase-action">
               <a href="#kemitraan" class="cq-btn cq-btn-primary cq-btn-pill">
-                Lihat Paket Mesin &amp; Usaha <i class="ri-arrow-right-line" aria-hidden="true"></i>
+                Lihat Paket
               </a>
             </div>
           </div>
@@ -195,7 +195,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
         <!-- Row 2: Pabrik Chemical Orchid Brand (Konten Kiri, Image Kanan) -->
         <div class="cq-showcase-row" id="pabrik-chemical">
           <div class="cq-showcase-content">
-            <span class="cq-badge-clean">Pabrik Sendiri &bull; Orchid Brand Sleman</span>
+            <span class="cq-badge-clean">Pabrik Kimia</span>
             <h3 class="cq-showcase-title">Bahan Kimia Laundry Kualitas Pabrik dengan HPP Hemat</h3>
             <p class="cq-showcase-lead">
               Diproduksi langsung oleh PT Indotech Berkah Abadi di Sleman, D.I. Yogyakarta. Deterjen konsentrat rendah busa menjaga dinamo mesin cuci tetap awet dan hemat bilasan air, serta parfum microcapsule wangi tahan 30 hari di lemari.
@@ -216,7 +216,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
             </ul>
             <div class="cq-showcase-action">
               <a href="<?php echo esc_url(home_url('/pabrik-chemical/')); ?>" class="cq-btn cq-btn-primary cq-btn-pill">
-                Fasilitas Pabrik &amp; Produk Chemical <i class="ri-arrow-right-line" aria-hidden="true"></i>
+                Pabrik Kimia
               </a>
             </div>
           </div>
@@ -261,7 +261,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
             </div>
           </div>
           <div class="cq-showcase-content">
-            <span class="cq-badge-clean">Smart Cloud POS &bull; Sistem Langganan Terjangkau</span>
+            <span class="cq-badge-clean">Smart POS</span>
             <h3 class="cq-showcase-title">Dashboard Kasir Real-Time &amp; E-Nota WhatsApp Otomatis</h3>
             <p class="cq-showcase-lead">
               Tinggalkan pembukuan nota manual kertas yang rentan sobek, hilang, dan rawan kebocoran kasir. Software kasir POS berbasis cloud Cleanique dirancang khusus untuk operasional laundry kiloan maupun satuan dengan skema biaya langganan yang transparan.
@@ -282,7 +282,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
             </ul>
             <div class="cq-showcase-action">
               <a href="<?php echo esc_url(home_url('/aplikasi-laundry/')); ?>" class="cq-btn cq-btn-accent cq-btn-pill">
-                Pelajari Fitur &amp; Biaya Langganan POS <i class="ri-arrow-right-line" aria-hidden="true"></i>
+                Lihat Fitur
               </a>
             </div>
           </div>
@@ -291,7 +291,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
         <!-- Row 4: Finishing Boiler Setrika Uap (Konten Kiri, Image Kanan) -->
         <div class="cq-showcase-row" id="boiler-setrika">
           <div class="cq-showcase-content">
-            <span class="cq-badge-clean">Finishing Ergonomis &bull; Tekanan 3–4 Bar</span>
+            <span class="cq-badge-clean">Boiler Uap</span>
             <h3 class="cq-showcase-title">Boiler Setrika Uap Gas Otomatis, Bekerja 3x Lebih Cepat</h3>
             <p class="cq-showcase-lead">
               Kecepatan dan kerapian setrika adalah kunci utama kepuasan pelanggan laundry kiloan. Dengan uap kering bertekanan tinggi 3–4 bar, serat pakaian licin seketika hanya dengan sekali usap tanpa resiko gosong atau meninggalkan kilap pada kain.
@@ -312,7 +312,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
             </ul>
             <div class="cq-showcase-action">
               <a href="<?php echo esc_url($wa_kemitraan_url); ?>" target="_blank" rel="noopener" class="cq-btn cq-btn-primary cq-btn-pill">
-                <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Unit Boiler Uap
+                <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Boiler
               </a>
             </div>
           </div>
@@ -357,7 +357,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
             </div>
           </div>
           <div class="cq-showcase-content">
-            <span class="cq-badge-clean">Dukungan Nyata &bull; Sleman, D.I. Yogyakarta</span>
+            <span class="cq-badge-clean">Dukungan Teknis</span>
             <h3 class="cq-showcase-title">Standardisasi Alur Kerja, Pelatihan SOP &amp; Teknisi Siaga</h3>
             <p class="cq-showcase-lead">
               Anda tidak memulai bisnis ini sendirian. Insinyur mesin dan tim operasional PT Indotech Berkah Abadi mengawal mulai dari desain tata letak alur ruko higienis, instalasi pipa &amp; gas safety, hingga pelatihan karyawan dan kunjungan servis berkala.
@@ -378,7 +378,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
             </ul>
             <div class="cq-showcase-action">
               <a href="<?php echo esc_url(home_url('/tentang-kami/')); ?>" class="cq-btn cq-btn-primary cq-btn-pill">
-                Profil Lengkap Perusahaan <i class="ri-arrow-right-line" aria-hidden="true"></i>
+                Profil Perusahaan
               </a>
             </div>
           </div>
@@ -419,7 +419,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
           </ul>
           <div class="cq-kemitraan-actions">
             <a href="<?php echo esc_url(cleanique_get_whatsapp_url('kemitraan')); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-block" target="_blank" rel="noopener">
-              <i class="ri-whatsapp-line"></i> Konsultasi Paket Starter
+              <i class="ri-whatsapp-line"></i> Pilih Starter
             </a>
           </div>
         </div>
@@ -444,7 +444,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
           </ul>
           <div class="cq-kemitraan-actions">
             <a href="<?php echo esc_url(cleanique_get_whatsapp_url('kemitraan')); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-block" target="_blank" rel="noopener">
-              <i class="ri-whatsapp-line"></i> Konsultasi Paket Komersial
+              <i class="ri-whatsapp-line"></i> Pilih Komersial
             </a>
           </div>
         </div>
@@ -468,7 +468,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
           </ul>
           <div class="cq-kemitraan-actions">
             <a href="<?php echo esc_url(cleanique_get_whatsapp_url('kemitraan')); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-block" target="_blank" rel="noopener">
-              <i class="ri-whatsapp-line"></i> Konsultasi Paket Industrial
+              <i class="ri-whatsapp-line"></i> Pilih Industrial
             </a>
           </div>
         </div>
@@ -476,7 +476,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
 
       <div class="cq-kemitraan-catalog-action">
         <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-lg">
-          <i class="ri-store-2-line" aria-hidden="true"></i> Lihat Seluruh Katalog Rincian Paket Usaha <i class="ri-arrow-right-line" aria-hidden="true"></i>
+          Katalog Paket
         </a>
       </div>
     </div>
@@ -493,7 +493,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
     
     <div class="cq-container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto; position: relative; z-index: 2;">
-        <span class="cq-badge-clean" style="margin-bottom: var(--cq-sp-12);">SOP &bull; Alur Pendampingan Terstruktur</span>
+        <span class="cq-badge-clean" style="margin-bottom: var(--cq-sp-12);">Alur Kemitraan</span>
         <h2 class="cq-section-title" style="margin-bottom: var(--cq-sp-12);">
           6 Langkah Alur Kemitraan Menuju Pembukaan Outlet
         </h2>
@@ -511,7 +511,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
             <div class="cq-timeline-node-inner"></div>
           </div>
           <div class="cq-timeline-badge-pill">
-            <span class="cq-timeline-dot"></span> Tahap 01 &bull; Konsultasi Bisnis
+            <span class="cq-timeline-dot"></span> Tahap 01
           </div>
           <div class="cq-timeline-card">
             <div class="cq-timeline-card-header">
@@ -542,7 +542,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
             <div class="cq-timeline-node-inner"></div>
           </div>
           <div class="cq-timeline-badge-pill">
-            <span class="cq-timeline-dot dot-mint"></span> Tahap 02 &bull; Due Diligence
+            <span class="cq-timeline-dot dot-mint"></span> Tahap 02
           </div>
           <div class="cq-timeline-card">
             <div class="cq-timeline-card-header">
@@ -573,7 +573,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
             <div class="cq-timeline-node-inner"></div>
           </div>
           <div class="cq-timeline-badge-pill">
-            <span class="cq-timeline-dot dot-blue"></span> Tahap 03 &bull; Engineering Layout
+            <span class="cq-timeline-dot dot-blue"></span> Tahap 03
           </div>
           <div class="cq-timeline-card">
             <div class="cq-timeline-card-header">
@@ -604,7 +604,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
             <div class="cq-timeline-node-inner"></div>
           </div>
           <div class="cq-timeline-badge-pill">
-            <span class="cq-timeline-dot" style="background: #0284c7;"></span> Tahap 04 &bull; Machinery Setup
+            <span class="cq-timeline-dot" style="background: #0284c7;"></span> Tahap 04
           </div>
           <div class="cq-timeline-card">
             <div class="cq-timeline-card-header">
@@ -635,7 +635,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
             <div class="cq-timeline-node-inner"></div>
           </div>
           <div class="cq-timeline-badge-pill">
-            <span class="cq-timeline-dot" style="background: #8b5cf6;"></span> Tahap 05 &bull; Training &amp; SOP
+            <span class="cq-timeline-dot" style="background: #8b5cf6;"></span> Tahap 05
           </div>
           <div class="cq-timeline-card">
             <div class="cq-timeline-card-header">
@@ -666,7 +666,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
             <div class="cq-timeline-node-inner"></div>
           </div>
           <div class="cq-timeline-badge-pill">
-            <span class="cq-timeline-dot" style="background: #10b981;"></span> Tahap 06 &bull; Grand Opening
+            <span class="cq-timeline-dot" style="background: #10b981;"></span> Tahap 06
           </div>
           <div class="cq-timeline-card">
             <div class="cq-timeline-card-header">
@@ -694,7 +694,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
 
       <div class="cq-timeline-cta-row">
         <a href="<?php echo esc_url($wa_kemitraan_url); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
-          <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasikan Langkah Pertama Anda <i class="ri-arrow-right-line" aria-hidden="true"></i>
+          <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Sekarang
         </a>
       </div>
     </div>
@@ -712,7 +712,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
           'initial'    => 'H',
           'avatar_bg'  => '#0284C7',
           'avatar_img' => get_template_directory_uri() . '/assets/images/mitra-outlet-sleman.jpg',
-          'badge'      => 'Balik Modal 6 Bln',
+          'badge'      => 'Balik Modal',
       ],
       [
           'name'       => 'Mas Dimas Pratama',
@@ -721,7 +721,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
           'initial'    => 'D',
           'avatar_bg'  => '#7C3AED',
           'avatar_img' => get_template_directory_uri() . '/assets/images/mitra-outlet-solo.jpg',
-          'badge'      => 'Balik Modal 5 Bln',
+          'badge'      => 'Balik Modal',
       ],
       [
           'name'       => 'Ibu Hj. Nurul Hidayati',
@@ -730,7 +730,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
           'initial'    => 'N',
           'avatar_bg'  => '#059669',
           'avatar_img' => get_template_directory_uri() . '/assets/images/mitra-outlet-semarang.jpg',
-          'badge'      => 'Ekspansi Cabang 2',
+          'badge'      => 'Ekspansi Cabang',
       ],
       [
           'name'       => 'dr. Maya Anggraini',
@@ -748,7 +748,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
           'initial'    => 'H',
           'avatar_bg'  => '#2563EB',
           'avatar_img' => '',
-          'badge'      => 'Margin Laba 45%',
+          'badge'      => 'Margin 45%',
       ],
       [
           'name'       => 'Rina Wijayanti',
@@ -757,7 +757,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
           'initial'    => 'R',
           'avatar_bg'  => '#7C3AED',
           'avatar_img' => '',
-          'badge'      => '100% Paperless',
+          'badge'      => 'Paperless',
       ],
       [
           'name'       => 'Budi Santoso',
@@ -766,7 +766,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
           'initial'    => 'B',
           'avatar_bg'  => '#0D9488',
           'avatar_img' => '',
-          'badge'      => 'Mesin & Boiler Safety',
+          'badge'      => 'Mesin Safety',
       ],
       [
           'name'       => 'Siti Nurhaliza',
@@ -775,7 +775,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
           'initial'    => 'S',
           'avatar_bg'  => '#059669',
           'avatar_img' => '',
-          'badge'      => 'Mitra Terverifikasi',
+          'badge'      => 'Terverifikasi',
       ],
       [
           'name'       => 'I Wayan Gede',
@@ -784,7 +784,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
           'initial'    => 'W',
           'avatar_bg'  => '#0891B2',
           'avatar_img' => '',
-          'badge'      => 'Mitra Terverifikasi',
+          'badge'      => 'Terverifikasi',
       ],
   ];
 
@@ -807,7 +807,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
               'initial'    => strtoupper(substr(get_the_title(), 0, 1)),
               'avatar_bg'  => '#0284C7',
               'avatar_img' => has_post_thumbnail() ? get_the_post_thumbnail_url(get_the_ID(), 'thumbnail') : '',
-              'badge'      => 'Mitra Terverifikasi',
+              'badge'      => 'Terverifikasi',
           ];
       }
       wp_reset_postdata();
@@ -843,7 +843,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
                     <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
                   </div>
                   <span class="cq-testi-badge">
-                    <i class="ri-checkbox-circle-fill"></i> <?php echo esc_html($item['badge'] ?? 'Mitra Terverifikasi'); ?>
+                    <?php echo esc_html($item['badge'] ?? 'Terverifikasi'); ?>
                   </span>
                 </div>
                 <p class="cq-testi-card-quote">
@@ -879,7 +879,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
                     <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
                   </div>
                   <span class="cq-testi-badge">
-                    <i class="ri-checkbox-circle-fill"></i> <?php echo esc_html($item['badge'] ?? 'Mitra Terverifikasi'); ?>
+                    <?php echo esc_html($item['badge'] ?? 'Terverifikasi'); ?>
                   </span>
                 </div>
                 <p class="cq-testi-card-quote">
@@ -920,7 +920,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
                loading="lazy">
         </div>
         <div class="cq-visual-split-content">
-          <span class="cq-badge-clean">Produsen &amp; Pengembang Langsung</span>
+          <span class="cq-badge-clean">Pabrik Sleman</span>
           <h2 class="cq-section-title" style="margin-bottom: var(--cq-sp-16);">
             Didukung Pabrik Kimia Sendiri &amp; Tim Ahli di Sleman
           </h2>
@@ -929,7 +929,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
           </p>
           <div>
             <a href="<?php echo esc_url(home_url('/tentang-kami/')); ?>" class="cq-btn cq-btn-primary cq-btn-pill">
-              Profil Lengkap Perusahaan <i class="ri-arrow-right-line" aria-hidden="true"></i>
+              Profil Perusahaan
             </a>
           </div>
         </div>
@@ -945,10 +945,10 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
 
           <div class="cq-showroom-actions">
             <a href="<?php echo esc_url($wa_kemitraan_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill" target="_blank" rel="noopener">
-              <i class="ri-calendar-check-line" aria-hidden="true"></i> Jadwalkan Kunjungan Showroom
+              Kunjungan Showroom
             </a>
             <a href="<?php echo esc_url(home_url('/kontak/')); ?>" class="cq-btn cq-btn-outline cq-btn-pill" style="color: #fff; border-color: rgba(255,255,255,0.35);">
-              <i class="ri-map-pin-line" aria-hidden="true"></i> Peta Lokasi Sleman
+              Peta Lokasi
             </a>
           </div>
         </div>
@@ -1091,10 +1091,10 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
         </p>
         <div class="cq-banner-cta-actions">
           <a href="<?php echo esc_url($wa_kemitraan_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
-            <i class="ri-whatsapp-line" aria-hidden="true"></i> Hubungi Konsultan Kemitraan
+            <i class="ri-whatsapp-line" aria-hidden="true"></i> Hubungi Konsultan
           </a>
           <a href="<?php echo esc_url(home_url('/kontak/')); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-lg">
-            <i class="ri-map-pin-line" aria-hidden="true"></i> Peta Lokasi Showroom Sleman
+            Peta Lokasi
           </a>
         </div>
       </div>

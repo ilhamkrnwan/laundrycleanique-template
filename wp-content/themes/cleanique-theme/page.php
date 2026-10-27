@@ -19,8 +19,7 @@ get_header();
       <div class="cq-container">
         <div class="cq-single-hero-inner">
           <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-16); background: rgba(255, 255, 255, 0.9); border: 1px solid var(--sky-200);">
-            <i class="ri-shield-check-line" style="color: var(--mint-cta);" aria-hidden="true"></i>
-            Informasi &amp; Legalitas Resmi &bull; PT Indotech Berkah Abadi
+            Informasi Resmi
           </div>
           <h1 class="cq-single-title">
             <?php the_title(); ?>

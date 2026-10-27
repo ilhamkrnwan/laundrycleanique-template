@@ -50,7 +50,7 @@ if ($is_paket_usaha) {
                   <i class="ri-mail-line cq-newsletter-icon"></i>
                   <input type="email" placeholder="Masukkan Alamat Email Anda" required class="cq-newsletter-input">
                   <button type="submit" class="cq-newsletter-btn">
-                    Langganan <i class="ri-arrow-right-up-line"></i>
+                    Langganan
                   </button>
                 </div>
               </form>

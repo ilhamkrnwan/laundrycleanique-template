@@ -95,14 +95,14 @@ while (have_posts()) : the_post();
       <div class="cq-kemitraan-single-hero-inner">
         <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: var(--cq-sp-16);">
           <span class="cq-badge-pill cq-badge-accent" style="margin: 0;">
-            <i class="ri-store-2-line"></i> Program Kemitraan Resmi
+            Kemitraan Resmi
           </span>
           <?php if (!empty($badge)) : ?>
             <span class="cq-badge-pill cq-badge-warning" style="margin: 0;"><?php echo esc_html($badge); ?></span>
           <?php endif; ?>
           <?php if ($featured === '1') : ?>
             <span class="cq-badge-pill" style="margin: 0; background: #fef9c3; color: #713f12; border: 1px solid #fde047;">
-              <i class="ri-star-fill"></i> Paket Terlaris
+              Paket Terlaris
             </span>
           <?php endif; ?>
         </div>
@@ -173,7 +173,7 @@ while (have_posts()) : the_post();
             <div style="text-align: right;">
               <span class="cq-kemitraan-price-label-sm" style="color: #059669;">Estimasi Balik Modal (BEP)</span>
               <div class="cq-kemitraan-roi-chip" style="font-size: 14px; padding: 8px 18px; margin-top: 4px;">
-                <i class="ri-time-line"></i> <?php echo esc_html($roi); ?>
+                <?php echo esc_html($roi); ?>
               </div>
             </div>
           <?php endif; ?>
@@ -268,7 +268,7 @@ while (have_posts()) : the_post();
           </p>
           <div style="display: flex; gap: 10px; flex-wrap: wrap;">
             <a href="<?php echo esc_url($share_wa_url); ?>" target="_blank" rel="noopener" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-sm">
-              <i class="ri-whatsapp-line"></i> Bagikan via WhatsApp
+              <i class="ri-whatsapp-line"></i> Bagikan WhatsApp
             </a>
             <a href="<?php echo esc_url($share_fb_url); ?>" target="_blank" rel="noopener" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-sm">
               <i class="ri-facebook-fill"></i> Facebook
@@ -337,7 +337,7 @@ while (have_posts()) : the_post();
             </div>
             <?php if (!empty($roi)) : ?>
               <div class="cq-kemitraan-roi-chip" style="margin-top: 10px; font-size: 13px;">
-                <i class="ri-time-line"></i> BEP: <?php echo esc_html($roi); ?>
+                BEP: <?php echo esc_html($roi); ?>
               </div>
             <?php endif; ?>
 
@@ -362,17 +362,17 @@ while (have_posts()) : the_post();
 
             <!-- Primary CTA -->
             <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-block cq-btn-lg" target="_blank" rel="noopener">
-              <i class="ri-whatsapp-line"></i> Konsultasi &amp; Booking Paket
+              <i class="ri-whatsapp-line"></i> Konsultasi Paket
             </a>
 
             <?php if (!empty($brochure)) : ?>
               <a href="<?php echo esc_url($brochure); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-block" style="margin-top: 10px;" target="_blank" rel="noopener">
-                <i class="ri-file-download-line"></i> Unduh Proposal PDF
+                <i class="ri-file-download-line"></i> Unduh Proposal
               </a>
             <?php endif; ?>
 
             <a href="<?php echo esc_url(home_url('/kemitraan/')); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-block" style="margin-top: 10px;">
-              <i class="ri-arrow-left-line"></i> Lihat Semua Paket
+              Semua Paket
             </a>
 
             <!-- Trust Signals -->

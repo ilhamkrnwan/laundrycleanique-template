@@ -78,7 +78,6 @@
                   <span style="font-size: 9.5px; color: #64748B; font-weight: 600;">Berat Cucian</span>
                   <div class="cq-screen-tx-badge">
                     <span>Kiloan Komplit</span>
-                    <i class="ri-arrow-down-s-line" style="font-size: 11px;"></i>
                   </div>
                 </div>
                 <div class="cq-screen-tx-val">
@@ -112,13 +111,13 @@
             <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 9px 11px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; font-size: 9.5px;">
               <span style="color: #334155; font-weight: 600;">Parfum: Sakura • Rak B-04</span>
               <span style="color: #10B981; font-weight: 700; display: inline-flex; align-items: center; gap: 3px;">
-                <i class="ri-checkbox-circle-fill"></i> Siap Ambil
+                Siap Ambil
               </span>
             </div>
 
             <!-- WhatsApp 1-Click Action Button -->
             <div style="background: #25D366; color: #ffffff; text-align: center; padding: 9px 12px; border-radius: var(--cq-rad-pill); font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);">
-              <i class="ri-whatsapp-fill" style="font-size: 13px;"></i> Kirim Nota WhatsApp (1 Klik)
+              <i class="ri-whatsapp-fill" style="font-size: 13px;"></i> Kirim Nota
             </div>
           </div>
         </div>
@@ -186,7 +185,7 @@
     <!-- 3 Langkah Memulai Operasional (Split Layout: Poin Garis Kiri & Image Kanan) -->
     <div class="cq-onboarding-section-wrap">
       <div class="cq-onboarding-header">
-        <span class="cq-badge-clean" style="margin-bottom: var(--cq-sp-12);">Proses Cepat &amp; Praktis</span>
+        <span class="cq-badge-clean" style="margin-bottom: var(--cq-sp-12);">Proses Cepat</span>
         <h3 class="cq-onboarding-title">
           3 Langkah Mudah <span class="cq-text-blue">Mulai Operasional</span>
         </h3>
@@ -206,7 +205,7 @@
               <div class="cq-timeline-node-inner" style="background: #0284c7;"></div>
             </div>
             <div class="cq-timeline-badge-pill">
-              <span class="cq-timeline-dot dot-blue"></span> Tahap 01 &bull; Registrasi Akun
+              <span class="cq-timeline-dot dot-blue"></span> Tahap 01
             </div>
             <div class="cq-timeline-card">
               <div class="cq-timeline-card-header">
@@ -237,7 +236,7 @@
               <div class="cq-timeline-node-inner" style="background: #10b981;"></div>
             </div>
             <div class="cq-timeline-badge-pill">
-              <span class="cq-timeline-dot dot-mint"></span> Tahap 02 &bull; WA Gateway
+              <span class="cq-timeline-dot dot-mint"></span> Tahap 02
             </div>
             <div class="cq-timeline-card">
               <div class="cq-timeline-card-header">
@@ -268,7 +267,7 @@
               <div class="cq-timeline-node-inner" style="background: #0077b6;"></div>
             </div>
             <div class="cq-timeline-badge-pill">
-              <span class="cq-timeline-dot dot-blue"></span> Tahap 03 &bull; Go Operasional
+              <span class="cq-timeline-dot dot-blue"></span> Tahap 03
             </div>
             <div class="cq-timeline-card">
               <div class="cq-timeline-card-header">
@@ -303,7 +302,7 @@
                   <span></span><span></span><span></span>
                 </div>
                 <div class="cq-onboarding-visual-badge">
-                  <span class="cq-onboarding-pulse-dot"></span> Cleanique POS &bull; Cloud Dashboard
+                  <span class="cq-onboarding-pulse-dot"></span> POS Cloud
                 </div>
               </div>
               <div class="cq-onboarding-img-wrapper">

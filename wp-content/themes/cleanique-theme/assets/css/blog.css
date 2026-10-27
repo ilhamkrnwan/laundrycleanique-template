@@ -286,16 +286,17 @@
 
 
 /* ==========================================================================
-   4. ARTICLE BENTO GRID & BENTO CARD SYSTEM (.cq-bento-articles-grid, .cq-article-card-bento)
-   Modern Payno / Fintech Bento Architecture with rounded inset compartments,
-   floating glassmorphism micro-badges, and interactive circular action controls
+   4. ARTICLE BENTO GRID SYSTEM (.cq-bento-articles-grid, .cq-article-bento)
+   Cardless, High-End Bento Architecture with Asymmetric Spans,
+   Integrated Rounded Thumbnails, Floating Glassmorphism Badges,
+   and Interactive Micro-Animations.
    ========================================================================== */
 
 /* 4.1 Bento Articles Grid */
 .cq-bento-articles-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: clamp(20px, 2.5vw, 28px);
+  gap: clamp(28px, 3.5vw, 44px) clamp(20px, 2.5vw, 32px);
   align-items: stretch;
 }
 
@@ -310,48 +311,56 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /* Asymmetric Bento Span for Wide Featured Cards */
+  /* Asymmetric Bento Span: 2-Column Wide Blocks */
+  .cq-bento-articles-grid > .cq-article-bento.is-wide-bento,
   .cq-bento-articles-grid > .cq-article-card-bento.is-wide-bento {
     grid-column: span 2;
   }
 }
 
-/* 4.2 Bento Card Container */
+/* 4.2 Bento Item Container (Cardless & Clean: No Boxed Frames) */
+.cq-article-bento,
 .cq-article-card-bento,
 .cq-article-card-v2 {
-  background: #ffffff;
-  border-radius: clamp(22px, 2.5vw, 28px);
-  border: 1.5px solid var(--cq-border-light, #e2e8f0);
-  padding: 14px;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
   display: flex;
   flex-direction: column;
   height: 100%;
-  box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(15, 23, 42, 0.02);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.25s ease;
   position: relative;
-  overflow: hidden;
+  overflow: visible !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.cq-article-card-bento:hover,
-.cq-article-card-v2:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 45px -10px rgba(0, 119, 182, 0.16), 0 0 0 1px rgba(0, 119, 182, 0.2);
-  border-color: rgba(0, 119, 182, 0.38);
-}
-
-/* 4.3 Bento Inset Thumbnail Compartment */
+/* 4.3 Bento Thumbnail Compartment */
+.cq-bento-thumb-wrap,
 .cq-bento-card-thumb-wrap,
 .cq-article-card-thumb-wrap {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 10;
-  border-radius: 18px;
+  border-radius: clamp(18px, 2.2vw, 24px);
   overflow: hidden;
   background: #f1f5f9;
+  box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.08);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.cq-article-bento:hover .cq-bento-thumb-wrap,
+.cq-article-bento:hover .cq-bento-card-thumb-wrap,
+.cq-article-card-bento:hover .cq-bento-thumb-wrap,
+.cq-article-card-bento:hover .cq-bento-card-thumb-wrap,
+.cq-article-card-v2:hover .cq-article-card-thumb-wrap {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -8px rgba(0, 119, 182, 0.22);
+}
+
+.cq-bento-thumb-wrap img,
 .cq-bento-card-thumb-wrap img,
 .cq-article-card-thumb-wrap img {
   width: 100%;
@@ -361,17 +370,21 @@
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.cq-article-bento:hover .cq-bento-thumb-wrap img,
+.cq-article-bento:hover .cq-bento-card-thumb-wrap img,
+.cq-article-card-bento:hover .cq-bento-thumb-wrap img,
 .cq-article-card-bento:hover .cq-bento-card-thumb-wrap img,
 .cq-article-card-v2:hover .cq-article-card-thumb-wrap img {
   transform: scale(1.06);
 }
 
 /* Floating Glassmorphism Badges Bar inside Inset Thumbnail */
+.cq-bento-badges,
 .cq-bento-card-badges {
   position: absolute;
-  top: 12px;
-  left: 12px;
-  right: 12px;
+  top: 14px;
+  left: 14px;
+  right: 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -380,6 +393,7 @@
   z-index: 2;
 }
 
+.cq-bento-tag,
 .cq-bento-card-tag,
 .cq-article-card-tag {
   background: rgba(255, 255, 255, 0.94);
@@ -399,6 +413,7 @@
   pointer-events: auto;
 }
 
+.cq-bento-time,
 .cq-bento-card-time {
   background: rgba(15, 23, 42, 0.65);
   -webkit-backdrop-filter: blur(8px);
@@ -417,26 +432,29 @@
   pointer-events: auto;
 }
 
-/* 4.4 Bento Card Body Compartment */
+/* 4.4 Bento Body Compartment */
+.cq-bento-body,
 .cq-bento-card-body,
 .cq-article-card-body-v2 {
-  padding: 16px 8px 6px 8px;
+  padding: 16px 2px 2px 2px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
+.cq-bento-meta,
 .cq-bento-card-meta,
 .cq-article-card-meta-v2 {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 11px;
+  font-size: 11.5px;
   color: var(--cq-text-muted, #64748b);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   flex-wrap: wrap;
 }
 
+.cq-bento-meta span,
 .cq-bento-card-meta span,
 .cq-article-card-meta-v2 span {
   display: inline-flex;
@@ -448,6 +466,7 @@
   color: var(--cq-border-light, #cbd5e1);
 }
 
+.cq-bento-title,
 .cq-bento-card-title,
 .cq-article-card-title-v2 {
   font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
@@ -459,6 +478,7 @@
   margin: 0 0 10px 0;
 }
 
+.cq-bento-title a,
 .cq-bento-card-title a,
 .cq-article-card-title-v2 a {
   color: inherit;
@@ -466,17 +486,19 @@
   transition: color 0.2s ease;
 }
 
+.cq-bento-title a:hover,
 .cq-bento-card-title a:hover,
 .cq-article-card-title-v2 a:hover {
   color: var(--brand-deep, #0077b6);
 }
 
+.cq-bento-excerpt,
 .cq-bento-card-excerpt,
 .cq-article-card-excerpt-v2 {
   font-size: var(--cq-fs-sm, 0.925rem);
   color: var(--cq-text-muted, #64748b);
   line-height: 1.6;
-  margin: 0 0 18px 0;
+  margin: 0 0 16px 0;
   flex-grow: 1;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -484,18 +506,20 @@
   overflow: hidden;
 }
 
-/* 4.5 Bento Card Footer with Circular Arrow Micro-Interaction */
+/* 4.5 Bento Footer with Circular Arrow Micro-Interaction */
+.cq-bento-footer,
 .cq-bento-card-footer,
 .cq-article-card-footer-v2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 14px;
-  border-top: 1px dashed var(--cq-border-light, #e2e8f0);
+  padding-top: 12px;
+  border-top: 1px solid rgba(226, 232, 240, 0.8) !important;
   margin-top: auto;
   gap: 12px;
 }
 
+.cq-bento-hub,
 .cq-bento-card-hub {
   font-size: 11px;
   font-weight: 600;
@@ -514,6 +538,7 @@
   box-shadow: 0 0 6px rgba(16, 185, 129, 0.4);
 }
 
+.cq-bento-action,
 .cq-bento-card-action,
 .cq-article-card-link-v2 {
   font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
@@ -542,8 +567,10 @@
   flex-shrink: 0;
 }
 
+.cq-article-bento:hover .cq-bento-action-circle,
 .cq-article-card-bento:hover .cq-bento-action-circle,
 .cq-article-card-v2:hover .cq-bento-action-circle,
+.cq-bento-action:hover .cq-bento-action-circle,
 .cq-bento-card-action:hover .cq-bento-action-circle {
   background: var(--brand-deep, #0077b6);
   color: #ffffff;
@@ -552,38 +579,49 @@
   box-shadow: 0 4px 12px rgba(0, 119, 182, 0.3);
 }
 
-/* 4.6 Asymmetric Wide Bento Card (Horizontal Split on Desktop) */
+/* 4.6 Asymmetric Wide Bento Block (Horizontal Split on Desktop) */
 @media (min-width: 1024px) {
-  .cq-article-card-bento.is-wide-bento {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    gap: 20px;
-    padding: 16px;
-    background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
+  .cq-bento-articles-grid > .cq-article-bento.is-wide-bento,
+  .cq-bento-articles-grid > .cq-article-card-bento.is-wide-bento {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch !important;
+    gap: clamp(24px, 3vw, 36px) !important;
+    background: transparent !important;
+    padding: 0 !important;
   }
 
+  .cq-article-bento.is-wide-bento .cq-bento-thumb-wrap,
+  .cq-article-bento.is-wide-bento .cq-bento-card-thumb-wrap,
+  .cq-article-card-bento.is-wide-bento .cq-bento-thumb-wrap,
   .cq-article-card-bento.is-wide-bento .cq-bento-card-thumb-wrap {
-    width: 46%;
-    aspect-ratio: auto;
-    min-height: 250px;
-    flex-shrink: 0;
+    width: 48% !important;
+    min-height: 280px !important;
+    aspect-ratio: auto !important;
+    flex-shrink: 0 !important;
   }
 
+  .cq-article-bento.is-wide-bento .cq-bento-body,
+  .cq-article-bento.is-wide-bento .cq-bento-card-body,
+  .cq-article-card-bento.is-wide-bento .cq-bento-body,
   .cq-article-card-bento.is-wide-bento .cq-bento-card-body {
-    width: 54%;
-    padding: 8px 12px 6px 0;
-    justify-content: space-between;
+    width: 52% !important;
+    padding: 10px 0 !important;
+    justify-content: space-between !important;
   }
 
+  .cq-article-bento.is-wide-bento .cq-bento-title,
+  .cq-article-bento.is-wide-bento .cq-bento-card-title,
   .cq-article-card-bento.is-wide-bento .cq-bento-card-title {
-    font-size: 1.35rem;
-    line-height: 1.3;
+    font-size: clamp(1.3rem, 1.6vw, 1.55rem) !important;
+    line-height: 1.3 !important;
   }
 
+  .cq-article-bento.is-wide-bento .cq-bento-excerpt,
+  .cq-article-bento.is-wide-bento .cq-bento-card-excerpt,
   .cq-article-card-bento.is-wide-bento .cq-bento-card-excerpt {
-    -webkit-line-clamp: 3;
-    font-size: 0.95rem;
+    -webkit-line-clamp: 3 !important;
+    font-size: 0.95rem !important;
   }
 }
 

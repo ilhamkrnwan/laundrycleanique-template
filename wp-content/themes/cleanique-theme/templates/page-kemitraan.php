@@ -35,7 +35,7 @@ $headline         = get_option('cleanique_kemitraan_headline', 'Peluang Bisnis L
       <div class="cq-payno-hero-top">
         <div>
           <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-16); background: rgba(255, 255, 255, 0.9); border: 1px solid var(--sky-200);">
-            Program Kemitraan Turnkey &bull; PT Indotech Berkah Abadi
+            Kemitraan Turnkey
           </div>
           <?php if (!empty($headline) && $headline !== 'Peluang Bisnis Laundry Siap Operasi 100% Hak Milik Tanpa Royalti') : ?>
             <h1 class="cq-payno-heading">
@@ -65,10 +65,10 @@ $headline         = get_option('cleanique_kemitraan_headline', 'Peluang Bisnis L
 
           <div class="cq-payno-hero-actions">
             <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-primary cq-btn-pill" target="_blank" rel="noopener">
-              <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Tim Ahli via WhatsApp
+              <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Sekarang
             </a>
             <a href="#katalog-paket" class="cq-btn cq-btn-white-pill cq-btn-pill">
-              <i class="ri-store-2-line" aria-hidden="true"></i> Lihat 4 Pilihan Paket Usaha
+              Lihat Paket
             </a>
           </div>
         </div>
@@ -153,7 +153,7 @@ $headline         = get_option('cleanique_kemitraan_headline', 'Peluang Bisnis L
               <span class="cq-kemitraan-price-label">Modal investasi siap buka</span>
               <?php if (!empty($roi)) : ?>
                 <div class="cq-kemitraan-roi-chip">
-                  <i class="ri-time-line" aria-hidden="true"></i> BEP: <?php echo esc_html($roi); ?>
+                  BEP: <?php echo esc_html($roi); ?>
                 </div>
               <?php endif; ?>
             </div>
@@ -173,7 +173,7 @@ $headline         = get_option('cleanique_kemitraan_headline', 'Peluang Bisnis L
 
             <div class="cq-kemitraan-actions">
               <a href="<?php echo esc_url($item_wa); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-block" target="_blank" rel="noopener">
-                <i class="ri-whatsapp-line" aria-hidden="true"></i> Ambil Paket Ini
+                <i class="ri-whatsapp-line" aria-hidden="true"></i> Pilih Paket
               </a>
               <a href="<?php the_permalink(); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-block">
                 Detail Spesifikasi
@@ -199,7 +199,7 @@ $headline         = get_option('cleanique_kemitraan_headline', 'Peluang Bisnis L
   <section class="cq-mitra-active-section" id="mitra-aktif">
     <div class="cq-container">
       <div style="text-align: center; max-width: 760px; margin: 0 auto;">
-        <span class="cq-badge-clean" style="margin-bottom: var(--cq-sp-12);">Jaringan Outlet Nasional &bull; 300+ Mitra Aktif</span>
+        <span class="cq-badge-clean" style="margin-bottom: var(--cq-sp-12);">300+ Mitra</span>
         <h2 class="cq-section-title" style="margin-bottom: var(--cq-sp-12);">
           Daftar Mitra Aktif Cleanique Laundry di Berbagai Kota
         </h2>
@@ -226,7 +226,7 @@ $headline         = get_option('cleanique_kemitraan_headline', 'Peluang Bisnis L
                  alt="Cleanique Express Minomartani Sleman Yogyakarta" 
                  class="cq-mitra-active-img"
                  loading="lazy">
-            <span class="cq-mitra-active-badge-status">Aktif Beroperasi &bull; Sejak 2022</span>
+            <span class="cq-mitra-active-badge-status">Sejak 2022</span>
           </div>
           <div class="cq-mitra-active-body">
             <div class="cq-mitra-active-loc">
@@ -255,7 +255,7 @@ $headline         = get_option('cleanique_kemitraan_headline', 'Peluang Bisnis L
             </p>
             <div class="cq-mitra-active-footer">
               <span class="cq-mitra-active-footer-tag">
-                <i class="ri-checkbox-circle-fill" aria-hidden="true"></i> 100% Bebas Royalti
+                Bebas Royalti
               </span>
               <span>Google Maps Terverifikasi</span>
             </div>
@@ -269,7 +269,7 @@ $headline         = get_option('cleanique_kemitraan_headline', 'Peluang Bisnis L
                  alt="Cleanique Laundry Jebres Surakarta Solo" 
                  class="cq-mitra-active-img"
                  loading="lazy">
-            <span class="cq-mitra-active-badge-status">Aktif Beroperasi &bull; Sejak 2023</span>
+            <span class="cq-mitra-active-badge-status">Sejak 2023</span>
           </div>
           <div class="cq-mitra-active-body">
             <div class="cq-mitra-active-loc">
@@ -298,7 +298,7 @@ $headline         = get_option('cleanique_kemitraan_headline', 'Peluang Bisnis L
             </p>
             <div class="cq-mitra-active-footer">
               <span class="cq-mitra-active-footer-tag">
-                <i class="ri-checkbox-circle-fill" aria-hidden="true"></i> 100% Bebas Royalti
+                Bebas Royalti
               </span>
               <span>Google Maps Terverifikasi</span>
             </div>
@@ -312,7 +312,7 @@ $headline         = get_option('cleanique_kemitraan_headline', 'Peluang Bisnis L
                  alt="Cleanique Prima Tembalang Semarang" 
                  class="cq-mitra-active-img"
                  loading="lazy">
-            <span class="cq-mitra-active-badge-status">Aktif Beroperasi &bull; Sejak 2021</span>
+            <span class="cq-mitra-active-badge-status">Sejak 2021</span>
           </div>
           <div class="cq-mitra-active-body">
             <div class="cq-mitra-active-loc">
@@ -341,7 +341,7 @@ $headline         = get_option('cleanique_kemitraan_headline', 'Peluang Bisnis L
             </p>
             <div class="cq-mitra-active-footer">
               <span class="cq-mitra-active-footer-tag">
-                <i class="ri-checkbox-circle-fill" aria-hidden="true"></i> 100% Bebas Royalti
+                Bebas Royalti
               </span>
               <span>Google Maps Terverifikasi</span>
             </div>
@@ -355,7 +355,7 @@ $headline         = get_option('cleanique_kemitraan_headline', 'Peluang Bisnis L
                  alt="Cleanique Laundry Ruko Palagan Sleman" 
                  class="cq-mitra-active-img"
                  loading="lazy">
-            <span class="cq-mitra-active-badge-status">Aktif Beroperasi &bull; Cabang Baru 2024</span>
+            <span class="cq-mitra-active-badge-status">Cabang Baru</span>
           </div>
           <div class="cq-mitra-active-body">
             <div class="cq-mitra-active-loc">
@@ -384,7 +384,7 @@ $headline         = get_option('cleanique_kemitraan_headline', 'Peluang Bisnis L
             </p>
             <div class="cq-mitra-active-footer">
               <span class="cq-mitra-active-footer-tag">
-                <i class="ri-checkbox-circle-fill" aria-hidden="true"></i> 100% Bebas Royalti
+                Bebas Royalti
               </span>
               <span>Google Maps Terverifikasi</span>
             </div>
@@ -398,7 +398,7 @@ $headline         = get_option('cleanique_kemitraan_headline', 'Peluang Bisnis L
                  alt="Cleanique Mandiri Klaten Kota" 
                  class="cq-mitra-active-img"
                  loading="lazy">
-            <span class="cq-mitra-active-badge-status">Aktif Beroperasi &bull; Sejak 2023</span>
+            <span class="cq-mitra-active-badge-status">Sejak 2023</span>
           </div>
           <div class="cq-mitra-active-body">
             <div class="cq-mitra-active-loc">
@@ -427,7 +427,7 @@ $headline         = get_option('cleanique_kemitraan_headline', 'Peluang Bisnis L
             </p>
             <div class="cq-mitra-active-footer">
               <span class="cq-mitra-active-footer-tag">
-                <i class="ri-checkbox-circle-fill" aria-hidden="true"></i> 100% Bebas Royalti
+                Bebas Royalti
               </span>
               <span>Google Maps Terverifikasi</span>
             </div>
@@ -441,7 +441,7 @@ $headline         = get_option('cleanique_kemitraan_headline', 'Peluang Bisnis L
                  alt="Cleanique Flagship Showroom & Training Center Sleman" 
                  class="cq-mitra-active-img"
                  loading="lazy">
-            <span class="cq-mitra-active-badge-status is-flagship">Showroom &amp; Pusat Diklat Resmi</span>
+            <span class="cq-mitra-active-badge-status is-flagship">Pusat Diklat</span>
           </div>
           <div class="cq-mitra-active-body">
             <div class="cq-mitra-active-loc">
@@ -506,10 +506,10 @@ $headline         = get_option('cleanique_kemitraan_headline', 'Peluang Bisnis L
         </p>
         <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;">
           <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
-            <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Rencana Outlet Saya
+            <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Outlet
           </a>
           <a href="<?php echo esc_url(home_url('/kontak/')); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg">
-            <i class="ri-map-pin-line" aria-hidden="true"></i> Jadwalkan Kunjungan Showroom
+            Kunjungan Showroom
           </a>
         </div>
       </div>
@@ -595,13 +595,13 @@ $headline         = get_option('cleanique_kemitraan_headline', 'Peluang Bisnis L
         <div class="cq-calc-preset-bar">
           <span class="cq-calc-preset-label">Pilih Preset Usaha:</span>
           <button type="button" class="cq-calc-preset-chip is-active" data-kg="40" data-price="7000" data-modal="28500000">
-            Starter (40 Kg/hari)
+            Starter (40kg)
           </button>
           <button type="button" class="cq-calc-preset-chip" data-kg="75" data-price="8000" data-modal="48000000">
-            Komersial Ruko (75 Kg/hari)
+            Komersial (75kg)
           </button>
           <button type="button" class="cq-calc-preset-chip" data-kg="150" data-price="9000" data-modal="85000000">
-            Industrial Express (150 Kg/hari)
+            Industrial (150kg)
           </button>
         </div>
 
@@ -651,7 +651,7 @@ $headline         = get_option('cleanique_kemitraan_headline', 'Peluang Bisnis L
           <!-- Right: Result Card -->
           <div class="cq-calc-result-card">
             <div class="cq-calc-result-badge">
-              Proyeksi Finansial Bulanan
+              Proyeksi Finansial
             </div>
 
             <div class="cq-calc-metric-group">
@@ -674,7 +674,7 @@ $headline         = get_option('cleanique_kemitraan_headline', 'Peluang Bisnis L
             </div>
 
             <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-calc-cta-btn" target="_blank" rel="noopener">
-              <i class="ri-whatsapp-line"></i> Konsultasi Rencana Bisnis Saya
+              <i class="ri-whatsapp-line"></i> Konsultasi Sekarang
             </a>
           </div>
         </div>
@@ -841,10 +841,10 @@ $headline         = get_option('cleanique_kemitraan_headline', 'Peluang Bisnis L
       </p>
       <div class="cq-kemitraan-cta-actions">
         <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
-          <i class="ri-whatsapp-line" aria-hidden="true"></i> Hubungi Tim Konsultan via WhatsApp
+          <i class="ri-whatsapp-line" aria-hidden="true"></i> Hubungi Konsultan
         </a>
         <a href="<?php echo esc_url(home_url('/kontak/')); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg">
-          <i class="ri-map-pin-line" aria-hidden="true"></i> Kunjungi Showroom Sleman DIY
+          Kunjungan Showroom
         </a>
       </div>
     </div>

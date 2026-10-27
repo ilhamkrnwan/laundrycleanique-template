@@ -37,7 +37,7 @@ $current_cat_slug = get_query_var('category_name');
       <div class="cq-payno-hero-top">
         <div>
           <div class="cq-badge-pill cq-badge-accent" style="margin-bottom: var(--cq-sp-16); background: rgba(255, 255, 255, 0.9); border: 1px solid var(--sky-200);">
-            Pusat Edukasi &amp; Riset Bisnis Laundry &bull; PT Indotech Berkah Abadi
+            Pusat Edukasi
           </div>
           <h1 class="cq-payno-heading">
             Wawasan Industri, Panduan Bisnis &amp; <span class="cq-text-blue">Inovasi Laundry.</span>
@@ -59,10 +59,10 @@ $current_cat_slug = get_query_var('category_name');
 
           <div class="cq-payno-hero-actions">
             <a href="#kumpulan-artikel" class="cq-btn cq-btn-primary cq-btn-pill">
-              <i class="ri-book-open-line" aria-hidden="true"></i> Jelajahi Panduan Terbaru
+              Panduan Terbaru
             </a>
             <a href="<?php echo esc_url($wa_url); ?>" target="_blank" rel="noopener" class="cq-btn cq-btn-white-pill cq-btn-pill">
-              <i class="ri-whatsapp-line" aria-hidden="true"></i> Tanya Konsultan Ahli
+              <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi
             </a>
           </div>
         </div>
@@ -75,7 +75,7 @@ $current_cat_slug = get_query_var('category_name');
             <i class="ri-search-line" style="color: var(--cq-primary); font-size: 18px; margin-right: 8px;" aria-hidden="true"></i>
             <input type="search" class="cq-blog-search-input" placeholder="Cari tips mesin, formula chemical, nota digital, BEP..." value="<?php echo esc_attr($search_query); ?>" name="s" aria-label="Cari artikel">
             <button type="submit" class="cq-blog-search-btn">
-              <i class="ri-search-2-line" aria-hidden="true"></i> Cari Panduan
+              Cari
             </button>
           </div>
         </form>
@@ -104,78 +104,17 @@ $current_cat_slug = get_query_var('category_name');
     <div class="cq-container">
       
 
-      <?php
-      // 1. Ambil Artikel Sorotan (Post Terbaru / Unggulan) hanya pada Halaman 1 dan tanpa Search
-      $spotlight_id = 0;
-
-      if ($paged == 1 && empty($search_query)) :
-          $spotlight_query = new WP_Query([
-              'posts_per_page' => 1,
-              'post_status'    => 'publish',
-              'ignore_sticky_posts' => 1,
-          ]);
-
-          if ($spotlight_query->have_posts()) :
-              while ($spotlight_query->have_posts()) : $spotlight_query->the_post();
-                  $spotlight_id = get_the_ID();
-                  $spotlight_cats = get_the_category();
-                  $spotlight_cat_name = !empty($spotlight_cats) ? $spotlight_cats[0]->name : 'Artikel Utama';
-                  $reading_time = function_exists('cleanique_get_reading_time') ? cleanique_get_reading_time() : '5 mnt baca';
-      ?>
-        <!-- Artikel Sorotan Utama (Spotlight Card) -->
-        <article class="cq-article-spotlight">
-          <div class="cq-spotlight-img-wrap">
-            <a href="<?php the_permalink(); ?>" aria-label="<?php the_title_attribute(); ?>">
-              <?php if (has_post_thumbnail()) : ?>
-                <?php the_post_thumbnail('large', ['loading' => 'eager', 'alt' => get_the_title()]); ?>
-              <?php else : ?>
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-outlet.jpg'); ?>" alt="<?php the_title_attribute(); ?>" loading="eager">
-              <?php endif; ?>
-            </a>
-            <div class="cq-spotlight-badge">
-              Sorotan Utama &bull; <?php echo esc_html($spotlight_cat_name); ?>
-            </div>
-          </div>
-
-          <div class="cq-spotlight-body">
-            <div class="cq-spotlight-meta">
-              <span><i class="ri-calendar-line" aria-hidden="true"></i> <?php echo get_the_date(); ?></span>
-              <span>&bull;</span>
-              <span><i class="ri-time-line" aria-hidden="true"></i> <?php echo esc_html($reading_time); ?></span>
-              <span>&bull;</span>
-              <span><i class="ri-user-line" aria-hidden="true"></i> Tim Riset Indotech</span>
-            </div>
-            <h2 class="cq-spotlight-title">
-              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-            </h2>
-            <p class="cq-spotlight-excerpt">
-              <?php echo wp_trim_words(get_the_excerpt(), 28, '...'); ?>
-            </p>
-            <div>
-              <a href="<?php the_permalink(); ?>" class="cq-btn cq-btn-primary cq-btn-pill">
-                Baca Artikel Sorotan Lengkap <i class="ri-arrow-right-line" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
-        </article>
-      <?php
-              endwhile;
-              wp_reset_postdata();
-          endif;
-      endif;
-      ?>
-
-      <!-- Section Title for Latest Articles -->
-      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: var(--cq-sp-24); border-bottom: 1px solid var(--cq-border-light); padding-bottom: var(--cq-sp-16); flex-wrap: wrap; gap: 12px;">
+      <!-- Section Title for Articles Bento Hub -->
+      <div class="cq-bento-section-header" style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: var(--cq-sp-32); border-bottom: 1px solid var(--cq-border-light); padding-bottom: var(--cq-sp-16); flex-wrap: wrap; gap: 12px;">
         <div>
-          <h2 style="font-family: var(--cq-font-heading); font-size: clamp(1.4rem, 1.2rem + 0.6vw, 1.8rem); font-weight: 400; letter-spacing: -0.02em; color: var(--cq-dark-navy); margin: 0 0 4px 0;">
+          <h2 style="font-family: var(--cq-font-heading); font-size: clamp(1.4rem, 1.2rem + 0.6vw, 1.8rem); font-weight: 600; letter-spacing: -0.02em; color: var(--cq-dark-navy); margin: 0 0 4px 0;">
             <?php
             if (!empty($search_query)) {
                 echo 'Hasil Pencarian: "' . esc_html($search_query) . '"';
             } elseif (!empty($current_cat_slug)) {
                 echo 'Kategori: ' . esc_html(single_cat_title('', false));
             } else {
-                echo 'Koleksi Artikel &amp; Panduan Terbaru';
+                echo 'Koleksi Artikel &amp; Panduan Terkini';
             }
             ?>
           </h2>
@@ -183,12 +122,12 @@ $current_cat_slug = get_query_var('category_name');
             Dapatkan wawasan terkini untuk memajukan bisnis laundry komersial Anda.
           </p>
         </div>
-        <span style="font-size: 12px; font-weight: 700; color: var(--cq-primary);">
-          Diperbarui Berkala oleh PT Indotech
+        <span style="font-size: 12px; font-weight: 700; color: var(--cq-primary); display: inline-flex; align-items: center; gap: 6px;">
+          <i class="ri-shield-check-fill" style="color: var(--mint-cta, #10b981);" aria-hidden="true"></i> Diperbarui Berkala oleh PT Indotech
         </span>
       </div>
 
-      <!-- Main Articles Grid (Bento Style) -->
+      <!-- Main Articles Bento Grid (Asymmetric & Cardless) -->
       <div class="cq-bento-articles-grid">
         <?php
         $args = [
@@ -198,14 +137,8 @@ $current_cat_slug = get_query_var('category_name');
             'paged'          => $paged,
         ];
 
-        // Jika ada search
         if (!empty($search_query)) {
             $args['s'] = $search_query;
-        }
-
-        // Kecualikan artikel spotlight di halaman 1 agar tidak duplikat
-        if ($spotlight_id > 0) {
-            $args['post__not_in'] = [$spotlight_id];
         }
 
         $articles_query = new WP_Query($args);
@@ -217,50 +150,51 @@ $current_cat_slug = get_query_var('category_name');
                 $post_cats = get_the_category();
                 $cat_name  = !empty($post_cats) ? $post_cats[0]->name : 'Edukasi';
                 $reading_time = function_exists('cleanique_get_reading_time') ? cleanique_get_reading_time() : '4 mnt baca';
-                // Jika tidak ada spotlight (misal paged > 1 atau hasil search), kartu pertama jadi wide bento
-                $is_wide_bento = ($spotlight_id === 0 && $post_counter === 1) ? 'is-wide-bento' : '';
+
+                // Bento Layout Rhythm: Posisi 1 dan 4 pada setiap batch 4 item menjadi Wide Bento (2-kolom)
+                $mod = ($post_counter - 1) % 4;
+                $is_wide_bento = ($mod === 0 || $mod === 3) ? 'is-wide-bento' : '';
         ?>
-          <article class="cq-article-card-bento cq-article-card-v2 <?php echo esc_attr($is_wide_bento); ?>">
-            <div class="cq-bento-card-thumb-wrap cq-article-card-thumb-wrap">
+          <article class="cq-article-bento cq-article-card-bento <?php echo esc_attr($is_wide_bento); ?>">
+            <div class="cq-bento-thumb-wrap cq-bento-card-thumb-wrap">
               <a href="<?php the_permalink(); ?>" aria-label="<?php the_title_attribute(); ?>">
                 <?php if (has_post_thumbnail()) : ?>
-                  <?php the_post_thumbnail($is_wide_bento ? 'large' : 'cleanique-card', ['loading' => 'lazy', 'alt' => get_the_title()]); ?>
+                  <?php the_post_thumbnail($is_wide_bento ? 'large' : 'cleanique-card', ['loading' => ($post_counter === 1 ? 'eager' : 'lazy'), 'alt' => get_the_title()]); ?>
                 <?php else : ?>
                   <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-pos-app.jpg'); ?>" alt="<?php the_title_attribute(); ?>" loading="lazy">
                 <?php endif; ?>
               </a>
-              <div class="cq-bento-card-badges">
-                <span class="cq-bento-card-tag cq-article-card-tag">
-                  <i class="ri-price-tag-3-fill" aria-hidden="true"></i>
+              <div class="cq-bento-badges cq-bento-card-badges">
+                <span class="cq-bento-tag cq-bento-card-tag">
                   <?php echo esc_html($cat_name); ?>
                 </span>
-                <span class="cq-bento-card-time">
-                  <i class="ri-time-line" aria-hidden="true"></i> <?php echo esc_html($reading_time); ?>
+                <span class="cq-bento-time cq-bento-card-time">
+                  <?php echo esc_html($reading_time); ?>
                 </span>
               </div>
             </div>
 
-            <div class="cq-bento-card-body cq-article-card-body-v2">
-              <div class="cq-bento-card-meta cq-article-card-meta-v2">
+            <div class="cq-bento-body cq-bento-card-body">
+              <div class="cq-bento-meta cq-bento-card-meta">
                 <span><i class="ri-calendar-line" aria-hidden="true"></i> <?php echo get_the_date('d M Y'); ?></span>
                 <span class="cq-bento-meta-dot">&bull;</span>
                 <span><i class="ri-shield-check-line" aria-hidden="true"></i> Riset Indotech</span>
               </div>
 
-              <h3 class="cq-bento-card-title cq-article-card-title-v2">
+              <h3 class="cq-bento-title cq-bento-card-title">
                 <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
               </h3>
 
-              <p class="cq-bento-card-excerpt cq-article-card-excerpt-v2">
+              <p class="cq-bento-excerpt cq-bento-card-excerpt">
                 <?php echo wp_trim_words(get_the_excerpt(), $is_wide_bento ? 28 : 16, '...'); ?>
               </p>
 
-              <div class="cq-bento-card-footer cq-article-card-footer-v2">
-                <div class="cq-bento-card-hub">
+              <div class="cq-bento-footer cq-bento-card-footer">
+                <div class="cq-bento-hub cq-bento-card-hub">
                   <span class="cq-bento-hub-dot"></span>
                   <span>Indotech Hub</span>
                 </div>
-                <a href="<?php the_permalink(); ?>" class="cq-bento-card-action cq-article-card-link-v2" aria-label="Baca Panduan <?php the_title_attribute(); ?>">
+                <a href="<?php the_permalink(); ?>" class="cq-bento-action cq-bento-card-action" aria-label="Baca Panduan <?php the_title_attribute(); ?>">
                   <span>Baca Panduan</span>
                   <span class="cq-bento-action-circle" aria-hidden="true">
                     <i class="ri-arrow-right-up-line"></i>
@@ -271,6 +205,7 @@ $current_cat_slug = get_query_var('category_name');
           </article>
         <?php
             endwhile;
+            wp_reset_postdata();
         ?>
       </div>
 
@@ -300,7 +235,7 @@ $current_cat_slug = get_query_var('category_name');
             Tidak ditemukan artikel dengan kata kunci pencarian tersebut. Coba gunakan istilah umum seperti "mesin", "chemical", atau "kemitraan".
           </p>
           <a href="<?php echo esc_url(home_url('/artikel/')); ?>" class="cq-btn cq-btn-primary cq-btn-pill">
-            Kembali ke Semua Artikel
+            Semua Artikel
           </a>
         </div>
       <?php endif; ?>
@@ -322,10 +257,10 @@ $current_cat_slug = get_query_var('category_name');
         </p>
         <div class="cq-banner-cta-actions">
           <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
-            <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Tim Ahli via WhatsApp
+            <i class="ri-whatsapp-line" aria-hidden="true"></i> Hubungi Konsultan
           </a>
           <a href="<?php echo esc_url(home_url('/kemitraan/')); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg">
-            <i class="ri-store-2-line" aria-hidden="true"></i> Katalog Paket Kemitraan
+            Pilihan Paket
           </a>
         </div>
       </div>

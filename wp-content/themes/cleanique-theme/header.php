@@ -45,7 +45,7 @@ $is_landing_page = $is_paket_usaha || $is_aplikasi_laundry;
         </ul>
         <div class="cq-lp-header-actions">
           <a href="#trial-form" class="cq-btn cq-btn-white-pill cq-btn-sm cq-btn-pill">
-            <i class="ri-rocket-2-line"></i> Free Trial 7 Hari
+            Coba Gratis
           </a>
           <button class="cq-nav-toggle" id="cq-nav-toggle" type="button" aria-label="Buka Menu Navigasi" aria-expanded="false" aria-controls="cq-mobile-drawer">
             <span class="cq-hamburger-line"></span>
@@ -67,7 +67,7 @@ $is_landing_page = $is_paket_usaha || $is_aplikasi_laundry;
         </ul>
         <div class="cq-lp-header-actions">
           <a href="#daftar-promo" class="cq-btn cq-btn-white-pill cq-btn-sm cq-btn-pill">
-            <i class="ri-cursor-line"></i> Klaim Promo
+            Klaim Promo
           </a>
           <button class="cq-nav-toggle" id="cq-nav-toggle" type="button" aria-label="Buka Menu Navigasi" aria-expanded="false" aria-controls="cq-mobile-drawer">
             <span class="cq-hamburger-line"></span>
@@ -246,7 +246,7 @@ $is_landing_page = $is_paket_usaha || $is_aplikasi_laundry;
       <div class="cq-search-modal-input-wrap">
         <i class="ri-search-line cq-search-modal-icon"></i>
         <input type="search" class="cq-search-modal-input" placeholder="Ketik kata kunci (misal: paket kemitraan, parfum laundry, mesin stack)..." value="<?php echo get_search_query(); ?>" name="s" autocomplete="off" />
-        <button type="submit" class="cq-btn cq-btn-primary cq-btn-sm cq-btn-pill">Cari Sekarang</button>
+        <button type="submit" class="cq-btn cq-btn-primary cq-btn-sm cq-btn-pill">Cari</button>
       </div>
     </form>
     <div class="cq-search-modal-suggestions">
