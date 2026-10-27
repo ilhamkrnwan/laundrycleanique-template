@@ -592,26 +592,28 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
   </section>
 
   <!-- ========================================================
-       7. CLOSING BANNER CTA
+       7. CLOSING BANNER CTA (Contained Section Card)
        ======================================================== -->
-  <section class="cq-section cq-section-dark cq-banner-cta-section" id="kontak-cta">
-    <div class="cq-container cq-section-header">
-      <h2 class="cq-banner-cta-title">
-        Siap Membuka Usaha Laundry Mandiri Bersama Kami?
-      </h2>
-      <p class="cq-banner-cta-desc">
-        Diskusikan potensi lokasi, kalkulasi modal, dan paket mesin terbaik bersama tim konsultan resmi <strong>PT Indotech Berkah Abadi</strong> di Sleman, D.I. Yogyakarta.
-      </p>
-      <div class="cq-banner-cta-actions">
-        <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
-          <i class="ri-whatsapp-line" aria-hidden="true"></i> Chat WhatsApp Konsultan Kami
-        </a>
-        <a href="<?php echo esc_url(home_url('/kontak/')); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-lg">
-          <i class="ri-map-pin-line" aria-hidden="true"></i> Kunjungi Showroom Sleman DIY
-        </a>
-        <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg">
-          Pelajari Paket Usaha
-        </a>
+  <section class="cq-section cq-banner-cta-section" id="kontak-cta">
+    <div class="cq-container">
+      <div class="cq-banner-cta-card">
+        <h2 class="cq-banner-cta-title">
+          Siap Membuka Usaha Laundry Mandiri Bersama Kami?
+        </h2>
+        <p class="cq-banner-cta-desc">
+          Diskusikan potensi lokasi, kalkulasi modal, dan paket mesin terbaik bersama tim konsultan resmi <strong>PT Indotech Berkah Abadi</strong> di Sleman, D.I. Yogyakarta.
+        </p>
+        <div class="cq-banner-cta-actions">
+          <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
+            <i class="ri-whatsapp-line" aria-hidden="true"></i> Chat WhatsApp Konsultan Kami
+          </a>
+          <a href="<?php echo esc_url(home_url('/kontak/')); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-lg">
+            <i class="ri-map-pin-line" aria-hidden="true"></i> Kunjungi Showroom Sleman DIY
+          </a>
+          <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg">
+            Pelajari Paket Usaha
+          </a>
+        </div>
       </div>
     </div>
   </section>

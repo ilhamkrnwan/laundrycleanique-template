@@ -10,7 +10,7 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
 
-define('CLEANIQUE_VERSION', '1.5.1');
+define('CLEANIQUE_VERSION', '1.5.3');
 define('CLEANIQUE_DIR', get_template_directory());
 define('CLEANIQUE_URI', get_template_directory_uri());
 

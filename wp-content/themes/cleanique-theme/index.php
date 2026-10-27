@@ -77,47 +77,61 @@ $categories = get_categories(['hide_empty' => true]);
   <section class="cq-section" style="padding-top: var(--cq-sp-40);">
     <div class="cq-container">
       <?php if (have_posts()) : ?>
-        <div class="cq-grid-3">
-          <?php while (have_posts()) : the_post(); ?>
-            <article class="cq-article-card-v2">
-              <div class="cq-article-card-thumb-wrap">
+        <div class="cq-bento-articles-grid">
+          <?php 
+          $post_counter = 0;
+          while (have_posts()) : the_post(); 
+              $post_counter++;
+              $post_cats = get_the_category();
+              $cat_name = !empty($post_cats) ? $post_cats[0]->name : 'Edukasi';
+              $reading_time = function_exists('cleanique_get_reading_time') ? cleanique_get_reading_time() : '4 mnt baca';
+              $is_wide_bento = ($post_counter === 1 && !is_paged()) ? 'is-wide-bento' : '';
+          ?>
+            <article class="cq-article-card-bento cq-article-card-v2 <?php echo esc_attr($is_wide_bento); ?>">
+              <div class="cq-bento-card-thumb-wrap cq-article-card-thumb-wrap">
                 <a href="<?php the_permalink(); ?>" aria-label="<?php the_title_attribute(); ?>">
                   <?php if (has_post_thumbnail()) : ?>
-                    <?php the_post_thumbnail('cleanique-card', ['loading' => 'lazy', 'alt' => get_the_title()]); ?>
+                    <?php the_post_thumbnail($is_wide_bento ? 'large' : 'cleanique-card', ['loading' => 'lazy', 'alt' => get_the_title()]); ?>
                   <?php else : ?>
                     <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-outlet.jpg'); ?>" alt="<?php the_title_attribute(); ?>" loading="lazy">
                   <?php endif; ?>
                 </a>
-                <span class="cq-article-card-tag">
-                  <i class="ri-price-tag-3-line" aria-hidden="true"></i>
-                  <?php
-                  $post_cats = get_the_category();
-                  echo !empty($post_cats) ? esc_html($post_cats[0]->name) : 'Edukasi';
-                  ?>
-                </span>
+                <div class="cq-bento-card-badges">
+                  <span class="cq-bento-card-tag cq-article-card-tag">
+                    <i class="ri-price-tag-3-fill" aria-hidden="true"></i>
+                    <?php echo esc_html($cat_name); ?>
+                  </span>
+                  <span class="cq-bento-card-time">
+                    <i class="ri-time-line" aria-hidden="true"></i> <?php echo esc_html($reading_time); ?>
+                  </span>
+                </div>
               </div>
 
-              <div class="cq-article-card-body-v2">
-                <div class="cq-article-card-meta-v2">
-                  <span><i class="ri-calendar-line" aria-hidden="true"></i> <?php echo get_the_date(); ?></span>
-                  <span>&bull;</span>
-                  <span><i class="ri-time-line" aria-hidden="true"></i> <?php echo cleanique_get_reading_time(); ?></span>
+              <div class="cq-bento-card-body cq-article-card-body-v2">
+                <div class="cq-bento-card-meta cq-article-card-meta-v2">
+                  <span><i class="ri-calendar-line" aria-hidden="true"></i> <?php echo get_the_date('d M Y'); ?></span>
+                  <span class="cq-bento-meta-dot">&bull;</span>
+                  <span><i class="ri-shield-check-line" aria-hidden="true"></i> Riset Indotech</span>
                 </div>
 
-                <h3 class="cq-article-card-title-v2">
+                <h3 class="cq-bento-card-title cq-article-card-title-v2">
                   <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </h3>
 
-                <p class="cq-article-card-excerpt-v2">
-                  <?php echo wp_trim_words(get_the_excerpt(), 18, '...'); ?>
+                <p class="cq-bento-card-excerpt cq-article-card-excerpt-v2">
+                  <?php echo wp_trim_words(get_the_excerpt(), $is_wide_bento ? 28 : 16, '...'); ?>
                 </p>
 
-                <div class="cq-article-card-footer-v2">
-                  <span style="font-size: 11px; font-weight: 600; color: var(--cq-text-muted); display: inline-flex; align-items: center; gap: 4px;">
-                    <i class="ri-building-line" aria-hidden="true"></i> Indotech Hub
-                  </span>
-                  <a href="<?php the_permalink(); ?>" class="cq-article-card-link-v2">
-                    Baca Panduan <i class="ri-arrow-right-line" aria-hidden="true"></i>
+                <div class="cq-bento-card-footer cq-article-card-footer-v2">
+                  <div class="cq-bento-card-hub">
+                    <span class="cq-bento-hub-dot"></span>
+                    <span>Indotech Hub</span>
+                  </div>
+                  <a href="<?php the_permalink(); ?>" class="cq-bento-card-action cq-article-card-link-v2" aria-label="Baca Panduan <?php the_title_attribute(); ?>">
+                    <span>Baca Panduan</span>
+                    <span class="cq-bento-action-circle" aria-hidden="true">
+                      <i class="ri-arrow-right-up-line"></i>
+                    </span>
                   </a>
                 </div>
               </div>
@@ -148,6 +162,30 @@ $categories = get_categories(['hide_empty' => true]);
           </a>
         </div>
       <?php endif; ?>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       CLOSING BANNER CTA (Contained Section Card)
+       ======================================================== -->
+  <section class="cq-section cq-banner-cta-section cq-blog-cta-section" id="blog-cta" aria-labelledby="index-cta-title">
+    <div class="cq-container">
+      <div class="cq-banner-cta-card">
+        <h2 id="index-cta-title" class="cq-banner-cta-title">
+          Siap Memulai Bisnis Laundry Mandiri Tanpa Potongan Royalti?
+        </h2>
+        <p class="cq-banner-cta-desc">
+          Dapatkan konsultasi gratis mengenai analisis lokasi, pemilihan set mesin cuci &amp; dryer bergaransi, dan pasokan deterjen pabrik langsung dari tim ahli PT Indotech Berkah Abadi.
+        </p>
+        <div class="cq-banner-cta-actions">
+          <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
+            <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Tim Ahli via WhatsApp
+          </a>
+          <a href="<?php echo esc_url(home_url('/kemitraan/')); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg">
+            <i class="ri-store-2-line" aria-hidden="true"></i> Katalog Paket Kemitraan
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 </main>

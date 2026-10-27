@@ -353,23 +353,25 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
   </section>
 
   <!-- ========================================================
-       5. CLOSING BANNER CTA (Clean, Max 2 Action Buttons)
+       5. CLOSING BANNER CTA (Contained Section Card)
        ======================================================== -->
-  <section class="cq-section cq-section-dark cq-banner-cta-section">
-    <div class="cq-container cq-section-header">
-      <h2 class="cq-banner-cta-title">
-        Wujudkan Bisnis Laundry Tangguh &amp; Mandiri
-      </h2>
-      <p class="cq-banner-cta-desc">
-        Hubungi tim konsultan <strong>PT Indotech Berkah Abadi</strong> sekarang untuk mendapatkan rincian paket usaha siap buka, pasokan chemical standar pabrik, dan sistem Smart POS.
-      </p>
-      <div class="cq-banner-cta-actions">
-        <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
-          <i class="ri-whatsapp-line" aria-hidden="true"></i> Chat WhatsApp Konsultan Kami
-        </a>
-        <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-lg" style="color: #ffffff; border-color: rgba(255,255,255,0.4);">
-          <i class="ri-store-2-line" aria-hidden="true"></i> Lihat Seluruh Paket Usaha
-        </a>
+  <section class="cq-section cq-banner-cta-section">
+    <div class="cq-container">
+      <div class="cq-banner-cta-card">
+        <h2 class="cq-banner-cta-title">
+          Wujudkan Bisnis Laundry Tangguh &amp; Mandiri
+        </h2>
+        <p class="cq-banner-cta-desc">
+          Hubungi tim konsultan <strong>PT Indotech Berkah Abadi</strong> sekarang untuk mendapatkan rincian paket usaha siap buka, pasokan chemical standar pabrik, dan sistem Smart POS.
+        </p>
+        <div class="cq-banner-cta-actions">
+          <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
+            <i class="ri-whatsapp-line" aria-hidden="true"></i> Chat WhatsApp Konsultan Kami
+          </a>
+          <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-lg">
+            <i class="ri-store-2-line" aria-hidden="true"></i> Lihat Seluruh Paket Usaha
+          </a>
+        </div>
       </div>
     </div>
   </section>

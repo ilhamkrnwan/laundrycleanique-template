@@ -959,23 +959,25 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
   </section>
 
   <!-- ========================================================
-       11. FINAL BANNER CTA (Promo Akhir Tahun)
+       11. FINAL BANNER CTA (Contained Section Card)
        ======================================================== -->
-  <section class="cq-section cq-section-dark cq-banner-cta-section">
-    <div class="cq-container cq-section-header">
-      <h2 class="cq-banner-cta-title">
-        Siap Membuka Usaha Laundry Sukses Anda?
-      </h2>
-      <p class="cq-banner-cta-desc">
-        Jangan biarkan rasa takut gagal dan kebingungan menunda langkah Anda. Amankan kuota promo kemitraan dan konsultasikan lokasi usaha Anda bersama tim ahli Cleanique hari ini.
-      </p>
-      <div class="cq-banner-cta-actions">
-        <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
-          <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Kemitraan via WhatsApp
-        </a>
-        <a href="#daftar-promo" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg">
-          <i class="ri-file-download-line" aria-hidden="true"></i> Minta Brosur &amp; Proposal Lengkap
-        </a>
+  <section class="cq-section cq-banner-cta-section">
+    <div class="cq-container">
+      <div class="cq-banner-cta-card">
+        <h2 class="cq-banner-cta-title">
+          Siap Membuka Usaha Laundry Sukses Anda?
+        </h2>
+        <p class="cq-banner-cta-desc">
+          Jangan biarkan rasa takut gagal dan kebingungan menunda langkah Anda. Amankan kuota promo kemitraan dan konsultasikan lokasi usaha Anda bersama tim ahli Cleanique hari ini.
+        </p>
+        <div class="cq-banner-cta-actions">
+          <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
+            <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Kemitraan via WhatsApp
+          </a>
+          <a href="#daftar-promo" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg">
+            <i class="ri-file-download-line" aria-hidden="true"></i> Minta Brosur &amp; Proposal Lengkap
+          </a>
+        </div>
       </div>
     </div>
   </section>

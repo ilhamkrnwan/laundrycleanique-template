@@ -1077,24 +1077,26 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
   </section>
 
   <!-- ========================================================
-       11. BANNER CTA PENUTUP (Corporate Hub)
+       11. BANNER CTA PENUTUP (Corporate Hub - Contained Section Card)
        ======================================================== -->
-  <section class="cq-section cq-section-dark cq-banner-cta-section" id="kontak">
-    <div class="cq-container cq-section-header">
-      <h2 class="cq-banner-cta-title">
-        Siap Memulai atau Mengembangkan Bisnis Laundry Anda?
-      </h2>
-      <p class="cq-banner-cta-desc">
-        Kantor operasional &amp; showroom workshop: <strong><?php echo esc_html($office_addr); ?></strong>.<br>
-        Konsultasikan rencana pembukaan outlet laundry, ketersediaan daya listrik ruko, atau instalasi mesin bersama konsultan resmi kami.
-      </p>
-      <div class="cq-banner-cta-actions">
-        <a href="<?php echo esc_url($wa_kemitraan_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
-          <i class="ri-whatsapp-line" aria-hidden="true"></i> Hubungi Konsultan Kemitraan
-        </a>
-        <a href="<?php echo esc_url(home_url('/kontak/')); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-lg" style="color: #fff; border-color: rgba(255,255,255,0.4);">
-          <i class="ri-map-pin-line" aria-hidden="true"></i> Peta Lokasi Showroom Sleman
-        </a>
+  <section class="cq-section cq-banner-cta-section" id="kontak">
+    <div class="cq-container">
+      <div class="cq-banner-cta-card">
+        <h2 class="cq-banner-cta-title">
+          Siap Memulai atau Mengembangkan Bisnis Laundry Anda?
+        </h2>
+        <p class="cq-banner-cta-desc">
+          Kantor operasional &amp; showroom workshop: <strong><?php echo esc_html($office_addr); ?></strong>.<br>
+          Konsultasikan rencana pembukaan outlet laundry, ketersediaan daya listrik ruko, atau instalasi mesin bersama konsultan resmi kami.
+        </p>
+        <div class="cq-banner-cta-actions">
+          <a href="<?php echo esc_url($wa_kemitraan_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
+            <i class="ri-whatsapp-line" aria-hidden="true"></i> Hubungi Konsultan Kemitraan
+          </a>
+          <a href="<?php echo esc_url(home_url('/kontak/')); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-lg">
+            <i class="ri-map-pin-line" aria-hidden="true"></i> Peta Lokasi Showroom Sleman
+          </a>
+        </div>
       </div>
     </div>
   </section>

@@ -21,8 +21,9 @@ while (have_posts()) : the_post();
     $wa_paket_url = 'https://api.whatsapp.com/send?phone=' . $clean_wa . '&text=' . rawurlencode($wa_msg);
 ?>
 
-<main id="main-content" class="cq-section" style="padding-top: var(--cq-sp-40); padding-bottom: var(--cq-sp-64); background: linear-gradient(180deg, #F0F9FF 0%, #FFFFFF 100%);">
-  <div class="cq-container" style="max-width: 1040px;">
+<main id="main-content">
+  <section class="cq-section" style="padding-top: var(--cq-sp-40); padding-bottom: var(--cq-sp-64); background: linear-gradient(180deg, #F0F9FF 0%, #FFFFFF 100%);">
+    <div class="cq-container" style="max-width: 1040px;">
     <!-- Breadcrumb & Back Link -->
     <div style="margin-bottom: var(--cq-sp-24);">
       <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-white-pill cq-btn-sm" style="display: inline-flex; align-items: center; gap: 6px;">
@@ -90,7 +91,31 @@ while (have_posts()) : the_post();
         </a>
       </div>
     </div>
-  </div>
+  </section>
+
+  <!-- ========================================================
+       CLOSING BANNER CTA (Contained Section Card)
+       ======================================================== -->
+  <section class="cq-section cq-banner-cta-section" id="paket-cta">
+    <div class="cq-container">
+      <div class="cq-banner-cta-card">
+        <h2 class="cq-banner-cta-title">
+          Siap Membuka Cabang Laundry Mandiri dengan <?php the_title(); ?>?
+        </h2>
+        <p class="cq-banner-cta-desc">
+          Konsultasikan kesiapan lokasi ruko, perhitungan BEP, dan jadwal instalasi mesin bersama tim ahli PT Indotech Berkah Abadi. 100% hak milik Anda tanpa royalti fee.
+        </p>
+        <div class="cq-banner-cta-actions">
+          <a href="<?php echo esc_url($wa_paket_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
+            <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Paket via WhatsApp
+          </a>
+          <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg">
+            <i class="ri-store-2-line" aria-hidden="true"></i> Lihat Semua Pilihan Paket
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <?php

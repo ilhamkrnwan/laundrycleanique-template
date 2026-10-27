@@ -238,26 +238,28 @@ $wa_url = cleanique_get_whatsapp_url('chemical');
   </section>
 
   <!-- ========================================================
-       5. CLOSING BANNER CTA
+       5. CLOSING BANNER CTA (Contained Section Card)
        ======================================================== -->
-  <section class="cq-section cq-section-dark cq-banner-cta-section">
-    <div class="cq-container cq-section-header">
-      <h2 class="cq-banner-cta-title">
-        Ingin Pasokan Chemical Rutin Langsung dari Pabrik?
-      </h2>
-      <p class="cq-banner-cta-desc">
-        Kunjungi portal resmi kami di <strong>indotech.id</strong> atau hubungi tim distribusi <strong>PT Indotech Berkah Abadi</strong> untuk penawaran harga grosir khusus pengusaha laundry.
-      </p>
-      <div class="cq-banner-cta-actions">
-        <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
-          <i class="ri-whatsapp-line" aria-hidden="true"></i> Pesan Chemical via WhatsApp
-        </a>
-        <a href="https://indotech.id" target="_blank" rel="noopener" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg">
-          <i class="ri-external-link-line" aria-hidden="true"></i> Kunjungi Situs Indotech.id
-        </a>
-        <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-lg">
-          <i class="ri-store-2-line" aria-hidden="true"></i> Paket Usaha Laundry
-        </a>
+  <section class="cq-section cq-banner-cta-section">
+    <div class="cq-container">
+      <div class="cq-banner-cta-card">
+        <h2 class="cq-banner-cta-title">
+          Ingin Pasokan Chemical Rutin Langsung dari Pabrik?
+        </h2>
+        <p class="cq-banner-cta-desc">
+          Kunjungi portal resmi kami di <strong>indotech.id</strong> atau hubungi tim distribusi <strong>PT Indotech Berkah Abadi</strong> untuk penawaran harga grosir khusus pengusaha laundry.
+        </p>
+        <div class="cq-banner-cta-actions">
+          <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
+            <i class="ri-whatsapp-line" aria-hidden="true"></i> Pesan Chemical via WhatsApp
+          </a>
+          <a href="https://indotech.id" target="_blank" rel="noopener" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg">
+            <i class="ri-external-link-line" aria-hidden="true"></i> Kunjungi Situs Indotech.id
+          </a>
+          <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-lg">
+            <i class="ri-store-2-line" aria-hidden="true"></i> Paket Usaha Laundry
+          </a>
+        </div>
       </div>
     </div>
   </section>

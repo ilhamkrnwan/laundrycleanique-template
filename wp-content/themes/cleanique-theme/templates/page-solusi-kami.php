@@ -177,26 +177,28 @@ $wa_url = cleanique_get_whatsapp_url('general');
   </section>
 
   <!-- ========================================================
-       5. CLOSING BANNER CTA
+       5. CLOSING BANNER CTA (Contained Section Card)
        ======================================================== -->
-  <section class="cq-section cq-section-dark cq-banner-cta-section">
-    <div class="cq-container cq-section-header">
-      <h2 class="cq-banner-cta-title">
-        Bingung Menentukan Solusi yang Paling Tepat?
-      </h2>
-      <p class="cq-banner-cta-desc">
-        Konsultasikan rencana bisnis atau kendala operasional laundry Anda sekarang bersama tim konsultan ahli <strong>PT Indotech Berkah Abadi</strong>.
-      </p>
-      <div class="cq-banner-cta-actions">
-        <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
-          <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Gratis via WhatsApp
-        </a>
-        <a href="<?php echo esc_url(home_url('/kontak/')); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-lg">
-          <i class="ri-map-pin-line" aria-hidden="true"></i> Lokasi Kantor &amp; Workshop
-        </a>
-        <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg">
-          Katalog Paket Usaha
-        </a>
+  <section class="cq-section cq-banner-cta-section">
+    <div class="cq-container">
+      <div class="cq-banner-cta-card">
+        <h2 class="cq-banner-cta-title">
+          Bingung Menentukan Solusi yang Paling Tepat?
+        </h2>
+        <p class="cq-banner-cta-desc">
+          Konsultasikan rencana bisnis atau kendala operasional laundry Anda sekarang bersama tim konsultan ahli <strong>PT Indotech Berkah Abadi</strong>.
+        </p>
+        <div class="cq-banner-cta-actions">
+          <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
+            <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi Gratis via WhatsApp
+          </a>
+          <a href="<?php echo esc_url(home_url('/kontak/')); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-lg">
+            <i class="ri-map-pin-line" aria-hidden="true"></i> Lokasi Kantor &amp; Workshop
+          </a>
+          <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg">
+            Katalog Paket Usaha
+          </a>
+        </div>
       </div>
     </div>
   </section>
