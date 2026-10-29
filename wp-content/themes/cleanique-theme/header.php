@@ -245,7 +245,7 @@ $is_landing_page = $is_paket_usaha || $is_aplikasi_laundry;
     <form role="search" method="get" class="cq-search-modal-form" action="<?php echo esc_url(home_url('/')); ?>">
       <div class="cq-search-modal-input-wrap">
         <i class="ri-search-line cq-search-modal-icon"></i>
-        <input type="search" class="cq-search-modal-input" placeholder="Ketik kata kunci (misal: paket kemitraan, parfum laundry, mesin stack)..." value="<?php echo get_search_query(); ?>" name="s" autocomplete="off" />
+        <input type="search" class="cq-search-modal-input" placeholder="Ketik kata kunci (misal: paket kemitraan, biang sabun, mesin cuci)..." value="<?php echo get_search_query(); ?>" name="s" autocomplete="off" />
         <button type="submit" class="cq-btn cq-btn-primary cq-btn-sm cq-btn-pill">Cari</button>
       </div>
     </form>
@@ -253,8 +253,8 @@ $is_landing_page = $is_paket_usaha || $is_aplikasi_laundry;
       <span class="cq-search-sug-label"><i class="ri-fire-line"></i> Rekomendasi Pencarian:</span>
       <div class="cq-search-sug-pills">
         <a href="<?php echo esc_url(home_url('/?s=kemitraan')); ?>" class="cq-search-tag">Paket Kemitraan</a>
-        <a href="<?php echo esc_url(home_url('/?s=chemical+orchid')); ?>" class="cq-search-tag">Chemical Pabrik Orchid</a>
-        <a href="<?php echo esc_url(home_url('/?s=mesin+komersial')); ?>" class="cq-search-tag">Mesin Cuci Heavy Duty</a>
+        <a href="<?php echo esc_url(home_url('/?s=biang+sabun')); ?>" class="cq-search-tag">Biang Sabun Pabrik</a>
+        <a href="<?php echo esc_url(home_url('/?s=mesin+cuci')); ?>" class="cq-search-tag">Mesin Cuci &amp; Pengering</a>
         <a href="<?php echo esc_url(home_url('/?s=aplikasi+kasir')); ?>" class="cq-search-tag">Aplikasi Kasir POS</a>
       </div>
     </div>

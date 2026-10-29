@@ -64,7 +64,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
         <div class="cq-corp-gateway-card">
           <div class="cq-gateway-thumb-wrap">
             <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/equip-washer-dryer.jpg'); ?>" 
-                 alt="Paket Penjualan Usaha Laundry Mesin Komersial Heavy Duty" 
+                 alt="Paket Penjualan Usaha Laundry Mesin Cuci dan Pengering" 
                  class="cq-gateway-thumb-img" 
                  loading="lazy">
           </div>
@@ -76,12 +76,12 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
           </div>
 
           <p class="cq-corp-card-desc">
-            Paket investasi mandiri komplit dengan unit mesin cuci &amp; pengering komersial heavy-duty bergaransi resmi pabrik, instalasi pemipaan air &amp; gas standar keselamatan, pasokan awal chemical pabrik Orchid Brand, dan SOP operasional lengkap hingga grand opening. 100% kepemilikan aset &amp; keuntungan milik Anda tanpa potongan omzet bulanan.
+            Paket investasi mandiri komplit dengan unit mesin cuci &amp; pengering siap pakai, instalasi pemipaan air &amp; gas standar keselamatan, pasokan awal <strong>biang sabun pekat</strong> yang diencerkan sendiri agar biaya operasional lebih murah, dan SOP operasional lengkap hingga grand opening. 100% kepemilikan aset &amp; keuntungan milik Anda tanpa potongan omzet bulanan.
           </p>
 
           <ul class="cq-corp-gateway-bullets">
-            <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> Mesin cuci front load &amp; dryer komersial heavy-duty bergaransi resmi</li>
-            <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> Pasokan chemical standar industri langsung dari pabrik Sleman</li>
+            <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> Mesin cuci front load &amp; top load plus pengering box gas, semua unit baru</li>
+            <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> Pasokan biang sabun pekat &amp; paket bahan langsung dari pabrik Sleman</li>
             <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> 100% kepemilikan aset mesin &amp; keuntungan harian milik Anda</li>
           </ul>
 
@@ -144,7 +144,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
       </div>
 
       <div class="cq-showcase-list">
-        <!-- Row 1: Mesin Cuci & Dryer Heavy Duty (Image Kiri, Konten Kanan) -->
+        <!-- Row 1: Mesin Cuci & Pengering (Image Kiri, Konten Kanan) -->
         <div class="cq-showcase-row is-reversed" id="hardware-mesin">
           <div class="cq-showcase-visual">
             <div class="cq-showcase-window">
@@ -152,11 +152,11 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
                 <div class="cq-showcase-dots">
                   <span></span><span></span><span></span>
                 </div>
-                <span class="cq-showcase-titlebar">Hardware Komersial &bull; Heavy Duty</span>
+                <span class="cq-showcase-titlebar">Peralatan Siap Pakai &bull; Unit Baru</span>
               </div>
               <div class="cq-showcase-img-box">
                 <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/equip-washer-dryer.jpg'); ?>" 
-                     alt="Set Mesin Cuci Front Load dan Pengering Gas Heavy Duty Cleanique Laundry" 
+                     alt="Mesin Cuci dan Pengering Laundry Cleanique" 
                      class="cq-showcase-img"
                      loading="lazy"
                      width="1200"
@@ -165,23 +165,23 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
             </div>
           </div>
           <div class="cq-showcase-content">
-            <span class="cq-badge-clean">Mesin Komersial</span>
-            <h3 class="cq-showcase-title">Mesin Komersial Heavy Duty, Tahan Putaran Non-Stop</h3>
+            <span class="cq-badge-clean">Peralatan</span>
+            <h3 class="cq-showcase-title">Mesin Cuci &amp; Pengering Baru, Siap Operasional</h3>
             <p class="cq-showcase-lead">
-              Bukan mesin cuci rumah tangga biasa yang cepat jebol bila dipaksa bekerja maraton setiap hari. Cleanique menyuplai set mesin front-loading drum stainless steel SUS304 berdaya putar tinggi dan dryer konversi gas bergaransi resmi.
+              Mesin yang kami kirim adalah unit baru, bukan bekas atau rekondisi. Komposisi front load, top load, dan pengering box gas disesuaikan dengan kapasitas paket dan hasil survei lokasi, lalu dirakit serta diuji di tempat.
             </p>
             <ul class="cq-showcase-specs">
               <li class="cq-showcase-spec-item">
                 <i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
-                <span><strong>Putaran RPM Tinggi:</strong> Drum SUS304 memeras air cucian hingga 70% lebih kering sebelum masuk dryer.</span>
+                <span><strong>Kapasitas Sesuai Volume:</strong> Front load 7 kg untuk cucian harian, top load 9–12 kg untuk sprei dan selimut.</span>
               </li>
               <li class="cq-showcase-spec-item">
                 <i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
-                <span><strong>Pengering Gas Konversi:</strong> Pakaian kering 100% tuntas dalam 45 menit siap lipat tanpa perlu dijemur.</span>
+                <span><strong>Pengering Box Gas:</strong> Tidak bergantung cuaca dan lebih hemat dibanding pengering listrik.</span>
               </li>
               <li class="cq-showcase-spec-item">
                 <i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
-                <span><strong>Garansi Servis Resmi:</strong> Didukung ketersediaan suku cadang dan teknisi terlatih PT Indotech.</span>
+                <span><strong>Konsultasi Teknis Tanpa Batas:</strong> Tanya jawab operasional via WhatsApp kapan pun dibutuhkan.</span>
               </li>
             </ul>
             <div class="cq-showcase-action">
@@ -192,22 +192,22 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
           </div>
         </div>
 
-        <!-- Row 2: Pabrik Chemical Orchid Brand (Konten Kiri, Image Kanan) -->
+        <!-- Row 2: Pabrik Biang Sabun & Paket Bahan (Konten Kiri, Image Kanan) -->
         <div class="cq-showcase-row" id="pabrik-chemical">
           <div class="cq-showcase-content">
-            <span class="cq-badge-clean">Pabrik Kimia</span>
-            <h3 class="cq-showcase-title">Bahan Kimia Laundry Kualitas Pabrik dengan HPP Hemat</h3>
+            <span class="cq-badge-clean">Pabrik Bahan</span>
+            <h3 class="cq-showcase-title">Biang Sabun &amp; Paket Bahan Pabrik, Biaya Operasional Lebih Murah</h3>
             <p class="cq-showcase-lead">
-              Diproduksi langsung oleh PT Indotech Berkah Abadi di Sleman, D.I. Yogyakarta. Deterjen konsentrat rendah busa menjaga dinamo mesin cuci tetap awet dan hemat bilasan air, serta parfum microcapsule wangi tahan 30 hari di lemari.
+              Diproduksi langsung oleh PT Indotech Berkah Abadi di Sleman, D.I. Yogyakarta. Bahan dikirim dalam bentuk <strong>pekat</strong> lalu diencerkan sendiri di outlet, sehingga biaya per kilo cucian lebih murah dibanding membeli sabun jadi. Bahan bersertifikat halal.
             </p>
             <ul class="cq-showcase-specs">
               <li class="cq-showcase-spec-item">
                 <i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
-                <span><strong>Harga Produsen Tangan Pertama:</strong> Memangkas HPP mencuci per kilogram sehingga margin laba outlet lebih tebal.</span>
+                <span><strong>Harga Produsen Tangan Pertama:</strong> Memangkas biaya mencuci per kilogram sehingga margin laba outlet lebih tebal.</span>
               </li>
               <li class="cq-showcase-spec-item">
                 <i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
-                <span><strong>Higienis &amp; Ramah Lingkungan:</strong> Izin edar resmi, lulus uji laboratorium, dan lembut menjaga serat pakaian.</span>
+                <span><strong>Bersertifikat Halal:</strong> Siap difasilitasi untuk sertifikasi halal outlet dan masuk ekosistem mitra bisnis syariah.</span>
               </li>
               <li class="cq-showcase-spec-item">
                 <i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
@@ -216,7 +216,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
             </ul>
             <div class="cq-showcase-action">
               <a href="<?php echo esc_url(home_url('/pabrik-chemical/')); ?>" class="cq-btn cq-btn-primary cq-btn-pill">
-                Pabrik Kimia
+                Pabrik Bahan
               </a>
             </div>
           </div>
@@ -226,7 +226,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
                 <div class="cq-showcase-dots">
                   <span></span><span></span><span></span>
                 </div>
-                <span class="cq-showcase-titlebar">Pabrik Chemical &bull; Orchid Brand</span>
+                <span class="cq-showcase-titlebar">Pabrik Biang Sabun &bull; PT Indotech</span>
               </div>
               <div class="cq-showcase-img-box">
                 <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/chemical-products.jpg'); ?>" 
@@ -336,7 +336,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
           </div>
         </div>
 
-        <!-- Row 5: SOP, Pelatihan & Teknisi Siaga (Image Kiri, Konten Kanan) -->
+        <!-- Row 5: SOP, Pelatihan & Konsultasi Teknis (Image Kiri, Konten Kanan) -->
         <div class="cq-showcase-row is-reversed" id="teknisi-sop">
           <div class="cq-showcase-visual">
             <div class="cq-showcase-window">
@@ -348,7 +348,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
               </div>
               <div class="cq-showcase-img-box">
                 <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/indotech-team.jpg'); ?>" 
-                     alt="Pusat Layanan Teknis &amp; Workshop PT Indotech Berkah Abadi Yogyakarta" 
+                     alt="Tim Indotech Berkah Abadi Sleman" 
                      class="cq-showcase-img"
                      loading="lazy"
                      width="1200"
@@ -357,10 +357,10 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
             </div>
           </div>
           <div class="cq-showcase-content">
-            <span class="cq-badge-clean">Dukungan Teknis</span>
-            <h3 class="cq-showcase-title">Standardisasi Alur Kerja, Pelatihan SOP &amp; Teknisi Siaga</h3>
+            <span class="cq-badge-clean">Pendampingan</span>
+            <h3 class="cq-showcase-title">Standardisasi Alur Kerja, Pelatihan SOP &amp; Konsultasi Teknis</h3>
             <p class="cq-showcase-lead">
-              Anda tidak memulai bisnis ini sendirian. Insinyur mesin dan tim operasional PT Indotech Berkah Abadi mengawal mulai dari desain tata letak alur ruko higienis, instalasi pipa &amp; gas safety, hingga pelatihan karyawan dan kunjungan servis berkala.
+              Anda tidak memulai bisnis ini sendirian. Tim PT Indotech Berkah Abadi mengawal mulai dari desain tata letak alur ruko higienis, instalasi pipa &amp; gas, pelatihan karyawan, hingga konsultasi operasional setelah outlet berjalan.
             </p>
             <ul class="cq-showcase-specs">
               <li class="cq-showcase-spec-item">
@@ -369,11 +369,11 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
               </li>
               <li class="cq-showcase-spec-item">
                 <i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
-                <span><strong>Pelatihan Karyawan Tuntas:</strong> Edukasi teknik mencuci, takaran chemical presisi, dan pelayanan kasir POS.</span>
+                <span><strong>Pelatihan Karyawan Tuntas:</strong> 5 hari 4 malam oleh trainer: teknik mencuci, takaran bahan, dan pelayanan kasir POS.</span>
               </li>
               <li class="cq-showcase-spec-item">
                 <i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
-                <span><strong>Tim Teknisi Siaga Sleman:</strong> Layanan pemeliharaan berkala, perbaikan mesin cepat, dan stok sparepart resmi.</span>
+                <span><strong>Konsultasi Teknis Tanpa Batas:</strong> Tanya jawab teknis dan manajemen laundry via WhatsApp tanpa batas waktu.</span>
               </li>
             </ul>
             <div class="cq-showcase-action">
@@ -395,89 +395,283 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
       <div class="cq-section-header">
         <h2 class="cq-section-title">Pilihan Paket Usaha Laundry Siap Buka</h2>
         <p class="cq-section-desc">
-          Investasi transparan sesuai lokasi dan modal usaha Anda. Seluruh paket sudah termasuk mesin komersial, instalasi plumbing aman, paket awal chemical pabrik, dan SOP tuntas tanpa potongan omzet bulanan.
+          Investasi transparan sesuai lokasi dan modal usaha Anda. Seluruh paket komplit di atas <strong>sudah otomatis include Paket Pelatihan SOP &amp; Pendampingan Onsite (senilai Rp 8.500.000)</strong> tanpa biaya tambahan. Bagi yang sudah memiliki unit mesin sendiri, tersedia pula paket pelatihan terpisah.
         </p>
       </div>
 
-      <div class="cq-bento-grid cq-bento-grid-3">
-        <!-- Paket 1: Starter Kiloan -->
-        <div class="cq-kemitraan-card">
-          <div class="cq-kemitraan-header">
-            <h3 class="cq-corp-card-title">Paket Kiloan Starter</h3>
-            <p class="cq-corp-card-desc">Solusi hemat bagi pemula untuk membuka usaha laundry kiloan di perumahan atau area kos mahasiswa.</p>
-          </div>
-          <div class="cq-kemitraan-price-wrap">
-            <div class="cq-kemitraan-price">Mulai Rp 28 Juta-an</div>
-            <span class="cq-kemitraan-price-label">Estimasi modal investasi siap buka</span>
-          </div>
-          <ul class="cq-kemitraan-specs-list">
-            <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> <span>1 Unit Mesin Cuci Front Load Komersial</span></li>
-            <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> <span>1 Unit Mesin Pengering Gas Konversi 10.5 Kg</span></li>
-            <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> <span>Starter Kit Chemical Pabrik Orchid Brand 60 Liter</span></li>
-            <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> <span>Instalasi Plumbing &amp; SOP Operasional Karyawan</span></li>
-            <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> <span>Lisensi Aplikasi Kasir POS Cleanique Laundry</span></li>
-          </ul>
-          <div class="cq-kemitraan-actions">
-            <a href="<?php echo esc_url(cleanique_get_whatsapp_url('kemitraan')); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-block" target="_blank" rel="noopener">
-              <i class="ri-whatsapp-line"></i> Pilih Starter
-            </a>
-          </div>
+      <!-- Toggle Skema Investasi (Modern Tiered Pricing Architecture) -->
+      <div class="cq-pricing-switcher-wrap">
+        <div class="cq-pricing-switcher-pills" role="tablist" aria-label="Pilihan Skema Pembayaran">
+          <button type="button" class="cq-pricing-pill-btn is-active" data-scheme="full" role="tab" aria-selected="true">
+            <i class="ri-wallet-3-line"></i>
+            <span>Bayar Lunas</span>
+          </button>
+          <button type="button" class="cq-pricing-pill-btn" data-scheme="termin" role="tab" aria-selected="false">
+            <i class="ri-calendar-check-line"></i>
+            <span>Skema Termin</span>
+            <span class="cq-switcher-badge">DP 50%</span>
+          </button>
         </div>
-
-        <!-- Paket 2: Komersial Pro (Featured) -->
-        <div class="cq-kemitraan-card is-featured">
-          <div class="cq-kemitraan-ribbon">Paling Populer</div>
-          <div class="cq-kemitraan-header">
-            <h3 class="cq-corp-card-title">Paket Komersial Pro (Ruko)</h3>
-            <p class="cq-corp-card-desc">Kapasitas tinggi untuk lokasi ruko komersial strategis, melayani kiloan cepat dan bed cover tebal.</p>
-          </div>
-          <div class="cq-kemitraan-price-wrap">
-            <div class="cq-kemitraan-price">Mulai Rp 48 Juta-an</div>
-            <span class="cq-kemitraan-price-label">Estimasi modal investasi siap buka</span>
-          </div>
-          <ul class="cq-kemitraan-specs-list">
-            <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> <span>2 Unit Mesin Cuci Komersial Front Load Stack</span></li>
-            <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> <span>2 Unit Mesin Pengering Gas Heavy Duty 10.5 Kg</span></li>
-            <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> <span>Paket Chemical Pabrik Orchid Brand 120 Liter</span></li>
-            <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> <span>Boiler Setrika Uap 15 Liter + Meja Vacuum</span></li>
-            <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> <span>Pelatihan Karyawan &amp; SOP Higienis Onsite</span></li>
-          </ul>
-          <div class="cq-kemitraan-actions">
-            <a href="<?php echo esc_url(cleanique_get_whatsapp_url('kemitraan')); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-block" target="_blank" rel="noopener">
-              <i class="ri-whatsapp-line"></i> Pilih Komersial
-            </a>
-          </div>
-        </div>
-
-        <!-- Paket 3: Industrial Express -->
-        <div class="cq-kemitraan-card">
-          <div class="cq-kemitraan-header">
-            <h3 class="cq-corp-card-title">Paket Industrial Express</h3>
-            <p class="cq-corp-card-desc">Spesifikasi mesin heavy-duty berkapasitas besar untuk sentra laundry hotel melati, asrama, dan guesthouse.</p>
-          </div>
-          <div class="cq-kemitraan-price-wrap">
-            <div class="cq-kemitraan-price">Mulai Rp 85 Juta-an</div>
-            <span class="cq-kemitraan-price-label">Estimasi modal investasi siap buka</span>
-          </div>
-          <ul class="cq-kemitraan-specs-list">
-            <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> <span>Set Mesin Industri Washer &amp; Dryer Kapasitas Ekstra</span></li>
-            <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> <span>Sistem Boiler Uap Otomatis 25 Liter Multi-Kepala</span></li>
-            <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> <span>Pasokan Kimia Industri Skala Besar Harga Pabrik</span></li>
-            <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> <span>Aplikasi POS Multi-Kasir &amp; Laporan Cloud Terpusat</span></li>
-            <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> <span>Pendampingan Manajemen &amp; Pemasaran Grand Opening</span></li>
-          </ul>
-          <div class="cq-kemitraan-actions">
-            <a href="<?php echo esc_url(cleanique_get_whatsapp_url('kemitraan')); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-block" target="_blank" rel="noopener">
-              <i class="ri-whatsapp-line"></i> Pilih Industrial
-            </a>
-          </div>
+        <div class="cq-pricing-switcher-note">
+          <span class="cq-scheme-note cq-scheme-note-full is-active">
+            <i class="ri-shield-check-fill"></i> Paket komplit siap buka: mesin baru, instalasi pipa &amp; gas, chemical awal, dan pelatihan tuntas 0% royalti.
+          </span>
+          <span class="cq-scheme-note cq-scheme-note-termin">
+            <i class="ri-information-fill"></i> Ringan di awal: <strong>DP 50%</strong> saat penandatanganan MOU, <strong>Termin 40%</strong> saat mesin tiba di lokasi, dan <strong>Pelunasan 10%</strong> saat serah terima.
+          </span>
         </div>
       </div>
 
-      <div class="cq-kemitraan-catalog-action">
-        <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-lg">
-          Katalog Paket
-        </a>
+      <!-- Tiered Bento Pricing Layout (3 Core Cards Top + 2 Wide Cards Bottom) -->
+      <div class="cq-pricing-bento-layout">
+        <!-- Row 1: 3 Core Tier Cards -->
+        <div class="cq-pricing-bento-top">
+          <!-- Paket 1: Starter Kiloan -->
+          <div class="cq-kemitraan-card">
+            <div class="cq-kemitraan-header">
+              <h3 class="cq-corp-card-title">Paket Starter</h3>
+              <p class="cq-corp-card-desc">Solusi hemat bagi pemula untuk membuka usaha laundry kiloan di perumahan atau area kos.</p>
+            </div>
+
+            <!-- High-Impact Price Showcase Box -->
+            <div class="cq-kemitraan-price-box">
+              <div class="cq-kemitraan-price-display">
+                <span class="cq-price-prefix">Rp</span>
+                <span class="cq-price-val" data-price-full="45" data-price-termin="22,5">45</span>
+                <span class="cq-price-unit">
+                  <span class="cq-price-unit-main">Juta</span>
+                  <span class="cq-price-unit-sub" data-sub-full="-an" data-sub-termin="-an (MOU)">-an</span>
+                </span>
+              </div>
+              <p class="cq-price-subtext" data-label-full="Estimasi modal siap buka" data-label-termin="DP 50% saat MOU">Estimasi modal siap buka</p>
+            </div>
+
+            <!-- ROI Indicator Chip -->
+            <div class="cq-kemitraan-roi-pill">
+              <i class="ri-line-chart-line"></i> BEP 4 &ndash; 6 Bulan
+            </div>
+
+            <div class="cq-kemitraan-divider"></div>
+
+            <ul class="cq-kemitraan-specs-list">
+              <li class="cq-spec-highlight-free"><i class="ri-gift-line" aria-hidden="true"></i> <span>Pelatihan SOP Onsite (Gratis)</span></li>
+              <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> <span>1 Unit Mesin Cuci Front Load 7 kg + Top Load 9 kg</span></li>
+              <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> <span>1 Unit Pengering Box Konversi Gas 10 kg</span></li>
+              <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> <span>Starter Paket Chemical Biang Pabrik Orchid</span></li>
+              <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> <span>2 Unit Setrika Listrik + Detailing</span></li>
+              <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> <span>Aplikasi Kasir POS Cleanique 6 Bulan</span></li>
+            </ul>
+
+            <div class="cq-kemitraan-actions">
+              <a href="<?php echo esc_url(cleanique_get_whatsapp_url('kemitraan')); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-block" target="_blank" rel="noopener">
+                <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi
+              </a>
+              <a href="<?php echo esc_url(home_url('/kemitraan/paket-kiloan-starter/')); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-block">
+                Detail Paket
+              </a>
+            </div>
+          </div>
+
+          <!-- Paket 2: Komersial Pro (Featured) -->
+          <div class="cq-kemitraan-card is-featured">
+            <!-- Featured Floating Ribbon -->
+            <div class="cq-kemitraan-ribbon">
+              <i class="ri-fire-fill"></i> Paling Populer
+            </div>
+
+            <div class="cq-kemitraan-header">
+              <h3 class="cq-corp-card-title">Paket Super</h3>
+              <p class="cq-corp-card-desc">Kapasitas menengah untuk ruko komersial strategis, melayani kiloan cepat dan bed cover.</p>
+            </div>
+
+            <!-- High-Impact Price Showcase Box (Featured Style) -->
+            <div class="cq-kemitraan-price-box is-featured">
+              <div class="cq-kemitraan-price-display">
+                <span class="cq-price-prefix is-featured">Rp</span>
+                <span class="cq-price-val is-featured" data-price-full="75" data-price-termin="37,5">75</span>
+                <span class="cq-price-unit">
+                  <span class="cq-price-unit-main is-featured">Juta</span>
+                  <span class="cq-price-unit-sub" data-sub-full="-an" data-sub-termin="-an (MOU)">-an</span>
+                </span>
+              </div>
+              <p class="cq-price-subtext" data-label-full="Estimasi modal siap buka" data-label-termin="DP 50% saat MOU">Estimasi modal siap buka</p>
+            </div>
+
+            <!-- ROI Indicator Chip -->
+            <div class="cq-kemitraan-roi-pill is-featured">
+              <i class="ri-line-chart-line"></i> BEP 5 &ndash; 8 Bulan
+            </div>
+
+            <div class="cq-kemitraan-divider"></div>
+
+            <ul class="cq-kemitraan-specs-list">
+              <li class="cq-spec-highlight-free"><i class="ri-gift-line" aria-hidden="true"></i> <span>Pelatihan Onsite 5 Hari (Gratis)</span></li>
+              <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> <span>2 Unit Mesin Cuci Front Load 7 kg + Top Load 12 kg</span></li>
+              <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> <span>2 Unit Pengering Box Konversi Gas 10 kg</span></li>
+              <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> <span>Setrika Uap Boiler 15 Liter + Listrik</span></li>
+              <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> <span>Vertical Steamer untuk Jas &amp; Gaun</span></li>
+              <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> <span>Tablet Kasir + POS Cleanique 1 Tahun</span></li>
+            </ul>
+
+            <div class="cq-kemitraan-actions">
+              <a href="<?php echo esc_url(cleanique_get_whatsapp_url('kemitraan')); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-block cq-btn-featured" target="_blank" rel="noopener">
+                <i class="ri-whatsapp-fill"></i>
+                <span>Pilih Paket</span>
+              </a>
+              <a href="<?php echo esc_url(home_url('/kemitraan/paket-komersial-pro-ruko/')); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-block">
+                Detail Paket
+              </a>
+            </div>
+          </div>
+
+          <!-- Paket 3: Industrial Express -->
+          <div class="cq-kemitraan-card">
+            <div class="cq-kemitraan-header">
+              <h3 class="cq-corp-card-title">Paket Premium</h3>
+              <p class="cq-corp-card-desc">Skala komersial besar untuk sentra laundry hotel melati, asrama, dan guesthouse.</p>
+            </div>
+
+            <!-- High-Impact Price Showcase Box -->
+            <div class="cq-kemitraan-price-box">
+              <div class="cq-kemitraan-price-display">
+                <span class="cq-price-prefix">Rp</span>
+                <span class="cq-price-val" data-price-full="167" data-price-termin="83,5">167</span>
+                <span class="cq-price-unit">
+                  <span class="cq-price-unit-main">Juta</span>
+                  <span class="cq-price-unit-sub" data-sub-full="-an" data-sub-termin="-an (MOU)">-an</span>
+                </span>
+              </div>
+              <p class="cq-price-subtext" data-label-full="Estimasi modal siap buka" data-label-termin="DP 50% saat MOU">Estimasi modal siap buka</p>
+            </div>
+
+            <!-- ROI Indicator Chip -->
+            <div class="cq-kemitraan-roi-pill">
+              <i class="ri-line-chart-line"></i> BEP 6 &ndash; 10 Bulan
+            </div>
+
+            <div class="cq-kemitraan-divider"></div>
+
+            <ul class="cq-kemitraan-specs-list">
+              <li class="cq-spec-highlight-free"><i class="ri-gift-line" aria-hidden="true"></i> <span>Pelatihan Komprehensif (Gratis)</span></li>
+              <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> <span>4 Unit Mesin Cuci Front Load 7 kg + 2 Top Load 12 kg</span></li>
+              <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> <span>4 Unit Pengering Box Konversi Gas 10 kg</span></li>
+              <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> <span>2 Unit Setrika Uap Boiler 20 Liter</span></li>
+              <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> <span>PC Kasir + Printer Nota &amp; Tablet</span></li>
+              <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> <span>Aplikasi POS Cleanique 1,5 Tahun</span></li>
+            </ul>
+
+            <div class="cq-kemitraan-actions">
+              <a href="<?php echo esc_url(cleanique_get_whatsapp_url('kemitraan')); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-block" target="_blank" rel="noopener">
+                <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi
+              </a>
+              <a href="<?php echo esc_url(home_url('/kemitraan/paket-industrial-express/')); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-block">
+                Detail Paket
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: 2 Wide Bento Cards (Pelatihan & SOP + Enterprise Industrial) -->
+        <div class="cq-pricing-bento-bottom">
+          <!-- Card 4: Horizontal Split Card (Paket Pelatihan & SOP Tanpa Mesin) -->
+          <div class="cq-pricing-horizontal-card">
+            <div class="cq-pricing-horizontal-left">
+              <div class="cq-kemitraan-header">
+                <span class="cq-pkg-tag"><i class="ri-user-star-line"></i> Tanpa Mesin</span>
+                <h3 class="cq-corp-card-title">Pelatihan SOP Saja</h3>
+                <p class="cq-corp-card-desc">Bimbingan operasional mandiri bagi yang sudah memiliki unit mesin sendiri.</p>
+              </div>
+
+              <div class="cq-kemitraan-price-box">
+                <div class="cq-kemitraan-price-display">
+                  <span class="cq-price-prefix">Rp</span>
+                  <span class="cq-price-val" data-price-full="8,5" data-price-termin="4,25">8,5</span>
+                  <span class="cq-price-unit">
+                    <span class="cq-price-unit-main">Juta</span>
+                    <span class="cq-price-unit-sub" data-sub-full="" data-sub-termin=" (MOU)"></span>
+                  </span>
+                </div>
+                <p class="cq-price-subtext" data-label-full="Pelatihan onsite komplit" data-label-termin="DP 50% saat MOU">Pelatihan onsite komplit</p>
+              </div>
+
+              <div class="cq-kemitraan-actions">
+                <a href="<?php echo esc_url(cleanique_get_kemitraan_whatsapp_url(41)); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-block" target="_blank" rel="noopener">
+                  <span>Pilih Pelatihan</span>
+                  <i class="ri-arrow-right-line"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="cq-pricing-horizontal-right">
+              <h4 class="cq-horizontal-right-title"><i class="ri-checkbox-multiple-fill"></i> Modul Pelatihan:</h4>
+              <ul class="cq-horizontal-feature-list">
+                <li>
+                  <i class="ri-checkbox-circle-fill"></i>
+                  <div>
+                    <strong>Bimbingan Onsite 5 Hari</strong>
+                    <span>Pelatihan langsung di outlet Anda sampai siap beroperasi.</span>
+                  </div>
+                </li>
+                <li>
+                  <i class="ri-checkbox-circle-fill"></i>
+                  <div>
+                    <strong>SOP Cuci &amp; Spotting Noda</strong>
+                    <span>Teknik pembersihan noda darah, minyak, jamur, serta setrika uap.</span>
+                  </div>
+                </li>
+                <li>
+                  <i class="ri-checkbox-circle-fill"></i>
+                  <div>
+                    <strong>Starter Chemical Pabrik Orchid</strong>
+                    <span>Deterjen konsentrat, softener, &amp; parfum microcapsule tahan lama.</span>
+                  </div>
+                </li>
+                <li>
+                  <i class="ri-checkbox-circle-fill"></i>
+                  <div>
+                    <strong>Aplikasi POS &amp; Nota WhatsApp</strong>
+                    <span>Pencatatan kasir digital berbasis cloud dan anti-curang.</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 5: Enterprise Industrial Card (Custom Quote & Skala Besar) -->
+          <div class="cq-pricing-enterprise-card">
+            <div class="cq-enterprise-header">
+              <span class="cq-pkg-tag is-enterprise"><i class="ri-building-4-line"></i> Sentra Industri</span>
+              <h3 class="cq-corp-card-title">Skala Industri Besar</h3>
+              <p class="cq-corp-card-desc">Kebutuhan kapasitas mesin ekstra besar untuk sentra laundry rumah sakit, hotel, dan asrama.</p>
+            </div>
+
+            <div class="cq-enterprise-specs">
+              <div class="cq-enterprise-spec-item">
+                <i class="ri-ruler-2-line"></i>
+                <span>Layout alur &amp; survey</span>
+              </div>
+              <div class="cq-enterprise-spec-item">
+                <i class="ri-sound-module-line"></i>
+                <span>Mesin 25 &ndash; 100 kg</span>
+              </div>
+              <div class="cq-enterprise-spec-item">
+                <i class="ri-fire-line"></i>
+                <span>Boiler uap sentral gas</span>
+              </div>
+              <div class="cq-enterprise-spec-item">
+                <i class="ri-file-text-line"></i>
+                <span>Kontrak resmi PT</span>
+              </div>
+            </div>
+
+            <div class="cq-enterprise-footer">
+              <a href="<?php echo esc_url(cleanique_get_whatsapp_url('kemitraan')); ?>" class="cq-btn cq-btn-enterprise cq-btn-pill cq-btn-block" target="_blank" rel="noopener">
+                <span>Hubungi Kami</span>
+                <i class="ri-arrow-right-line"></i>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -619,7 +813,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
               </div>
             </div>
             <p class="cq-timeline-card-desc">
-              Pengiriman unit mesin washer &amp; dryer komersial dari workshop Sleman ke lokasi outlet mitra. Teknisi berpengalaman PT Indotech melakukan perakitan unit, kalibrasi putaran RPM, setting pembakar gas, dan pengujian operasional menyeluruh.
+              Pengiriman unit mesin cuci &amp; pengering dari workshop Sleman ke lokasi outlet mitra. Tim instalasi PT Indotech melakukan perakitan unit, pengujian fungsi, setting pembakar gas, dan pengujian operasional menyeluruh.
             </p>
             <div class="cq-timeline-tags-row">
               <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Ekspedisi Berasuransi Penuh</span>
@@ -650,7 +844,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
               </div>
             </div>
             <p class="cq-timeline-card-desc">
-              Pelatihan intensif bagi staf kasir dan operator: teknik identifikasi kain, takaran chemical presisi dari pabrik Orchid Brand, teknik spotting noda membandel, teknik setrika uap cepat, serta pengoperasian sistem kasir POS Cleanique.
+              Pelatihan intensif bagi staf kasir dan operator: teknik identifikasi kain, takaran bahan presisi, teknik spotting noda membandel, teknik setrika uap cepat, serta pengoperasian sistem kasir POS Cleanique.
             </p>
             <div class="cq-timeline-tags-row">
               <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Modul Kimia Rendah Busa</span>
@@ -708,7 +902,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
       [
           'name'       => 'Pak Hendro & Ibu Siska',
           'role'       => 'Owner Cleanique Express • Minomartani, Sleman',
-          'quote'      => 'Awalnya ragu karena kami belum pernah bisnis laundry. Sangat terbantu dengan pendampingan teknisi Indotech dari perancangan pipa, kelistrikan sampai training takaran chemical. Deterjen dan parfumnya wangi tahan lama dan hemat karena suplai langsung pabrik. Dalam 6 bulan modal kami sudah balik!',
+          'quote'      => 'Awalnya ragu karena kami belum pernah bisnis laundry. Sangat terbantu dengan pendampingan surveyor dan trainer Indotech dari perancangan pipa, kelistrikan sampai pelatihan takaran bahan. Biang sabunnya hemat karena diencerkan sendiri dan hasilnya konsisten. Dalam 6 bulan modal kami sudah balik!',
           'initial'    => 'H',
           'avatar_bg'  => '#0284C7',
           'avatar_img' => get_template_directory_uri() . '/assets/images/mitra-outlet-sleman.jpg',
@@ -726,7 +920,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
       [
           'name'       => 'Ibu Hj. Nurul Hidayati',
           'role'       => 'Owner Cleanique Tembalang • Semarang',
-          'quote'      => 'Mesin komersial stack washer & dryer Cleanique benar-benar bandel, bekerja maraton dari pagi sampai malam mesin tetap stabil dan hemat gas. Tim teknisi PT Indotech responsif saat instalasi. Sekarang kami sedang persiapan membuka cabang kedua.',
+          'quote'      => 'Mesinnya bekerja dari pagi sampai malam tanpa kendala, dan biang sabunnya jauh lebih hemat dibanding beli deterjen jadi. Tim instalasi PT Indotech juga rapi saat pemasangan pipa dan gas. Sekarang kami sedang persiapan membuka cabang kedua.',
           'initial'    => 'N',
           'avatar_bg'  => '#059669',
           'avatar_img' => get_template_directory_uri() . '/assets/images/mitra-outlet-semarang.jpg',
@@ -735,7 +929,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
       [
           'name'       => 'dr. Maya Anggraini',
           'role'       => 'Owner Royal Laundromat • 4 Cabang, Bandung',
-          'quote'      => 'Mengelola 4 cabang laundry kiloan dan satuan jadi sangat terkontrol dalam satu ekosistem Cleanique. Pasokan chemical pabrik Orchid Brand selalu ready tepat waktu, mesin komersial minim downtime, dan laporan laba rugi terpantau harian dari HP.',
+          'quote'      => 'Mengelola 4 cabang laundry kiloan dan satuan jadi sangat terkontrol dalam satu ekosistem Cleanique. Pasokan biang sabun pabrik selalu ready tepat waktu, mesin minim downtime, dan laporan laba rugi terpantau harian dari HP.',
           'initial'    => 'M',
           'avatar_bg'  => '#DB2777',
           'avatar_img' => '',
@@ -762,7 +956,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
       [
           'name'       => 'Budi Santoso',
           'role'       => 'Owner Smart Clean Laundromat • Bantul, Yogyakarta',
-          'quote'      => 'Instalasi boiler setrika uap dan mesin dryer gas dari Indotech sangat rapi dan safety. Karyawan kami bisa bekerja 2x lebih cepat dan hemat tenaga. Layanan purna jual teknisinya sangat sigap saat kami butuh konsultasi sparepart.',
+          'quote'      => 'Instalasi setrika uap dan mesin pengering gas dari Indotech sangat rapi dan safety. Karyawan kami bisa bekerja 2x lebih cepat dan hemat tenaga. Konsultasi teknisnya juga tetap responsif saat kami butuh panduan operasional.',
           'initial'    => 'B',
           'avatar_bg'  => '#0D9488',
           'avatar_img' => '',
@@ -922,10 +1116,10 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
         <div class="cq-visual-split-content">
           <span class="cq-badge-clean">Pabrik Sleman</span>
           <h2 class="cq-section-title" style="margin-bottom: var(--cq-sp-16);">
-            Didukung Pabrik Kimia Sendiri &amp; Tim Ahli di Sleman
+            Didukung Pabrik Biang Sabun Sendiri &amp; Tim Ahli di Sleman
           </h2>
           <p style="color: var(--cq-text-muted); line-height: 1.7; margin-bottom: var(--cq-sp-24);">
-            <strong>PT Indotech Berkah Abadi</strong> menghadirkan standar mutu tinggi pada setiap produk: dari formulasi deterjen rendah busa dan parfum laundry microcapsule *Orchid Brand*, pemilihan mesin cuci heavy-duty komersial bergaransi, hingga perancangan aplikasi kasir berbasis cloud yang aman.
+            <strong>PT Indotech Berkah Abadi</strong> menghadirkan standar mutu tinggi pada setiap produk: dari formulasi biang sabun pekat, softener, dan parfum laundry, pemilihan mesin cuci &amp; pengering baru, hingga perancangan aplikasi kasir berbasis cloud yang aman.
           </p>
           <div>
             <a href="<?php echo esc_url(home_url('/tentang-kami/')); ?>" class="cq-btn cq-btn-primary cq-btn-pill">
@@ -938,9 +1132,9 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
       <!-- Showroom Box Sleman DIY -->
       <div class="cq-showroom-box">
         <div>
-          <h2 class="cq-showroom-title">Ingin Melihat Mesin &amp; Coba Chemical Langsung?</h2>
+          <h2 class="cq-showroom-title">Ingin Melihat Mesin &amp; Coba Bahan Langsung?</h2>
           <p class="cq-showroom-desc">
-            Pintu workshop dan showroom kami di Sleman, D.I. Yogyakarta terbuka lebar untuk calon mitra. Saksikan demo langsung kekuatan mesin cuci komersial, buktikan keharuman parfum Orchid Brand, dan diskusikan rencana bisnis Anda bersama konsultan kami.
+            Pintu workshop dan showroom kami di Sleman, D.I. Yogyakarta terbuka lebar untuk calon mitra. Lihat langsung unit mesin cuci &amp; pengering, coba formula biang sabun, dan diskusikan rencana bisnis Anda bersama konsultan kami.
           </p>
 
           <div class="cq-showroom-actions">
@@ -975,7 +1169,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
               <i class="ri-phone-fill" aria-hidden="true"></i>
               <div>
                 <strong>Hotline Konsultasi Kemitraan</strong>
-                <p>WhatsApp: 0812-3456-7890<br>Telepon: (0274) 889-1234</p>
+                <p>WhatsApp: 0856-0006-1005 (Ragil)<br>Telepon: (0274) 2882482</p>
               </div>
             </div>
           </div>
@@ -1003,7 +1197,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
           </button>
           <div class="cq-accordion-content">
             <p>
-              Kemitraan Cleanique Laundry adalah sistem pembelian paket usaha mandiri komplit (Turnkey). Mesin, peralatan, dan seluruh aset outlet 100% menjadi hak milik Anda. Kami tidak memotong omzet atau memungut royalti fee bulanan. Model bisnis kami adalah sebagai produsen bahan kimia pabrik Orchid Brand dan penyedia mesin resmi.
+              Kemitraan Cleanique Laundry adalah sistem pembelian paket usaha mandiri komplit (Turnkey). Mesin, peralatan, dan seluruh aset outlet 100% menjadi hak milik Anda. Kami tidak memotong omzet atau memungut royalti fee bulanan. Model bisnis kami adalah sebagai produsen biang sabun &amp; paket bahan laundry dan penyedia mesin.
             </p>
           </div>
         </div>
@@ -1063,12 +1257,12 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
         <!-- FAQ 6 -->
         <div class="cq-accordion-item">
           <button type="button" class="cq-accordion-trigger" aria-expanded="false">
-            <span>Apakah ada garansi mesin dan ketersediaan teknisi bila terjadi kendala?</span>
+            <span>Apakah unit mesin baru dan bagaimana pendampingannya?</span>
             <i class="ri-arrow-down-s-line cq-accordion-icon" aria-hidden="true"></i>
           </button>
           <div class="cq-accordion-content">
             <p>
-              Setiap paket kemitraan dilengkapi garansi servis dan suku cadang mesin resmi selama 1 tahun. Tim teknisi internal PT Indotech siap melakukan kunjungan perawatan maupun perbaikan cepat agar operasional outlet Anda tidak terganggu.
+              Semua unit 100% baru, bukan bekas atau rekondisi. Pendampingan meliputi survei kelayakan lokasi, instalasi oleh tim PT Indotech Berkah Abadi, pelatihan trainer onsite 5 hari 4 malam, serta konsultasi teknis tanpa batas waktu setelah outlet berjalan.
             </p>
           </div>
         </div>
@@ -1150,10 +1344,10 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
     },
     {
       "@type": "Question",
-      "name": "Apakah ada garansi mesin dan ketersediaan teknisi bila terjadi kendala?",
+      "name": "Apakah unit mesin baru dan bagaimana pendampingannya?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Setiap paket kemitraan dilengkapi garansi servis dan suku cadang mesin resmi selama 1 tahun dengan tim teknisi internal PT Indotech yang siaga."
+        "text": "Semua unit 100% baru, bukan bekas. Pendampingan berupa survey lokasi, instalasi, pelatihan trainer onsite 5 hari 4 malam, dan konsultasi teknis tanpa batas waktu."
       }
     }
   ]

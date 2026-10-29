@@ -19,7 +19,7 @@ if (have_posts()) {
 
 $wa_url = cleanique_get_whatsapp_url('general');
 $office_addr = get_theme_mod('cleanique_office_address', 'Jalan Jongke Kidul Tengah No. 30, RT.01/RW.23, Jongke Tengah, Sendangadi, Kec. Mlati, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55285');
-$wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
+$wa_number = get_theme_mod('cleanique_wa_number', '6285600061005');
 ?>
 
 <main id="main-content" class="cq-about-page">
@@ -42,11 +42,13 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
 
         <div class="cq-payno-hero-right">
           <p class="cq-payno-hero-desc">
-            <strong>Cleanique Laundry</strong> adalah produk inovasi dan unit bisnis terpadu dari <strong>PT Indotech Berkah Abadi</strong> (manufaktur bahan kimia industri, *Orchid Brand*, dan penyedia mesin laundry terkemuka di Sleman, D.I. Yogyakarta). Kami mendedikasikan fasilitas riset, bengkel rekayasa mesin, dan tim IT in-house untuk melahirkan ribuan pengusaha laundry yang mandiri, efisien, dan 100% bebas dari royalti bulanan.
+            <strong>Cleanique Laundry</strong> adalah produk inovasi dan unit bisnis terpadu dari <strong>PT Indotech Berkah Abadi</strong> (manufaktur biang sabun dan paket bahan laundry, serta penyedia mesin laundry di Sleman, D.I. Yogyakarta). Kami mendedikasikan fasilitas riset, bengkel rekayasa mesin, dan tim IT in-house untuk melahirkan ribuan pengusaha laundry yang mandiri, efisien, dan 100% bebas dari royalti bulanan.
           </p>
 
           <div style="font-size: var(--cq-fs-xs); color: var(--ink); font-weight: 600; margin-bottom: var(--cq-sp-16); display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-            <span><i class="ri-checkbox-circle-fill" style="color: var(--mint-cta);" aria-hidden="true"></i> Pabrik Chemical Sendiri</span>
+            <span><i class="ri-checkbox-circle-fill" style="color: var(--mint-cta);" aria-hidden="true"></i> Pabrik Biang Sabun &amp; Bahan</span>
+            <span>&bull;</span>
+            <span><i class="ri-checkbox-circle-fill" style="color: var(--mint-cta);" aria-hidden="true"></i> Bahan Bersertifikat Halal</span>
             <span>&bull;</span>
             <span><i class="ri-checkbox-circle-fill" style="color: var(--mint-cta);" aria-hidden="true"></i> Legalitas Resmi PT</span>
             <span>&bull;</span>
@@ -80,8 +82,8 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
             <i class="ri-flask-fill"></i>
           </div>
           <div>
-            <div style="font-size: 13px; font-weight: 600; color: var(--ink);">Pabrik Chemical Sendiri</div>
-            <div style="font-size: 11px; color: var(--cq-text-muted);">Formulasi Standar Orchid Brand</div>
+            <div style="font-size: 13px; font-weight: 600; color: var(--ink);">Pabrik Biang Sabun Sendiri</div>
+            <div style="font-size: 11px; color: var(--cq-text-muted);">Formula Pekat, Bersertifikat Halal</div>
           </div>
         </div>
 
@@ -229,7 +231,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
           <div class="cq-peluang-icon-wrap is-teal" aria-hidden="true"><i class="ri-flask-line"></i></div>
           <h3 class="cq-peluang-card-title">Pabrik &amp; Formulasi Sendiri</h3>
           <p class="cq-peluang-card-desc">
-            Bukan perantara. Didukung langsung oleh pabrik chemical PT Indotech Berkah Abadi di Sleman, DIY sehingga suplai deterjen dan parfum selalu stabil dengan harga termurah.
+            Bukan perantara. Didukung langsung oleh pabrik biang sabun PT Indotech Berkah Abadi di Sleman, DIY sehingga suplai bahan dan parfum selalu stabil dengan harga termurah. Bahan bersertifikat halal.
           </p>
           <div class="cq-peluang-card-meta">
             <i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
@@ -251,13 +253,13 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
 
         <div class="cq-peluang-card">
           <div class="cq-peluang-icon-wrap is-amber" aria-hidden="true"><i class="ri-tools-line"></i></div>
-          <h3 class="cq-peluang-card-title">Teknisi &amp; Garansi Resmi</h3>
+          <h3 class="cq-peluang-card-title">Surveyor, Trainer &amp; Instalasi</h3>
           <p class="cq-peluang-card-desc">
-            Dukungan teknisi ahli berpengalaman untuk survei lokasi, instalasi pipa &amp; kelistrikan, garansi suku cadang mesin komersial, dan konsultasi operasional 24/7.
+            Pendampingan surveyor untuk survei kelayakan lokasi, tim instalasi pipa &amp; kelistrikan, pelatihan trainer onsite 5 hari 4 malam, serta konsultasi teknis tanpa batas waktu.
           </p>
           <div class="cq-peluang-card-meta">
             <i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
-            <span>Garansi Resmi &amp; Servis 24/7</span>
+            <span>Unit Baru &amp; Konsultasi Teknis</span>
           </div>
         </div>
       </div>
@@ -398,7 +400,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
               </div>
             </div>
             <p class="cq-timeline-card-desc">
-              Ekspedisi mesin cuci dan pengering komersial ke lokasi mitra. Teknisi resmi PT Indotech melakukan perakitan unit, kalibrasi putaran RPM, pengujian suhu panas dryer, serta uji kebocoran gas menyeluruh sebelum diserahterimakan.
+              Ekspedisi mesin cuci dan pengering ke lokasi mitra. Tim instalasi PT Indotech melakukan perakitan unit, pengujian fungsi, pengujian suhu panas pengering, serta uji kebocoran gas menyeluruh sebelum diserahterimakan.
             </p>
             <div class="cq-timeline-tags-row">
               <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Ekspedisi Berasuransi Penuh</span>
@@ -429,7 +431,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
               </div>
             </div>
             <p class="cq-timeline-card-desc">
-              Pelatihan intensif bagi operator dan owner: teknik identifikasi serat kain, takaran chemical presisi Orchid Brand, teknik spotting noda membandel (darah, minyak, jamur), teknik setrika uap cepat, serta pengoperasian sistem POS Cleanique.
+              Pelatihan intensif bagi operator dan owner: teknik identifikasi serat kain, takaran bahan presisi, teknik spotting noda membandel (darah, minyak, jamur), teknik setrika uap cepat, serta pengoperasian sistem POS Cleanique.
             </p>
             <div class="cq-timeline-tags-row">
               <span class="cq-timeline-tag-item"><i class="ri-check-line"></i> Modul Kimia &amp; Penghilang Noda</span>
@@ -551,7 +553,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
               </div>
             </div>
             <p class="cq-portal-gateway-desc">
-              Solusi paket lengkap mulai dari mesin cuci &amp; dryer komersial heavy-duty bergaransi resmi, pasokan deterjen pabrik awal, hingga pelatihan SOP karyawan onsite sampai tuntas.
+              Solusi paket lengkap mulai dari mesin cuci &amp; pengering baru, pasokan biang sabun pabrik, hingga pelatihan trainer onsite 5 hari 4 malam sampai tuntas.
             </p>
             <div class="cq-portal-gateway-action-row">
               <span class="cq-btn cq-btn-primary cq-btn-pill cq-btn-sm">

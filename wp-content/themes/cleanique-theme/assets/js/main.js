@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const city = document.querySelector('#investor-city')?.value.trim() || '';
       const paket = document.querySelector('#investor-paket')?.value || 'Commercial Pro';
 
-      const waNumber = typeof CleaniqueConfig !== 'undefined' ? CleaniqueConfig.waNumber : '6281234567890';
+      const waNumber = typeof CleaniqueConfig !== 'undefined' ? CleaniqueConfig.waNumber : '6285600061005';
       const cleanWa = waNumber.replace(/[^0-9]/g, '');
 
       const msg = `Halo Tim Cleanique Laundry (PT Indotech Berkah Abadi), saya tertarik konsultasi Paket Usaha Laundry:\n\n` +
@@ -550,6 +550,424 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', handleScrollspy, { passive: true });
     handleScrollspy();
   }
+
+  // ========================================================
+  // 10. Universal Image Preview Lightbox Modal
+  // ========================================================
+  const initImagePreviewModal = () => {
+    const modal = document.querySelector('#cq-img-modal');
+    if (!modal) return;
+
+    const modalImg = modal.querySelector('#cq-img-modal-img');
+    const modalCaption = modal.querySelector('#cq-img-modal-caption');
+    const modalCounter = modal.querySelector('#cq-img-modal-counter');
+    const modalSpinner = modal.querySelector('#cq-img-modal-spinner');
+    const modalDownload = modal.querySelector('#cq-img-modal-download');
+    const modalClose = modal.querySelector('#cq-img-modal-close');
+    const modalBackdrop = modal.querySelector('#cq-img-modal-backdrop');
+    const modalPrev = modal.querySelector('#cq-img-modal-prev');
+    const modalNext = modal.querySelector('#cq-img-modal-next');
+    const modalZoom = modal.querySelector('#cq-img-modal-zoom');
+    const modalZoomIcon = modal.querySelector('#cq-img-modal-zoom-icon');
+    const modalLinkBtn = modal.querySelector('#cq-img-modal-link-btn');
+    const modalFigure = modal.querySelector('#cq-img-modal-figure');
+    const modalStage = modal.querySelector('#cq-img-modal-stage');
+
+    let currentGallery = [];
+    let currentIndex = 0;
+    let isZoomed = false;
+
+    // Filter to identify previewable content images
+    const isPreviewable = (img) => {
+      if (!img || !(img instanceof HTMLElement)) return false;
+
+      // Ignore if explicitly disabled
+      if (
+        img.classList.contains('no-preview') ||
+        img.hasAttribute('data-no-preview') ||
+        img.hasAttribute('data-modal-ignore')
+      ) {
+        return false;
+      }
+
+      // Ignore lightbox's own image
+      if (img.id === 'cq-img-modal-img' || img.closest('#cq-img-modal')) {
+        return false;
+      }
+
+      // Ignore website logos
+      if (
+        img.classList.contains('cq-brand-logo-img') ||
+        img.classList.contains('custom-logo') ||
+        img.closest('.cq-brand') ||
+        img.closest('.cq-payno-footer-brand') ||
+        img.closest('#site-header .cq-brand')
+      ) {
+        return false;
+      }
+
+      // Ignore small avatars, user profile icons, badges
+      if (
+        img.classList.contains('avatar') ||
+        img.classList.contains('cq-avatar') ||
+        img.closest('.cq-testi-card-avatar') ||
+        img.closest('.cq-author-avatar') ||
+        img.closest('.cq-comment-avatar') ||
+        img.closest('.cq-bio-avatar')
+      ) {
+        return false;
+      }
+
+      // Ignore tiny tracking pixels, decorative icons (< 45px)
+      const rect = img.getBoundingClientRect();
+      const naturalW = img.naturalWidth;
+      const naturalH = img.naturalHeight;
+      const displayW = rect.width;
+      const displayH = rect.height;
+
+      if (
+        (displayW > 0 && displayW < 45 && displayH > 0 && displayH < 45) ||
+        (naturalW > 0 && naturalW < 45 && naturalH > 0 && naturalH < 45)
+      ) {
+        return false;
+      }
+
+      // Ensure valid image source exists
+      const src = img.currentSrc || img.getAttribute('src');
+      if (!src || src.trim() === '' || src.startsWith('data:image/svg')) {
+        return false;
+      }
+
+      return true;
+    };
+
+    // Mark previewable images with styling class & attributes
+    const markPreviewableImages = () => {
+      document.querySelectorAll('img').forEach((img) => {
+        if (isPreviewable(img)) {
+          img.classList.add('cq-previewable-img');
+          img.setAttribute('data-previewable', 'true');
+          if (!img.getAttribute('title') && img.getAttribute('alt')) {
+            img.setAttribute('title', 'Klik untuk memperbesar pratinjau gambar');
+          }
+        }
+      });
+    };
+
+    markPreviewableImages();
+
+    // Reset zoom state
+    const setZoom = (zoomed) => {
+      isZoomed = zoomed;
+      if (modalFigure) {
+        modalFigure.classList.toggle('is-zoomed', isZoomed);
+      }
+      if (modalZoomIcon) {
+        modalZoomIcon.className = isZoomed ? 'ri-zoom-out-line' : 'ri-zoom-in-line';
+      }
+    };
+
+    // Open Modal
+    const openModal = () => {
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      if (modalClose) modalClose.focus();
+    };
+
+    // Close Modal
+    const closeModal = () => {
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      setZoom(false);
+      document.body.style.overflow = '';
+      if (modalImg) {
+        modalImg.classList.remove('is-loaded');
+      }
+    };
+
+    // Render image by index
+    const displayImage = (index) => {
+      if (!currentGallery.length) return;
+
+      // Wrap-around index
+      currentIndex = (index + currentGallery.length) % currentGallery.length;
+      const targetImg = currentGallery[currentIndex];
+      if (!targetImg) return;
+
+      // Reset zoom
+      setZoom(false);
+
+      // Extract image source (prefer high-res if provided via data attributes or currentSrc)
+      const fullSrc =
+        targetImg.getAttribute('data-full-src') ||
+        targetImg.getAttribute('data-large-src') ||
+        targetImg.getAttribute('data-src') ||
+        targetImg.currentSrc ||
+        targetImg.src;
+
+      // Extract caption
+      let captionText = '';
+      const parentFigure = targetImg.closest('figure');
+      const figcaption = parentFigure ? parentFigure.querySelector('figcaption') : null;
+
+      if (figcaption && figcaption.textContent.trim()) {
+        captionText = figcaption.textContent.trim();
+      } else if (targetImg.getAttribute('alt')) {
+        captionText = targetImg.getAttribute('alt').trim();
+      } else if (targetImg.getAttribute('title')) {
+        captionText = targetImg.getAttribute('title').trim();
+      }
+
+      if (modalCaption) {
+        modalCaption.textContent = captionText;
+        modalCaption.style.display = captionText ? 'block' : 'none';
+      }
+
+      // Contextual link (if image was wrapped in a page link)
+      const parentLink = targetImg.closest('a');
+      if (parentLink && parentLink.href) {
+        const href = parentLink.href.trim();
+        const isImageDirectLink = /\.(jpe?g|png|gif|webp|svg)(\?.*)?$/i.test(href);
+        const isHashOrEmpty = href === '#' || href.startsWith('javascript:');
+
+        if (!isImageDirectLink && !isHashOrEmpty) {
+          modalLinkBtn.href = href;
+          modalLinkBtn.style.display = 'inline-flex';
+        } else {
+          modalLinkBtn.style.display = 'none';
+        }
+      } else {
+        modalLinkBtn.style.display = 'none';
+      }
+
+      // Counter
+      if (modalCounter) {
+        if (currentGallery.length > 1) {
+          modalCounter.textContent = `${currentIndex + 1} / ${currentGallery.length}`;
+          modalCounter.style.display = 'block';
+        } else {
+          modalCounter.style.display = 'none';
+        }
+      }
+
+      // Prev / Next button visibility
+      if (modalPrev) modalPrev.classList.toggle('is-hidden', currentGallery.length <= 1);
+      if (modalNext) modalNext.classList.toggle('is-hidden', currentGallery.length <= 1);
+
+      // Download / Full Resolution button
+      if (modalDownload) {
+        modalDownload.href = fullSrc;
+      }
+
+      // Load Image with Spinner & Immediate Render
+      if (modalImg) {
+        modalImg.classList.remove('is-loaded');
+        modalImg.src = fullSrc;
+        modalImg.alt = captionText || 'Pratinjau Gambar Cleanique';
+
+        if (modalImg.complete && modalImg.naturalWidth > 0) {
+          if (modalSpinner) modalSpinner.classList.remove('is-visible');
+          modalImg.classList.add('is-loaded');
+        } else {
+          if (modalSpinner) modalSpinner.classList.add('is-visible');
+          modalImg.onload = () => {
+            if (modalSpinner) modalSpinner.classList.remove('is-visible');
+            modalImg.classList.add('is-loaded');
+          };
+          modalImg.onerror = () => {
+            modalImg.src = targetImg.src;
+            if (modalSpinner) modalSpinner.classList.remove('is-visible');
+            modalImg.classList.add('is-loaded');
+          };
+        }
+      }
+    };
+
+    // Open lightbox with specific clicked image
+    const openLightbox = (img) => {
+      // Refresh current gallery of visible previewable images
+      currentGallery = Array.from(document.querySelectorAll('img')).filter((el) => {
+        return isPreviewable(el) && el.offsetParent !== null;
+      });
+
+      if (!currentGallery.length) {
+        currentGallery = Array.from(document.querySelectorAll('img')).filter(isPreviewable);
+      }
+
+      currentIndex = currentGallery.indexOf(img);
+      if (currentIndex === -1) {
+        currentGallery.unshift(img);
+        currentIndex = 0;
+      }
+
+      displayImage(currentIndex);
+      openModal();
+    };
+
+    // Global Event Delegation for clicking any previewable image
+    document.addEventListener('click', (e) => {
+      let img = e.target.closest('img');
+      if (!img) {
+        const previewTrigger = e.target.closest('.cq-kemitraan-gallery-thumb, .cq-kemitraan-gallery-item, .cq-kemitraan-hero-frame, [data-preview-trigger]');
+        if (previewTrigger) {
+          img = previewTrigger.querySelector('img');
+        }
+      }
+      if (!img || !isPreviewable(img)) return;
+
+      // Prevent parent navigation if inside a link or card
+      e.preventDefault();
+      e.stopPropagation();
+
+      openLightbox(img);
+    });
+
+    // Control buttons listeners
+    if (modalClose) modalClose.addEventListener('click', closeModal);
+    if (modalBackdrop) modalBackdrop.addEventListener('click', closeModal);
+    if (modalPrev) modalPrev.addEventListener('click', () => displayImage(currentIndex - 1));
+    if (modalNext) modalNext.addEventListener('click', () => displayImage(currentIndex + 1));
+
+    // Zoom Toggle Button & Image Click Zoom
+    if (modalZoom) {
+      modalZoom.addEventListener('click', (e) => {
+        e.stopPropagation();
+        setZoom(!isZoomed);
+      });
+    }
+
+    if (modalImg) {
+      modalImg.addEventListener('click', (e) => {
+        e.stopPropagation();
+        setZoom(!isZoomed);
+      });
+    }
+
+    // Keyboard Shortcuts
+    document.addEventListener('keydown', (e) => {
+      if (!modal.classList.contains('is-open')) return;
+
+      if (e.key === 'Escape') {
+        closeModal();
+      } else if (e.key === 'ArrowLeft') {
+        displayImage(currentIndex - 1);
+      } else if (e.key === 'ArrowRight') {
+        displayImage(currentIndex + 1);
+      } else if (e.key === '+' || e.key === '=') {
+        setZoom(true);
+      } else if (e.key === '-') {
+        setZoom(false);
+      }
+    });
+
+    // Mobile Swipe Gestures
+    if (modalStage) {
+      let touchStartX = 0;
+      let touchStartY = 0;
+      let touchEndX = 0;
+      let touchEndY = 0;
+
+      modalStage.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 1) {
+          touchStartX = e.touches[0].clientX;
+          touchStartY = e.touches[0].clientY;
+        }
+      }, { passive: true });
+
+      modalStage.addEventListener('touchend', (e) => {
+        if (e.changedTouches.length === 1) {
+          touchEndX = e.changedTouches[0].clientX;
+          touchEndY = e.changedTouches[0].clientY;
+
+          const diffX = touchEndX - touchStartX;
+          const diffY = touchEndY - touchStartY;
+
+          if (isZoomed) return;
+
+          // Horizontal swipe
+          if (Math.abs(diffX) > 50 && Math.abs(diffX) > Math.abs(diffY)) {
+            if (diffX < 0) {
+              displayImage(currentIndex + 1);
+            } else {
+              displayImage(currentIndex - 1);
+            }
+          }
+          // Vertical swipe down to close
+          else if (diffY > 80 && Math.abs(diffY) > Math.abs(diffX)) {
+            closeModal();
+          }
+        }
+      }, { passive: true });
+    }
+  };
+
+  initImagePreviewModal();
+
+  // ========================================================
+  // 11. Tiered Bento Pricing Switcher (Full vs Termin 50%)
+  // ========================================================
+  const initPricingSwitcher = () => {
+    const wrap = document.querySelector('.cq-pricing-switcher-wrap');
+    if (!wrap) return;
+
+    const pillBtns = wrap.querySelectorAll('.cq-pricing-pill-btn');
+    const noteFull = wrap.querySelector('.cq-scheme-note-full');
+    const noteTermin = wrap.querySelector('.cq-scheme-note-termin');
+
+    const updatePricing = (scheme) => {
+      // Toggle active states on notes
+      if (noteFull) noteFull.classList.toggle('is-active', scheme === 'full');
+      if (noteTermin) noteTermin.classList.toggle('is-active', scheme === 'termin');
+
+      // Update all prices and labels in any pricing layouts
+      document.querySelectorAll('.cq-pricing-bento-layout').forEach((layout) => {
+        // Price numbers with smooth micro-animation
+        layout.querySelectorAll('.cq-price-val, [data-price-full]').forEach((el) => {
+          const targetVal = scheme === 'termin' ? el.getAttribute('data-price-termin') : el.getAttribute('data-price-full');
+          if (targetVal) {
+            el.style.transition = 'opacity 0.15s ease, transform 0.15s ease';
+            el.style.opacity = '0.2';
+            el.style.transform = 'translateY(-2px)';
+            setTimeout(() => {
+              el.textContent = targetVal;
+              el.style.opacity = '1';
+              el.style.transform = 'translateY(0)';
+            }, 120);
+          }
+        });
+
+        // Top tags
+        layout.querySelectorAll('[data-label-full]').forEach((el) => {
+          const targetLabel = scheme === 'termin' ? el.getAttribute('data-label-termin') : el.getAttribute('data-label-full');
+          if (targetLabel) el.textContent = targetLabel;
+        });
+
+        // Sub units
+        layout.querySelectorAll('[data-sub-full]').forEach((el) => {
+          const targetSub = scheme === 'termin' ? el.getAttribute('data-sub-termin') : el.getAttribute('data-sub-full');
+          if (targetSub !== null) el.textContent = targetSub;
+        });
+      });
+    };
+
+    pillBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        if (btn.classList.contains('is-active')) return;
+        pillBtns.forEach((b) => {
+          b.classList.remove('is-active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('is-active');
+        btn.setAttribute('aria-selected', 'true');
+
+        const scheme = btn.getAttribute('data-scheme') || 'full';
+        updatePricing(scheme);
+      });
+    });
+  };
+
+  initPricingSwitcher();
 });
 
 // Global Function for Helpfulness Rating

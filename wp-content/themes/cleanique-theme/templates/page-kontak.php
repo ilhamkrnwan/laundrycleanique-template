@@ -15,7 +15,7 @@ if (have_posts()) {
 
 $wa_url = cleanique_get_whatsapp_url('general');
 $office_addr = get_theme_mod('cleanique_office_address', 'Jalan Jongke Kidul Tengah No. 30, RT.01/RW.23, Jongke Tengah, Sendangadi, Kec. Mlati, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55285');
-$wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
+$wa_number = get_theme_mod('cleanique_wa_number', '6285600061005');
 ?>
 
 <main id="main-content" class="cq-contact-page">

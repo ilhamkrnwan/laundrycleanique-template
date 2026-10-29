@@ -146,17 +146,48 @@ while (have_posts()) : the_post();
            ====================================================== -->
       <article class="cq-single-main" itemscope itemtype="https://schema.org/Product">
 
-        <!-- Featured Image -->
-        <?php if (has_post_thumbnail()) : ?>
-          <figure class="cq-kemitraan-single-fig">
-            <?php the_post_thumbnail('large', [
-                'loading'  => 'eager',
-                'alt'      => get_the_title(),
-                'itemprop' => 'image',
-                'style'    => 'width: 100%; height: auto; border-radius: 20px; display: block;',
-            ]); ?>
-          </figure>
-        <?php endif; ?>
+        <!-- ====================================================
+             1. THUMBNAIL / HERO IMAGE SHOWCASE
+             ==================================================== -->
+        <?php
+        $hero_img_url = '';
+        $hero_img_alt = get_the_title();
+        if (has_post_thumbnail()) {
+            $hero_img_url = get_the_post_thumbnail_url($post_id, 'large');
+            $hero_img_alt = get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true) ?: get_the_title();
+        } else {
+            // Intelligent fallback based on package slug
+            $slug = get_post_field('post_name', $post_id);
+            if (strpos($slug, 'komersial') !== false || strpos($slug, 'super') !== false || strpos($slug, 'ruko') !== false) {
+                $hero_img_url = get_template_directory_uri() . '/assets/images/equip-washer-dryer.jpg';
+                $hero_img_alt = 'Set Mesin Cuci dan Pengering Stack Komersial Paket Pro Ruko Cleanique';
+            } elseif (strpos($slug, 'industrial') !== false || strpos($slug, 'premium') !== false) {
+                $hero_img_url = get_template_directory_uri() . '/assets/images/hero-outlet.jpg';
+                $hero_img_alt = 'Outlet Sentra Laundry Skala Besar Paket Industrial Cleanique';
+            } else {
+                $hero_img_url = get_template_directory_uri() . '/assets/images/equip-washer-dryer.jpg';
+                $hero_img_alt = 'Paket Usaha Kemitraan Laundry Siap Buka Cleanique';
+            }
+        }
+        ?>
+        <figure class="cq-kemitraan-hero-frame">
+          <div class="cq-kemitraan-hero-badge">
+            <i class="ri-shield-star-line"></i> Dokumentasi Paket Resmi
+          </div>
+          <img src="<?php echo esc_url($hero_img_url); ?>" 
+               alt="<?php echo esc_attr($hero_img_alt); ?>" 
+               class="cq-kemitraan-hero-img"
+               loading="eager"
+               itemprop="image">
+          <figcaption class="cq-kemitraan-hero-caption">
+            <span class="cq-kemitraan-hero-caption-text">
+              <i class="ri-zoom-in-line"></i> Klik foto untuk memperbesar pratinjau (resolusi penuh)
+            </span>
+            <span class="cq-kemitraan-hero-tag">
+              <i class="ri-checkbox-circle-fill"></i> 100% Unit Baru &bull; Garansi Pabrik
+            </span>
+          </figcaption>
+        </figure>
 
         <!-- Price & ROI Banner -->
         <div class="cq-kemitraan-single-price-banner">
@@ -228,6 +259,164 @@ while (have_posts()) : the_post();
             </ul>
           </div>
         <?php endif; ?>
+
+        <!-- ====================================================
+             2. INTERACTIVE PHOTO GALLERY
+             Visual Fasilitas Mesin, Chemical, POS & Outlet
+             ==================================================== -->
+        <section class="cq-kemitraan-gallery-section" id="galeri-fasilitas">
+          <div class="cq-kemitraan-gallery-header">
+            <div>
+              <span class="cq-badge-clean" style="margin-bottom: 8px;">
+                <i class="ri-gallery-fill"></i> Dokumentasi &amp; Fasilitas Fisik
+              </span>
+              <h2 class="cq-kemitraan-gallery-title">
+                Galeri Mesin, Peralatan &amp; Standar Outlet
+              </h2>
+              <p class="cq-kemitraan-gallery-desc">
+                Berikut dokumentasi visual fisik unit mesin komersial, instalasi boiler uap, pasokan formula chemical pabrik, sistem kasir POS, dan standar interior outlet yang didapatkan pada paket kemitraan ini:
+              </p>
+            </div>
+          </div>
+
+          <div class="cq-kemitraan-gallery-grid">
+            <!-- Item 1: Mesin Cuci & Dryer Stack -->
+            <div class="cq-kemitraan-gallery-item">
+              <div class="cq-kemitraan-gallery-thumb">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/equip-washer-dryer.jpg'); ?>" 
+                     alt="Set Mesin Cuci Front Load dan Pengering Gas Heavy Duty Komersial" 
+                     loading="lazy">
+                <div class="cq-kemitraan-gallery-overlay">
+                  <span class="cq-gallery-zoom-btn" title="Perbesar Foto"><i class="ri-zoom-in-line"></i></span>
+                  <span class="cq-gallery-badge">Mesin Utama</span>
+                </div>
+              </div>
+              <div class="cq-kemitraan-gallery-info">
+                <h4 class="cq-gallery-item-title">Mesin Cuci Front Load &amp; Dryer Gas</h4>
+                <p class="cq-gallery-item-desc">Set washer drum stainless steel SUS304 berdaya putar tinggi dan dryer konversi gas hemat energi, pakaian kering tuntas 45 menit siap lipat.</p>
+              </div>
+            </div>
+
+            <!-- Item 2: Boiler Setrika Uap Gas & Meja Vacuum -->
+            <div class="cq-kemitraan-gallery-item">
+              <div class="cq-kemitraan-gallery-thumb">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/equip-boiler-iron.jpg'); ?>" 
+                     alt="Sistem Boiler Setrika Uap Gas Otomatis dan Meja Vacuum Stainless" 
+                     loading="lazy">
+                <div class="cq-kemitraan-gallery-overlay">
+                  <span class="cq-gallery-zoom-btn" title="Perbesar Foto"><i class="ri-zoom-in-line"></i></span>
+                  <span class="cq-gallery-badge">Finishing Uap</span>
+                </div>
+              </div>
+              <div class="cq-kemitraan-gallery-info">
+                <h4 class="cq-gallery-item-title">Boiler Setrika Uap Gas &amp; Meja Vacuum</h4>
+                <p class="cq-gallery-item-desc">Tekanan uap kering tinggi anti-gosong dan anti-mengkilap pada serat kain, melicinkan pakaian 3x lebih cepat dibanding setrika listrik rumah tangga.</p>
+              </div>
+            </div>
+
+            <!-- Item 3: Smart Laundry Management POS App -->
+            <div class="cq-kemitraan-gallery-item">
+              <div class="cq-kemitraan-gallery-thumb">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-pos-app.jpg'); ?>" 
+                     alt="Tampilan Dashboard Aplikasi Kasir Laundry POS dan E-Nota WhatsApp" 
+                     loading="lazy">
+                <div class="cq-kemitraan-gallery-overlay">
+                  <span class="cq-gallery-zoom-btn" title="Perbesar Foto"><i class="ri-zoom-in-line"></i></span>
+                  <span class="cq-gallery-badge">Sistem Kasir</span>
+                </div>
+              </div>
+              <div class="cq-kemitraan-gallery-info">
+                <h4 class="cq-gallery-item-title">Aplikasi Kasir POS &amp; E-Nota WhatsApp</h4>
+                <p class="cq-gallery-item-desc">Sistem pencatatan digital berbasis cloud otomatis kirim e-nota ke nomor WhatsApp pelanggan, pelacakan live status cucian, dan audit tutup kasir anti-curang.</p>
+              </div>
+            </div>
+
+            <!-- Item 4: Chemical & Parfum Pabrik -->
+            <div class="cq-kemitraan-gallery-item">
+              <div class="cq-kemitraan-gallery-thumb">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/chemical-products.jpg'); ?>" 
+                     alt="Produksi Paket Bahan Chemical Laundry Standar Pabrik Orchid Brand" 
+                     loading="lazy">
+                <div class="cq-kemitraan-gallery-overlay">
+                  <span class="cq-gallery-zoom-btn" title="Perbesar Foto"><i class="ri-zoom-in-line"></i></span>
+                  <span class="cq-gallery-badge">Chemical Pabrik</span>
+                </div>
+              </div>
+              <div class="cq-kemitraan-gallery-info">
+                <h4 class="cq-gallery-item-title">Formula Kimia Pabrik &amp; Parfum Tahan Lama</h4>
+                <p class="cq-gallery-item-desc">Pasokan awal deterjen cair konsentrat, softener eco ramah lingkungan, pelicin anti kusam, dan parfum microcapsule tahan wangi berminggu-minggu.</p>
+              </div>
+            </div>
+
+            <!-- Item 5: Standar Interior Outlet Ruko -->
+            <div class="cq-kemitraan-gallery-item">
+              <div class="cq-kemitraan-gallery-thumb">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-outlet.jpg'); ?>" 
+                     alt="Standar Penataan Interior dan Display Outlet Kemitraan Laundry Cleanique" 
+                     loading="lazy">
+                <div class="cq-kemitraan-gallery-overlay">
+                  <span class="cq-gallery-zoom-btn" title="Perbesar Foto"><i class="ri-zoom-in-line"></i></span>
+                  <span class="cq-gallery-badge">Interior Ruko</span>
+                </div>
+              </div>
+              <div class="cq-kemitraan-gallery-info">
+                <h4 class="cq-gallery-item-title">Standar Tata Letak &amp; Display Front Office</h4>
+                <p class="cq-gallery-item-desc">Desain alur kerja ruangan higienis pemisahan pakaian bersih dan kotor, rak pakaian siap ambil rapi, dan meja penerimaan kasir yang ramah pelanggan.</p>
+              </div>
+            </div>
+
+            <!-- Item 6: Tim Teknisi & Instalasi Resmi -->
+            <div class="cq-kemitraan-gallery-item">
+              <div class="cq-kemitraan-gallery-thumb">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/indotech-team.jpg'); ?>" 
+                     alt="Tim Teknisi dan Workshop Pabrik PT Indotech Berkah Abadi" 
+                     loading="lazy">
+                <div class="cq-kemitraan-gallery-overlay">
+                  <span class="cq-gallery-zoom-btn" title="Perbesar Foto"><i class="ri-zoom-in-line"></i></span>
+                  <span class="cq-gallery-badge">Dukungan Onsite</span>
+                </div>
+              </div>
+              <div class="cq-kemitraan-gallery-info">
+                <h4 class="cq-gallery-item-title">Instalasi Plumbing &amp; Pendampingan Tim Ahli</h4>
+                <p class="cq-gallery-item-desc">Pemasangan jalur pipa air bersih, pembuangan, regulator gas berstandar keselamatan, serta pelatihan SOP karyawan langsung di lokasi Anda.</p>
+              </div>
+            </div>
+
+            <!-- Item 7: Contoh Outlet Mitra Aktif Sleman -->
+            <div class="cq-kemitraan-gallery-item">
+              <div class="cq-kemitraan-gallery-thumb">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/mitra-outlet-sleman.jpg'); ?>" 
+                     alt="Outlet Mitra Cleanique Express Minomartani Sleman Yogyakarta" 
+                     loading="lazy">
+                <div class="cq-kemitraan-gallery-overlay">
+                  <span class="cq-gallery-zoom-btn" title="Perbesar Foto"><i class="ri-zoom-in-line"></i></span>
+                  <span class="cq-gallery-badge">Outlet Aktif</span>
+                </div>
+              </div>
+              <div class="cq-kemitraan-gallery-info">
+                <h4 class="cq-gallery-item-title">Cleanique Express Minomartani (Sleman)</h4>
+                <p class="cq-gallery-item-desc">Contoh ruko operasional mitra aktif yang telah mencapai BEP dalam 7 bulan dengan omzet harian stabil ratusan kilogram cucian.</p>
+              </div>
+            </div>
+
+            <!-- Item 8: Contoh Outlet Mitra Aktif Solo -->
+            <div class="cq-kemitraan-gallery-item">
+              <div class="cq-kemitraan-gallery-thumb">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/mitra-outlet-solo.jpg'); ?>" 
+                     alt="Outlet Mitra Cleanique Laundry Jebres Surakarta Solo" 
+                     loading="lazy">
+                <div class="cq-kemitraan-gallery-overlay">
+                  <span class="cq-gallery-zoom-btn" title="Perbesar Foto"><i class="ri-zoom-in-line"></i></span>
+                  <span class="cq-gallery-badge">Outlet Aktif</span>
+                </div>
+              </div>
+              <div class="cq-kemitraan-gallery-info">
+                <h4 class="cq-gallery-item-title">Cleanique Laundry Jebres (Surakarta Solo)</h4>
+                <p class="cq-gallery-item-desc">Contoh ruko komersial di kawasan kampus dan kos mahasiswa dengan utilisasi mesin cuci front-load dan setrika uap maksimal setiap hari.</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <!-- Main Description / WordPress Content -->
         <?php

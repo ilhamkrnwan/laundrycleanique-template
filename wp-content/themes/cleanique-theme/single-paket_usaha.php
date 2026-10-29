@@ -15,7 +15,7 @@ while (have_posts()) : the_post();
     $specs_raw = get_post_meta(get_the_ID(), '_cq_paket_specs', true);
     $specs = !empty($specs_raw) ? array_filter(array_map('trim', explode("\n", $specs_raw))) : [];
 
-    $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
+    $wa_number = get_theme_mod('cleanique_wa_number', '6285600061005');
     $clean_wa = preg_replace('/[^0-9]/', '', $wa_number);
     $wa_msg = "Halo Tim Cleanique Laundry (PT Indotech Berkah Abadi), saya tertarik konsultasi " . get_the_title() . " (" . ($price ?: 'Konsultasi') . "). Mohon info rincian modal dan jadwal konsultasi.";
     $wa_paket_url = 'https://api.whatsapp.com/send?phone=' . $clean_wa . '&text=' . rawurlencode($wa_msg);

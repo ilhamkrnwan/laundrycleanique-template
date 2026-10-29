@@ -6,7 +6,7 @@
  * @package Cleanique
  */
 
-$wa_url = function_exists('cleanique_get_whatsapp_url') ? cleanique_get_whatsapp_url('general') : 'https://wa.me/6281234567890';
+$wa_url = function_exists('cleanique_get_whatsapp_url') ? cleanique_get_whatsapp_url('general') : 'https://wa.me/6285600061005';
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>

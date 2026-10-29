@@ -43,13 +43,13 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
 
         <div class="cq-payno-hero-right">
           <p class="cq-payno-hero-desc">
-            Mau punya bisnis laundry yang ramai tapi <strong>bingung mulai dari mana &amp; takut modal puluhan juta hangus?</strong> Jangan habiskan waktu dan biaya untuk <em>trial &amp; error</em> bertahun-tahun. Bersama <strong>Cleanique</strong>, Anda langsung memiliki paket usaha kemitraan lengkap: mesin komersial heavy-duty bergaransi, formula chemical standar pabrik Orchid Brand, SOP tuntas, bonus sistem POS kasir, dan <strong>100% keuntungan milik Anda TANPA Royalty Fee!</strong>
+            Mau punya bisnis laundry yang ramai tapi <strong>bingung mulai dari mana &amp; takut modal puluhan juta hangus?</strong> Jangan habiskan waktu dan biaya untuk <em>trial &amp; error</em> bertahun-tahun. Bersama <strong>Cleanique</strong>, Anda langsung memiliki paket usaha kemitraan lengkap: mesin cuci &amp; pengering siap pakai, <strong>biang sabun pekat</strong> yang diencerkan sendiri agar biaya operasional lebih murah, SOP tuntas, bonus sistem POS kasir, dan <strong>100% keuntungan milik Anda TANPA Royalty Fee!</strong>
           </p>
 
           <div style="font-size: var(--cq-fs-xs); color: var(--ink); font-weight: 600; margin-bottom: var(--cq-sp-16); display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
             <span><i class="ri-checkbox-circle-fill" style="color: var(--mint-cta);" aria-hidden="true"></i> 100% Hak Milik Tanpa Bagi Hasil</span>
             <span>&bull;</span>
-            <span><i class="ri-checkbox-circle-fill" style="color: var(--mint-cta);" aria-hidden="true"></i> Garansi Resmi Mesin Pabrik</span>
+            <span><i class="ri-checkbox-circle-fill" style="color: var(--mint-cta);" aria-hidden="true"></i> Bahan Bersertifikat Halal</span>
             <span>&bull;</span>
             <span><i class="ri-checkbox-circle-fill" style="color: var(--mint-cta);" aria-hidden="true"></i> Pendampingan Onsite Sampai Buka</span>
           </div>
@@ -94,14 +94,14 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
           </div>
         </div>
 
-        <!-- Floating Card 3 (Bottom Left): Suplai Pabrik Chemical -->
+        <!-- Floating Card 3 (Bottom Left): Suplai Biang Sabun Pabrik -->
         <div class="cq-floating-card cq-float-bottom">
           <div class="cq-screen-avatar-img" style="width: 28px; height: 28px; background: #e0f2fe;">
             <i class="ri-flask-fill" style="color: var(--brand-deep); font-size: 16px;" aria-hidden="true"></i>
           </div>
           <div>
-            <div style="font-size: 11px; font-weight: 700; color: var(--ink); line-height: 1.2;">Suplai Chemical Langsung Pabrik</div>
-            <div style="font-size: 10px; color: var(--cq-text-muted);">PT Indotech Berkah Abadi &bull; <span style="color: var(--mint-cta); font-weight: 600;">Harga Grosir Termurah</span></div>
+            <div style="font-size: 11px; font-weight: 700; color: var(--ink); line-height: 1.2;">Suplai Biang Sabun Pabrik</div>
+            <div style="font-size: 10px; color: var(--cq-text-muted);">PT Indotech Berkah Abadi &bull; <span style="color: var(--mint-cta); font-weight: 600;">Biaya Operasional Lebih Murah</span></div>
           </div>
         </div>
 
@@ -127,7 +127,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
               Promo Terbatas
             </span>
             <div class="cq-countdown-title">Subsidi Ongkir &amp; Bonus Lisensi POS 1 Tahun Penuh!</div>
-            <p class="cq-countdown-subtitle">Klaim bonus chemical 100 Liter pertama &amp; pendampingan teknisi onsite hingga siap buka.</p>
+            <p class="cq-countdown-subtitle">Termasuk pelatihan trainer onsite 5 hari 4 malam hingga outlet siap buka.</p>
           </div>
           <div class="cq-countdown-timer">
             <div class="cq-countdown-box">
@@ -280,12 +280,12 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
               Risiko Mesin
             </div>
           </div>
-          <h3 class="cq-peluang-pain-title">Tergiur Mesin Rumah Tangga Murahan (3 Bulan Jebol)</h3>
+          <h3 class="cq-peluang-pain-title">Beli Mesin Tanpa Survei &amp; Instalasi yang Benar</h3>
           <p class="cq-card-desc">
-            Membeli mesin cuci rumahan biasa karena harganya tampak murah. Padahal mesin rumahan tidak dirancang berputar 12 jam/hari. Dalam 3 bulan dinamo terbakar, garansi hangus karena pemakaian komersial, dan outlet terpaksa tutup.
+            Membeli unit mesin tanpa menghitung daya listrik, debit air, dan jalur pembuangan lebih dulu. Hasilnya kapasitas mesin tidak sesuai volume cucian, alur kerja berantakan, dan outlet terpaksa menambah biaya perbaikan di awal operasional.
           </p>
           <div class="cq-pain-safe-guard">
-            <i class="ri-shield-check-fill"></i> <span><strong>Proteksi Cleanique:</strong> Paket include unit washer &amp; dryer commercial heavy-duty bergaransi resmi pabrik.</span>
+            <i class="ri-shield-check-fill"></i> <span><strong>Proteksi Cleanique:</strong> Surveyor memeriksa kelayakan lokasi lebih dulu, lalu kapasitas unit disesuaikan dengan paket yang dipilih.</span>
           </div>
         </div>
 
@@ -298,12 +298,12 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
               Risiko Kimia
             </div>
           </div>
-          <h3 class="cq-peluang-pain-title">Trial &amp; Error Chemical Bertahun-Tahun (Baju Rusak)</h3>
+          <h3 class="cq-peluang-pain-title">Trial &amp; Error Meracik Bahan (Baju Rusak)</h3>
           <p class="cq-card-desc">
             Mencoba meracik deterjen dan parfum sendiri atau membeli curah tanpa izin edar. Hasilnya: baju pelanggan apek saat musim hujan, serat kain sobek, atau luntur. Pelanggan komplain keras dan meminta ganti rugi.
           </p>
           <div class="cq-pain-safe-guard">
-            <i class="ri-shield-check-fill"></i> <span><strong>Proteksi Cleanique:</strong> Suplai chemical standar industri berizin edar resmi langsung dari pabrik PT Indotech.</span>
+            <i class="ri-shield-check-fill"></i> <span><strong>Proteksi Cleanique:</strong> Suplai biang sabun &amp; paket bahan pabrik yang diencerkan sendiri, takaran sudah terukur per siklus cuci.</span>
           </div>
         </div>
 
@@ -321,7 +321,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
             Menyuruh tukang bangunan umum memasang instalasi dryer konversi gas dan pompa air tanpa SOP sertifikasi. Tekanan air sering drop, mesin cepat berkerak, dan rawan bahaya kebakaran gas.
           </p>
           <div class="cq-pain-safe-guard">
-            <i class="ri-shield-check-fill"></i> <span><strong>Proteksi Cleanique:</strong> Dipandu dan disupervisi teknisi profesional bersertifikat dengan standar safety ketat.</span>
+            <i class="ri-shield-check-fill"></i> <span><strong>Proteksi Cleanique:</strong> Instalasi dikerjakan tim instalasi PT Indotech dengan standar keselamatan gas dan air.</span>
           </div>
         </div>
 
@@ -357,7 +357,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
         </div>
         <h2 class="cq-section-title">Bersama Cleanique, Anda Buka Laundry Tanpa Risiko Gagal</h2>
         <p class="cq-section-desc">
-          Kami memberikan paket komplit siap buka (*Turnkey Business*) yang didukung langsung oleh produsen industri mesin dan pabrik chemical resmi PT Indotech Berkah Abadi.
+          Kami memberikan paket komplit siap buka (*Turnkey Business*) yang didukung langsung oleh penyedia mesin dan pabrik biang sabun PT Indotech Berkah Abadi.
         </p>
         <div class="cq-mobile-swipe-indicator"><i class="ri-arrow-left-right-line" aria-hidden="true"></i> Geser ke samping &rarr;</div>
       </div>
@@ -373,17 +373,17 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
 
         <div class="cq-peluang-solusi-card">
           <div class="cq-peluang-solusi-icon" aria-hidden="true"><i class="ri-cpu-line"></i></div>
-          <h3 class="cq-peluang-card-title">Mesin Heavy Duty Bergaransi Resmi</h3>
+          <h3 class="cq-peluang-card-title">Mesin Baru Sesuai Kapasitas Paket</h3>
           <p class="cq-peluang-card-desc">
-            Unit washer dan dryer komersial berkualitas industri yang dirancang mampu bekerja maraton terus-menerus dengan konsumsi listrik dan gas hemat. Garansi servis dan spare part terjamin.
+            Semua unit 100% baru, bukan bekas atau rekondisi. Komposisi front load, top load, dan pengering box gas disesuaikan dengan kapasitas paket serta hasil survei lokasi.
           </p>
         </div>
 
         <div class="cq-peluang-solusi-card">
           <div class="cq-peluang-solusi-icon" aria-hidden="true"><i class="ri-flask-fill"></i></div>
-          <h3 class="cq-peluang-card-title">Suplai Chemical Langsung Pabrik</h3>
+          <h3 class="cq-peluang-card-title">Biang Sabun &amp; Paket Bahan Pabrik</h3>
           <p class="cq-peluang-card-desc">
-            Diproduksi langsung oleh pabrik kami di Sleman. Deterjen rendah busa, pelembut &amp; parfum microcapsule wangi tahan 30 hari, serta penghilang noda darah/minyak/karat dengan harga grosir termurah.
+            Biang sabun pekat, softener, dan parfum waterbase diencerkan sendiri di outlet. Biaya per kilo cucian lebih murah dibanding membeli sabun jadi, stok lebih tahan lama, dan bahan bersertifikat halal.
           </p>
         </div>
 
@@ -391,7 +391,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
           <div class="cq-peluang-solusi-icon" aria-hidden="true"><i class="ri-graduation-cap-fill"></i></div>
           <h3 class="cq-peluang-card-title">SOP Higienis &amp; Training Onsite</h3>
           <p class="cq-peluang-card-desc">
-            Anda dan staf diajarkan teknik pencucian berbagai jenis kain, takaran chemical presisi, teknik setrika uap licin seketika, packing rapi, hingga pelayanan kasir prima sampai mandiri.
+            Anda dan staf diajarkan teknik pencucian berbagai jenis kain, takaran bahan presisi, teknik setrika uap licin seketika, packing rapi, hingga pelayanan kasir prima sampai mandiri.
           </p>
         </div>
 
@@ -407,7 +407,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
           <div class="cq-peluang-solusi-icon" aria-hidden="true"><i class="ri-team-line"></i></div>
           <h3 class="cq-peluang-card-title">Pendampingan Sampai Hari Buka</h3>
           <p class="cq-peluang-card-desc">
-            Tim teknisi dan konsultan kami mendampingi perancangan denah layout ruangan, setting pipa pembuangan, instalasi kelistrikan aman, hingga strategi promosi grand opening outlet Anda.
+            Surveyor dan konsultan kami memetakan lokasi, daya listrik, sumber air, dan jalur pembuangan limbah sebelum paket disusun. Setelah itu trainer mendampingi operasional hingga grand opening.
           </p>
         </div>
       </div>
@@ -421,51 +421,51 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
     <div class="cq-container">
       <div class="cq-section-header">
         <h2 class="cq-section-title">Apa Saja yang Anda Dapatkan dalam Setiap Paket?</h2>
-        <p class="cq-section-desc">Peralatan berkualitas tinggi dan siap pakai, dirakit dan diuji langsung oleh teknisi berpengalaman PT Indotech Berkah Abadi.</p>
+        <p class="cq-section-desc">Peralatan baru dan siap pakai, dirakit serta diuji di lokasi oleh tim instalasi PT Indotech Berkah Abadi.</p>
       </div>
 
       <?php
       $fasilitas_items = [
           [
-              'title' => 'Mesin Cuci & Dryer Stack',
-              'desc'  => 'Heavy-duty drum stainless steel hemat listrik & gas, kapasitas cuci sprei tebal dan bed cover.',
+              'title' => 'Mesin Cuci Front & Top Load',
+              'desc'  => 'Front load 7 kg untuk cucian harian, top load 9–12 kg untuk sprei dan selimut. Cukup untuk volume kiloan tanpa makan tempat.',
               'image' => get_template_directory_uri() . '/assets/images/equip-washer-dryer.jpg',
-              'alt'   => 'Mesin Cuci dan Pengering Stack Komersial',
-              'tag'   => 'Hardware Utama',
+              'alt'   => 'Mesin Cuci Laundry Cleanique',
+              'tag'   => 'Peralatan Utama',
           ],
           [
-              'title' => 'Boiler Uap & Meja Vakum',
-              'desc'  => 'Setrika uap licin seketika anti-gosong, lengkap dengan meja hisap uap berdaya sedot tinggi.',
+              'title' => 'Pengering Box Konversi Gas',
+              'desc'  => 'Pakaian kering tanpa bergantung cuaca. Memakai gas LPG sehingga lebih hemat dibanding pengering listrik.',
               'image' => get_template_directory_uri() . '/assets/images/equip-boiler-iron.jpg',
-              'alt'   => 'Setrika Uap Boiler Gas Industri',
+              'alt'   => 'Mesin Pengering Box Konversi Gas',
+              'tag'   => 'Pengeringan',
+          ],
+          [
+              'title' => 'Setrika Uap Tabung & Meja Setrika',
+              'desc'  => 'Setrika uap tabung untuk hasil licin seketika, ditambah setrika listrik untuk detailing bagian kerah dan lipatan.',
+              'image' => get_template_directory_uri() . '/assets/images/equip-boiler-iron.jpg',
+              'alt'   => 'Setrika Uap Tabung dan Meja Setrika',
               'tag'   => 'Finishing Rapi',
           ],
           [
-              'title' => 'Paket Chemical Pabrik',
-              'desc'  => 'Deterjen rendah busa, pelembut & parfum microcapsule wangi tahan 30 hari dalam lemari.',
+              'title' => 'Biang Sabun & Paket Bahan',
+              'desc'  => 'Bahan pekat (softener, parfum waterbase, anti noda) diencerkan sendiri di outlet. Biaya per kilo cucian lebih murah dan bersertifikat halal.',
               'image' => get_template_directory_uri() . '/assets/images/chemical-products.jpg',
-              'alt'   => 'Suplai Chemical Pabrik Indotech Orchid Brand',
-              'tag'   => 'Langsung Pabrik',
+              'alt'   => 'Biang Sabun dan Paket Bahan Laundry',
+              'tag'   => 'Hemat Operasional',
           ],
           [
-              'title' => 'Instalasi & Training Onsite',
-              'desc'  => 'Pemasangan pipa standar aman dan pelatihan karyawan intensif hingga outlet siap buka mandiri.',
+              'title' => 'Pelatihan Trainer Onsite',
+              'desc'  => 'Trainer mendampingi 5 hari 4 malam: operasional, kasir, pembukuan, hingga marketing lokal.',
               'image' => get_template_directory_uri() . '/assets/images/indotech-team.jpg',
-              'alt'   => 'Pelatihan dan Instalasi Tim Indotech',
-              'tag'   => 'Teknisi Handal',
+              'alt'   => 'Pelatihan Trainer Onsite Cleanique',
+              'tag'   => 'Pendampingan',
           ],
           [
-              'title' => 'Smart POS Kasir Digital',
-              'desc'  => 'Aplikasi kasir laundry otomatis kirim nota digital via WhatsApp & pantau omzet real-time dari HP.',
-              'image' => get_template_directory_uri() . '/assets/images/hero-pos-app.jpg',
-              'alt'   => 'Aplikasi Kasir POS Cleanique Laundry',
-              'tag'   => 'Sistem Cerdas',
-          ],
-          [
-              'title' => 'Branding & Signage Outlet',
-              'desc'  => 'Banner promosi, spanduk grand opening, neon box outlet, dan materi marketing profesional.',
+              'title' => 'Media Promo & Branding',
+              'desc'  => 'Akrilik billboard, neon box, x-banner, brosur, nota transaksi, dan kartu member siap pakai saat grand opening.',
               'image' => get_template_directory_uri() . '/assets/images/hero-outlet.jpg',
-              'alt'   => 'Branding dan Signage Outlet Laundry Cleanique',
+              'alt'   => 'Media Promosi dan Branding Outlet Cleanique',
               'tag'   => 'Media Promosi',
           ],
       ];
@@ -518,7 +518,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
       <div class="cq-section-header">
         <h2 class="cq-section-title">Paket Usaha Siap Buka Sesuai Budget Anda</h2>
         <p class="cq-section-desc">
-          Pilih paket yang paling cocok dengan lokasi dan modal Anda. Amankan kuota subsidi ongkir &amp; bonus lisensi POS sebelum 31 Desember!
+          Pilih paket yang paling cocok dengan lokasi dan modal Anda. Semua paket BO sudah termasuk pelatihan manajemen &amp; operasional. Amankan kuota subsidi ongkir &amp; bonus lisensi POS sebelum 31 Desember!
         </p>
         <div class="cq-mobile-swipe-indicator"><i class="ri-arrow-left-right-line" aria-hidden="true"></i> Geser ke samping &rarr;</div>
       </div>
@@ -526,7 +526,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
       <div class="cq-grid-3">
         <?php
         $paket_query = new WP_Query([
-            'post_type'      => 'paket_usaha',
+            'post_type'      => 'kemitraan',
             'posts_per_page' => 6,
             'post_status'    => 'publish',
             'orderby'        => 'menu_order date',
@@ -535,10 +535,10 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
 
         if ($paket_query->have_posts()) :
             while ($paket_query->have_posts()) : $paket_query->the_post();
-                $price = get_post_meta(get_the_ID(), '_cq_paket_price', true);
-                $badge = get_post_meta(get_the_ID(), '_cq_paket_badge', true);
-                $featured = get_post_meta(get_the_ID(), '_cq_paket_featured', true);
-                $specs_raw = get_post_meta(get_the_ID(), '_cq_paket_specs', true);
+                $price = get_post_meta(get_the_ID(), '_cq_kemitraan_price', true);
+                $badge = get_post_meta(get_the_ID(), '_cq_kemitraan_badge', true);
+                $featured = get_post_meta(get_the_ID(), '_cq_kemitraan_featured', true);
+                $specs_raw = get_post_meta(get_the_ID(), '_cq_kemitraan_specs', true);
                 $specs = !empty($specs_raw) ? array_filter(array_map('trim', explode("\n", $specs_raw))) : [];
         ?>
           <div class="cq-invest-card <?php echo $featured ? 'is-popular' : ''; ?>">
@@ -548,7 +548,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
             <h3 class="cq-pricing-title"><?php the_title(); ?></h3>
             <p class="cq-card-desc"><?php echo wp_trim_words(get_the_excerpt(), 15, '...'); ?></p>
             <div class="cq-invest-price-val">
-              <?php echo esc_html($price ?: 'Konsultasi'); ?> <small>/ modal awal</small>
+              <?php echo esc_html($price ?: 'Konsultasi'); ?> <small>/ <?php echo $badge === 'Tanpa Mesin' ? 'biaya paket' : 'modal awal'; ?></small>
             </div>
             <ul class="cq-pricing-list">
               <?php foreach ($specs as $spec) : ?>
@@ -564,70 +564,12 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
             wp_reset_postdata();
         else :
         ?>
-        <!-- Fallback Default Paket 1: Starter UMKM -->
-        <div class="cq-invest-card">
-          <h3 class="cq-pricing-title">Paket Starter UMKM</h3>
-          <p class="cq-card-desc">Cocok untuk usaha laundry pemula di area perumahan, indekos, atau kontrakan.</p>
-          <div class="cq-invest-price-val">
-            Rp 25 Juta-an <small>/ modal awal</small>
-          </div>
-          <ul class="cq-pricing-list">
-            <li class="checked">1 Unit Mesin Cuci Front Load Komersial</li>
-            <li class="checked">1 Unit Mesin Pengering (Dryer Konversi Gas)</li>
-            <li class="checked">Paket Chemical Starter Indotech (Deterjen, Parfum, Softener)</li>
-            <li class="checked">1 Set Meja Setrika Uap Boiler + Setrika</li>
-            <li class="checked">Timbangan Digital + Keranjang Cucian</li>
-            <li class="checked">Bahan Promosi (Spanduk, Brosur, Nota Fisik)</li>
-            <li class="checked">Gratis Lisensi Aplikasi Kasir Cleanique 3 Bulan</li>
-          </ul>
-          <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-block" target="_blank" rel="noopener">
-            <i class="ri-whatsapp-line" aria-hidden="true"></i> Pilih Starter
-          </a>
-        </div>
-
-        <!-- Fallback Default Paket 2: Commercial Pro (Featured) -->
+        <!-- Fallback: data paket tidak tersedia -->
         <div class="cq-invest-card is-popular">
-          <div class="cq-invest-badge-pill">Rekomendasi</div>
-          <h3 class="cq-pricing-title">Paket Commercial Pro</h3>
-          <p class="cq-card-desc">Kapasitas menengah ideal untuk ruko strategis, pusat kampus, dan perumahan padat.</p>
-          <div class="cq-invest-price-val">
-            Rp 48 Juta-an <small>/ modal awal</small>
-          </div>
-          <ul class="cq-pricing-list">
-            <li class="checked">2 Unit Mesin Cuci Front Loading Heavy Duty</li>
-            <li class="checked">2 Unit Mesin Pengering Gas Komersial Stack</li>
-            <li class="checked">1 Set Boiler Setrika Uap 15 Liter (2 Kepala Setrika)</li>
-            <li class="checked">Paket Lengkap Chemical Orchid Brand / Cleanique (100 Liter)</li>
-            <li class="checked">Kit Chemical Anti Noda Lengkap (Darah, Karat, Minyak)</li>
-            <li class="checked">Instalasi Pipa Air, Filter &amp; Gas Standar Keselamatan</li>
-            <li class="checked">Rak Display Laundry Besi Kokoh</li>
-            <li class="checked">Gratis Lisensi Aplikasi Kasir Cleanique 1 Tahun Penuh</li>
-            <li class="checked">Training Karyawan Onsite &amp; Pendampingan Buka</li>
-          </ul>
+          <h3 class="cq-pricing-title">Katalog Paket Sedang Diperbarui</h3>
+          <p class="cq-card-desc">Rincian paket Starter, Super, Premium, dan Paket Pelatihan dapat kami kirimkan langsung melalui WhatsApp.</p>
           <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-block" target="_blank" rel="noopener">
-            <i class="ri-whatsapp-line" aria-hidden="true"></i> Pilih Komersial
-          </a>
-        </div>
-
-        <!-- Fallback Default Paket 3: Industrial Premium -->
-        <div class="cq-invest-card">
-          <h3 class="cq-pricing-title">Paket Industrial</h3>
-          <p class="cq-card-desc">Untuk target pasar skala besar: hotel melati, kost eksklusif, guesthouse, dan multi-outlet.</p>
-          <div class="cq-invest-price-val">
-            Rp 85 Juta-an <small>/ modal awal</small>
-          </div>
-          <ul class="cq-pricing-list">
-            <li class="checked">3+ Unit Mesin Cuci Kapasitas Besar (Bed Cover Ready)</li>
-            <li class="checked">3+ Unit Mesin Pengering Kapasitas Besar</li>
-            <li class="checked">Boiler Uap Industri 25 Liter + Meja Vacuum</li>
-            <li class="checked">Pasokan Chemical Grosir Skala Pabrik Langsung</li>
-            <li class="checked">Mesin Sealing / Packaging Otomatis</li>
-            <li class="checked">Branding Interior &amp; Eksterior Lengkap (Neon Box, Meja Kasir)</li>
-            <li class="checked">Sistem POS Laundry Multi-Cabang Seumur Hidup</li>
-            <li class="checked">Konsultasi Bisnis Eksklusif langsung bersama Tim Ahli</li>
-          </ul>
-          <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-block" target="_blank" rel="noopener">
-            <i class="ri-whatsapp-line" aria-hidden="true"></i> Pilih Industrial
+            <i class="ri-whatsapp-line" aria-hidden="true"></i> Minta Katalog
           </a>
         </div>
         <?php endif; ?>
@@ -673,7 +615,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
               <span class="cq-story-rating-text">5.0 &bull; Mitra Terverifikasi</span>
             </div>
             <blockquote class="cq-story-quote">
-              &ldquo;Awalnya kami ragu karena sama sekali belum pernah bisnis laundry. Untung didampingi teknisi Indotech dari perancangan pipa, kelistrikan sampai training takaran chemical. Deterjen dan parfumnya wangi tahan lama dan hemat banget karena suplai langsung pabrik. Dalam 6 bulan modal kami sudah balik!&rdquo;
+              &ldquo;Awalnya kami ragu karena sama sekali belum pernah bisnis laundry. Untung didampingi surveyor dan trainer Indotech dari perancangan pipa, kelistrikan sampai pelatihan takaran bahan. Biang sabunnya hemat banget karena diencerkan sendiri dan hasilnya konsisten. Dalam 6 bulan modal kami sudah balik!&rdquo;
             </blockquote>
             <div class="cq-story-author-box">
               <div class="cq-story-avatar-initial">H&amp;S</div>
@@ -761,7 +703,7 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
               <span class="cq-story-rating-text">5.0 &bull; Mitra Terverifikasi</span>
             </div>
             <blockquote class="cq-story-quote">
-              &ldquo;Mesin komersial stack washer &amp; dryer Cleanique benar-benar bandel, bekerja maraton dari pagi sampai malam mesin tetap stabil dan hemat gas. Tim teknisi PT Indotech gerak cepat saat pendampingan instalasi. Sekarang kami sedang persiapan membuka cabang kedua!&rdquo;
+              &ldquo;Mesinnya bekerja dari pagi sampai malam tanpa kendala, dan biang sabunnya jauh lebih hemat dibanding beli deterjen jadi. Tim instalasi PT Indotech juga rapi saat pemasangan pipa dan gas. Sekarang kami sedang persiapan membuka cabang kedua!&rdquo;
             </blockquote>
             <div class="cq-story-author-box">
               <div class="cq-story-avatar-initial">NH</div>
@@ -841,48 +783,62 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
               <span>Pilihan Paket yang Diminati</span>
               <span style="font-size: 11.5px; color: var(--cq-text-muted); font-weight: 500;">Pilih salah satu</span>
             </label>
-            <input type="hidden" id="investor-paket" name="paket" value="Paket Commercial Pro (Rp 48 Jt - Paling Populer)">
+            <input type="hidden" id="investor-paket" name="paket" value="Paket Super (Rp 75 Jt - Paling Populer)">
 
             <div class="cq-paket-card-selector" role="radiogroup" aria-label="Pilihan Paket yang Diminati">
-              <!-- Card 1: Starter UMKM -->
-              <label class="cq-paket-choice-card" data-paket="Paket Starter UMKM (Rp 25 Jt)">
-                <input type="radio" name="paket_radio" value="Paket Starter UMKM (Rp 25 Jt)" class="cq-paket-radio-native">
+              <!-- Card 1: Starter -->
+              <label class="cq-paket-choice-card" data-paket="Paket Starter (Rp 45 Jt)">
+                <input type="radio" name="paket_radio" value="Paket Starter (Rp 45 Jt)" class="cq-paket-radio-native">
                 <div class="cq-paket-choice-top">
-                  <span class="cq-paket-choice-badge">UMKM</span>
+                  <span class="cq-paket-choice-badge">Starter</span>
                   <span class="cq-paket-choice-check"><i class="ri-check-line" aria-hidden="true"></i></span>
                 </div>
                 <div class="cq-paket-choice-body">
                   <span class="cq-paket-choice-name">Starter</span>
-                  <span class="cq-paket-choice-price">Rp 25 Jt</span>
-                  <span class="cq-paket-choice-sub">Modal Hemat &bull; 1 Stack</span>
+                  <span class="cq-paket-choice-price">Rp 45 Jt</span>
+                  <span class="cq-paket-choice-sub">Ruko 24 m&sup2; &bull; Hemat Pemula</span>
                 </div>
               </label>
 
-              <!-- Card 2: Commercial Pro (Default Selected) -->
-              <label class="cq-paket-choice-card is-selected is-popular" data-paket="Paket Commercial Pro (Rp 48 Jt - Paling Populer)">
-                <input type="radio" name="paket_radio" value="Paket Commercial Pro (Rp 48 Jt - Paling Populer)" class="cq-paket-radio-native" checked>
+              <!-- Card 2: Super (Default Selected) -->
+              <label class="cq-paket-choice-card is-selected is-popular" data-paket="Paket Super (Rp 75 Jt - Paling Populer)">
+                <input type="radio" name="paket_radio" value="Paket Super (Rp 75 Jt - Paling Populer)" class="cq-paket-radio-native" checked>
                 <div class="cq-paket-choice-top">
                   <span class="cq-paket-choice-badge is-popular">Terlaris</span>
                   <span class="cq-paket-choice-check"><i class="ri-check-line" aria-hidden="true"></i></span>
                 </div>
                 <div class="cq-paket-choice-body">
-                  <span class="cq-paket-choice-name">Commercial Pro</span>
-                  <span class="cq-paket-choice-price">Rp 48 Jt</span>
-                  <span class="cq-paket-choice-sub">2 Stack + POS Smart</span>
+                  <span class="cq-paket-choice-name">Super</span>
+                  <span class="cq-paket-choice-price">Rp 75 Jt</span>
+                  <span class="cq-paket-choice-sub">Ruko 36 m&sup2; &bull; POS 1 Tahun</span>
                 </div>
               </label>
 
-              <!-- Card 3: Industrial Premium -->
-              <label class="cq-paket-choice-card" data-paket="Paket Industrial Premium (Rp 85 Jt)">
-                <input type="radio" name="paket_radio" value="Paket Industrial Premium (Rp 85 Jt)" class="cq-paket-radio-native">
+              <!-- Card 3: Premium -->
+              <label class="cq-paket-choice-card" data-paket="Paket Premium (Rp 167 Jt)">
+                <input type="radio" name="paket_radio" value="Paket Premium (Rp 167 Jt)" class="cq-paket-radio-native">
                 <div class="cq-paket-choice-top">
                   <span class="cq-paket-choice-badge">Premium</span>
                   <span class="cq-paket-choice-check"><i class="ri-check-line" aria-hidden="true"></i></span>
                 </div>
                 <div class="cq-paket-choice-body">
-                  <span class="cq-paket-choice-name">Industrial</span>
-                  <span class="cq-paket-choice-price">Rp 85 Jt</span>
-                  <span class="cq-paket-choice-sub">3 Stack + Boiler Uap</span>
+                  <span class="cq-paket-choice-name">Premium</span>
+                  <span class="cq-paket-choice-price">Rp 167 Jt</span>
+                  <span class="cq-paket-choice-sub">72 m&sup2; &bull; Skala Besar</span>
+                </div>
+              </label>
+
+              <!-- Card 4: Pelatihan Saja -->
+              <label class="cq-paket-choice-card" data-paket="Paket Pelatihan Manajemen &amp; Operasional (Rp 8,5 Jt)">
+                <input type="radio" name="paket_radio" value="Paket Pelatihan Manajemen &amp; Operasional (Rp 8,5 Jt)" class="cq-paket-radio-native">
+                <div class="cq-paket-choice-top">
+                  <span class="cq-paket-choice-badge">Pelatihan</span>
+                  <span class="cq-paket-choice-check"><i class="ri-check-line" aria-hidden="true"></i></span>
+                </div>
+                <div class="cq-paket-choice-body">
+                  <span class="cq-paket-choice-name">Pelatihan</span>
+                  <span class="cq-paket-choice-price">Rp 8,5 Jt</span>
+                  <span class="cq-paket-choice-sub">Tanpa Mesin &bull; 5 Hari</span>
                 </div>
               </label>
             </div>
@@ -921,17 +877,17 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
             <i class="ri-arrow-down-s-line cq-accordion-icon" aria-hidden="true"></i>
           </button>
           <div class="cq-accordion-content">
-            Justru kemitraan Cleanique dirancang khusus untuk pemula agar tidak terjebak trial-error. Anda dan karyawan akan dilatih tuntas onsite mulai dari pengoperasian mesin, teknik spotting noda, takaran chemical, hingga SOP pelayanan pelanggan dan pembukuan kasir.
+            Justru kemitraan Cleanique dirancang khusus untuk pemula agar tidak terjebak trial-error. Anda dan karyawan akan dilatih tuntas onsite mulai dari pengoperasian mesin, teknik spotting noda, takaran bahan, hingga SOP pelayanan pelanggan dan pembukuan kasir.
           </div>
         </div>
 
         <div class="cq-accordion-item">
           <button class="cq-accordion-trigger" type="button" aria-expanded="false">
-            <span>Bagaimana jaminan garansi mesin dan ketersediaan suku cadang?</span>
+            <span>Apakah unit mesin baru dan bagaimana pendampingannya?</span>
             <i class="ri-arrow-down-s-line cq-accordion-icon" aria-hidden="true"></i>
           </button>
           <div class="cq-accordion-content">
-            Semua mesin komersial washer dan dryer mendapatkan garansi resmi serta dukungan teknisi berpengalaman dan ketersediaan suku cadang asli dari PT Indotech Berkah Abadi.
+            Semua unit 100% baru, bukan bekas atau rekondisi. Pendampingan meliputi survei kelayakan lokasi, instalasi oleh tim PT Indotech Berkah Abadi, pelatihan trainer onsite 5 hari 4 malam, serta konsultasi teknis tanpa batas waktu setelah outlet berjalan.
           </div>
         </div>
 
@@ -947,11 +903,21 @@ $wa_url = cleanique_get_whatsapp_url('paket_usaha');
 
         <div class="cq-accordion-item">
           <button class="cq-accordion-trigger" type="button" aria-expanded="false">
-            <span>Bagaimana kelanjutan pasokan deterjen dan pewangi setelah buka?</span>
+            <span>Bagaimana kelanjutan pasokan bahan laundry setelah buka?</span>
             <i class="ri-arrow-down-s-line cq-accordion-icon" aria-hidden="true"></i>
           </button>
           <div class="cq-accordion-content">
-            Sebagai mitra resmi, Anda mendapatkan hak akses harga khusus pabrik termurah langsung dari pabrik PT Indotech Berkah Abadi di Sleman untuk deterjen, softener microcapsule, parfum, dan cairan anti-noda Orchid Brand.
+            Mitra mendapatkan akses harga khusus pabrik untuk biang sabun, softener, parfum waterbase, dan cairan anti-noda. Bahan dikirim dalam bentuk pekat lalu diencerkan sendiri di outlet, sehingga biaya per kilo cucian lebih murah dibanding membeli sabun jadi.
+          </div>
+        </div>
+
+        <div class="cq-accordion-item">
+          <button class="cq-accordion-trigger" type="button" aria-expanded="false">
+            <span>Apakah bahan laundry Cleanique bersertifikat halal?</span>
+            <i class="ri-arrow-down-s-line cq-accordion-icon" aria-hidden="true"></i>
+          </button>
+          <div class="cq-accordion-content">
+            Ya. Bahan yang kami suplai bersertifikat halal. Bagi mitra yang ingin naik kelas, kami mendampingi proses sertifikasi halal outlet sehingga usaha Anda berpeluang masuk ekosistem mitra bisnis syariah.
           </div>
         </div>
       </div>

@@ -128,6 +128,59 @@ if ($is_paket_usaha) {
   </a>
 </aside>
 
+<!-- ========================================================
+     GLOBAL IMAGE PREVIEW LIGHTBOX MODAL
+     Interactive High-Resolution Image Preview & Zoom Dialog
+     ======================================================== -->
+<div class="cq-img-modal" id="cq-img-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Pratinjau Gambar Cleanique">
+  <div class="cq-img-modal-backdrop" id="cq-img-modal-backdrop"></div>
+  
+  <div class="cq-img-modal-container">
+    <!-- Top Action Bar -->
+    <div class="cq-img-modal-topbar">
+      <div class="cq-img-modal-counter" id="cq-img-modal-counter">1 / 1</div>
+      <div class="cq-img-modal-actions">
+        <button type="button" class="cq-img-modal-btn" id="cq-img-modal-zoom" aria-label="Perbesar / Perkecil" title="Perbesar / Perkecil Gambar">
+          <i class="ri-zoom-in-line" id="cq-img-modal-zoom-icon"></i>
+        </button>
+        <a href="#" class="cq-img-modal-btn" id="cq-img-modal-download" target="_blank" rel="noopener" aria-label="Buka Gambar Asli" title="Buka Gambar Resolusi Penuh">
+          <i class="ri-external-link-line"></i>
+        </a>
+        <button type="button" class="cq-img-modal-btn cq-img-modal-close" id="cq-img-modal-close" aria-label="Tutup Pratinjau (Esc)" title="Tutup (Esc)">
+          <i class="ri-close-line"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Image Stage & Nav Controls -->
+    <div class="cq-img-modal-stage" id="cq-img-modal-stage">
+      <button type="button" class="cq-img-modal-nav cq-img-modal-prev" id="cq-img-modal-prev" aria-label="Gambar Sebelumnya (Panah Kiri)" title="Sebelumnya">
+        <i class="ri-arrow-left-s-line"></i>
+      </button>
+
+      <div class="cq-img-modal-figure" id="cq-img-modal-figure">
+        <div class="cq-img-modal-spinner" id="cq-img-modal-spinner" aria-hidden="true">
+          <i class="ri-loader-4-line ri-spin"></i>
+        </div>
+        <img src="" alt="" class="cq-img-modal-img" id="cq-img-modal-img" loading="eager" draggable="false">
+      </div>
+
+      <button type="button" class="cq-img-modal-nav cq-img-modal-next" id="cq-img-modal-next" aria-label="Gambar Selanjutnya (Panah Kanan)" title="Selanjutnya">
+        <i class="ri-arrow-right-s-line"></i>
+      </button>
+    </div>
+
+    <!-- Bottom Caption & Context Link Bar -->
+    <div class="cq-img-modal-caption-wrap" id="cq-img-modal-caption-wrap">
+      <p class="cq-img-modal-caption" id="cq-img-modal-caption"></p>
+      <a href="#" class="cq-img-modal-link-btn" id="cq-img-modal-link-btn" style="display: none;">
+        <span>Buka Halaman Terkait</span>
+        <i class="ri-arrow-right-up-line"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
 <?php wp_footer(); ?>
 </body>
 </html>

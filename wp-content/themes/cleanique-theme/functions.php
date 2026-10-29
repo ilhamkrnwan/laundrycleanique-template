@@ -10,7 +10,7 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
 
-define('CLEANIQUE_VERSION', '1.5.5');
+define('CLEANIQUE_VERSION', '1.6.6');
 define('CLEANIQUE_DIR', get_template_directory());
 define('CLEANIQUE_URI', get_template_directory_uri());
 
@@ -206,15 +206,7 @@ function cleanique_enqueue_assets() {
         CLEANIQUE_VERSION
     );
 
-    // 6. ROI & Financial Turnover Simulator Stylesheet
-    wp_enqueue_style(
-        'cleanique-calculator-style',
-        CLEANIQUE_URI . '/assets/css/calculator.css',
-        ['cleanique-cards-style'],
-        CLEANIQUE_VERSION
-    );
-
-    // 7. Kemitraan Catalog & Comparison Matrix Stylesheet
+    // 6. Kemitraan Catalog & Comparison Matrix Stylesheet
     wp_enqueue_style(
         'cleanique-kemitraan-style',
         CLEANIQUE_URI . '/assets/css/kemitraan.css',
@@ -282,7 +274,7 @@ function cleanique_enqueue_assets() {
     );
 
     // Kirim konfigurasi ke JS
-    $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
+    $wa_number = get_theme_mod('cleanique_wa_number', '6285600061005');
     wp_localize_script('cleanique-main-script', 'CleaniqueConfig', [
         'ajaxUrl'   => admin_url('admin-ajax.php'),
         'waNumber'  => esc_js($wa_number),
@@ -305,7 +297,7 @@ function cleanique_customize_register($wp_customize) {
 
     // No WhatsApp CS
     $wp_customize->add_setting('cleanique_wa_number', [
-        'default'           => '6281234567890',
+        'default'           => '6285600061005',
         'sanitize_callback' => 'sanitize_text_field',
     ]);
     $wp_customize->add_control('cleanique_wa_number', [
@@ -345,7 +337,7 @@ add_action('customize_register', 'cleanique_customize_register');
  * @return string WhatsApp URL
  */
 function cleanique_get_whatsapp_url($context = 'general') {
-    $wa_number = get_theme_mod('cleanique_wa_number', '6281234567890');
+    $wa_number = get_theme_mod('cleanique_wa_number', '6285600061005');
     $wa_number = preg_replace('/[^0-9]/', '', $wa_number);
 
     switch ($context) {
@@ -377,7 +369,7 @@ function cleanique_get_whatsapp_url($context = 'general') {
  * Helper: Link WhatsApp khusus untuk single/detail paket kemitraan tertentu
  */
 function cleanique_get_kemitraan_whatsapp_url($post_id = 0) {
-    $wa_number = get_option('cleanique_kemitraan_wa') ?: get_theme_mod('cleanique_wa_number', '6281234567890');
+    $wa_number = get_option('cleanique_kemitraan_wa') ?: get_theme_mod('cleanique_wa_number', '6285600061005');
     $wa_number = preg_replace('/[^0-9]/', '', $wa_number);
 
     if ($post_id) {

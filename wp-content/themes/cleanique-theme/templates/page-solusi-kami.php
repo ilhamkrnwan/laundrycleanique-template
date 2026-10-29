@@ -40,7 +40,7 @@ $wa_url = cleanique_get_whatsapp_url('general');
 
         <div class="cq-payno-hero-right">
           <p class="cq-payno-hero-desc">
-            Cleanique Laundry menyediakan rantai pasok dan sistem terpadu bagi para wirausahawan binatu: mulai dari paket pembukaan outlet fisik siap pakai dengan mesin komersial heavy-duty, suplai chemical langsung dari pabrik, hingga transformasi kasir digital modern berbasis komputasi cloud.
+            Cleanique Laundry menyediakan rantai pasok dan sistem terpadu bagi para wirausahawan binatu: mulai dari paket pembukaan outlet fisik siap pakai dengan mesin cuci &amp; pengering baru, suplai biang sabun langsung dari pabrik, hingga transformasi kasir digital modern berbasis komputasi cloud.
           </p>
 
           <div style="font-size: var(--cq-fs-xs); color: var(--ink); font-weight: 600; margin-bottom: var(--cq-sp-16); display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
@@ -112,13 +112,13 @@ $wa_url = cleanique_get_whatsapp_url('general');
             Paket Usaha Laundry Lengkap (Turnkey Business)
           </h2>
           <p style="color: var(--cq-text-muted); font-size: 1.05rem; line-height: 1.7; margin-bottom: var(--cq-sp-16);">
-            Bagi calon investor dan pengusaha yang ingin memiliki outlet laundry kiloan atau komersial tanpa perlu bingung meriset mesin, meracik chemical, atau menyusun SOP. Seluruh peralatan siap pakai bergaransi resmi pabrik.
+            Bagi calon investor dan pengusaha yang ingin memiliki outlet laundry kiloan atau komersial tanpa perlu bingung meriset mesin, meracik bahan, atau menyusun SOP. Seluruh peralatan siap pakai dan unit 100% baru.
           </p>
 
           <ul class="cq-portal-gateway-bullets" style="margin-bottom: var(--cq-sp-24);">
-            <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> Set mesin cuci &amp; dryer komersial heavy-duty bergaransi resmi pabrik.</li>
+            <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> Set mesin cuci &amp; pengering baru, kapasitas sesuai paket.</li>
             <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> Instalasi pipa air, kelistrikan, dan cerobong pembuangan gas standar aman.</li>
-            <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> Pasokan deterjen, softener, dan parfum langsung dari pabrik Indotech.</li>
+            <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> Pasokan biang sabun, softener, dan parfum halal langsung dari pabrik Indotech.</li>
             <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> Termasuk lisensi sistem aplikasi kasir digital POS Cleanique.</li>
             <li><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> Pelatihan SOP karyawan, pendampingan grand opening, dan 100% tanpa royalti fee.</li>
           </ul>

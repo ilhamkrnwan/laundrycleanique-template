@@ -128,24 +128,24 @@
 
 .cq-kemitraan-ribbon {
   position: absolute;
-  top: -12px;
-  right: 18px;
-  background: linear-gradient(135deg, var(--cq-primary, #0077b6) 0%, var(--cq-primary-dark, #0284c7) 100%);
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
   color: #ffffff;
   font-family: var(--cq-font-heading, sans-serif);
-  font-size: 10.5px;
-  font-weight: 800;
+  font-size: 11px;
+  font-weight: 600 !important;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   padding: 4px 14px;
   border-radius: var(--cq-rad-pill, 9999px);
-  box-shadow: 0 4px 12px rgba(0, 119, 182, 0.3);
-  white-space: nowrap;
-  z-index: 2;
-}
-
-.cq-kemitraan-card.is-featured .cq-kemitraan-ribbon {
-  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.28);
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center;
+  gap: 5px;
+  z-index: 5;
 }
 
 .cq-kemitraan-header {
@@ -154,7 +154,7 @@
 
 .cq-kemitraan-header .cq-corp-card-title {
   font-size: clamp(1.15rem, 1.05rem + 0.25vw, 1.3rem);
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 6px;
   line-height: 1.3;
   min-height: 2.7em;
@@ -174,18 +174,259 @@
   overflow: hidden;
 }
 
+/* Top Category Pill */
+.cq-pkg-tag {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  font-weight: 600 !important;
+  color: #475569;
+  background: #f1f5f9;
+  padding: 4px 12px;
+  border-radius: var(--cq-rad-pill, 9999px);
+  margin-bottom: 12px;
+  border: 1px solid #e2e8f0;
+  width: fit-content;
+  white-space: nowrap !important;
+  line-height: 1;
+}
+
+.cq-pkg-tag i {
+  color: #0284c7;
+  font-size: 13px;
+}
+
+.cq-pkg-tag.is-featured {
+  color: #0369a1;
+  background: #e0f2fe;
+  border-color: #bae6fd;
+}
+
+.cq-pkg-tag.is-featured i {
+  color: #0284c7;
+}
+
+/* ==========================================================================
+   HIGH-IMPACT KEMITRAAN PRICING ARCHITECTURE (.cq-kemitraan-price-box)
+   ========================================================================== */
+.cq-kemitraan-price-box {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1.5px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 16px 18px;
+  margin: 14px 0 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.cq-kemitraan-price-box:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.06);
+}
+
+.cq-kemitraan-price-box.is-featured {
+  background: linear-gradient(135deg, #e0f2fe 0%, #ffffff 100%);
+  border: 1.5px solid #7dd3fc;
+  box-shadow: 0 8px 25px -4px rgba(0, 168, 232, 0.16);
+}
+
+.cq-price-top-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.cq-price-starter-tag {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+  white-space: nowrap !important;
+}
+
+.cq-price-starter-tag.is-featured {
+  color: #0284c7;
+}
+
+.cq-price-ownership-badge {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600 !important;
+  color: #059669;
+  background: #dcfce7;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  white-space: nowrap !important;
+  line-height: 1;
+}
+
+.cq-price-ownership-badge i {
+  font-size: 12px;
+}
+
+.cq-price-ownership-badge.is-featured {
+  background: #10b981;
+  color: #ffffff;
+  border: none;
+}
+
+/* Big Bold Price Display */
+.cq-kemitraan-price-display {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin: 2px 0 0 0;
+}
+
+.cq-price-prefix {
+  font-family: var(--cq-font-heading, sans-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #64748b;
+  line-height: 1;
+}
+
+.cq-price-prefix.is-featured {
+  color: #0284c7;
+}
+
+.cq-price-val {
+  font-family: var(--cq-font-heading, sans-serif);
+  font-size: clamp(2.6rem, 2.3rem + 1.2vw, 3.4rem);
+  font-weight: 900;
+  color: #0f172a;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.cq-price-val.is-featured {
+  color: #0077b6;
+  text-shadow: 0 2px 10px rgba(0, 119, 182, 0.15);
+}
+
+.cq-price-unit {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 1px;
+  margin-left: 4px;
+}
+
+.cq-price-unit-main {
+  font-family: var(--cq-font-heading, sans-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #1e293b;
+  line-height: 1;
+}
+
+.cq-price-unit-main.is-featured {
+  color: #0284c7;
+}
+
+.cq-price-unit-sub {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #64748b;
+  line-height: 1;
+}
+
+.cq-price-subtext {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 500;
+  margin: 4px 0 0 0;
+  line-height: 1.4;
+  white-space: nowrap !important;
+}
+
+.cq-kemitraan-card.is-featured .cq-price-subtext {
+  color: #0284c7;
+}
+
+.cq-kemitraan-price-footer {
+  margin-top: 2px;
+}
+
+.cq-kemitraan-price-label {
+  font-size: 11.5px;
+  color: #64748b;
+  font-weight: 600;
+  display: inline-flex !important;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  white-space: nowrap !important;
+  line-height: 1;
+}
+
+.cq-kemitraan-price-label i {
+  color: #10b981;
+  font-size: 14px;
+}
+
+/* ROI Chip: strictly single-row badge */
+.cq-kemitraan-roi-pill {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  font-weight: 600 !important;
+  color: #065f46;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  padding: 5px 12px;
+  border-radius: var(--cq-rad-pill, 9999px);
+  margin-bottom: 14px;
+  width: fit-content;
+  white-space: nowrap !important;
+  line-height: 1;
+}
+
+.cq-kemitraan-roi-pill i {
+  color: #10b981;
+  font-size: 13.5px;
+}
+
+.cq-kemitraan-roi-pill.is-featured {
+  background: #d1fae5;
+  border-color: #6ee7b7;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.12);
+}
+
+.cq-kemitraan-card strong,
+.cq-pricing-horizontal-card strong,
+.cq-pricing-enterprise-card strong {
+  font-weight: 600;
+}
+
+.cq-kemitraan-divider {
+  height: 1px;
+  background: #f1f5f9;
+  margin: 0 0 16px 0;
+  width: 100%;
+}
+
+/* Legacy fallback support */
 .cq-kemitraan-price-wrap {
   margin: var(--cq-sp-12, 12px) 0;
   padding-bottom: var(--cq-sp-14, 14px);
   border-bottom: 1px solid var(--cq-border-light, #e2e8f0);
-  min-height: 98px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
 }
 
 .cq-kemitraan-price {
   font-family: var(--cq-font-heading, sans-serif);
+  font-size: 1.85rem;
+  font-weight: 900;
+  color: #0f172a;
   line-height: 1.2;
   display: flex;
   align-items: baseline;
@@ -193,31 +434,8 @@
   gap: 5px;
 }
 
-.cq-kemitraan-price .cq-price-prefix {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--cq-text-muted, #64748b);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.cq-kemitraan-price .cq-price-num {
-  font-size: clamp(1.3rem, 1.15rem + 0.35vw, 1.6rem);
-  font-weight: 800;
-  color: var(--cq-dark-navy, #0b132b);
-  letter-spacing: -0.02em;
-}
-
-.cq-kemitraan-price-label {
-  font-size: 11px;
-  color: var(--cq-text-muted, #64748b);
-  font-weight: 600;
-  margin-top: 3px;
-  display: block;
-}
-
 .cq-kemitraan-roi-chip {
-  display: inline-flex;
+  display: inline-flex !important;
   align-items: center;
   gap: 5px;
   padding: 4px 10px;
@@ -225,10 +443,11 @@
   color: #065f46;
   border: 1px solid rgba(16, 185, 129, 0.22);
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 600 !important;
   border-radius: var(--cq-rad-pill, 9999px);
   margin-top: 8px;
   width: fit-content;
+  white-space: nowrap !important;
 }
 
 .cq-kemitraan-roi-chip i {
@@ -262,6 +481,38 @@
   margin-top: 1px;
 }
 
+.cq-kemitraan-specs-list li.cq-spec-highlight-free {
+  background: #f0fdf4;
+  border: 1px dashed #86efac;
+  border-radius: 10px;
+  padding: 6px 10px;
+  margin: 2px 0;
+}
+
+.cq-kemitraan-specs-list li.cq-spec-highlight-free i {
+  color: #16a34a;
+  font-size: 1.15rem;
+}
+
+.cq-kemitraan-specs-list li.cq-spec-highlight-free span {
+  color: #14532d;
+  font-size: 0.84rem;
+  line-height: 1.4;
+}
+
+.cq-spec-val-tag {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #047857;
+  background: #dcfce7;
+  border: 1px solid #a7f3d0;
+  padding: 1px 7px;
+  border-radius: 4px;
+  margin-left: 4px;
+  white-space: nowrap;
+}
+
 .cq-kemitraan-actions {
   margin-top: auto;
   display: flex;
@@ -274,11 +525,376 @@
   min-height: 44px;
   padding: 10px 14px;
   font-size: 0.88rem;
-  font-weight: 700;
+  font-weight: 600;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
+}
+
+/* ==========================================================================
+   3.1 TIERED BENTO PRICING ARCHITECTURE (3 Core Top + 2 Wide Bottom)
+   High-Impact SaaS-Style Pricing Architecture for Cleanique Laundry
+   ========================================================================== */
+
+/* Toggle Scheme Switcher */
+.cq-pricing-switcher-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto clamp(24px, 4vw, 36px) auto;
+  text-align: center;
+}
+
+.cq-pricing-switcher-pills {
+  display: inline-flex;
+  align-items: center;
+  background: #f1f5f9;
+  padding: 5px;
+  border-radius: var(--cq-rad-pill, 9999px);
+  border: 1.5px solid #e2e8f0;
+  box-shadow: inset 0 2px 4px rgba(15, 23, 42, 0.04);
+  gap: 4px;
+  max-width: 100%;
+}
+
+.cq-pricing-pill-btn {
+  border: none;
+  background: transparent;
+  padding: 9px 20px;
+  border-radius: var(--cq-rad-pill, 9999px);
+  font-family: var(--cq-font-heading, sans-serif);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.cq-pricing-pill-btn i {
+  font-size: 15px;
+  color: #94a3b8;
+  transition: color 0.25s ease;
+}
+
+.cq-pricing-pill-btn:hover {
+  color: var(--cq-dark-navy, #0f172a);
+}
+
+.cq-pricing-pill-btn.is-active {
+  background: #ffffff;
+  color: var(--cq-dark-navy, #0f172a);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+}
+
+.cq-pricing-pill-btn.is-active i {
+  color: var(--cq-primary, #0077b6);
+}
+
+.cq-switcher-badge {
+  font-size: 11px;
+  font-weight: 600 !important;
+  color: #0284c7;
+  background: #e0f2fe;
+  padding: 2px 8px;
+  border-radius: var(--cq-rad-pill, 9999px);
+  border: 1px solid rgba(2, 132, 199, 0.2);
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center;
+}
+
+.cq-pricing-switcher-note {
+  margin-top: 12px;
+  font-size: 12.5px;
+  color: #64748b;
+  min-height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cq-scheme-note {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.cq-scheme-note.is-active {
+  display: inline-flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cq-scheme-note i {
+  color: var(--cq-primary, #0077b6);
+  font-size: 15px;
+}
+
+.cq-scheme-note strong {
+  color: var(--cq-dark-navy, #0f172a);
+}
+
+/* Bento Container */
+.cq-pricing-bento-layout {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(22px, 3vw, 32px);
+}
+
+/* Row 1: 3 Core Cards */
+.cq-pricing-bento-top {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 2.5vw, 28px);
+  align-items: stretch;
+}
+
+/* Row 2: 2 Wide Bento Cards */
+.cq-pricing-bento-bottom {
+  display: grid;
+  grid-template-columns: 1.55fr 1fr;
+  gap: clamp(20px, 2.5vw, 28px);
+  align-items: stretch;
+}
+
+/* Bottom Card 1: Horizontal Split Card (Pelatihan & SOP) */
+.cq-pricing-horizontal-card {
+  background: #ffffff;
+  border: 1.5px solid var(--cq-border-light, #e2e8f0);
+  border-radius: 26px;
+  padding: clamp(24px, 3.5vw, 34px);
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: clamp(24px, 3vw, 36px);
+  align-items: center;
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease;
+}
+
+.cq-pricing-horizontal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 48px -10px rgba(0, 119, 182, 0.12);
+  border-color: #38bdf8;
+}
+
+.cq-pricing-horizontal-left {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cq-pricing-horizontal-left .cq-kemitraan-price-box {
+  margin: 12px 0 16px 0;
+}
+
+.cq-pricing-horizontal-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #f8fafc;
+  padding: clamp(18px, 2.5vw, 24px);
+  border-radius: 20px;
+  border: 1px solid #f1f5f9;
+}
+
+.cq-horizontal-right-title {
+  font-family: var(--cq-font-heading, sans-serif);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--cq-dark-navy, #0f172a);
+  margin: 0 0 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  letter-spacing: -0.01em;
+}
+
+.cq-horizontal-right-title i {
+  color: var(--cq-primary, #0077b6);
+  font-size: 16px;
+}
+
+.cq-horizontal-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cq-horizontal-feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: #475569;
+}
+
+.cq-horizontal-feature-list li i {
+  color: #10b981;
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.cq-horizontal-feature-list li strong {
+  display: block;
+  font-weight: 600;
+  color: var(--cq-dark-navy, #0f172a);
+  font-size: 13px;
+  margin-bottom: 1px;
+}
+
+.cq-horizontal-feature-list li span {
+  display: block;
+  color: #64748b;
+}
+
+/* Bottom Card 2: Enterprise Industrial Card */
+.cq-pricing-enterprise-card {
+  background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+  border: 1.5px solid #334155;
+  border-radius: 26px;
+  padding: clamp(24px, 3.5vw, 34px);
+  box-shadow: 0 10px 32px -6px rgba(15, 23, 42, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  color: #ffffff;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease;
+}
+
+.cq-pricing-enterprise-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 50px -10px rgba(15, 23, 42, 0.45);
+  border-color: #38bdf8;
+}
+
+.cq-enterprise-header .cq-corp-card-title {
+  color: #ffffff;
+  font-size: clamp(1.2rem, 1.1rem + 0.3vw, 1.4rem);
+  font-weight: 600;
+  margin: 8px 0 8px 0;
+  line-height: 1.3;
+}
+
+.cq-enterprise-header .cq-corp-card-desc {
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 0 0 18px 0;
+}
+
+.cq-pkg-tag.is-enterprise {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.cq-enterprise-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.cq-enterprise-spec-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: #e2e8f0;
+  line-height: 1.4;
+}
+
+.cq-enterprise-spec-item i {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.cq-enterprise-footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cq-enterprise-cta-label {
+  font-size: 11px;
+  color: #94a3b8;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.cq-btn-enterprise {
+  background: #ffffff;
+  color: #0f172a !important;
+  font-weight: 600 !important;
+  border: none;
+  transition: all 0.25s ease;
+}
+
+.cq-btn-enterprise:hover {
+  background: #38bdf8;
+  color: #0f172a !important;
+  box-shadow: 0 8px 24px rgba(56, 189, 248, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Responsive Breakpoints for Bento Pricing */
+@media (max-width: 1040px) {
+  .cq-pricing-bento-top {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .cq-pricing-bento-bottom {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .cq-pricing-bento-top {
+    grid-template-columns: 1fr;
+  }
+  .cq-pricing-horizontal-card {
+    grid-template-columns: 1fr;
+  }
+  .cq-pricing-switcher-pills {
+    flex-direction: column;
+    width: 100%;
+    border-radius: 18px;
+    padding: 6px;
+  }
+  .cq-pricing-pill-btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* ==========================================================================
