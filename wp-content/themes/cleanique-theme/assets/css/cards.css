@@ -2179,24 +2179,25 @@ section[id],
   display: none !important;
 }
 
-/* Floating Contained Card (Tidak Full Width) */
+/* Floating Contained Card (Modern 2-Column Split Bento Architecture) */
 .cq-banner-cta-card,
 .cq-banner-cta-section > .cq-container > .cq-section-header,
 .cq-banner-cta-section .cq-container.cq-section-header {
   position: relative;
   width: 100%;
-  max-width: 100% !important;
+  max-width: 1140px !important;
   margin-bottom: 0 !important;
-  background: linear-gradient(135deg, #0b132b 0%, #1c2541 60%, #0f172a 100%) !important;
-  color: #ffffff;
-  border-radius: clamp(24px, 3.5vw, 36px);
-  padding: clamp(44px, 5.5vw, 72px) clamp(24px, 4.5vw, 56px);
-  text-align: center;
+  background: linear-gradient(135deg, #07172c 0%, #0d274c 50%, #061527 100%) !important;
+  color: #ffffff !important;
+  border-radius: clamp(24px, 3.5vw, 32px) !important;
+  padding: clamp(36px, 4.5vw, 56px) clamp(24px, 4vw, 52px) !important;
+  text-align: left !important;
   overflow: hidden;
-  box-shadow: 0 24px 60px -15px rgba(11, 19, 43, 0.45), 0 4px 20px -2px rgba(11, 19, 43, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  margin-left: auto;
-  margin-right: auto;
+  box-shadow: 0 24px 60px -15px rgba(7, 23, 44, 0.45), 0 4px 20px -2px rgba(7, 23, 44, 0.2) !important;
+  border: 1px solid rgba(0, 168, 232, 0.25) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  z-index: 2;
 }
 
 /* Subtle top border illumination */
@@ -2206,11 +2207,12 @@ section[id],
   content: "";
   position: absolute;
   top: 0;
-  left: 10%;
-  right: 10%;
+  left: 8%;
+  right: 8%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(0, 168, 232, 0.65), transparent);
+  background: linear-gradient(90deg, transparent, rgba(0, 229, 153, 0.6), rgba(0, 168, 232, 0.8), transparent) !important;
   pointer-events: none;
+  z-index: 1;
 }
 
 /* Internal radial glow */
@@ -2219,12 +2221,11 @@ section[id],
 .cq-banner-cta-section .cq-container.cq-section-header::before {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: min(650px, 92%);
-  height: 360px;
-  background: radial-gradient(circle, rgba(0, 168, 232, 0.18) 0%, rgba(0, 119, 182, 0) 70%);
+  top: -20%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 168, 232, 0.15) 0%, transparent 70%) !important;
   pointer-events: none;
   z-index: 1;
 }
@@ -2235,17 +2236,53 @@ section[id],
   z-index: 2;
 }
 
+.cq-banner-cta-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(28px, 4vw, 44px);
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 992px) {
+  .cq-banner-cta-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: clamp(36px, 4.5vw, 56px);
+  }
+}
+
+.cq-banner-cta-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.cq-banner-cta-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.cq-banner-cta-badges .cq-badge-pill {
+  margin: 0 !important;
+  white-space: nowrap !important;
+  font-weight: 600;
+}
+
 .cq-banner-cta-title,
 .cq-banner-cta-card h2,
 .cq-banner-cta-section h2,
 .cq-banner-cta-section .cq-section-header h2 {
   color: #ffffff !important;
-  font-family: var(--cq-font-heading);
-  font-size: clamp(1.8rem, 1.4rem + 1.2vw, 2.6rem);
-  font-weight: 300;
-  letter-spacing: -0.03em;
-  line-height: 1.25;
-  margin-bottom: 16px;
+  font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(1.85rem, 1.4rem + 1.2vw, 2.5rem) !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  margin: 0 0 14px 0 !important;
+  text-align: left !important;
 }
 
 .cq-banner-cta-title strong,
@@ -2263,18 +2300,110 @@ section[id],
 .cq-banner-cta-section p,
 .cq-banner-cta-section .cq-section-header p {
   color: #cbd5e1 !important;
-  font-size: clamp(1rem, 0.95rem + 0.2vw, 1.15rem);
-  max-width: 720px;
-  margin: 0 auto 32px;
-  line-height: 1.65;
+  font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.05rem) !important;
+  max-width: 580px;
+  margin: 0 0 24px 0 !important;
+  line-height: 1.65 !important;
+  text-align: left !important;
 }
 
 .cq-banner-cta-actions {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start !important;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.cq-banner-cta-trust {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 12.5px;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.cq-banner-cta-trust span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cq-banner-cta-trust i {
+  color: #10b981;
+}
+
+.cq-banner-cta-right {
+  position: relative;
+  width: 100%;
+}
+
+.cq-banner-cta-visual {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(15, 23, 42, 0.6);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.4);
+}
+
+.cq-banner-cta-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+}
+
+.cq-banner-cta-visual-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(7, 23, 44, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 168, 232, 0.35);
+  color: #e0f2fe;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  z-index: 3;
+}
+
+.cq-banner-cta-visual-badge i {
+  color: #00a8e8;
+}
+
+.cq-banner-cta-visual-footer {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  z-index: 3;
+}
+
+.cq-cta-stat-pill {
+  background: rgba(7, 23, 44, 0.88);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .cq-banner-cta-actions .cq-btn-accent {
