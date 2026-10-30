@@ -7518,3 +7518,215 @@
   }
 }
 
+
+/* ==========================================================================
+   MODERN CORPORATE BANNER CTA CARD (Split Bento Architecture)
+   ========================================================================== */
+.cq-banner-cta-card,
+.cq-banner-cta-section .cq-banner-cta-card,
+.cq-kemitraan-cta-box {
+  position: relative;
+  width: 100%;
+  max-width: 1140px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-bottom: 0 !important;
+  background: linear-gradient(135deg, #07172c 0%, #0d274c 50%, #061527 100%) !important;
+  color: #ffffff !important;
+  border-radius: clamp(24px, 3.5vw, 32px) !important;
+  padding: clamp(36px, 4.5vw, 56px) clamp(24px, 4vw, 52px) !important;
+  text-align: left !important;
+  overflow: hidden;
+  box-shadow: 0 24px 60px -15px rgba(7, 23, 44, 0.45), 0 4px 20px -2px rgba(7, 23, 44, 0.2) !important;
+  border: 1px solid rgba(0, 168, 232, 0.25) !important;
+  z-index: 2;
+}
+
+.cq-banner-cta-card::after,
+.cq-banner-cta-section .cq-banner-cta-card::after,
+.cq-kemitraan-cta-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 229, 153, 0.6), rgba(0, 168, 232, 0.8), transparent) !important;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cq-banner-cta-card::before,
+.cq-banner-cta-section .cq-banner-cta-card::before,
+.cq-kemitraan-cta-box::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 168, 232, 0.15) 0%, transparent 70%) !important;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cq-banner-cta-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(28px, 4vw, 44px);
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 992px) {
+  .cq-banner-cta-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: clamp(36px, 4.5vw, 56px);
+  }
+}
+
+.cq-banner-cta-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.cq-banner-cta-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.cq-banner-cta-badges .cq-badge-pill {
+  margin: 0 !important;
+  white-space: nowrap !important;
+  font-weight: 600;
+}
+
+.cq-banner-cta-title,
+.cq-banner-cta-card h2,
+.cq-banner-cta-section h2,
+.cq-kemitraan-cta-box h2 {
+  color: #ffffff !important;
+  font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(1.85rem, 1.4rem + 1.2vw, 2.5rem) !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  margin: 0 0 14px 0 !important;
+  text-align: left !important;
+}
+
+.cq-banner-cta-desc,
+.cq-banner-cta-card p,
+.cq-banner-cta-section p,
+.cq-kemitraan-cta-box p {
+  font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.05rem) !important;
+  color: #cbd5e1 !important;
+  line-height: 1.65 !important;
+  margin: 0 0 24px 0 !important;
+  max-width: 580px;
+  text-align: left !important;
+}
+
+.cq-banner-cta-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+  justify-content: flex-start !important;
+}
+
+.cq-banner-cta-trust {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 12.5px;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.cq-banner-cta-trust span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cq-banner-cta-trust i {
+  color: #10b981;
+  font-size: 15px;
+}
+
+/* Right Column Visual Showcase */
+.cq-banner-cta-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.cq-banner-cta-visual {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.4);
+  background: #0b132b;
+}
+
+.cq-banner-cta-visual-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(11, 19, 43, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.cq-banner-cta-visual-badge i {
+  color: #00e599;
+}
+
+.cq-banner-cta-img {
+  width: 100%;
+  height: auto;
+  max-height: 280px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.cq-banner-cta-visual:hover .cq-banner-cta-img {
+  transform: scale(1.03);
+}
+
+.cq-banner-cta-visual-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 16px;
+  background: rgba(11, 19, 43, 0.9);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cq-cta-stat-pill {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #e2e8f0;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}

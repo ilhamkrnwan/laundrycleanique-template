@@ -174,7 +174,7 @@ $reading_time = cleanique_get_reading_time($current_id);
                 'itemprop' => 'url',
             ]); ?>
           <?php else : ?>
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-outlet.jpg'); ?>" alt="<?php the_title_attribute(); ?>" loading="eager" itemprop="url">
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/01-thumbnail-kembangkan-bisnis-laundry.webp'); ?>" alt="<?php the_title_attribute(); ?>" loading="eager" itemprop="url">
           <?php endif; ?>
           <figcaption class="cq-featured-caption">
             <i class="ri-camera-lens-line" aria-hidden="true"></i> Operasional Mesin Komersial &amp; Standar Outlet Cleanique Laundry (PT Indotech Berkah Abadi)
@@ -321,7 +321,7 @@ $reading_time = cleanique_get_reading_time($current_id);
 
               <!-- Figure: Image + Image Caption -->
               <figure class="cq-prose-figure">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-outlet.jpg'); ?>" alt="Penataan Mesin Stack Washer Dryer di Outlet Cleanique Laundry" loading="lazy">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/04-mesin-komersial-heavy-duty.webp'); ?>" alt="Penataan Mesin Stack Washer Dryer di Outlet Cleanique Laundry" loading="lazy">
                 <figcaption class="cq-figure-caption">
                   <i class="ri-information-line" aria-hidden="true"></i> Gambar 1: Penataan instalasi mesin stack komersial heavy-duty Cleanique Laundry dengan sistem plumbing air bersih dan pembuangan uap dryer terintegrasi.
                 </figcaption>
@@ -784,7 +784,7 @@ HPP_Chemical = (Deterjen_ml * Harga_ml) + (Softener_ml * Harga_ml) + (Parfum_ml 
                     <span>Peluang Usaha</span>
                   </div>
                   <div class="cq-post-nav-content">
-                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-outlet.jpg'); ?>" class="cq-post-nav-thumb" alt="Paket Usaha Siap Buka" loading="lazy">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/02-paket-usaha-laundry-siap-buka.webp'); ?>" class="cq-post-nav-thumb" alt="Paket Usaha Siap Buka" loading="lazy">
                     <span class="cq-post-nav-title">Pelajari Paket Usaha Kemitraan Laundry Siap Buka 100% Hak Milik</span>
                   </div>
                 </a>
@@ -811,7 +811,7 @@ HPP_Chemical = (Deterjen_ml * Harga_ml) + (Softener_ml * Harga_ml) + (Parfum_ml 
                   </div>
                   <div class="cq-post-nav-content">
                     <span class="cq-post-nav-title">Coba Gratis 7 Hari Aplikasi Kasir &amp; Nota WhatsApp Otomatis</span>
-                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-pos-app.jpg'); ?>" class="cq-post-nav-thumb" alt="Aplikasi POS Laundry" loading="lazy">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/03-smart-laundry-management-pos.webp'); ?>" class="cq-post-nav-thumb" alt="Aplikasi POS Laundry" loading="lazy">
                   </div>
                 </a>
               <?php endif; ?>
@@ -936,7 +936,7 @@ HPP_Chemical = (Deterjen_ml * Harga_ml) + (Softener_ml * Harga_ml) + (Parfum_ml 
                   <?php if (has_post_thumbnail()) : ?>
                     <?php the_post_thumbnail([64, 64], ['class' => 'cq-sidebar-recent-thumb', 'alt' => get_the_title()]); ?>
                   <?php else : ?>
-                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-outlet.jpg'); ?>" class="cq-sidebar-recent-thumb" alt="<?php the_title_attribute(); ?>" loading="lazy">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/01-thumbnail-kembangkan-bisnis-laundry.webp'); ?>" class="cq-sidebar-recent-thumb" alt="<?php the_title_attribute(); ?>" loading="lazy">
                   <?php endif; ?>
                   <div class="cq-sidebar-recent-info">
                     <span class="cq-sidebar-recent-title"><?php the_title(); ?></span>
@@ -949,21 +949,21 @@ HPP_Chemical = (Deterjen_ml * Harga_ml) + (Softener_ml * Harga_ml) + (Parfum_ml 
               else :
               ?>
                 <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-sidebar-recent-item">
-                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-outlet.jpg'); ?>" class="cq-sidebar-recent-thumb" alt="Panduan Memulai Usaha" loading="lazy">
+                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/02-paket-usaha-laundry-siap-buka.webp'); ?>" class="cq-sidebar-recent-thumb" alt="Panduan Memulai Usaha" loading="lazy">
                   <div class="cq-sidebar-recent-info">
                     <span class="cq-sidebar-recent-title">Panduan Memulai Usaha Laundry Kiloan Modal Hemat</span>
                     <span class="cq-sidebar-recent-date"><i class="ri-calendar-line" aria-hidden="true"></i> Update 2026</span>
                   </div>
                 </a>
                 <a href="<?php echo esc_url(home_url('/aplikasi-laundry/')); ?>" class="cq-sidebar-recent-item">
-                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-pos-app.jpg'); ?>" class="cq-sidebar-recent-thumb" alt="Kecurangan Kasir" loading="lazy">
+                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/06-dashboard-kasir-e-nota-whatsapp.webp'); ?>" class="cq-sidebar-recent-thumb" alt="Kecurangan Kasir" loading="lazy">
                   <div class="cq-sidebar-recent-info">
                     <span class="cq-sidebar-recent-title">Cara Mengurangi Risiko Kasir Curang dengan Nota WhatsApp</span>
                     <span class="cq-sidebar-recent-date"><i class="ri-calendar-line" aria-hidden="true"></i> Update 2026</span>
                   </div>
                 </a>
                 <a href="<?php echo esc_url(home_url('/pabrik-chemical/')); ?>" class="cq-sidebar-recent-item">
-                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/chemical-products.jpg'); ?>" class="cq-sidebar-recent-thumb" alt="Parfum Microcapsule" loading="lazy">
+                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/05-bahan-kimia-laundry-kualitas-pabrik.webp'); ?>" class="cq-sidebar-recent-thumb" alt="Parfum Microcapsule" loading="lazy">
                   <div class="cq-sidebar-recent-info">
                     <span class="cq-sidebar-recent-title">Rahasia Formulasi Parfum Microcapsule Tahan 30 Hari</span>
                     <span class="cq-sidebar-recent-date"><i class="ri-calendar-line" aria-hidden="true"></i> Update 2026</span>
@@ -1016,7 +1016,7 @@ HPP_Chemical = (Deterjen_ml * Harga_ml) + (Softener_ml * Harga_ml) + (Parfum_ml 
                 <?php if (has_post_thumbnail()) : ?>
                   <?php the_post_thumbnail('cleanique-card', ['loading' => 'lazy', 'alt' => get_the_title()]); ?>
                 <?php else : ?>
-                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-outlet.jpg'); ?>" alt="<?php the_title_attribute(); ?>" loading="lazy">
+                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/01-thumbnail-kembangkan-bisnis-laundry.webp'); ?>" alt="<?php the_title_attribute(); ?>" loading="lazy">
                 <?php endif; ?>
               </a>
               <span class="cq-article-card-tag">
@@ -1058,7 +1058,7 @@ HPP_Chemical = (Deterjen_ml * Harga_ml) + (Softener_ml * Harga_ml) + (Parfum_ml 
           <article class="cq-article-card-v2">
             <div class="cq-article-card-thumb-wrap">
               <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-outlet.jpg'); ?>" alt="Panduan Usaha Laundry Kiloan Modal Hemat" loading="lazy">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/02-paket-usaha-laundry-siap-buka.webp'); ?>" alt="Panduan Usaha Laundry Kiloan Modal Hemat" loading="lazy">
               </a>
               <span class="cq-article-card-tag">Panduan Usaha</span>
             </div>
@@ -1086,7 +1086,7 @@ HPP_Chemical = (Deterjen_ml * Harga_ml) + (Softener_ml * Harga_ml) + (Parfum_ml 
           <article class="cq-article-card-v2">
             <div class="cq-article-card-thumb-wrap">
               <a href="<?php echo esc_url(home_url('/aplikasi-laundry/')); ?>">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-pos-app.jpg'); ?>" alt="Nota WhatsApp Anti Curang" loading="lazy">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/06-dashboard-kasir-e-nota-whatsapp.webp'); ?>" alt="Nota WhatsApp Anti Curang" loading="lazy">
               </a>
               <span class="cq-article-card-tag" style="color: #059669; border-color: rgba(5, 150, 105, 0.25);">Digitalisasi POS</span>
             </div>
@@ -1114,7 +1114,7 @@ HPP_Chemical = (Deterjen_ml * Harga_ml) + (Softener_ml * Harga_ml) + (Parfum_ml 
           <article class="cq-article-card-v2">
             <div class="cq-article-card-thumb-wrap">
               <a href="<?php echo esc_url(home_url('/pabrik-chemical/')); ?>">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/chemical-products.jpg'); ?>" alt="Parfum Laundry Tahan 30 Hari" loading="lazy">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/05-bahan-kimia-laundry-kualitas-pabrik.webp'); ?>" alt="Parfum Laundry Tahan 30 Hari" loading="lazy">
               </a>
               <span class="cq-article-card-tag" style="color: #d97706; border-color: rgba(217, 119, 6, 0.25);">Chemical Pabrik</span>
             </div>

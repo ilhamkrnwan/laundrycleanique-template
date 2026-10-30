@@ -329,10 +329,11 @@
 /* --- Hero Header --- */
 .cq-kemitraan-single-hero {
   background: linear-gradient(180deg, #f0f7ff 0%, #f8fafc 100%);
-  padding-top: clamp(100px, 12vw, 130px);
-  padding-bottom: clamp(36px, 5vw, 52px);
+  padding-top: clamp(24px, 3.5vw, 40px);
+  padding-bottom: clamp(32px, 4vw, 48px);
   position: relative;
   overflow: hidden;
+  border-bottom: 1px solid var(--cq-border-light, #e2e8f0);
 }
 
 .cq-kemitraan-single-hero::before {
@@ -342,83 +343,147 @@
   right: -8%;
   width: 480px;
   height: 480px;
-  background: radial-gradient(circle, rgba(0, 119, 182, 0.09) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 119, 182, 0.08) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
 }
 
-.cq-kemitraan-single-hero-inner {
-  max-width: 800px;
+/* 2-Column Hero Grid */
+.cq-kemitraan-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(24px, 3.5vw, 44px);
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .cq-kemitraan-hero-grid {
+    grid-template-columns: 1.12fr 0.88fr;
+    gap: clamp(32px, 4vw, 52px);
+  }
+}
+
+.cq-kemitraan-hero-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.cq-kemitraan-hero-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.cq-kemitraan-hero-badges .cq-badge-pill {
+  margin: 0;
+  font-weight: 600;
+  white-space: nowrap !important;
 }
 
 .cq-kemitraan-single-title {
   font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
-  font-size: clamp(2rem, 1.6rem + 1.8vw, 3rem);
-  font-weight: 300;
+  font-size: clamp(2rem, 1.6rem + 1.5vw, 2.75rem);
+  font-weight: 600;
   color: var(--cq-dark-navy, #0b132b);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  margin-bottom: var(--cq-sp-16, 16px);
-}
-
-.cq-kemitraan-single-title strong,
-.cq-kemitraan-single-title b {
-  font-weight: 500;
+  line-height: 1.16;
+  letter-spacing: -0.025em;
+  margin: 0 0 12px 0;
 }
 
 .cq-kemitraan-single-subtitle {
-  font-size: clamp(0.975rem, 0.9rem + 0.3vw, 1.1rem);
+  font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.05rem);
   color: var(--cq-text-muted, #64748b);
-  line-height: 1.65;
-  margin-bottom: var(--cq-sp-24, 24px);
-  max-width: 680px;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+  max-width: 600px;
 }
 
-/* --- Featured Figure --- */
-.cq-kemitraan-single-fig {
-  border-radius: 20px;
-  overflow: hidden;
-  margin: 0 0 var(--cq-sp-32, 32px);
-  border: 1px solid var(--cq-border-light, #e2e8f0);
-  box-shadow: 0 8px 32px -8px rgba(15, 23, 42, 0.08);
-}
-
-.cq-kemitraan-single-fig img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-/* --- Price Banner --- */
-.cq-kemitraan-single-price-banner {
+/* Price & ROI Highlight Strip */
+.cq-kemitraan-hero-price-strip {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  background: var(--sky-50, #f0f9ff);
-  border: 1px solid var(--sky-200, #bae6fd);
-  border-radius: 18px;
-  padding: clamp(18px, 2.5vw, 24px) clamp(20px, 3vw, 28px);
-  margin-bottom: var(--cq-sp-32, 32px);
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 119, 182, 0.16);
+  border-radius: 16px;
+  padding: 12px 18px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 16px -4px rgba(11, 19, 43, 0.05);
 }
 
-.cq-kemitraan-price-label-sm {
+.cq-kemitraan-hero-price-label {
   font-size: 11px;
   text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 0.055em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
   color: var(--cq-primary-dark, #023e8a);
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
-.cq-kemitraan-price-big {
+.cq-kemitraan-hero-price-val {
   font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
-  font-size: clamp(1.7rem, 1.3rem + 1.4vw, 2.4rem);
-  font-weight: 600;
+  font-size: clamp(1.35rem, 1.15rem + 0.8vw, 1.85rem);
+  font-weight: 700;
   color: var(--cq-dark-navy, #0b132b);
+  line-height: 1.1;
+}
+
+/* Direct CTA Buttons */
+.cq-kemitraan-hero-cta-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+/* Trust Signals */
+.cq-kemitraan-hero-trust {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--cq-text-muted, #64748b);
+}
+
+.cq-kemitraan-hero-trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cq-kemitraan-hero-trust-item i {
+  color: #10b981;
+  font-size: 14px;
+}
+
+/* Right Column Visual Frame */
+.cq-kemitraan-hero-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.cq-kemitraan-hero-right .cq-kemitraan-hero-frame {
+  margin: 0;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 119, 182, 0.16);
+  background: #ffffff;
+  box-shadow: 0 16px 36px -8px rgba(11, 19, 43, 0.12);
+  overflow: hidden;
+}
+
+.cq-kemitraan-hero-right .cq-kemitraan-hero-img {
+  width: 100%;
+  height: auto;
+  max-height: 380px;
+  object-fit: cover;
+  display: block;
 }
 
 /* --- 4 Pillars --- */
@@ -877,7 +942,7 @@
   color: #ffffff;
   font-family: var(--cq-font-heading, sans-serif);
   font-size: 11.5px;
-  font-weight: 700;
+  font-weight: 600;
   padding: 6px 14px;
   border-radius: var(--cq-rad-pill, 9999px);
   display: inline-flex;
@@ -944,160 +1009,161 @@
   gap: 4px;
 }
 
-/* 10.2 Photo Gallery Section */
+/* 10.2 Photo Gallery Section - Pure Visual Gallery */
 .cq-kemitraan-gallery-section {
-  margin-top: clamp(36px, 5vw, 54px);
-  padding: clamp(24px, 4vw, 36px);
-  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  margin-top: clamp(28px, 4vw, 40px);
+  padding: clamp(18px, 3vw, 24px);
+  background: #ffffff;
   border: 1.5px solid var(--cq-border-light, #e2e8f0);
-  border-radius: 28px;
-  box-shadow: 0 10px 30px -4px rgba(15, 23, 42, 0.05);
+  border-radius: 24px;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
 }
 
 .cq-kemitraan-gallery-header {
-  margin-bottom: 24px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--cq-border-light, #f1f5f9);
 }
 
 .cq-kemitraan-gallery-title {
   font-family: var(--cq-font-heading, sans-serif);
-  font-size: clamp(1.35rem, 1.2rem + 0.6vw, 1.75rem);
-  font-weight: 800;
+  font-size: clamp(1.15rem, 1.05rem + 0.35vw, 1.35rem);
+  font-weight: 600;
   color: var(--cq-dark-navy, #0f172a);
-  letter-spacing: -0.02em;
-  margin: 6px 0 10px 0;
+  letter-spacing: -0.015em;
+  margin: 4px 0 0 0;
   line-height: 1.25;
 }
 
-.cq-kemitraan-gallery-desc {
-  font-size: 13.5px;
+.cq-gallery-hint {
+  font-size: 12px;
+  font-weight: 500;
   color: #64748b;
-  line-height: 1.6;
-  margin: 0;
-  max-width: 780px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
 }
 
 .cq-kemitraan-gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
 }
 
 .cq-kemitraan-gallery-item {
-  background: #ffffff;
-  border-radius: 20px;
-  border: 1.5px solid #e2e8f0;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  aspect-ratio: 4 / 3;
+  border-radius: 16px;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+  background: #0f172a;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  cursor: zoom-in;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
               border-color 0.25s ease;
-  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.04);
 }
 
 .cq-kemitraan-gallery-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px -8px rgba(0, 119, 182, 0.18);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px -6px rgba(0, 119, 182, 0.22);
   border-color: #38bdf8;
 }
 
-.cq-kemitraan-gallery-thumb {
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 16 / 10;
-  background: #e2e8f0;
-}
-
-.cq-kemitraan-gallery-thumb img {
+.cq-kemitraan-gallery-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  cursor: zoom-in;
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.cq-kemitraan-gallery-item:hover .cq-kemitraan-gallery-thumb img {
+.cq-kemitraan-gallery-item:hover img {
   transform: scale(1.06);
 }
 
 .cq-kemitraan-gallery-overlay {
   position: absolute;
   inset: 0;
-  pointer-events: none;
-  padding: 12px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
-  z-index: 2;
+  padding: 10px;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.2) 0%, transparent 40%, rgba(15, 23, 42, 0.72) 100%);
+  pointer-events: none;
+  opacity: 0.88;
+  transition: opacity 0.22s ease;
 }
 
-.cq-gallery-badge {
-  background: rgba(15, 23, 42, 0.75);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  color: #ffffff;
-  font-family: var(--cq-font-heading, sans-serif);
-  font-size: 10.5px;
-  font-weight: 800;
-  padding: 4px 10px;
-  border-radius: var(--cq-rad-pill, 9999px);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-left: auto;
+.cq-kemitraan-gallery-item:hover .cq-kemitraan-gallery-overlay {
+  opacity: 1;
 }
 
 .cq-gallery-zoom-btn {
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   color: #0f172a;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
-  opacity: 0;
+  font-size: 16px;
+  align-self: flex-end;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
   transform: scale(0.85);
-  transition: all 0.22s ease;
+  opacity: 0;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .cq-kemitraan-gallery-item:hover .cq-gallery-zoom-btn {
-  opacity: 1;
   transform: scale(1);
+  opacity: 1;
 }
 
-.cq-kemitraan-gallery-info {
-  padding: 18px 20px;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+.cq-gallery-badge {
+  background: rgba(15, 23, 42, 0.82);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+  align-self: flex-start;
+  margin-top: auto;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
-.cq-gallery-item-title {
-  font-family: var(--cq-font-heading, sans-serif);
-  font-size: 14.5px;
-  font-weight: 800;
-  color: var(--cq-dark-navy, #0f172a);
-  margin: 0 0 6px 0;
-  line-height: 1.35;
-}
-
-.cq-gallery-item-desc {
-  font-size: 12.5px;
-  color: #64748b;
-  line-height: 1.55;
-  margin: 0;
+@media (max-width: 992px) {
+  .cq-kemitraan-gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 640px) {
   .cq-kemitraan-gallery-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
   .cq-kemitraan-gallery-section {
-    padding: 18px;
+    padding: 16px;
     border-radius: 20px;
+  }
+  .cq-kemitraan-gallery-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
   }
   .cq-kemitraan-hero-frame {
     border-radius: 18px;
@@ -1107,4 +1173,214 @@
   }
 }
 
+/* ==========================================================================
+   MODERN CORPORATE BANNER CTA CARD (Split Bento Architecture)
+   ========================================================================== */
+.cq-banner-cta-card,
+.cq-banner-cta-section .cq-banner-cta-card,
+.cq-kemitraan-cta-box {
+  position: relative;
+  width: 100%;
+  max-width: 1140px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-bottom: 0 !important;
+  background: linear-gradient(135deg, #07172c 0%, #0d274c 50%, #061527 100%) !important;
+  color: #ffffff !important;
+  border-radius: clamp(24px, 3.5vw, 32px) !important;
+  padding: clamp(36px, 4.5vw, 56px) clamp(24px, 4vw, 52px) !important;
+  text-align: left !important;
+  overflow: hidden;
+  box-shadow: 0 24px 60px -15px rgba(7, 23, 44, 0.45), 0 4px 20px -2px rgba(7, 23, 44, 0.2) !important;
+  border: 1px solid rgba(0, 168, 232, 0.25) !important;
+  z-index: 2;
+}
 
+.cq-banner-cta-card::after,
+.cq-banner-cta-section .cq-banner-cta-card::after,
+.cq-kemitraan-cta-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 229, 153, 0.6), rgba(0, 168, 232, 0.8), transparent) !important;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cq-banner-cta-card::before,
+.cq-banner-cta-section .cq-banner-cta-card::before,
+.cq-kemitraan-cta-box::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 168, 232, 0.15) 0%, transparent 70%) !important;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cq-banner-cta-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(28px, 4vw, 44px);
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 992px) {
+  .cq-banner-cta-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: clamp(36px, 4.5vw, 56px);
+  }
+}
+
+.cq-banner-cta-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.cq-banner-cta-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.cq-banner-cta-badges .cq-badge-pill {
+  margin: 0 !important;
+  white-space: nowrap !important;
+  font-weight: 600;
+}
+
+.cq-banner-cta-title,
+.cq-banner-cta-card h2,
+.cq-banner-cta-section h2,
+.cq-kemitraan-cta-box h2 {
+  color: #ffffff !important;
+  font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(1.85rem, 1.4rem + 1.2vw, 2.5rem) !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  margin: 0 0 14px 0 !important;
+  text-align: left !important;
+}
+
+.cq-banner-cta-desc,
+.cq-banner-cta-card p,
+.cq-banner-cta-section p,
+.cq-kemitraan-cta-box p {
+  font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.05rem) !important;
+  color: #cbd5e1 !important;
+  line-height: 1.65 !important;
+  margin: 0 0 24px 0 !important;
+  max-width: 580px;
+  text-align: left !important;
+}
+
+.cq-banner-cta-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+  justify-content: flex-start !important;
+}
+
+.cq-banner-cta-trust {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 12.5px;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.cq-banner-cta-trust span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cq-banner-cta-trust i {
+  color: #10b981;
+  font-size: 15px;
+}
+
+/* Right Column Visual Showcase */
+.cq-banner-cta-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.cq-banner-cta-visual {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.4);
+  background: #0b132b;
+}
+
+.cq-banner-cta-visual-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(11, 19, 43, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.cq-banner-cta-visual-badge i {
+  color: #00e599;
+}
+
+.cq-banner-cta-img {
+  width: 100%;
+  height: auto;
+  max-height: 280px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.cq-banner-cta-visual:hover .cq-banner-cta-img {
+  transform: scale(1.03);
+}
+
+.cq-banner-cta-visual-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 16px;
+  background: rgba(11, 19, 43, 0.9);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cq-cta-stat-pill {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #e2e8f0;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}

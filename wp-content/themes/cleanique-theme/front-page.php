@@ -42,13 +42,18 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
             <a href="#kemitraan" class="cq-btn cq-btn-outline cq-btn-pill">
               Pilihan Paket
             </a>
+            <?php if (!empty($proposal_pdf_url)) : ?>
+              <a href="<?php echo esc_url($proposal_pdf_url); ?>" target="_blank" rel="noopener" class="cq-btn cq-btn-outline cq-btn-pill">
+                <i class="ri-file-download-line" aria-hidden="true"></i> Unduh Proposal
+              </a>
+            <?php endif; ?>
           </div>
         </div>
 
         <div class="cq-corp-hero-visual">
           <div class="cq-hero-visual-frame">
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-outlet.jpg'); ?>" 
-                 alt="Standar Outlet Kemitraan Laundry Cleanique Modern &amp; Higienis" 
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/01-thumbnail-kembangkan-bisnis-laundry.webp'); ?>" 
+                 alt="Kembangkan Bisnis Laundry Kiloan dan Satuan Modern Bersama Cleanique" 
                  class="cq-hero-visual-img" 
                  loading="lazy">
             <div class="cq-hero-visual-caption">
@@ -63,7 +68,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
         <!-- Gateway Card 1: Paket Penjualan Usaha Laundry Mandiri -->
         <div class="cq-corp-gateway-card">
           <div class="cq-gateway-thumb-wrap">
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/equip-washer-dryer.jpg'); ?>" 
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/02-paket-usaha-laundry-siap-buka.webp'); ?>" 
                  alt="Paket Penjualan Usaha Laundry Mesin Cuci dan Pengering" 
                  class="cq-gateway-thumb-img" 
                  loading="lazy">
@@ -95,7 +100,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
         <!-- Gateway Card 2: Smart Laundry Management System (POS Langganan) -->
         <div class="cq-corp-gateway-card">
           <div class="cq-gateway-thumb-wrap">
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-pos-app.jpg'); ?>" 
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/03-smart-laundry-management-pos.webp'); ?>" 
                  alt="Aplikasi Smart Laundry Management Kasir POS WhatsApp" 
                  class="cq-gateway-thumb-img" 
                  loading="lazy">
@@ -155,8 +160,8 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
                 <span class="cq-showcase-titlebar">Peralatan Siap Pakai &bull; Unit Baru</span>
               </div>
               <div class="cq-showcase-img-box">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/equip-washer-dryer.jpg'); ?>" 
-                     alt="Mesin Cuci dan Pengering Laundry Cleanique" 
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/04-mesin-komersial-heavy-duty.webp'); ?>" 
+                     alt="Mesin Cuci dan Pengering Laundry Komersial Heavy Duty Cleanique" 
                      class="cq-showcase-img"
                      loading="lazy"
                      width="1200"
@@ -229,7 +234,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
                 <span class="cq-showcase-titlebar">Pabrik Biang Sabun &bull; PT Indotech</span>
               </div>
               <div class="cq-showcase-img-box">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/chemical-products.jpg'); ?>" 
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/05-bahan-kimia-laundry-kualitas-pabrik.webp'); ?>" 
                      alt="Produksi Bahan Kimia Laundry Standar Pabrik PT Indotech Berkah Abadi" 
                      class="cq-showcase-img"
                      loading="lazy"
@@ -251,7 +256,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
                 <span class="cq-showcase-titlebar">Smart POS &bull; Cloud Dashboard</span>
               </div>
               <div class="cq-showcase-img-box">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-pos-app.jpg'); ?>" 
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/06-dashboard-kasir-e-nota-whatsapp.webp'); ?>" 
                      alt="Tampilan Dashboard Smart Laundry Management POS dan E-Nota WhatsApp" 
                      class="cq-showcase-img"
                      loading="lazy"
@@ -325,7 +330,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
                 <span class="cq-showcase-titlebar">Finishing Unit &bull; Steam Boiler</span>
               </div>
               <div class="cq-showcase-img-box">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/equip-boiler-iron.jpg'); ?>" 
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/07-boiler-setrika-uap-gas-otomatis.webp'); ?>" 
                      alt="Boiler Setrika Uap Gas Otomatis dan Meja Vacuum Laundry Sleman Yogyakarta" 
                      class="cq-showcase-img"
                      loading="lazy"
@@ -347,8 +352,8 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
                 <span class="cq-showcase-titlebar">PT Indotech &bull; Showroom &amp; Workshop</span>
               </div>
               <div class="cq-showcase-img-box">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/indotech-team.jpg'); ?>" 
-                     alt="Tim Indotech Berkah Abadi Sleman" 
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/08-standardisasi-pelatihan-sop-teknisi.webp'); ?>" 
+                     alt="Standardisasi SOP dan Pelatihan Teknisi Cleanique" 
                      class="cq-showcase-img"
                      loading="lazy"
                      width="1200"
@@ -905,7 +910,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
           'quote'      => 'Awalnya ragu karena kami belum pernah bisnis laundry. Sangat terbantu dengan pendampingan surveyor dan trainer Indotech dari perancangan pipa, kelistrikan sampai pelatihan takaran bahan. Biang sabunnya hemat karena diencerkan sendiri dan hasilnya konsisten. Dalam 6 bulan modal kami sudah balik!',
           'initial'    => 'H',
           'avatar_bg'  => '#0284C7',
-          'avatar_img' => get_template_directory_uri() . '/assets/images/mitra-outlet-sleman.jpg',
+          'avatar_img' => get_template_directory_uri() . '/assets/images/mitra-outlet-sleman.webp',
           'badge'      => 'Balik Modal',
       ],
       [
@@ -914,7 +919,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
           'quote'      => 'Yang paling memuaskan adalah sistem aplikasi kasir Cleanique POS-nya. Nota langsung terkirim WhatsApp ke pelanggan, omzet harian bisa dipantau langsung dari HP sambil saya tetap bekerja kantor. 100% laba operasional masuk ke kantong sendiri tanpa royalti fee!',
           'initial'    => 'D',
           'avatar_bg'  => '#7C3AED',
-          'avatar_img' => get_template_directory_uri() . '/assets/images/mitra-outlet-solo.jpg',
+          'avatar_img' => get_template_directory_uri() . '/assets/images/mitra-outlet-solo.webp',
           'badge'      => 'Balik Modal',
       ],
       [
@@ -923,7 +928,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
           'quote'      => 'Mesinnya bekerja dari pagi sampai malam tanpa kendala, dan biang sabunnya jauh lebih hemat dibanding beli deterjen jadi. Tim instalasi PT Indotech juga rapi saat pemasangan pipa dan gas. Sekarang kami sedang persiapan membuka cabang kedua.',
           'initial'    => 'N',
           'avatar_bg'  => '#059669',
-          'avatar_img' => get_template_directory_uri() . '/assets/images/mitra-outlet-semarang.jpg',
+          'avatar_img' => get_template_directory_uri() . '/assets/images/mitra-outlet-semarang.webp',
           'badge'      => 'Ekspansi Cabang',
       ],
       [
@@ -1109,8 +1114,8 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
     <div class="cq-container">
       <div class="cq-visual-split" style="margin-bottom: var(--cq-sp-48);">
         <div class="cq-visual-split-img">
-          <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/indotech-team.jpg'); ?>"
-               alt="Pusat Layanan Teknis &amp; Workshop PT Indotech Berkah Abadi Yogyakarta"
+          <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/09-pabrik-kimia-sendiri-sleman.webp'); ?>"
+               alt="Pusat Layanan Teknis &amp; Workshop Pabrik PT Indotech Berkah Abadi Sleman"
                loading="lazy">
         </div>
         <div class="cq-visual-split-content">
@@ -1270,26 +1275,76 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
     </div>
   </section>
 
-  <!-- ========================================================
-       11. BANNER CTA PENUTUP (Corporate Hub - Contained Section Card)
+    <!-- ========================================================
+       11. BANNER CTA PENUTUP (Corporate Showcase Bento)
        ======================================================== -->
   <section class="cq-section cq-banner-cta-section" id="kontak">
     <div class="cq-container">
       <div class="cq-banner-cta-card">
-        <h2 class="cq-banner-cta-title">
-          Siap Memulai atau Mengembangkan Bisnis Laundry Anda?
-        </h2>
-        <p class="cq-banner-cta-desc">
-          Kantor operasional &amp; showroom workshop: <strong><?php echo esc_html($office_addr); ?></strong>.<br>
-          Konsultasikan rencana pembukaan outlet laundry, ketersediaan daya listrik ruko, atau instalasi mesin bersama konsultan resmi kami.
-        </p>
-        <div class="cq-banner-cta-actions">
-          <a href="<?php echo esc_url($wa_kemitraan_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
-            <i class="ri-whatsapp-line" aria-hidden="true"></i> Hubungi Konsultan
-          </a>
-          <a href="<?php echo esc_url(home_url('/kontak/')); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-lg">
-            Peta Lokasi
-          </a>
+        <div class="cq-banner-cta-grid">
+
+          <!-- Left Column: Value Prop & Actions -->
+          <div class="cq-banner-cta-left">
+            <div class="cq-banner-cta-badges">
+              <span class="cq-badge-pill cq-badge-accent">
+                Kemitraan Resmi
+              </span>
+              <span class="cq-badge-pill cq-badge-success">
+                0% Royalti
+              </span>
+            </div>
+
+            <h2 class="cq-banner-cta-title">
+              Siap Memulai Bisnis Laundry Anda?
+            </h2>
+
+            <p class="cq-banner-cta-desc">
+              Kantor &amp; showroom: <strong><?php echo esc_html($office_addr); ?></strong>.<br>
+              Konsultasikan pembukaan outlet, daya listrik ruko, dan paket mesin bergaransi pabrik bersama tim ahli kami.
+            </p>
+
+            <div class="cq-banner-cta-actions">
+              <a href="<?php echo esc_url($wa_kemitraan_url); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
+                <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi WhatsApp
+              </a>
+              <?php if (!empty($proposal_pdf_url)) : ?>
+                <a href="<?php echo esc_url($proposal_pdf_url); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
+                  <i class="ri-file-download-line" aria-hidden="true"></i> Unduh Proposal
+                </a>
+              <?php endif; ?>
+              <a href="<?php echo esc_url(home_url('/kontak/')); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-lg">
+                Peta Lokasi
+              </a>
+            </div>
+
+            <div class="cq-banner-cta-trust">
+              <span><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> 100% Hak Milik</span>
+              <span><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> Garansi Pabrik</span>
+              <span><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> Termasuk Pelatihan</span>
+            </div>
+          </div>
+
+          <!-- Right Column: Visual Showcase -->
+          <div class="cq-banner-cta-right">
+            <div class="cq-banner-cta-visual">
+              <div class="cq-banner-cta-visual-badge">
+                <i class="ri-map-pin-2-line" aria-hidden="true"></i> Workshop &amp; Showroom
+              </div>
+              <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/02-paket-usaha-laundry-siap-buka.webp'); ?>" 
+                   alt="Paket Usaha Laundry Siap Buka Cleanique" 
+                   loading="lazy" 
+                   class="cq-banner-cta-img">
+              <div class="cq-banner-cta-visual-footer">
+                <span class="cq-cta-stat-pill">
+                  <i class="ri-shield-star-line"></i> 300+ Mitra Aktif
+                </span>
+                <span class="cq-cta-stat-pill">
+                  <i class="ri-star-fill" style="color: #facc15;"></i> 5.0 Terverifikasi
+                </span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>

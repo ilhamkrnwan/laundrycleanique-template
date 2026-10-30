@@ -307,7 +307,7 @@
               </div>
               <div class="cq-onboarding-img-wrapper">
                 <img 
-                  src="<?php echo esc_url(CLEANIQUE_URI . '/assets/images/hero-pos-app.jpg'); ?>" 
+                  src="<?php echo esc_url(CLEANIQUE_URI . '/assets/images/03-smart-laundry-management-pos.webp'); ?>" 
                   alt="Tampilan Antarmuka POS Cleanique dan Nota Digital WhatsApp" 
                   class="cq-onboarding-img"
                   loading="lazy"

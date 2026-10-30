@@ -18,6 +18,7 @@ if (have_posts()) {
 // ────────────────────────────────────────────────────────────────────────────
 
 $wa_url = cleanique_get_whatsapp_url('general');
+$proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
 ?>
 
 <main id="main-content" class="cq-solutions-page">
@@ -103,7 +104,7 @@ $wa_url = cleanique_get_whatsapp_url('general');
     <div class="cq-container">
       <div class="cq-visual-split" style="align-items: center; margin-bottom: var(--cq-sp-64);">
         <div class="cq-visual-split-img">
-          <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-outlet.jpg'); ?>" 
+          <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/02-paket-usaha-laundry-siap-buka.webp'); ?>" 
                alt="Outlet Paket Usaha Kemitraan Laundry Cleanique" 
                loading="lazy">
         </div>
@@ -143,7 +144,7 @@ $wa_url = cleanique_get_whatsapp_url('general');
     <div class="cq-container">
       <div class="cq-visual-split is-reversed" style="align-items: center;">
         <div class="cq-visual-split-img">
-          <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-pos-app.jpg'); ?>" 
+          <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/03-smart-laundry-management-pos.webp'); ?>" 
                alt="Aplikasi POS Kasir Laundry Cleanique Cloud" 
                loading="lazy">
         </div>
@@ -176,28 +177,75 @@ $wa_url = cleanique_get_whatsapp_url('general');
     </div>
   </section>
 
-  <!-- ========================================================
-       5. CLOSING BANNER CTA (Contained Section Card)
+    <!-- ========================================================
+       5. CLOSING BANNER CTA (Corporate Showcase Bento)
        ======================================================== -->
-  <section class="cq-section cq-banner-cta-section">
+  <section class="cq-section cq-banner-cta-section" id="kontak">
     <div class="cq-container">
       <div class="cq-banner-cta-card">
-        <h2 class="cq-banner-cta-title">
-          Bingung Menentukan Solusi yang Paling Tepat?
-        </h2>
-        <p class="cq-banner-cta-desc">
-          Konsultasikan rencana bisnis atau kendala operasional laundry Anda sekarang bersama tim konsultan ahli <strong>PT Indotech Berkah Abadi</strong>.
-        </p>
-        <div class="cq-banner-cta-actions">
-          <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
-            <i class="ri-whatsapp-line" aria-hidden="true"></i> Hubungi Konsultan
-          </a>
-          <a href="<?php echo esc_url(home_url('/kontak/')); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-lg">
-            Peta Lokasi
-          </a>
-          <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg">
-            Pilihan Paket
-          </a>
+        <div class="cq-banner-cta-grid">
+
+          <!-- Left Column: Value Prop & Actions -->
+          <div class="cq-banner-cta-left">
+            <div class="cq-banner-cta-badges">
+              <span class="cq-badge-pill cq-badge-accent">
+                Ekosistem Lengkap
+              </span>
+              <span class="cq-badge-pill cq-badge-success">
+                0% Royalti
+              </span>
+            </div>
+
+            <h2 class="cq-banner-cta-title">
+              Siap Memilih Solusi Usaha Laundry Anda?
+            </h2>
+
+            <p class="cq-banner-cta-desc">
+              Mulai bisnis laundry siap buka dari paket turnkey komplit, bahan kimia pabrik Sleman, hingga aplikasi kasir POS modern.
+            </p>
+
+            <div class="cq-banner-cta-actions">
+              <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
+                <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi WhatsApp
+              </a>
+              <?php if (!empty($proposal_pdf_url)) : ?>
+                <a href="<?php echo esc_url($proposal_pdf_url); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
+                  <i class="ri-file-download-line" aria-hidden="true"></i> Unduh Proposal
+                </a>
+              <?php endif; ?>
+              <a href="<?php echo esc_url(home_url('/kontak/')); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-lg">
+                Peta Lokasi
+              </a>
+            </div>
+
+            <div class="cq-banner-cta-trust">
+              <span><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> 100% Hak Milik</span>
+              <span><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> Garansi Pabrik</span>
+              <span><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> Termasuk Pelatihan</span>
+            </div>
+          </div>
+
+          <!-- Right Column: Visual Showcase -->
+          <div class="cq-banner-cta-right">
+            <div class="cq-banner-cta-visual">
+              <div class="cq-banner-cta-visual-badge">
+                <i class="ri-shield-check-line" aria-hidden="true"></i> Ekosistem Resmi Indotech
+              </div>
+              <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/01-thumbnail-kembangkan-bisnis-laundry.webp'); ?>" 
+                   alt="Ekosistem Solusi Usaha Laundry Cleanique" 
+                   loading="lazy" 
+                   class="cq-banner-cta-img">
+              <div class="cq-banner-cta-visual-footer">
+                <span class="cq-cta-stat-pill">
+                  <i class="ri-shield-star-line"></i> 300+ Mitra Aktif
+                </span>
+                <span class="cq-cta-stat-pill">
+                  <i class="ri-star-fill" style="color: #facc15;"></i> 5.0 Terverifikasi
+                </span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>

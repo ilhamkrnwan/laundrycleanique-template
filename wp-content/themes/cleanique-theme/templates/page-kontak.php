@@ -14,6 +14,7 @@ if (have_posts()) {
 }
 
 $wa_url = cleanique_get_whatsapp_url('general');
+$proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
 $office_addr = get_theme_mod('cleanique_office_address', 'Jalan Jongke Kidul Tengah No. 30, RT.01/RW.23, Jongke Tengah, Sendangadi, Kec. Mlati, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55285');
 $wa_number = get_theme_mod('cleanique_wa_number', '6285600061005');
 ?>
@@ -56,7 +57,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6285600061005');
 
         <div class="cq-corp-hero-visual">
           <div class="cq-hero-visual-frame">
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-outlet.jpg'); ?>" 
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/01-thumbnail-kembangkan-bisnis-laundry.webp'); ?>" 
                  alt="Showroom dan Outlet Standar Kemitraan Cleanique Laundry Sleman" 
                  class="cq-hero-visual-img" 
                  loading="lazy">
@@ -91,7 +92,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6285600061005');
           <!-- Card 1: Workshop & Showroom Showcase Card (Real Team & Facility Image) -->
           <div class="cq-contact-info-card">
             <div class="cq-gateway-thumb-wrap">
-              <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/indotech-team.jpg'); ?>" 
+              <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/09-pabrik-kimia-sendiri-sleman.webp'); ?>" 
                    alt="Fasilitas Workshop &amp; Tim Teknis PT Indotech Berkah Abadi Sleman" 
                    class="cq-gateway-thumb-img" 
                    loading="lazy">
@@ -136,7 +137,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6285600061005');
           <!-- Card 3: Live Test Drive & Demo Showroom (With Equipment Image) -->
           <div class="cq-contact-demo-card">
             <div class="cq-contact-demo-thumb">
-              <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/equip-washer-dryer.jpg'); ?>" 
+              <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/04-mesin-komersial-heavy-duty.webp'); ?>" 
                    alt="Mesin Cuci Komersial dan Dryer Heavy Duty Cleanique" 
                    loading="lazy">
             </div>
@@ -352,25 +353,75 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6285600061005');
     </div>
   </section>
 
-  <!-- ========================================================
-       5. CLOSING BANNER CTA (Contained Section Card)
+    <!-- ========================================================
+       5. CLOSING BANNER CTA (Corporate Showcase Bento)
        ======================================================== -->
-  <section class="cq-section cq-banner-cta-section">
+  <section class="cq-section cq-banner-cta-section" id="kontak-bottom">
     <div class="cq-container">
       <div class="cq-banner-cta-card">
-        <h2 class="cq-banner-cta-title">
-          Wujudkan Bisnis Laundry Tangguh &amp; Mandiri
-        </h2>
-        <p class="cq-banner-cta-desc">
-          Hubungi tim konsultan <strong>PT Indotech Berkah Abadi</strong> sekarang untuk mendapatkan rincian paket usaha siap buka, pasokan chemical standar pabrik, dan sistem Smart POS.
-        </p>
-        <div class="cq-banner-cta-actions">
-          <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
-            <i class="ri-whatsapp-line" aria-hidden="true"></i> Hubungi Konsultan
-          </a>
-          <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-lg">
-            Pilihan Paket
-          </a>
+        <div class="cq-banner-cta-grid">
+
+          <!-- Left Column: Value Prop & Actions -->
+          <div class="cq-banner-cta-left">
+            <div class="cq-banner-cta-badges">
+              <span class="cq-badge-pill cq-badge-accent">
+                Konsultasi Gratis
+              </span>
+              <span class="cq-badge-pill cq-badge-success">
+                Respon Cepat
+              </span>
+            </div>
+
+            <h2 class="cq-banner-cta-title">
+              Wujudkan Bisnis Laundry Mandiri Anda
+            </h2>
+
+            <p class="cq-banner-cta-desc">
+              Hubungi tim konsultan PT Indotech Berkah Abadi sekarang untuk mendapatkan rincian paket usaha siap buka dan pendampingan lokasi.
+            </p>
+
+            <div class="cq-banner-cta-actions">
+              <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
+                <i class="ri-whatsapp-line" aria-hidden="true"></i> Hubungi Konsultan
+              </a>
+              <?php if (!empty($proposal_pdf_url)) : ?>
+                <a href="<?php echo esc_url($proposal_pdf_url); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
+                  <i class="ri-file-download-line" aria-hidden="true"></i> Unduh Proposal
+                </a>
+              <?php endif; ?>
+              <a href="<?php echo esc_url(home_url('/kemitraan/')); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-lg">
+                Pilihan Paket
+              </a>
+            </div>
+
+            <div class="cq-banner-cta-trust">
+              <span><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> 100% Hak Milik</span>
+              <span><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> Garansi Pabrik</span>
+              <span><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> Termasuk Pelatihan</span>
+            </div>
+          </div>
+
+          <!-- Right Column: Visual Showcase -->
+          <div class="cq-banner-cta-right">
+            <div class="cq-banner-cta-visual">
+              <div class="cq-banner-cta-visual-badge">
+                <i class="ri-map-pin-2-line" aria-hidden="true"></i> Showroom &amp; Pabrik Sleman
+              </div>
+              <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/02-paket-usaha-laundry-siap-buka.webp'); ?>" 
+                   alt="Paket Kemitraan Laundry Siap Buka Cleanique" 
+                   loading="lazy" 
+                   class="cq-banner-cta-img">
+              <div class="cq-banner-cta-visual-footer">
+                <span class="cq-cta-stat-pill">
+                  <i class="ri-shield-star-line"></i> 300+ Mitra Aktif
+                </span>
+                <span class="cq-cta-stat-pill">
+                  <i class="ri-star-fill" style="color: #facc15;"></i> 5.0 Terverifikasi
+                </span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>

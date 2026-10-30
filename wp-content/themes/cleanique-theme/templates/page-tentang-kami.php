@@ -18,6 +18,7 @@ if (have_posts()) {
 // ────────────────────────────────────────────────────────────────────────────
 
 $wa_url = cleanique_get_whatsapp_url('general');
+$proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
 $office_addr = get_theme_mod('cleanique_office_address', 'Jalan Jongke Kidul Tengah No. 30, RT.01/RW.23, Jongke Tengah, Sendangadi, Kec. Mlati, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55285');
 $wa_number = get_theme_mod('cleanique_wa_number', '6285600061005');
 ?>
@@ -71,8 +72,8 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6285600061005');
       <!-- Visual Showcase Stage with 3 Floating Glass Badges -->
       <div class="cq-peluang-stage" style="margin-top: var(--cq-sp-40);">
         <div class="cq-peluang-frame">
-          <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/indotech-team.jpg'); ?>" 
-               alt="Pusat Layanan Teknis, Showroom Mesin, dan Tim Konsultan PT Indotech Berkah Abadi Yogyakarta" 
+          <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/09-pabrik-kimia-sendiri-sleman.webp'); ?>" 
+               alt="Pusat Layanan Teknis, Showroom Mesin, dan Tim Konsultan PT Indotech Berkah Abadi Sleman" 
                loading="lazy">
         </div>
 
@@ -488,7 +489,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6285600061005');
     <div class="cq-container">
       <div class="cq-visual-split" style="align-items: center;">
         <div class="cq-visual-split-img">
-          <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/chemical-products.jpg'); ?>"
+          <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/05-bahan-kimia-laundry-kualitas-pabrik.webp'); ?>"
                alt="Laboratorium dan Produk Pabrik PT Indotech Berkah Abadi Sleman"
                loading="lazy">
         </div>
@@ -539,7 +540,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6285600061005');
         <!-- Gateway Card 1 -->
         <div class="cq-portal-gateway-card" onclick="location.href='<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>'" role="button" tabindex="0" onkeypress="if(event.key==='Enter')location.href='<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>'">
           <div class="cq-portal-gateway-img-wrap">
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-outlet.jpg'); ?>" alt="Paket Usaha Laundry Siap Operasi" loading="lazy">
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/02-paket-usaha-laundry-siap-buka.webp'); ?>" alt="Paket Usaha Laundry Siap Operasi" loading="lazy">
             <div class="cq-portal-gateway-tag is-primary">
               Peluang Usaha
             </div>
@@ -566,7 +567,7 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6285600061005');
         <!-- Gateway Card 2 -->
         <div class="cq-portal-gateway-card" onclick="location.href='<?php echo esc_url(home_url('/aplikasi-laundry/')); ?>'" role="button" tabindex="0" onkeypress="if(event.key==='Enter')location.href='<?php echo esc_url(home_url('/aplikasi-laundry/')); ?>'">
           <div class="cq-portal-gateway-img-wrap">
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-pos-app.jpg'); ?>" alt="Aplikasi Kasir POS Laundry Cleanique" loading="lazy">
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/03-smart-laundry-management-pos.webp'); ?>" alt="Aplikasi Kasir POS Laundry Cleanique" loading="lazy">
             <div class="cq-portal-gateway-tag is-accent">
               Smart POS
             </div>
@@ -593,28 +594,75 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6285600061005');
     </div>
   </section>
 
-  <!-- ========================================================
-       7. CLOSING BANNER CTA (Contained Section Card)
+    <!-- ========================================================
+       7. CLOSING BANNER CTA (Corporate Showcase Bento)
        ======================================================== -->
   <section class="cq-section cq-banner-cta-section" id="kontak-cta">
     <div class="cq-container">
       <div class="cq-banner-cta-card">
-        <h2 class="cq-banner-cta-title">
-          Siap Membuka Usaha Laundry Mandiri Bersama Kami?
-        </h2>
-        <p class="cq-banner-cta-desc">
-          Diskusikan potensi lokasi, kalkulasi modal, dan paket mesin terbaik bersama tim konsultan resmi <strong>PT Indotech Berkah Abadi</strong> di Sleman, D.I. Yogyakarta.
-        </p>
-        <div class="cq-banner-cta-actions">
-          <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
-            <i class="ri-whatsapp-line" aria-hidden="true"></i> Hubungi Konsultan
-          </a>
-          <a href="<?php echo esc_url(home_url('/kontak/')); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-lg">
-            Kunjungan Showroom
-          </a>
-          <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg">
-            Pilihan Paket
-          </a>
+        <div class="cq-banner-cta-grid">
+
+          <!-- Left Column: Value Prop & Actions -->
+          <div class="cq-banner-cta-left">
+            <div class="cq-banner-cta-badges">
+              <span class="cq-badge-pill cq-badge-accent">
+                Legalitas Resmi PT
+              </span>
+              <span class="cq-badge-pill cq-badge-success">
+                Pabrik Sleman
+              </span>
+            </div>
+
+            <h2 class="cq-banner-cta-title">
+              Siap Bermitra dengan Cleanique Laundry?
+            </h2>
+
+            <p class="cq-banner-cta-desc">
+              Diskusikan potensi lokasi, analisis kebutuhan mesin, dan survei workshop kami bersama tim ahli PT Indotech Berkah Abadi.
+            </p>
+
+            <div class="cq-banner-cta-actions">
+              <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
+                <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi WhatsApp
+              </a>
+              <?php if (!empty($proposal_pdf_url)) : ?>
+                <a href="<?php echo esc_url($proposal_pdf_url); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
+                  <i class="ri-file-download-line" aria-hidden="true"></i> Unduh Proposal
+                </a>
+              <?php endif; ?>
+              <a href="<?php echo esc_url(home_url('/kontak/')); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-lg">
+                Kunjungan Showroom
+              </a>
+            </div>
+
+            <div class="cq-banner-cta-trust">
+              <span><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> Badan Hukum PT Resmi</span>
+              <span><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> Garansi Pabrik</span>
+              <span><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> Termasuk Pelatihan</span>
+            </div>
+          </div>
+
+          <!-- Right Column: Visual Showcase -->
+          <div class="cq-banner-cta-right">
+            <div class="cq-banner-cta-visual">
+              <div class="cq-banner-cta-visual-badge">
+                <i class="ri-map-pin-2-line" aria-hidden="true"></i> Showroom &amp; Pabrik Sleman
+              </div>
+              <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/09-pabrik-kimia-sendiri-sleman.webp'); ?>" 
+                   alt="Pabrik dan Showroom Cleanique PT Indotech Berkah Abadi" 
+                   loading="lazy" 
+                   class="cq-banner-cta-img">
+              <div class="cq-banner-cta-visual-footer">
+                <span class="cq-cta-stat-pill">
+                  <i class="ri-shield-star-line"></i> 300+ Mitra Aktif
+                </span>
+                <span class="cq-cta-stat-pill">
+                  <i class="ri-star-fill" style="color: #facc15;"></i> 5.0 Terverifikasi
+                </span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>

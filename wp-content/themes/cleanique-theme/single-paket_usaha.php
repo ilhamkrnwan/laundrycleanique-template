@@ -93,25 +93,75 @@ while (have_posts()) : the_post();
     </div>
   </section>
 
-  <!-- ========================================================
-       CLOSING BANNER CTA (Contained Section Card)
+    <!-- ========================================================
+       CLOSING BANNER CTA (Corporate Showcase Bento)
        ======================================================== -->
   <section class="cq-section cq-banner-cta-section" id="paket-cta">
     <div class="cq-container">
       <div class="cq-banner-cta-card">
-        <h2 class="cq-banner-cta-title">
-          Siap Membuka Cabang Laundry Mandiri dengan <?php the_title(); ?>?
-        </h2>
-        <p class="cq-banner-cta-desc">
-          Konsultasikan kesiapan lokasi ruko, perhitungan BEP, dan jadwal instalasi mesin bersama tim ahli PT Indotech Berkah Abadi. 100% hak milik Anda tanpa royalti fee.
-        </p>
-        <div class="cq-banner-cta-actions">
-          <a href="<?php echo esc_url($wa_paket_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
-            <i class="ri-whatsapp-line" aria-hidden="true"></i> Hubungi Konsultan
-          </a>
-          <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg">
-            Pilihan Paket
-          </a>
+        <div class="cq-banner-cta-grid">
+
+          <!-- Left Column: Value Prop & Actions -->
+          <div class="cq-banner-cta-left">
+            <div class="cq-banner-cta-badges">
+              <span class="cq-badge-pill cq-badge-accent">
+                Kemitraan Resmi
+              </span>
+              <span class="cq-badge-pill cq-badge-success">
+                0% Royalti
+              </span>
+            </div>
+
+            <h2 class="cq-banner-cta-title">
+              Siap Membuka Cabang dengan <?php the_title(); ?>?
+            </h2>
+
+            <p class="cq-banner-cta-desc">
+              Konsultasikan kesiapan lokasi ruko, perhitungan BEP, dan jadwal instalasi mesin bergaransi bersama tim ahli PT Indotech Berkah Abadi.
+            </p>
+
+            <div class="cq-banner-cta-actions">
+              <a href="<?php echo esc_url($wa_paket_url); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
+                <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi WhatsApp
+              </a>
+              <?php if (!empty($proposal_pdf_url)) : ?>
+                <a href="<?php echo esc_url($proposal_pdf_url); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
+                  <i class="ri-file-download-line" aria-hidden="true"></i> Unduh Proposal
+                </a>
+              <?php endif; ?>
+              <a href="<?php echo esc_url(home_url('/kemitraan/')); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-lg">
+                Semua Paket
+              </a>
+            </div>
+
+            <div class="cq-banner-cta-trust">
+              <span><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> 100% Hak Milik</span>
+              <span><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> Garansi Pabrik</span>
+              <span><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> Termasuk Pelatihan</span>
+            </div>
+          </div>
+
+          <!-- Right Column: Visual Showcase -->
+          <div class="cq-banner-cta-right">
+            <div class="cq-banner-cta-visual">
+              <div class="cq-banner-cta-visual-badge">
+                <i class="ri-shield-star-line" aria-hidden="true"></i> Unit Baru &amp; Garansi
+              </div>
+              <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/02-paket-usaha-laundry-siap-buka.webp'); ?>" 
+                   alt="<?php the_title_attribute(); ?>" 
+                   loading="lazy" 
+                   class="cq-banner-cta-img">
+              <div class="cq-banner-cta-visual-footer">
+                <span class="cq-cta-stat-pill">
+                  <i class="ri-shield-star-line"></i> 300+ Mitra Aktif
+                </span>
+                <span class="cq-cta-stat-pill">
+                  <i class="ri-star-fill" style="color: #facc15;"></i> 5.0 Terverifikasi
+                </span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>

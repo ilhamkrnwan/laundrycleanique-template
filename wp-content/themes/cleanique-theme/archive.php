@@ -10,6 +10,7 @@
 get_header();
 
 $wa_url = cleanique_get_whatsapp_url('general');
+$proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
 $archive_title = get_the_archive_title();
 $archive_desc = get_the_archive_description();
 $categories = get_categories(['hide_empty' => true]);
@@ -104,7 +105,7 @@ $categories = get_categories(['hide_empty' => true]);
                   <?php if (has_post_thumbnail()) : ?>
                     <?php the_post_thumbnail($is_wide_bento ? 'large' : 'cleanique-card', ['loading' => ($post_counter === 1 ? 'eager' : 'lazy'), 'alt' => get_the_title()]); ?>
                   <?php else : ?>
-                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-outlet.jpg'); ?>" alt="<?php the_title_attribute(); ?>" loading="lazy">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/01-thumbnail-kembangkan-bisnis-laundry.webp'); ?>" alt="<?php the_title_attribute(); ?>" loading="lazy">
                   <?php endif; ?>
                 </a>
                 <div class="cq-bento-badges cq-bento-card-badges">
@@ -175,25 +176,75 @@ $categories = get_categories(['hide_empty' => true]);
     </div>
   </section>
 
-  <!-- ========================================================
-       CLOSING BANNER CTA (Contained Section Card)
+    <!-- ========================================================
+       CLOSING BANNER CTA (Corporate Showcase Bento)
        ======================================================== -->
   <section class="cq-section cq-banner-cta-section cq-blog-cta-section" id="blog-cta" aria-labelledby="archive-cta-title">
     <div class="cq-container">
       <div class="cq-banner-cta-card">
-        <h2 id="archive-cta-title" class="cq-banner-cta-title">
-          Siap Memulai Bisnis Laundry Mandiri Tanpa Potongan Royalti?
-        </h2>
-        <p class="cq-banner-cta-desc">
-          Dapatkan konsultasi gratis mengenai analisis lokasi, pemilihan set mesin cuci &amp; dryer bergaransi, dan pasokan deterjen pabrik langsung dari tim ahli PT Indotech Berkah Abadi.
-        </p>
-        <div class="cq-banner-cta-actions">
-          <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
-            <i class="ri-whatsapp-line" aria-hidden="true"></i> Hubungi Konsultan
-          </a>
-          <a href="<?php echo esc_url(home_url('/kemitraan/')); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg">
-            Pilihan Paket
-          </a>
+        <div class="cq-banner-cta-grid">
+
+          <!-- Left Column: Value Prop & Actions -->
+          <div class="cq-banner-cta-left">
+            <div class="cq-banner-cta-badges">
+              <span class="cq-badge-pill cq-badge-accent">
+                Kemitraan Resmi
+              </span>
+              <span class="cq-badge-pill cq-badge-success">
+                0% Royalti
+              </span>
+            </div>
+
+            <h2 id="archive-cta-title" class="cq-banner-cta-title">
+              Siap Memulai Bisnis Laundry Mandiri?
+            </h2>
+
+            <p class="cq-banner-cta-desc">
+              Dapatkan paket lengkap mesin komersial bergaransi, pasokan deterjen pabrik Sleman, dan bimbingan operasional sampai balik modal.
+            </p>
+
+            <div class="cq-banner-cta-actions">
+              <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
+                <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi WhatsApp
+              </a>
+              <?php if (!empty($proposal_pdf_url)) : ?>
+                <a href="<?php echo esc_url($proposal_pdf_url); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
+                  <i class="ri-file-download-line" aria-hidden="true"></i> Unduh Proposal
+                </a>
+              <?php endif; ?>
+              <a href="<?php echo esc_url(home_url('/kemitraan/')); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-lg">
+                Pilihan Paket
+              </a>
+            </div>
+
+            <div class="cq-banner-cta-trust">
+              <span><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> 100% Hak Milik</span>
+              <span><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> Garansi Pabrik</span>
+              <span><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> Termasuk Pelatihan</span>
+            </div>
+          </div>
+
+          <!-- Right Column: Visual Showcase -->
+          <div class="cq-banner-cta-right">
+            <div class="cq-banner-cta-visual">
+              <div class="cq-banner-cta-visual-badge">
+                <i class="ri-store-2-line" aria-hidden="true"></i> Paket Usaha Turnkey
+              </div>
+              <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/02-paket-usaha-laundry-siap-buka.webp'); ?>" 
+                   alt="Paket Usaha Kemitraan Laundry Siap Buka Cleanique" 
+                   loading="lazy" 
+                   class="cq-banner-cta-img">
+              <div class="cq-banner-cta-visual-footer">
+                <span class="cq-cta-stat-pill">
+                  <i class="ri-shield-star-line"></i> 300+ Mitra Aktif
+                </span>
+                <span class="cq-cta-stat-pill">
+                  <i class="ri-star-fill" style="color: #facc15;"></i> 5.0 Terverifikasi
+                </span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>

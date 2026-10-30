@@ -18,6 +18,7 @@ if (have_posts()) {
 // ────────────────────────────────────────────────────────────────────────────
 
 $wa_url = cleanique_get_whatsapp_url('chemical');
+$proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
 ?>
 
 <main id="main-content" class="cq-chemical-page">
@@ -65,7 +66,7 @@ $wa_url = cleanique_get_whatsapp_url('chemical');
       <!-- Visual Showcase Stage with 3 Floating Glass Badges -->
       <div class="cq-peluang-stage" style="margin-top: var(--cq-sp-40);">
         <div class="cq-peluang-frame">
-          <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/chemical-products.jpg'); ?>" 
+          <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/05-bahan-kimia-laundry-kualitas-pabrik.webp'); ?>" 
                alt="Rangkaian Produk Chemical Laundry PT Indotech Berkah Abadi" 
                loading="lazy">
         </div>
@@ -237,28 +238,75 @@ $wa_url = cleanique_get_whatsapp_url('chemical');
     </div>
   </section>
 
-  <!-- ========================================================
-       5. CLOSING BANNER CTA (Contained Section Card)
+    <!-- ========================================================
+       5. CLOSING BANNER CTA (Corporate Showcase Bento)
        ======================================================== -->
-  <section class="cq-section cq-banner-cta-section">
+  <section class="cq-section cq-banner-cta-section" id="kontak">
     <div class="cq-container">
       <div class="cq-banner-cta-card">
-        <h2 class="cq-banner-cta-title">
-          Ingin Pasokan Chemical Rutin Langsung dari Pabrik?
-        </h2>
-        <p class="cq-banner-cta-desc">
-          Kunjungi portal resmi kami di <strong>indotech.id</strong> atau hubungi tim distribusi <strong>PT Indotech Berkah Abadi</strong> untuk penawaran harga grosir khusus pengusaha laundry.
-        </p>
-        <div class="cq-banner-cta-actions">
-          <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-accent cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
-            <i class="ri-whatsapp-line" aria-hidden="true"></i> Pesan Chemical
-          </a>
-          <a href="https://indotech.id" target="_blank" rel="noopener" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg">
-            Situs Induk
-          </a>
-          <a href="<?php echo esc_url(home_url('/paket-usaha-laundry/')); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-lg">
-            Pilihan Paket
-          </a>
+        <div class="cq-banner-cta-grid">
+
+          <!-- Left Column: Value Prop & Actions -->
+          <div class="cq-banner-cta-left">
+            <div class="cq-banner-cta-badges">
+              <span class="cq-badge-pill cq-badge-accent">
+                Pabrik Sendiri
+              </span>
+              <span class="cq-badge-pill cq-badge-success">
+                Harga Grosir
+              </span>
+            </div>
+
+            <h2 class="cq-banner-cta-title">
+              Butuh Pasokan Chemical Rutin Pabrik?
+            </h2>
+
+            <p class="cq-banner-cta-desc">
+              Dapatkan harga tangan pertama dari pabrik Sleman kami dengan formula busa rendah ramah mesin dan aroma microcapsule tahan lama.
+            </p>
+
+            <div class="cq-banner-cta-actions">
+              <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
+                <i class="ri-whatsapp-line" aria-hidden="true"></i> Pesan Chemical
+              </a>
+              <?php if (!empty($proposal_pdf_url)) : ?>
+                <a href="<?php echo esc_url($proposal_pdf_url); ?>" class="cq-btn cq-btn-white-pill cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
+                  <i class="ri-file-download-line" aria-hidden="true"></i> Unduh Katalog
+                </a>
+              <?php endif; ?>
+              <a href="https://indotech.id" target="_blank" rel="noopener" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-lg">
+                Situs Induk
+              </a>
+            </div>
+
+            <div class="cq-banner-cta-trust">
+              <span><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> 100% Bersertifikat Halal</span>
+              <span><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> Formula Low Foam</span>
+              <span><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> Kirim Seluruh Indonesia</span>
+            </div>
+          </div>
+
+          <!-- Right Column: Visual Showcase -->
+          <div class="cq-banner-cta-right">
+            <div class="cq-banner-cta-visual">
+              <div class="cq-banner-cta-visual-badge">
+                <i class="ri-flask-line" aria-hidden="true"></i> Pabrik Kimia Sleman DIY
+              </div>
+              <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/05-bahan-kimia-laundry-kualitas-pabrik.webp'); ?>" 
+                   alt="Produksi Bahan Kimia Deterjen Laundry Cleanique" 
+                   loading="lazy" 
+                   class="cq-banner-cta-img">
+              <div class="cq-banner-cta-visual-footer">
+                <span class="cq-cta-stat-pill">
+                  <i class="ri-shield-star-line"></i> Harga Pabrik Langsung
+                </span>
+                <span class="cq-cta-stat-pill">
+                  <i class="ri-star-fill" style="color: #facc15;"></i> Formula Teruji
+                </span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>

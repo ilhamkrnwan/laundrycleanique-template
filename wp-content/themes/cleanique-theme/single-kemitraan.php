@@ -40,6 +40,28 @@ while (have_posts()) : the_post();
         'order'          => 'ASC',
         'post__not_in'   => [$post_id],
     ]);
+    // Intelligent image resolution
+    $hero_img_url = '';
+    $hero_img_alt = get_the_title();
+    if (has_post_thumbnail()) {
+        $hero_img_url = get_the_post_thumbnail_url($post_id, 'large');
+        $hero_img_alt = get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true) ?: get_the_title();
+    } else {
+        $slug = get_post_field('post_name', $post_id);
+        if (strpos($slug, 'komersial') !== false || strpos($slug, 'super') !== false || strpos($slug, 'ruko') !== false) {
+            $hero_img_url = get_template_directory_uri() . '/assets/images/04-mesin-komersial-heavy-duty.webp';
+            $hero_img_alt = 'Set Mesin Cuci dan Pengering Stack Komersial Paket Pro Ruko Cleanique';
+        } elseif (strpos($slug, 'industrial') !== false || strpos($slug, 'premium') !== false) {
+            $hero_img_url = get_template_directory_uri() . '/assets/images/02-paket-usaha-laundry-siap-buka.webp';
+            $hero_img_alt = 'Outlet Sentra Laundry Skala Besar Paket Industrial Cleanique';
+        } elseif (strpos($slug, 'pelatihan') !== false) {
+            $hero_img_url = get_template_directory_uri() . '/assets/images/08-standardisasi-pelatihan-sop-teknisi.webp';
+            $hero_img_alt = 'Pelatihan Standardisasi Operasional dan SOP Laundry Cleanique';
+        } else {
+            $hero_img_url = get_template_directory_uri() . '/assets/images/02-paket-usaha-laundry-siap-buka.webp';
+            $hero_img_alt = 'Paket Usaha Kemitraan Laundry Siap Buka Cleanique';
+        }
+    }
 ?>
 
 <main id="main-content" class="cq-kemitraan-single-page" itemscope itemtype="https://schema.org/Product">
@@ -87,50 +109,109 @@ while (have_posts()) : the_post();
     </div>
   </div>
 
-  <!-- ========================================================
+    <!-- ========================================================
        HERO HEADER: Paket Kemitraan Title
        ======================================================== -->
   <header class="cq-kemitraan-single-hero">
     <div class="cq-container">
-      <div class="cq-kemitraan-single-hero-inner">
-        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: var(--cq-sp-16);">
-          <span class="cq-badge-pill cq-badge-accent" style="margin: 0;">
-            Kemitraan Resmi
-          </span>
-          <?php if (!empty($badge)) : ?>
-            <span class="cq-badge-pill cq-badge-warning" style="margin: 0;"><?php echo esc_html($badge); ?></span>
-          <?php endif; ?>
-          <?php if ($featured === '1') : ?>
-            <span class="cq-badge-pill" style="margin: 0; background: #fef9c3; color: #713f12; border: 1px solid #fde047;">
-              Paket Terlaris
+      <div class="cq-kemitraan-hero-grid">
+
+        <!-- Left Column: Info & CTA -->
+        <div class="cq-kemitraan-hero-left">
+          <div class="cq-kemitraan-hero-badges">
+            <span class="cq-badge-pill cq-badge-accent">
+              Kemitraan Resmi
             </span>
-          <?php endif; ?>
+            <?php if (!empty($badge)) : ?>
+              <span class="cq-badge-pill cq-badge-warning"><?php echo esc_html($badge); ?></span>
+            <?php elseif ($featured === '1') : ?>
+              <span class="cq-badge-pill cq-badge-warning">Paket Terlaris</span>
+            <?php endif; ?>
+          </div>
+
+          <h1 class="cq-kemitraan-single-title" itemprop="name">
+            <?php the_title(); ?>
+          </h1>
+
+          <p class="cq-kemitraan-single-subtitle">
+            <?php echo wp_trim_words(get_the_excerpt(), 22, '...'); ?>
+          </p>
+
+          <!-- Price & ROI Highlight Strip -->
+          <div class="cq-kemitraan-hero-price-strip">
+            <div>
+              <span class="cq-kemitraan-hero-price-label">Investasi Mulai</span>
+              <div class="cq-kemitraan-hero-price-val" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <span itemprop="price" content="<?php echo esc_attr(preg_replace('/[^0-9]/', '', $price ?: '0')); ?>">
+                  <?php echo esc_html($price ?: 'Konsultasi'); ?>
+                </span>
+                <meta itemprop="priceCurrency" content="IDR">
+              </div>
+            </div>
+            <?php if (!empty($roi)) : ?>
+              <span class="cq-kemitraan-roi-chip">
+                <i class="ri-time-line" aria-hidden="true"></i> BEP: <?php echo esc_html($roi); ?>
+              </span>
+            <?php endif; ?>
+            <span class="cq-badge-pill cq-badge-success" style="margin: 0;">
+              <i class="ri-shield-check-line" aria-hidden="true"></i> 0% Royalti
+            </span>
+          </div>
+
+          <!-- Direct CTA Buttons -->
+          <div class="cq-kemitraan-hero-cta-group">
+            <a href="<?php echo esc_url($wa_url); ?>" class="cq-btn cq-btn-primary cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
+              <i class="ri-whatsapp-line" aria-hidden="true"></i> Konsultasi WhatsApp
+            </a>
+            <?php if (!empty($brochure)) : ?>
+              <a href="<?php echo esc_url($brochure); ?>" class="cq-btn cq-btn-outline cq-btn-pill cq-btn-lg" target="_blank" rel="noopener">
+                <i class="ri-file-download-line" aria-hidden="true"></i> Unduh Proposal
+              </a>
+            <?php endif; ?>
+          </div>
+
+          <!-- Trust Signals -->
+          <div class="cq-kemitraan-hero-trust">
+            <span class="cq-kemitraan-hero-trust-item"><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> 100% Hak Milik</span>
+            <span class="cq-kemitraan-hero-trust-item"><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> Garansi Pabrik</span>
+            <span class="cq-kemitraan-hero-trust-item"><i class="ri-checkbox-circle-fill" aria-hidden="true"></i> Termasuk Pelatihan</span>
+          </div>
         </div>
 
-        <h1 class="cq-kemitraan-single-title" itemprop="name">
-          <?php the_title(); ?>
-        </h1>
-
-        <p class="cq-kemitraan-single-subtitle">
-          <?php echo wp_trim_words(get_the_excerpt(), 24, '...'); ?>
-        </p>
-
-        <!-- Quick Share -->
-        <div class="cq-hero-share-actions">
-          <span class="cq-hero-share-title">Bagikan:</span>
-          <a href="<?php echo esc_url($share_wa_url); ?>" target="_blank" rel="noopener" class="cq-mini-share-btn is-wa" title="WhatsApp" aria-label="Bagikan via WhatsApp">
-            <i class="ri-whatsapp-line"></i>
-          </a>
-          <a href="<?php echo esc_url($share_fb_url); ?>" target="_blank" rel="noopener" class="cq-mini-share-btn is-fb" title="Facebook" aria-label="Bagikan via Facebook">
-            <i class="ri-facebook-fill"></i>
-          </a>
-          <a href="<?php echo esc_url($share_x_url); ?>" target="_blank" rel="noopener" class="cq-mini-share-btn is-x" title="X / Twitter" aria-label="Bagikan via X">
-            <i class="ri-twitter-x-line"></i>
-          </a>
-          <button type="button" class="cq-mini-share-btn is-copy cq-copy-link-btn" title="Salin Tautan" aria-label="Salin Tautan" data-url="<?php echo esc_url($current_url); ?>">
-            <i class="ri-links-line"></i>
-          </button>
+        <!-- Right Column: Hero Visual Frame -->
+        <div class="cq-kemitraan-hero-right">
+          <figure class="cq-kemitraan-hero-frame" data-preview-trigger>
+            <div class="cq-kemitraan-hero-badge">
+              <i class="ri-shield-star-line" aria-hidden="true"></i> Dokumentasi Resmi
+            </div>
+            <img src="<?php echo esc_url($hero_img_url); ?>" 
+                 alt="<?php echo esc_attr($hero_img_alt); ?>" 
+                 class="cq-kemitraan-hero-img"
+                 loading="eager"
+                 itemprop="image">
+            <figcaption class="cq-kemitraan-hero-caption">
+              <span class="cq-kemitraan-hero-tag">
+                <i class="ri-checkbox-circle-fill" aria-hidden="true"></i> 100% Unit Baru &bull; Garansi Pabrik
+              </span>
+              <div class="cq-hero-share-actions" style="margin-top: 0;">
+                <span class="cq-hero-share-title">Bagikan:</span>
+                <a href="<?php echo esc_url($share_wa_url); ?>" target="_blank" rel="noopener" class="cq-mini-share-btn is-wa" title="WhatsApp" aria-label="Bagikan via WhatsApp">
+                  <i class="ri-whatsapp-line"></i>
+                </a>
+                <a href="<?php echo esc_url($share_fb_url); ?>" target="_blank" rel="noopener" class="cq-mini-share-btn is-fb" title="Facebook" aria-label="Bagikan via Facebook">
+                  <i class="ri-facebook-fill"></i>
+                </a>
+                <a href="<?php echo esc_url($share_x_url); ?>" target="_blank" rel="noopener" class="cq-mini-share-btn is-x" title="X / Twitter" aria-label="Bagikan via X">
+                  <i class="ri-twitter-x-line"></i>
+                </a>
+                <button type="button" class="cq-mini-share-btn is-copy cq-copy-link-btn" title="Salin Tautan" aria-label="Salin Tautan" data-url="<?php echo esc_url($current_url); ?>">
+                  <i class="ri-links-line"></i>
+                </button>
+              </div>
+            </figcaption>
+          </figure>
         </div>
+
       </div>
     </div>
   </header>
@@ -138,7 +219,7 @@ while (have_posts()) : the_post();
   <!-- ========================================================
        MAIN LAYOUT: Two Column (Content + Sticky Sidebar)
        ======================================================== -->
-  <div class="cq-container cq-article-body-container" style="padding-top: clamp(32px, 5vw, 48px); padding-bottom: clamp(60px, 8vw, 100px);">
+  <div class="cq-container cq-article-body-container" style="padding-top: clamp(28px, 4vw, 40px); padding-bottom: clamp(60px, 8vw, 100px);">
     <div class="cq-single-layout">
 
       <!-- ======================================================
@@ -146,71 +227,7 @@ while (have_posts()) : the_post();
            ====================================================== -->
       <article class="cq-single-main" itemscope itemtype="https://schema.org/Product">
 
-        <!-- ====================================================
-             1. THUMBNAIL / HERO IMAGE SHOWCASE
-             ==================================================== -->
-        <?php
-        $hero_img_url = '';
-        $hero_img_alt = get_the_title();
-        if (has_post_thumbnail()) {
-            $hero_img_url = get_the_post_thumbnail_url($post_id, 'large');
-            $hero_img_alt = get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true) ?: get_the_title();
-        } else {
-            // Intelligent fallback based on package slug
-            $slug = get_post_field('post_name', $post_id);
-            if (strpos($slug, 'komersial') !== false || strpos($slug, 'super') !== false || strpos($slug, 'ruko') !== false) {
-                $hero_img_url = get_template_directory_uri() . '/assets/images/equip-washer-dryer.jpg';
-                $hero_img_alt = 'Set Mesin Cuci dan Pengering Stack Komersial Paket Pro Ruko Cleanique';
-            } elseif (strpos($slug, 'industrial') !== false || strpos($slug, 'premium') !== false) {
-                $hero_img_url = get_template_directory_uri() . '/assets/images/hero-outlet.jpg';
-                $hero_img_alt = 'Outlet Sentra Laundry Skala Besar Paket Industrial Cleanique';
-            } else {
-                $hero_img_url = get_template_directory_uri() . '/assets/images/equip-washer-dryer.jpg';
-                $hero_img_alt = 'Paket Usaha Kemitraan Laundry Siap Buka Cleanique';
-            }
-        }
-        ?>
-        <figure class="cq-kemitraan-hero-frame">
-          <div class="cq-kemitraan-hero-badge">
-            <i class="ri-shield-star-line"></i> Dokumentasi Paket Resmi
-          </div>
-          <img src="<?php echo esc_url($hero_img_url); ?>" 
-               alt="<?php echo esc_attr($hero_img_alt); ?>" 
-               class="cq-kemitraan-hero-img"
-               loading="eager"
-               itemprop="image">
-          <figcaption class="cq-kemitraan-hero-caption">
-            <span class="cq-kemitraan-hero-caption-text">
-              <i class="ri-zoom-in-line"></i> Klik foto untuk memperbesar pratinjau (resolusi penuh)
-            </span>
-            <span class="cq-kemitraan-hero-tag">
-              <i class="ri-checkbox-circle-fill"></i> 100% Unit Baru &bull; Garansi Pabrik
-            </span>
-          </figcaption>
-        </figure>
-
-        <!-- Price & ROI Banner -->
-        <div class="cq-kemitraan-single-price-banner">
-          <div>
-            <span class="cq-kemitraan-price-label-sm">Estimasi Modal Awal Siap Buka</span>
-            <div class="cq-kemitraan-price-big" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-              <span itemprop="price" content="<?php echo esc_attr(preg_replace('/[^0-9]/', '', $price ?: '0')); ?>">
-                <?php echo esc_html($price ?: 'Konsultasi Budget'); ?>
-              </span>
-              <meta itemprop="priceCurrency" content="IDR">
-            </div>
-          </div>
-          <?php if (!empty($roi)) : ?>
-            <div style="text-align: right;">
-              <span class="cq-kemitraan-price-label-sm" style="color: #059669;">Estimasi Balik Modal (BEP)</span>
-              <div class="cq-kemitraan-roi-chip" style="font-size: 14px; padding: 8px 18px; margin-top: 4px;">
-                <?php echo esc_html($roi); ?>
-              </div>
-            </div>
-          <?php endif; ?>
-        </div>
-
-        <!-- 4 Guarantee Pills -->
+        <!-- 4 Guarantee Pillars -->
         <div class="cq-kemitraan-single-pillars">
           <div class="cq-kemitraan-pillar-item">
             <i class="ri-hand-coin-fill" style="color: #10b981;"></i>
@@ -223,7 +240,14 @@ while (have_posts()) : the_post();
             <i class="ri-shield-check-fill" style="color: var(--cq-primary);"></i>
             <div>
               <strong>Garansi Mesin Resmi</strong>
-              <span>Servis & suku cadang pabrik</span>
+              <span>Servis &amp; suku cadang pabrik</span>
+            </div>
+          </div>
+          <div class="cq-kemitraan-pillar-item">
+            <i class="ri-graduation-cap-fill" style="color: #0284c7;"></i>
+            <div>
+              <strong>Termasuk Pelatihan</strong>
+              <span>SOP manajemen &amp; operasional</span>
             </div>
           </div>
           <div class="cq-kemitraan-pillar-item">
@@ -231,13 +255,6 @@ while (have_posts()) : the_post();
             <div>
               <strong>Chemical Pabrik DIY</strong>
               <span>Harga tangan pertama Sleman</span>
-            </div>
-          </div>
-          <div class="cq-kemitraan-pillar-item">
-            <i class="ri-smartphone-fill" style="color: #7c3aed;"></i>
-            <div>
-              <strong>Bonus Software POS</strong>
-              <span>Kasir + notifikasi WhatsApp</span>
             </div>
           </div>
         </div>
@@ -267,154 +284,106 @@ while (have_posts()) : the_post();
         <section class="cq-kemitraan-gallery-section" id="galeri-fasilitas">
           <div class="cq-kemitraan-gallery-header">
             <div>
-              <span class="cq-badge-clean" style="margin-bottom: 8px;">
-                <i class="ri-gallery-fill"></i> Dokumentasi &amp; Fasilitas Fisik
+              <span class="cq-badge-clean" style="margin-bottom: 6px;">
+                <i class="ri-image-2-fill"></i> Galeri Fasilitas
               </span>
               <h2 class="cq-kemitraan-gallery-title">
-                Galeri Mesin, Peralatan &amp; Standar Outlet
+                Dokumentasi Paket &amp; Peralatan
               </h2>
-              <p class="cq-kemitraan-gallery-desc">
-                Berikut dokumentasi visual fisik unit mesin komersial, instalasi boiler uap, pasokan formula chemical pabrik, sistem kasir POS, dan standar interior outlet yang didapatkan pada paket kemitraan ini:
-              </p>
             </div>
+            <span class="cq-gallery-hint">
+              <i class="ri-zoom-in-line"></i> Klik foto untuk perbesar
+            </span>
           </div>
 
           <div class="cq-kemitraan-gallery-grid">
-            <!-- Item 1: Mesin Cuci & Dryer Stack -->
-            <div class="cq-kemitraan-gallery-item">
-              <div class="cq-kemitraan-gallery-thumb">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/equip-washer-dryer.jpg'); ?>" 
-                     alt="Set Mesin Cuci Front Load dan Pengering Gas Heavy Duty Komersial" 
-                     loading="lazy">
-                <div class="cq-kemitraan-gallery-overlay">
-                  <span class="cq-gallery-zoom-btn" title="Perbesar Foto"><i class="ri-zoom-in-line"></i></span>
-                  <span class="cq-gallery-badge">Mesin Utama</span>
-                </div>
+            <!-- 1. Mesin Cuci & Dryer Stack -->
+            <figure class="cq-kemitraan-gallery-item" data-preview-trigger>
+              <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/04-mesin-komersial-heavy-duty.webp'); ?>" 
+                   alt="Set Mesin Cuci Front Load dan Pengering Gas Heavy Duty Komersial" 
+                   loading="lazy">
+              <div class="cq-kemitraan-gallery-overlay">
+                <span class="cq-gallery-zoom-btn" title="Perbesar"><i class="ri-zoom-in-line"></i></span>
+                <span class="cq-gallery-badge">Mesin Utama</span>
               </div>
-              <div class="cq-kemitraan-gallery-info">
-                <h4 class="cq-gallery-item-title">Mesin Cuci Front Load &amp; Dryer Gas</h4>
-                <p class="cq-gallery-item-desc">Set washer drum stainless steel SUS304 berdaya putar tinggi dan dryer konversi gas hemat energi, pakaian kering tuntas 45 menit siap lipat.</p>
-              </div>
-            </div>
+            </figure>
 
-            <!-- Item 2: Boiler Setrika Uap Gas & Meja Vacuum -->
-            <div class="cq-kemitraan-gallery-item">
-              <div class="cq-kemitraan-gallery-thumb">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/equip-boiler-iron.jpg'); ?>" 
-                     alt="Sistem Boiler Setrika Uap Gas Otomatis dan Meja Vacuum Stainless" 
-                     loading="lazy">
-                <div class="cq-kemitraan-gallery-overlay">
-                  <span class="cq-gallery-zoom-btn" title="Perbesar Foto"><i class="ri-zoom-in-line"></i></span>
-                  <span class="cq-gallery-badge">Finishing Uap</span>
-                </div>
+            <!-- 2. Boiler Setrika Uap Gas & Meja Vacuum -->
+            <figure class="cq-kemitraan-gallery-item" data-preview-trigger>
+              <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/07-boiler-setrika-uap-gas-otomatis.webp'); ?>" 
+                   alt="Sistem Boiler Setrika Uap Gas Otomatis dan Meja Vacuum Stainless" 
+                   loading="lazy">
+              <div class="cq-kemitraan-gallery-overlay">
+                <span class="cq-gallery-zoom-btn" title="Perbesar"><i class="ri-zoom-in-line"></i></span>
+                <span class="cq-gallery-badge">Finishing Uap</span>
               </div>
-              <div class="cq-kemitraan-gallery-info">
-                <h4 class="cq-gallery-item-title">Boiler Setrika Uap Gas &amp; Meja Vacuum</h4>
-                <p class="cq-gallery-item-desc">Tekanan uap kering tinggi anti-gosong dan anti-mengkilap pada serat kain, melicinkan pakaian 3x lebih cepat dibanding setrika listrik rumah tangga.</p>
-              </div>
-            </div>
+            </figure>
 
-            <!-- Item 3: Smart Laundry Management POS App -->
-            <div class="cq-kemitraan-gallery-item">
-              <div class="cq-kemitraan-gallery-thumb">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-pos-app.jpg'); ?>" 
-                     alt="Tampilan Dashboard Aplikasi Kasir Laundry POS dan E-Nota WhatsApp" 
-                     loading="lazy">
-                <div class="cq-kemitraan-gallery-overlay">
-                  <span class="cq-gallery-zoom-btn" title="Perbesar Foto"><i class="ri-zoom-in-line"></i></span>
-                  <span class="cq-gallery-badge">Sistem Kasir</span>
-                </div>
+            <!-- 3. Smart Laundry Management POS App -->
+            <figure class="cq-kemitraan-gallery-item" data-preview-trigger>
+              <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/03-smart-laundry-management-pos.webp'); ?>" 
+                   alt="Tampilan Aplikasi Kasir Laundry POS Cloud Cleanique" 
+                   loading="lazy">
+              <div class="cq-kemitraan-gallery-overlay">
+                <span class="cq-gallery-zoom-btn" title="Perbesar"><i class="ri-zoom-in-line"></i></span>
+                <span class="cq-gallery-badge">Sistem Kasir</span>
               </div>
-              <div class="cq-kemitraan-gallery-info">
-                <h4 class="cq-gallery-item-title">Aplikasi Kasir POS &amp; E-Nota WhatsApp</h4>
-                <p class="cq-gallery-item-desc">Sistem pencatatan digital berbasis cloud otomatis kirim e-nota ke nomor WhatsApp pelanggan, pelacakan live status cucian, dan audit tutup kasir anti-curang.</p>
-              </div>
-            </div>
+            </figure>
 
-            <!-- Item 4: Chemical & Parfum Pabrik -->
-            <div class="cq-kemitraan-gallery-item">
-              <div class="cq-kemitraan-gallery-thumb">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/chemical-products.jpg'); ?>" 
-                     alt="Produksi Paket Bahan Chemical Laundry Standar Pabrik Orchid Brand" 
-                     loading="lazy">
-                <div class="cq-kemitraan-gallery-overlay">
-                  <span class="cq-gallery-zoom-btn" title="Perbesar Foto"><i class="ri-zoom-in-line"></i></span>
-                  <span class="cq-gallery-badge">Chemical Pabrik</span>
-                </div>
+            <!-- 4. Chemical & Parfum Pabrik -->
+            <figure class="cq-kemitraan-gallery-item" data-preview-trigger>
+              <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/05-bahan-kimia-laundry-kualitas-pabrik.webp'); ?>" 
+                   alt="Produksi Paket Bahan Chemical Laundry Standar Pabrik Orchid Brand" 
+                   loading="lazy">
+              <div class="cq-kemitraan-gallery-overlay">
+                <span class="cq-gallery-zoom-btn" title="Perbesar"><i class="ri-zoom-in-line"></i></span>
+                <span class="cq-gallery-badge">Chemical Pabrik</span>
               </div>
-              <div class="cq-kemitraan-gallery-info">
-                <h4 class="cq-gallery-item-title">Formula Kimia Pabrik &amp; Parfum Tahan Lama</h4>
-                <p class="cq-gallery-item-desc">Pasokan awal deterjen cair konsentrat, softener eco ramah lingkungan, pelicin anti kusam, dan parfum microcapsule tahan wangi berminggu-minggu.</p>
-              </div>
-            </div>
+            </figure>
 
-            <!-- Item 5: Standar Interior Outlet Ruko -->
-            <div class="cq-kemitraan-gallery-item">
-              <div class="cq-kemitraan-gallery-thumb">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-outlet.jpg'); ?>" 
-                     alt="Standar Penataan Interior dan Display Outlet Kemitraan Laundry Cleanique" 
-                     loading="lazy">
-                <div class="cq-kemitraan-gallery-overlay">
-                  <span class="cq-gallery-zoom-btn" title="Perbesar Foto"><i class="ri-zoom-in-line"></i></span>
-                  <span class="cq-gallery-badge">Interior Ruko</span>
-                </div>
+            <!-- 5. Standar Interior Outlet Ruko -->
+            <figure class="cq-kemitraan-gallery-item" data-preview-trigger>
+              <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/02-paket-usaha-laundry-siap-buka.webp'); ?>" 
+                   alt="Standar Penataan Interior dan Display Outlet Kemitraan Laundry Cleanique" 
+                   loading="lazy">
+              <div class="cq-kemitraan-gallery-overlay">
+                <span class="cq-gallery-zoom-btn" title="Perbesar"><i class="ri-zoom-in-line"></i></span>
+                <span class="cq-gallery-badge">Toko Siap Buka</span>
               </div>
-              <div class="cq-kemitraan-gallery-info">
-                <h4 class="cq-gallery-item-title">Standar Tata Letak &amp; Display Front Office</h4>
-                <p class="cq-gallery-item-desc">Desain alur kerja ruangan higienis pemisahan pakaian bersih dan kotor, rak pakaian siap ambil rapi, dan meja penerimaan kasir yang ramah pelanggan.</p>
-              </div>
-            </div>
+            </figure>
 
-            <!-- Item 6: Tim Teknisi & Instalasi Resmi -->
-            <div class="cq-kemitraan-gallery-item">
-              <div class="cq-kemitraan-gallery-thumb">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/indotech-team.jpg'); ?>" 
-                     alt="Tim Teknisi dan Workshop Pabrik PT Indotech Berkah Abadi" 
-                     loading="lazy">
-                <div class="cq-kemitraan-gallery-overlay">
-                  <span class="cq-gallery-zoom-btn" title="Perbesar Foto"><i class="ri-zoom-in-line"></i></span>
-                  <span class="cq-gallery-badge">Dukungan Onsite</span>
-                </div>
+            <!-- 6. Dashboard Kasir & E-Nota WhatsApp -->
+            <figure class="cq-kemitraan-gallery-item" data-preview-trigger>
+              <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/06-dashboard-kasir-e-nota-whatsapp.webp'); ?>" 
+                   alt="Dashboard Kasir dan E-Nota WhatsApp Cleanique" 
+                   loading="lazy">
+              <div class="cq-kemitraan-gallery-overlay">
+                <span class="cq-gallery-zoom-btn" title="Perbesar"><i class="ri-zoom-in-line"></i></span>
+                <span class="cq-gallery-badge">E-Nota WA</span>
               </div>
-              <div class="cq-kemitraan-gallery-info">
-                <h4 class="cq-gallery-item-title">Instalasi Plumbing &amp; Pendampingan Tim Ahli</h4>
-                <p class="cq-gallery-item-desc">Pemasangan jalur pipa air bersih, pembuangan, regulator gas berstandar keselamatan, serta pelatihan SOP karyawan langsung di lokasi Anda.</p>
-              </div>
-            </div>
+            </figure>
 
-            <!-- Item 7: Contoh Outlet Mitra Aktif Sleman -->
-            <div class="cq-kemitraan-gallery-item">
-              <div class="cq-kemitraan-gallery-thumb">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/mitra-outlet-sleman.jpg'); ?>" 
-                     alt="Outlet Mitra Cleanique Express Minomartani Sleman Yogyakarta" 
-                     loading="lazy">
-                <div class="cq-kemitraan-gallery-overlay">
-                  <span class="cq-gallery-zoom-btn" title="Perbesar Foto"><i class="ri-zoom-in-line"></i></span>
-                  <span class="cq-gallery-badge">Outlet Aktif</span>
-                </div>
+            <!-- 7. Standardisasi SOP & Pelatihan Teknisi -->
+            <figure class="cq-kemitraan-gallery-item" data-preview-trigger>
+              <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/08-standardisasi-pelatihan-sop-teknisi.webp'); ?>" 
+                   alt="Pelatihan SOP dan Tim Teknisi Siaga Cleanique" 
+                   loading="lazy">
+              <div class="cq-kemitraan-gallery-overlay">
+                <span class="cq-gallery-zoom-btn" title="Perbesar"><i class="ri-zoom-in-line"></i></span>
+                <span class="cq-gallery-badge">Pelatihan SOP</span>
               </div>
-              <div class="cq-kemitraan-gallery-info">
-                <h4 class="cq-gallery-item-title">Cleanique Express Minomartani (Sleman)</h4>
-                <p class="cq-gallery-item-desc">Contoh ruko operasional mitra aktif yang telah mencapai BEP dalam 7 bulan dengan omzet harian stabil ratusan kilogram cucian.</p>
-              </div>
-            </div>
+            </figure>
 
-            <!-- Item 8: Contoh Outlet Mitra Aktif Solo -->
-            <div class="cq-kemitraan-gallery-item">
-              <div class="cq-kemitraan-gallery-thumb">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/mitra-outlet-solo.jpg'); ?>" 
-                     alt="Outlet Mitra Cleanique Laundry Jebres Surakarta Solo" 
-                     loading="lazy">
-                <div class="cq-kemitraan-gallery-overlay">
-                  <span class="cq-gallery-zoom-btn" title="Perbesar Foto"><i class="ri-zoom-in-line"></i></span>
-                  <span class="cq-gallery-badge">Outlet Aktif</span>
-                </div>
+            <!-- 8. Pabrik Kimia Sendiri Sleman -->
+            <figure class="cq-kemitraan-gallery-item" data-preview-trigger>
+              <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/09-pabrik-kimia-sendiri-sleman.webp'); ?>" 
+                   alt="Pabrik Kimia Laundry PT Indotech Berkah Abadi Sleman" 
+                   loading="lazy">
+              <div class="cq-kemitraan-gallery-overlay">
+                <span class="cq-gallery-zoom-btn" title="Perbesar"><i class="ri-zoom-in-line"></i></span>
+                <span class="cq-gallery-badge">Pabrik Sleman</span>
               </div>
-              <div class="cq-kemitraan-gallery-info">
-                <h4 class="cq-gallery-item-title">Cleanique Laundry Jebres (Surakarta Solo)</h4>
-                <p class="cq-gallery-item-desc">Contoh ruko komersial di kawasan kampus dan kos mahasiswa dengan utilisasi mesin cuci front-load dan setrika uap maksimal setiap hari.</p>
-              </div>
-            </div>
+            </figure>
           </div>
         </section>
 
@@ -518,8 +487,8 @@ while (have_posts()) : the_post();
               </div>
             <?php endif; ?>
 
-            <div style="font-size: 11px; text-transform: uppercase; font-weight: 700; letter-spacing: 0.06em; color: var(--cq-text-muted); margin-bottom: 6px;">
-              Investasi Modal Awal
+            <div style="font-size: 11px; text-transform: uppercase; font-weight: 600; letter-spacing: 0.05em; color: var(--cq-text-muted); margin-bottom: 6px;">
+              Investasi Paket
             </div>
             <div class="cq-kemitraan-sidebar-price">
               <?php echo esc_html($price ?: 'Konsultasi'); ?>
