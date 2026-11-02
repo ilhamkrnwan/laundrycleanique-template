@@ -291,15 +291,16 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6285600061005');
   <!-- ========================================================
        4. FAQ SEPUTAR KONSULTASI & KUNJUNGAN
        ======================================================== -->
-  <section class="cq-section cq-section-alt" id="faq-kontak">
+  <section class="cq-section cq-section-alt" id="faq">
+    <span id="faq-kontak" class="cq-anchor-alias" aria-hidden="true"></span>
     <div class="cq-container">
-      <div class="cq-section-header">
-        <span class="cq-badge-clean">FAQ Konsultasi</span>
-        <h2 class="cq-section-title">Pertanyaan Umum Seputar Kemitraan &amp; Kunjungan</h2>
+      <div class="cq-section-header text-center" style="max-width: 740px; margin: 0 auto var(--cq-sp-40);">
+        <span class="cq-section-subtitle">FAQ Konsultasi</span>
+        <h2 class="cq-section-title">Pertanyaan Umum Seputar Konsultasi &amp; Kunjungan</h2>
         <p class="cq-section-desc">Hal-hal yang sering ditanyakan oleh calon mitra sebelum berkunjung atau berdiskusi langsung dengan tim ahli kami.</p>
       </div>
 
-      <div class="cq-accordion" style="max-width: 820px; margin: 0 auto;">
+      <div class="cq-accordion">
         <div class="cq-accordion-item is-open">
           <button type="button" class="cq-accordion-trigger" aria-expanded="true">
             <span>Apakah saya perlu membuat janji temu sebelum berkunjung ke showroom?</span>

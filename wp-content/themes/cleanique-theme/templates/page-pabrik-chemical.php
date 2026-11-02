@@ -69,6 +69,9 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
           <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/05-bahan-kimia-laundry-kualitas-pabrik.webp'); ?>" 
                alt="Rangkaian Produk Chemical Laundry PT Indotech Berkah Abadi" 
                loading="lazy">
+          <div class="cq-peluang-frame-overlay">
+            <div class="cq-peluang-frame-badge">Chemical Pabrik Orchid</div>
+          </div>
         </div>
 
         <div class="cq-peluang-float-card float-left" style="top: 8%;">
@@ -238,8 +241,77 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
     </div>
   </section>
 
+  <!-- ========================================================
+       5. FAQ CHEMICAL PABRIK (Accordion Interaktif)
+       ======================================================== -->
+  <section class="cq-section cq-section-alt" id="faq">
+    <div class="cq-container">
+      <div class="cq-section-header text-center" style="max-width: 720px; margin: 0 auto var(--cq-sp-40);">
+        <span class="cq-section-subtitle">FAQ Chemical Pabrik</span>
+        <h2 class="cq-section-title">
+          Pertanyaan Seputar Bahan Kimia Laundry Pabrik
+        </h2>
+        <p class="cq-section-desc">
+          Informasi transparan seputar formula pekat, efisiensi HPP cucian, izin edar resmi, dan prosedur pemesanan grosir.
+        </p>
+      </div>
+
+      <div class="cq-accordion">
+        <div class="cq-accordion-item is-open">
+          <button type="button" class="cq-accordion-trigger" aria-expanded="true">
+            <span>Apakah chemical Orchid Brand bisa dibeli oleh umum tanpa menjadi mitra Cleanique?</span>
+            <i class="ri-arrow-down-s-line cq-accordion-icon" aria-hidden="true"></i>
+          </button>
+          <div class="cq-accordion-content">
+            <p>Bisa sekali. Pabrik chemical PT Indotech Berkah Abadi melayani pemesanan grosir untuk pengusaha laundry kiloan independen, hotel, rumah sakit, maupun calon pengusaha yang ingin menjadi distributor chemical di kotanya tanpa harus mengambil paket kemitraan.</p>
+          </div>
+        </div>
+
+        <div class="cq-accordion-item">
+          <button type="button" class="cq-accordion-trigger" aria-expanded="false">
+            <span>Apa keunggulan biang sabun pekat dibanding deterjen laundry cair jadi?</span>
+            <i class="ri-arrow-down-s-line cq-accordion-icon" aria-hidden="true"></i>
+          </button>
+          <div class="cq-accordion-content">
+            <p>Biang sabun konsentrat memiliki zat aktif tinggi yang diencerkan sendiri di outlet sesuai panduan takaran. Hasilnya, biaya modal chemical per kilogram cucian menjadi jauh lebih hemat (mulai Rp 150 – Rp 300 per kg) dan menghemat biaya ongkos kirim antarpulau hingga 70% karena tidak membayar bobot air.</p>
+          </div>
+        </div>
+
+        <div class="cq-accordion-item">
+          <button type="button" class="cq-accordion-trigger" aria-expanded="false">
+            <span>Apakah formula deterjen aman untuk bearing mesin cuci front load?</span>
+            <i class="ri-arrow-down-s-line cq-accordion-icon" aria-hidden="true"></i>
+          </button>
+          <div class="cq-accordion-content">
+            <p>Sangat aman. Seluruh deterjen cair dan konsentrat kami diformulasikan dengan teknologi busa rendah (low foam) yang dirancang khusus untuk mesin cuci putaran tinggi (high spin) front loading tanpa membebani motor/bearing dan tidak meninggalkan endapan residu di tabung.</p>
+          </div>
+        </div>
+
+        <div class="cq-accordion-item">
+          <button type="button" class="cq-accordion-trigger" aria-expanded="false">
+            <span>Apakah produk chemical Cleanique sudah bersertifikat Halal dan izin edar resmi?</span>
+            <i class="ri-arrow-down-s-line cq-accordion-icon" aria-hidden="true"></i>
+          </button>
+          <div class="cq-accordion-content">
+            <p>Ya. Seluruh lini produk deterjen, softener, sour (penetral), dan parfum laundry PT Indotech Berkah Abadi telah tersertifikasi Halal MUI/BPJPH serta diproduksi berizin edar resmi Kemenkes PKD demi keamanan operator dan kebersihan pakaian pelanggan.</p>
+          </div>
+        </div>
+
+        <div class="cq-accordion-item">
+          <button type="button" class="cq-accordion-trigger" aria-expanded="false">
+            <span>Bagaimana prosedur pemesanan ulang dan sistem pengiriman ke luar kota/pulau?</span>
+            <i class="ri-arrow-down-s-line cq-accordion-icon" aria-hidden="true"></i>
+          </button>
+          <div class="cq-accordion-content">
+            <p>Pemesanan dapat dilakukan langsung via WhatsApp resmi tim logistik pabrik Sleman. Kami bermitra dengan ekspedisi kargo darat, laut, dan udara bertarif ekonomis khusus bahan cairan. Pengiriman pulau Jawa estimasi 1–3 hari, sedangkan luar Jawa 4–8 hari kerja dengan kemasan jerigen bersegel rapat.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
     <!-- ========================================================
-       5. CLOSING BANNER CTA (Corporate Showcase Bento)
+       6. CLOSING BANNER CTA (Corporate Showcase Bento)
        ======================================================== -->
   <section class="cq-section cq-banner-cta-section" id="kontak">
     <div class="cq-container">

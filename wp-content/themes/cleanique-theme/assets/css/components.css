@@ -288,10 +288,11 @@
 }
 
 /* ==========================================================================
-   5. ACCORDION FAQ (.cq-accordion)
-   Modern Card Style with Smooth Micro-interactions
+   5. ACCORDION FAQ (.cq-accordion, .cq-faq-accordion)
+   Modern Card Style with Smooth Micro-interactions & Zero Layout Shift
    ========================================================================== */
-.cq-accordion {
+.cq-accordion,
+.cq-faq-accordion {
   display: flex;
   flex-direction: column;
   gap: var(--cq-sp-12, 14px);
@@ -315,7 +316,8 @@
   box-shadow: 0 6px 20px -4px rgba(15, 23, 42, 0.07);
 }
 
-.cq-accordion-item.is-open {
+.cq-accordion-item.is-open,
+details.cq-accordion-item[open] {
   border-color: var(--brand-deep, #0284c7);
   box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.08), 0 0 0 1px rgba(2, 132, 199, 0.15);
 }
@@ -327,7 +329,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 18px 22px;
+  padding: 18px 24px;
   background: transparent;
   border: none;
   font-family: var(--cq-font-heading, 'Plus Jakarta Sans', sans-serif);
@@ -336,17 +338,31 @@
   color: var(--cq-dark-navy, #0f172a);
   text-align: left;
   cursor: pointer;
-  min-height: 52px;
+  min-height: 54px;
   transition: color 0.2s ease, background 0.2s ease;
   line-height: 1.4;
   -webkit-appearance: none;
   appearance: none;
 }
 
+summary.cq-accordion-trigger {
+  list-style: none;
+}
+
+summary.cq-accordion-trigger::-webkit-details-marker {
+  display: none;
+}
+
 .cq-accordion-trigger:hover,
 .cq-accordion-header:hover {
   color: var(--brand-deep, #0284c7);
   background: rgba(248, 250, 252, 0.7);
+}
+
+.cq-accordion-item.is-open .cq-accordion-trigger,
+.cq-accordion-item.is-open .cq-accordion-header,
+details.cq-accordion-item[open] .cq-accordion-trigger {
+  color: var(--brand-deep, #0284c7);
 }
 
 .cq-accordion-trigger:focus-visible,
@@ -367,10 +383,11 @@
   font-size: 18px;
   flex-shrink: 0;
   margin-left: 12px;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, color 0.2s ease;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, color 0.25s ease;
 }
 
-.cq-accordion-item.is-open .cq-accordion-icon {
+.cq-accordion-item.is-open .cq-accordion-icon,
+details.cq-accordion-item[open] .cq-accordion-icon {
   transform: rotate(180deg);
   background: var(--brand-deep, #0284c7);
   color: #ffffff;
@@ -378,11 +395,24 @@
 
 .cq-accordion-content,
 .cq-accordion-body {
-  padding: 0 22px 20px 22px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 24px;
+  transition: max-height 0.38s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.28s ease, padding 0.35s ease;
   font-family: var(--cq-font-body, 'Inter', sans-serif);
   font-size: 14.5px;
   color: var(--navy-700, #334155);
   line-height: 1.7;
+}
+
+.cq-accordion-item.is-open .cq-accordion-content,
+.cq-accordion-item.is-open .cq-accordion-body,
+details.cq-accordion-item[open] .cq-accordion-content,
+details.cq-accordion-item[open] .cq-accordion-body {
+  max-height: 800px;
+  opacity: 1;
+  padding: 0 24px 22px 24px;
 }
 
 .cq-accordion-content p,
@@ -395,9 +425,36 @@
   margin-top: 10px;
 }
 
-.cq-accordion-item:not(.is-open) .cq-accordion-content,
-.cq-accordion-item:not(.is-open) .cq-accordion-body {
-  display: none;
+@media (max-width: 768px) {
+  .cq-accordion,
+  .cq-faq-accordion {
+    gap: 12px;
+  }
+  .cq-accordion-trigger,
+  .cq-accordion-header {
+    padding: 16px 18px;
+    font-size: 0.98rem;
+    gap: 12px;
+    min-height: 48px;
+  }
+  .cq-accordion-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+    margin-left: 8px;
+  }
+  .cq-accordion-content,
+  .cq-accordion-body {
+    padding: 0 18px;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+  .cq-accordion-item.is-open .cq-accordion-content,
+  .cq-accordion-item.is-open .cq-accordion-body,
+  details.cq-accordion-item[open] .cq-accordion-content,
+  details.cq-accordion-item[open] .cq-accordion-body {
+    padding: 0 18px 18px 18px;
+  }
 }
 
 /* ==========================================================================

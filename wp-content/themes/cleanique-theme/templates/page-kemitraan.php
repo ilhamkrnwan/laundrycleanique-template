@@ -692,67 +692,68 @@ $headline         = get_option('cleanique_kemitraan_headline', 'Peluang Bisnis L
   <!-- ========================================================
        7. FAQ KEMITRAAN (Accordion Interaktif)
        ======================================================== -->
-  <section class="cq-section" style="padding: clamp(60px, 8vw, 90px) 0; background: #f8fafc;" id="faq">
+  <section class="cq-section cq-section-alt" id="faq">
     <div class="cq-container">
-      <div style="text-align: center; max-width: 680px; margin: 0 auto clamp(32px, 5vw, 44px);">
-        <h2 class="cq-section-title" style="margin-bottom: var(--cq-sp-12);">
+      <div class="cq-section-header text-center" style="max-width: 680px; margin: 0 auto var(--cq-sp-40);">
+        <span class="cq-section-subtitle">FAQ Kemitraan</span>
+        <h2 class="cq-section-title">
           Hal yang Kerap Ditanyakan Calon Mitra
         </h2>
-        <p style="font-size: var(--cq-fs-sm); color: var(--cq-text-muted); line-height: 1.65; margin: 0;">
+        <p class="cq-section-desc">
           Jawaban lugas dan transparan mengenai sistem kemitraan tanpa royalti Cleanique Laundry.
         </p>
       </div>
 
-      <div style="max-width: 820px; margin: 0 auto;" class="cq-faq-accordion">
-        <details class="cq-accordion-item" open>
-          <summary class="cq-accordion-trigger">
+      <div class="cq-accordion">
+        <div class="cq-accordion-item is-open">
+          <button type="button" class="cq-accordion-trigger" aria-expanded="true">
             <span>Apakah benar-benar bebas biaya royalti selamanya?</span>
-            <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
-          </summary>
+            <i class="ri-arrow-down-s-line cq-accordion-icon" aria-hidden="true"></i>
+          </button>
           <div class="cq-accordion-content">
             <p><strong>Benar 100%.</strong> PT Indotech Berkah Abadi menganut model kemitraan bisnis mandiri. Anda tidak akan pernah ditagih biaya royalti persenan omzet bulanan, biaya perpanjangan lisensi merk tahunan, ataupun biaya wajib lainnya. 100% pendapatan kotor maupun bersih adalah hak milik penuh Anda.</p>
           </div>
-        </details>
+        </div>
 
-        <details class="cq-accordion-item">
-          <summary class="cq-accordion-trigger">
+        <div class="cq-accordion-item">
+          <button type="button" class="cq-accordion-trigger" aria-expanded="false">
             <span>Saya belum pernah berbisnis laundry, apakah ada pelatihan karyawan?</span>
-            <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
-          </summary>
+            <i class="ri-arrow-down-s-line cq-accordion-icon" aria-hidden="true"></i>
+          </button>
           <div class="cq-accordion-content">
             <p>Ya, seluruh paket kemitraan sudah mencakup modul pelatihan komprehensif. Tim pelatih kami memberikan bimbingan teknis langsung (onsite/daring) mulai dari teknik mencuci bahan pakaian sensitif, teknik spotting noda membandel (darah, minyak, jamur), teknik setrika uap cepat, hingga pengoperasian software kasir Cleanique.</p>
           </div>
-        </details>
+        </div>
 
-        <details class="cq-accordion-item">
-          <summary class="cq-accordion-trigger">
+        <div class="cq-accordion-item">
+          <button type="button" class="cq-accordion-trigger" aria-expanded="false">
             <span>Bagaimana jika mesin cuci atau pengering mengalami kendala teknis?</span>
-            <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
-          </summary>
+            <i class="ri-arrow-down-s-line cq-accordion-icon" aria-hidden="true"></i>
+          </button>
           <div class="cq-accordion-content">
             <p>Semua unit yang kami kirim 100% baru, bukan bekas atau rekondisi. PT Indotech memiliki gudang suku cadang di Sleman, DIY. Setelah outlet berjalan, mitra dapat berkonsultasi teknis tanpa batas waktu via WhatsApp, termasuk panduan diagnosa awal dan pengadaan sparepart dari gudang kami.</p>
           </div>
-        </details>
+        </div>
 
-        <details class="cq-accordion-item">
-          <summary class="cq-accordion-trigger">
+        <div class="cq-accordion-item">
+          <button type="button" class="cq-accordion-trigger" aria-expanded="false">
             <span>Apakah pasokan biang sabun dan pewangi wajib dibeli dari pabrik Cleanique?</span>
-            <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
-          </summary>
+            <i class="ri-arrow-down-s-line cq-accordion-icon" aria-hidden="true"></i>
+          </button>
           <div class="cq-accordion-content">
             <p>Kami menyarankan mitra menggunakan biang sabun dan paket bahan dari pabrik kami karena diformulasikan khusus dengan busa rendah (low foam) yang melindungi bearing mesin cuci dan parfum yang tahan lama. Sebagai mitra Cleanique, Anda mendapatkan harga pabrik tangan pertama yang lebih hemat dari pasokan toko grosir biasa. Bahan kami bersertifikat halal.</p>
           </div>
-        </details>
+        </div>
 
-        <details class="cq-accordion-item">
-          <summary class="cq-accordion-trigger">
+        <div class="cq-accordion-item">
+          <button type="button" class="cq-accordion-trigger" aria-expanded="false">
             <span>Berapa lama estimasi waktu dari penandatanganan hingga outlet siap buka?</span>
-            <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
-          </summary>
+            <i class="ri-arrow-down-s-line cq-accordion-icon" aria-hidden="true"></i>
+          </button>
           <div class="cq-accordion-content">
             <p>Rata-rata proses persiapan outlet memakan waktu <strong>7 hingga 14 hari kerja</strong>, bergantung pada kesiapan fisik ruko/kios (instalasi pipa air masuk dan buangan, ketersediaan daya listrik PLN, dan penyelesaian renovasi interior).</p>
           </div>
-        </details>
+        </div>
       </div>
     </div>
   </section>

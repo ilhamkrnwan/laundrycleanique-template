@@ -157,42 +157,42 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // 1.5 The 3 Floating Glass Cards Fly In (Orbix Studio Signature)
+    // 1.5 The 3 Floating Glass Cards Fly In (Desktop Only)
     const floatLeft = document.querySelector('.cq-float-left');
     const floatRight = document.querySelector('.cq-float-right');
     const floatBottom = document.querySelector('.cq-float-bottom');
 
-    if (floatLeft) {
-      heroTl.from(floatLeft, {
-        x: -55,
-        y: 25,
-        opacity: 0,
-        duration: 1.1,
-        ease: 'power3.out'
-      }, 0.6);
-    }
+    if (window.innerWidth >= 992) {
+      if (floatLeft) {
+        heroTl.from(floatLeft, {
+          x: -55,
+          y: 25,
+          opacity: 0,
+          duration: 1.1,
+          ease: 'power3.out'
+        }, 0.6);
+      }
 
-    if (floatRight) {
-      heroTl.from(floatRight, {
-        x: 55,
-        y: 25,
-        opacity: 0,
-        duration: 1.1,
-        ease: 'power3.out'
-      }, 0.75);
-    }
+      if (floatRight) {
+        heroTl.from(floatRight, {
+          x: 55,
+          y: 25,
+          opacity: 0,
+          duration: 1.1,
+          ease: 'power3.out'
+        }, 0.75);
+      }
 
-    if (floatBottom) {
-      heroTl.from(floatBottom, {
-        y: 40,
-        opacity: 0,
-        duration: 0.95,
-        ease: 'power3.out'
-      }, 0.9);
-    }
+      if (floatBottom) {
+        heroTl.from(floatBottom, {
+          y: 40,
+          opacity: 0,
+          duration: 0.95,
+          ease: 'power3.out'
+        }, 0.9);
+      }
 
-    // 1.6 Ambient Continuous Out-Of-Sync Floating Loops (Living UI)
-    if (window.innerWidth > 767) {
+      // 1.6 Ambient Continuous Out-Of-Sync Floating Loops (Living UI - Desktop Only)
       if (floatLeft) {
         gsap.to(floatLeft, {
           y: '-=10',
@@ -224,6 +224,18 @@ document.addEventListener('DOMContentLoaded', () => {
           ease: 'sine.inOut',
           delay: 2.4
         });
+      }
+    } else {
+      // Mobile / Tablet: subtle vertical entrance without breaking flex layout flow
+      const mobileFloatCards = document.querySelectorAll('.cq-floating-card, .cq-peluang-float-card');
+      if (mobileFloatCards.length) {
+        heroTl.from(mobileFloatCards, {
+          y: 20,
+          opacity: 0,
+          duration: 0.6,
+          stagger: 0.1,
+          ease: 'power2.out'
+        }, 0.6);
       }
     }
 
@@ -573,29 +585,31 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ==========================================================================
-     7. FAQ ACCORDION (#faq)
+     7. FAQ ACCORDION (#faq, #faq-kontak)
      ========================================================================== */
-  const faqSection = document.querySelector('#faq');
-  if (faqSection && typeof ScrollTrigger !== 'undefined') {
-    const faqItems = faqSection.querySelectorAll('.cq-accordion-item');
-    if (faqItems.length) {
-      gsap.fromTo(faqItems,
-        { y: 20, opacity: 0 },
-        {
-          scrollTrigger: {
-            trigger: '.cq-accordion',
-            start: 'top 85%',
-            toggleActions: 'play none none none'
-          },
-          y: 0,
-          opacity: 1,
-          duration: 0.55,
-          stagger: 0.07,
-          ease: 'power2.out',
-          clearProps: 'transform,opacity'
-        }
-      );
-    }
+  const faqSections = document.querySelectorAll('#faq, #faq-kontak, .cq-accordion');
+  if (faqSections.length && typeof ScrollTrigger !== 'undefined') {
+    faqSections.forEach(section => {
+      const faqItems = section.querySelectorAll('.cq-accordion-item');
+      if (faqItems.length) {
+        gsap.fromTo(faqItems,
+          { y: 20, opacity: 0 },
+          {
+            scrollTrigger: {
+              trigger: section,
+              start: 'top 85%',
+              toggleActions: 'play none none none'
+            },
+            y: 0,
+            opacity: 1,
+            duration: 0.55,
+            stagger: 0.07,
+            ease: 'power2.out',
+            clearProps: 'transform,opacity'
+          }
+        );
+      }
+    });
   }
 
   /* ==========================================================================

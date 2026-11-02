@@ -75,6 +75,9 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6285600061005');
           <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/09-pabrik-kimia-sendiri-sleman.webp'); ?>" 
                alt="Pusat Layanan Teknis, Showroom Mesin, dan Tim Konsultan PT Indotech Berkah Abadi Sleman" 
                loading="lazy">
+          <div class="cq-peluang-frame-overlay">
+            <div class="cq-peluang-frame-badge">Showroom &amp; Pabrik Sleman</div>
+          </div>
         </div>
 
         <!-- Floating Glass Card 1 (Top Left) -->
@@ -594,8 +597,67 @@ $wa_number = get_theme_mod('cleanique_wa_number', '6285600061005');
     </div>
   </section>
 
+  <!-- ========================================================
+       7. FAQ TENTANG PERUSAHAAN (Accordion Interaktif)
+       ======================================================== -->
+  <section class="cq-section cq-section-alt" id="faq">
+    <div class="cq-container">
+      <div class="cq-section-header text-center" style="max-width: 720px; margin: 0 auto var(--cq-sp-40);">
+        <span class="cq-section-subtitle">FAQ Profil PT</span>
+        <h2 class="cq-section-title">
+          Pertanyaan Seputar PT Indotech Berkah Abadi
+        </h2>
+        <p class="cq-section-desc">
+          Profil legalitas perseroan, fasilitas showroom &amp; pabrik Sleman, serta komitmen pendampingan mitra laundry.
+        </p>
+      </div>
+
+      <div class="cq-accordion">
+        <div class="cq-accordion-item is-open">
+          <button type="button" class="cq-accordion-trigger" aria-expanded="true">
+            <span>Siapa entitas badan hukum resmi di balik Cleanique Laundry?</span>
+            <i class="ri-arrow-down-s-line cq-accordion-icon" aria-hidden="true"></i>
+          </button>
+          <div class="cq-accordion-content">
+            <p>Cleanique Laundry dikembangkan dan dinaungi langsung oleh <strong>PT Indotech Berkah Abadi</strong>, perseroan terbatas berbadan hukum resmi yang berkedudukan di Sleman, D.I. Yogyakarta dengan izin usaha lengkap, AHU Kemenkumham, NIB berbasis risiko, serta sertifikasi halal pabrik.</p>
+          </div>
+        </div>
+
+        <div class="cq-accordion-item">
+          <button type="button" class="cq-accordion-trigger" aria-expanded="false">
+            <span>Di mana lokasi showroom, workshop mesin, dan pabrik chemical kami?</span>
+            <i class="ri-arrow-down-s-line cq-accordion-icon" aria-hidden="true"></i>
+          </button>
+          <div class="cq-accordion-content">
+            <p>Pusat operasional, showroom mesin komersial, dan laboratorium peracikan bahan kimia kami berlokasi di Sleman, D.I. Yogyakarta. Calon mitra dapat membuat janji temu untuk melihat langsung demo mesin, menguji aroma parfum, serta berkonsultasi denah outlet.</p>
+          </div>
+        </div>
+
+        <div class="cq-accordion-item">
+          <button type="button" class="cq-accordion-trigger" aria-expanded="false">
+            <span>Berapa banyak mitra yang telah mempercayakan bisnis laundry-nya pada Cleanique?</span>
+            <i class="ri-arrow-down-s-line cq-accordion-icon" aria-hidden="true"></i>
+          </button>
+          <div class="cq-accordion-content">
+            <p>Hingga saat ini, lebih dari 300+ outlet mitra aktif telah beroperasi di berbagai kota di seluruh Indonesia mulai dari Jawa, Sumatera, Kalimantan, Sulawesi, hingga Papua yang memanfaatkan mesin bergaransi resmi pabrik, pasokan chemical Orchid Brand, dan sistem POS Cleanique.</p>
+          </div>
+        </div>
+
+        <div class="cq-accordion-item">
+          <button type="button" class="cq-accordion-trigger" aria-expanded="false">
+            <span>Apakah PT Indotech melayani pendampingan sertifikasi halal bagi outlet mitra?</span>
+            <i class="ri-arrow-down-s-line cq-accordion-icon" aria-hidden="true"></i>
+          </button>
+          <div class="cq-accordion-content">
+            <p>Ya, karena seluruh bahan baku kimia kami bersertifikat Halal dan SOP pencucian terstandarisasi, kami siap mendampingi mitra yang ingin mendaftarkan outletnya ke Badan Penyelenggara Jaminan Produk Halal (BPJPH) untuk sertifikasi Halal laundry resmi.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
     <!-- ========================================================
-       7. CLOSING BANNER CTA (Corporate Showcase Bento)
+       8. CLOSING BANNER CTA (Corporate Showcase Bento)
        ======================================================== -->
   <section class="cq-section cq-banner-cta-section" id="kontak-cta">
     <div class="cq-container">

@@ -78,6 +78,11 @@ $wa_trial_url = cleanique_get_whatsapp_url('aplikasi_trial');
         <p class="cq-section-desc" style="margin: 0 auto; color: #64748B; font-size: 16px; line-height: 1.6;">
           Berapa banyak uang, waktu, dan pelanggan loyal yang terbuang sia-sia setiap bulan hanya karena masih mengandalkan buku nota kertas dan rekap manual?
         </p>
+
+        <!-- Mobile Swipe Indicator Pill -->
+        <div class="cq-mobile-swipe-indicator">
+          <i class="ri-arrow-left-right-line" aria-hidden="true"></i> Geser menyamping untuk melihat 6 masalah
+        </div>
       </div>
 
       <div class="cq-payno-problem-grid">
@@ -468,14 +473,17 @@ $wa_trial_url = cleanique_get_whatsapp_url('aplikasi_trial');
   <!-- 8. FAQ SECTION (Accessible Accordion) -->
   <section class="cq-section cq-section-alt" id="faq">
     <div class="cq-container">
-      <div class="cq-section-header" style="text-align: center; max-width: 640px; margin: 0 auto var(--cq-sp-32);">
-        <span class="cq-section-subtitle">FAQ Aplikasi</span>
-        <h2 style="font-family: var(--cq-font-heading); font-weight: 300; font-size: clamp(2rem, 1.6rem + 1.8vw, 3rem); line-height: 1.15; letter-spacing: -0.03em; color: var(--ink);">
+      <div class="cq-section-header text-center" style="max-width: 680px; margin: 0 auto var(--cq-sp-40);">
+        <span class="cq-section-subtitle">FAQ Aplikasi POS</span>
+        <h2 class="cq-section-title">
           Pertanyaan Seputar <span class="cq-text-blue">Cleanique POS</span>
         </h2>
+        <p class="cq-section-desc">
+          Jawaban transparan seputar fitur aplikasi kasir, notifikasi WhatsApp otomatis, dan uji coba gratis 7 hari.
+        </p>
       </div>
 
-      <div class="cq-accordion" style="max-width: 780px; margin: 0 auto;">
+      <div class="cq-accordion">
         <div class="cq-accordion-item is-open">
           <button class="cq-accordion-trigger" type="button" aria-expanded="true">
             <span>Apakah Free Trial 7 Hari benar-benar gratis tanpa syarat?</span>

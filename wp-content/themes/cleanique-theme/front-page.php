@@ -1188,12 +1188,13 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
        ======================================================== -->
   <section class="cq-section cq-section-alt" id="faq">
     <div class="cq-container">
-      <div class="cq-section-header">
+      <div class="cq-section-header text-center" style="max-width: 760px; margin: 0 auto var(--cq-sp-40);">
+        <span class="cq-section-subtitle">Tanya Jawab</span>
         <h2 class="cq-section-title">Pertanyaan yang Sering Diajukan Calon Mitra</h2>
-        <p class="cq-section-desc">Jawaban transparan seputar sistem kemitraan, mesin, pasokan chemical, dan sistem langganan POS.</p>
+        <p class="cq-section-desc">Jawaban transparan seputar sistem kemitraan mandiri, mesin cuci bergaransi, pasokan chemical pabrik, dan sistem langganan POS.</p>
       </div>
 
-      <div class="cq-accordion" style="max-width: 860px; margin: 0 auto;">
+      <div class="cq-accordion">
         <!-- FAQ 1 -->
         <div class="cq-accordion-item is-open">
           <button type="button" class="cq-accordion-trigger" aria-expanded="true">

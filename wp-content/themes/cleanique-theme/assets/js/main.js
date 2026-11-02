@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 2. Accessible Mobile Navigation Drawer
-  const navToggle = document.querySelector('#cq-nav-toggle');
+  const navToggles = document.querySelectorAll('.cq-nav-toggle, #cq-nav-toggle');
   const drawer = document.querySelector('#cq-mobile-drawer');
   const drawerClose = document.querySelector('#cq-drawer-close');
   const drawerBackdrop = document.querySelector('#cq-drawer-backdrop');
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!drawer) return;
     drawer.classList.add('is-open');
     drawer.setAttribute('aria-hidden', 'false');
-    if (navToggle) navToggle.setAttribute('aria-expanded', 'true');
+    navToggles.forEach(t => t.setAttribute('aria-expanded', 'true'));
     document.body.style.overflow = 'hidden';
   };
 
@@ -36,16 +36,17 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!drawer) return;
     drawer.classList.remove('is-open');
     drawer.setAttribute('aria-hidden', 'true');
-    if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
+    navToggles.forEach(t => t.setAttribute('aria-expanded', 'false'));
     document.body.style.overflow = '';
   };
 
-  if (navToggle) {
-    navToggle.addEventListener('click', () => {
+  navToggles.forEach(t => {
+    t.addEventListener('click', (e) => {
+      e.preventDefault();
       const isOpen = drawer && drawer.classList.contains('is-open');
       isOpen ? closeDrawer() : openDrawer();
     });
-  }
+  });
 
   if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
   if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeDrawer);
@@ -221,33 +222,55 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. Accessible FAQ Accordion Toggle
-  document.querySelectorAll('.cq-accordion-trigger, .cq-accordion-header').forEach(trigger => {
-    trigger.addEventListener('click', () => {
-      const item = trigger.closest('.cq-accordion-item');
-      if (!item) return;
-      const isOpen = item.classList.contains('is-open');
+  // 6. Accessible FAQ Accordion Toggle (Unified Smooth Accordion Engine)
+  const initFaqAccordions = () => {
+    document.querySelectorAll('.cq-accordion-trigger, .cq-accordion-header').forEach(trigger => {
+      // Avoid duplicate binding if re-run
+      if (trigger.dataset.accordionBound) return;
+      trigger.dataset.accordionBound = 'true';
 
-      // Optional: close other accordions in the same container for cleaner view
-      const parent = item.closest('.cq-accordion');
-      if (parent) {
-        parent.querySelectorAll('.cq-accordion-item').forEach(other => {
-          if (other !== item) {
-            other.classList.remove('is-open');
-            other.querySelector('.cq-accordion-trigger, .cq-accordion-header')?.setAttribute('aria-expanded', 'false');
+      trigger.addEventListener('click', (e) => {
+        const item = trigger.closest('.cq-accordion-item');
+        if (!item) return;
+
+        const isDetails = item.tagName === 'DETAILS';
+        const isOpen = item.classList.contains('is-open') || (isDetails && item.hasAttribute('open'));
+
+        // Close other accordion items in the same container
+        const parent = item.closest('.cq-accordion, .cq-faq-accordion');
+        if (parent) {
+          parent.querySelectorAll('.cq-accordion-item').forEach(other => {
+            if (other !== item) {
+              other.classList.remove('is-open');
+              const otherTrigger = other.querySelector('.cq-accordion-trigger, .cq-accordion-header');
+              if (otherTrigger) {
+                otherTrigger.setAttribute('aria-expanded', 'false');
+              }
+              if (other.tagName === 'DETAILS') {
+                other.removeAttribute('open');
+              }
+            }
+          });
+        }
+
+        if (isOpen) {
+          item.classList.remove('is-open');
+          trigger.setAttribute('aria-expanded', 'false');
+          if (isDetails) {
+            e.preventDefault();
+            item.removeAttribute('open');
           }
-        });
-      }
-
-      if (isOpen) {
-        item.classList.remove('is-open');
-        trigger.setAttribute('aria-expanded', 'false');
-      } else {
-        item.classList.add('is-open');
-        trigger.setAttribute('aria-expanded', 'true');
-      }
+        } else {
+          item.classList.add('is-open');
+          trigger.setAttribute('aria-expanded', 'true');
+          if (isDetails) {
+            item.setAttribute('open', '');
+          }
+        }
+      });
     });
-  });
+  };
+  initFaqAccordions();
 
   // 7. Universal Promo Countdown Timer
   const initCountdowns = () => {

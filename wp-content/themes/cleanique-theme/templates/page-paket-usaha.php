@@ -85,7 +85,7 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
         </div>
 
         <!-- Floating Card 2 (Right): 100% Hak Milik Tanpa Royalti -->
-        <div class="cq-floating-card cq-float-right" style="max-width: 250px;">
+        <div class="cq-floating-card cq-float-right">
           <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 2px;">
             <span class="cq-badge-pill cq-badge-accent" style="font-size: 9px; padding: 2px 8px;">
               Kemitraan Mandiri
@@ -869,8 +869,10 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
        ======================================================== -->
   <section class="cq-section cq-section-alt" id="faq">
     <div class="cq-container">
-      <div class="cq-section-header">
+      <div class="cq-section-header text-center" style="max-width: 740px; margin: 0 auto var(--cq-sp-40);">
+        <span class="cq-section-subtitle">FAQ Paket Usaha</span>
         <h2 class="cq-section-title">Pertanyaan Seputar Kemitraan Laundry Cleanique</h2>
+        <p class="cq-section-desc">Hal-hal yang paling sering ditanyakan oleh calon pengusaha laundry sebelum memilih paket usaha siap buka.</p>
       </div>
 
       <div class="cq-accordion">

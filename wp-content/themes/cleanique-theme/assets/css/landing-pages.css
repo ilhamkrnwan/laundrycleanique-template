@@ -1364,22 +1364,70 @@
 }
 
 .cq-payno-problem-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--cq-sp-24);
-  margin-top: var(--cq-sp-40);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  gap: 16px;
+  width: auto;
+  margin-left: -16px;
+  margin-right: -16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 24px;
+  margin-top: var(--cq-sp-24);
+  scrollbar-width: none;
 }
 
-@media (min-width: 640px) {
+.cq-payno-problem-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.cq-payno-problem-grid > .cq-payno-problem-card {
+  flex: 0 0 84%;
+  width: 84%;
+  min-width: 275px;
+  max-width: 320px;
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  height: auto;
+}
+
+@media (min-width: 768px) {
   .cq-payno-problem-grid {
-    grid-template-columns: repeat(2, 1fr);
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    scroll-snap-type: none !important;
+    gap: var(--cq-sp-24) !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: var(--cq-sp-40) !important;
+  }
+
+  .cq-payno-problem-grid > .cq-payno-problem-card {
+    flex: initial !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
   }
 }
 
 @media (min-width: 1024px) {
   .cq-payno-problem-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--cq-sp-28);
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: var(--cq-sp-28) !important;
   }
 }
 
@@ -1589,6 +1637,9 @@
 .cq-phone-device {
   width: 100%;
   max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
   aspect-ratio: 9 / 18.5;
   background: #ffffff;
   border-radius: 46px;
@@ -2032,16 +2083,85 @@
   font-weight: 700;
 }
 
-@media (max-width: 899px) {
-  .cq-floating-card {
-    position: static;
-    margin: 12px auto;
-    width: 100%;
-    max-width: 320px;
-    animation: none;
+@media (max-width: 991px) {
+  .cq-payno-stage,
+  .cq-peluang-stage {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: clamp(14px, 3vw, 24px) 0 !important;
+    gap: 12px !important;
   }
-  .cq-float-bottom {
-    display: none;
+
+  .cq-phone-device {
+    order: 1 !important;
+    margin: 0 auto var(--cq-sp-16) auto !important;
+    align-self: center !important;
+    width: 100% !important;
+    max-width: min(320px, 88vw) !important;
+  }
+
+  .cq-peluang-showcase-frame,
+  .cq-peluang-frame {
+    order: 1 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 4px 0 !important;
+    border-radius: 20px !important;
+    border-width: 4px !important;
+    box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.18) !important;
+  }
+
+  .cq-floating-card,
+  .cq-peluang-float-card {
+    position: static !important;
+    order: 2 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    animation: none !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05) !important;
+    border-radius: 16px !important;
+    padding: 14px 18px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+  }
+
+  .cq-float-left,
+  .cq-float-right,
+  .cq-float-bottom,
+  .cq-peluang-float-card.float-left,
+  .cq-peluang-float-card.float-right {
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+}
+
+@media (max-width: 639px) {
+  .cq-payno-hero-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 10px !important;
+  }
+
+  .cq-payno-hero-actions .cq-btn {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 13px 20px !important;
   }
 }
 

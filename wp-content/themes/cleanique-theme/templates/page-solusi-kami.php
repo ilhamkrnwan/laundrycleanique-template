@@ -177,8 +177,67 @@ $proposal_pdf_url = get_option('cleanique_kemitraan_proposal_url');
     </div>
   </section>
 
+  <!-- ========================================================
+       5. FAQ SOLUSI EKOSISTEM (Accordion Interaktif)
+       ======================================================== -->
+  <section class="cq-section cq-section-alt" id="faq">
+    <div class="cq-container">
+      <div class="cq-section-header text-center" style="max-width: 720px; margin: 0 auto var(--cq-sp-40);">
+        <span class="cq-section-subtitle">FAQ Solusi Ekosistem</span>
+        <h2 class="cq-section-title">
+          Pertanyaan Seputar Ekosistem Cleanique
+        </h2>
+        <p class="cq-section-desc">
+          Integrasi komprehensif antara paket mesin usaha, pabrik bahan kimia pekat, dan aplikasi kasir pintar.
+        </p>
+      </div>
+
+      <div class="cq-accordion">
+        <div class="cq-accordion-item is-open">
+          <button type="button" class="cq-accordion-trigger" aria-expanded="true">
+            <span>Bagaimana keterhubungan antara mesin, chemical pabrik, dan aplikasi POS?</span>
+            <i class="ri-arrow-down-s-line cq-accordion-icon" aria-hidden="true"></i>
+          </button>
+          <div class="cq-accordion-content">
+            <p>Ketiganya merupakan ekosistem terpadu dari PT Indotech Berkah Abadi. Paket mesin siap pakai bergaransi resmi, pasokan bahan kimia disuplai langsung dari pabrik tangan pertama dengan harga hemat, dan aplikasi POS Cleanique mencatat seluruh operasional, keuangan kasir, serta mengirim nota WhatsApp otomatis ke konsumen.</p>
+          </div>
+        </div>
+
+        <div class="cq-accordion-item">
+          <button type="button" class="cq-accordion-trigger" aria-expanded="false">
+            <span>Apakah saya bisa mengambil salah satu solusi saja (misal hanya POS atau chemical)?</span>
+            <i class="ri-arrow-down-s-line cq-accordion-icon" aria-hidden="true"></i>
+          </button>
+          <div class="cq-accordion-content">
+            <p>Sangat bisa. Ekosistem Cleanique dirancang fleksibel tanpa paksaan. Anda dapat berlangganan aplikasi POS kasir saja untuk outlet yang sudah beroperasi, memesan chemical pabrik Orchid saja untuk kebutuhan deterjen grosir, ataupun mengambil paket usaha kemitraan mandiri komplit.</p>
+          </div>
+        </div>
+
+        <div class="cq-accordion-item">
+          <button type="button" class="cq-accordion-trigger" aria-expanded="false">
+            <span>Mengapa model kemitraan Cleanique tidak memungut royalti bulanan?</span>
+            <i class="ri-arrow-down-s-line cq-accordion-icon" aria-hidden="true"></i>
+          </button>
+          <div class="cq-accordion-content">
+            <p>Kami meyakini 100% keuntungan dan omzet harian adalah hak seutuhnya pemilik usaha. Hubungan bisnis kami adalah kemitraan sehat jangka panjang sebagai produsen mesin dan bahan kimia berkualitas dengan harga pabrik tangan pertama, bukan dengan memotong hasil kerja keras Anda.</p>
+          </div>
+        </div>
+
+        <div class="cq-accordion-item">
+          <button type="button" class="cq-accordion-trigger" aria-expanded="false">
+            <span>Bagaimana jika outlet saya mengalami kendala teknis di lapangan?</span>
+            <i class="ri-arrow-down-s-line cq-accordion-icon" aria-hidden="true"></i>
+          </button>
+          <div class="cq-accordion-content">
+            <p>Tim teknisi dan konsultan PT Indotech Berkah Abadi memberikan pendampingan teknis tanpa batas waktu via WhatsApp hotline. Kami memiliki workshop dan stok sparepart resmi di Sleman, DIY sehingga penanganan kendala mesin maupun konsultasi operasional dapat tertangani dengan cepat.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
     <!-- ========================================================
-       5. CLOSING BANNER CTA (Corporate Showcase Bento)
+       6. CLOSING BANNER CTA (Corporate Showcase Bento)
        ======================================================== -->
   <section class="cq-section cq-banner-cta-section" id="kontak">
     <div class="cq-container">

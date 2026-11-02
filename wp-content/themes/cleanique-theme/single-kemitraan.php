@@ -558,40 +558,40 @@ while (have_posts()) : the_post();
 
           <!-- Mini FAQ Card -->
           <div class="cq-corp-card" style="padding: 20px 24px; margin-top: 16px;">
-            <h3 style="font-family: var(--cq-font-heading); font-size: var(--cq-fs-sm); font-weight: 500; color: var(--cq-dark-navy); margin-bottom: 14px; display: flex; align-items: center; gap: 6px;">
-              <i class="ri-question-answer-line" style="color: var(--cq-primary);"></i> Pertanyaan Umum
+            <h3 style="font-family: var(--cq-font-heading); font-size: var(--cq-fs-sm); font-weight: 700; color: var(--cq-dark-navy); margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">
+              <i class="ri-question-answer-line" style="color: var(--cq-primary); font-size: 16px;"></i> Pertanyaan Umum
             </h3>
-            <div style="display: flex; flex-direction: column; gap: 12px;">
-              <details class="cq-accordion-item" style="border-radius: 10px; border: 1px solid var(--cq-border-light); overflow: hidden;">
-                <summary class="cq-accordion-trigger" style="font-size: 12px; padding: 12px 16px;">
+            <div class="cq-accordion" style="gap: 8px;">
+              <div class="cq-accordion-item" style="border-radius: 12px;">
+                <button type="button" class="cq-accordion-trigger" aria-expanded="false" style="font-size: 13px; font-weight: 600; padding: 12px 14px; min-height: 42px;">
                   <span>Apakah ada biaya royalti bulanan?</span>
-                  <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
-                </summary>
-                <div class="cq-accordion-content" style="font-size: 12px; padding: 12px 16px; padding-top: 0;">
-                  <p style="margin: 0;">Tidak sama sekali. 0% royalti selamanya — 100% keuntungan menjadi hak penuh Anda.</p>
+                  <i class="ri-arrow-down-s-line cq-accordion-icon" aria-hidden="true" style="width: 24px; height: 24px; font-size: 14px; margin-left: 6px;"></i>
+                </button>
+                <div class="cq-accordion-content" style="font-size: 12.5px; padding: 0 14px; line-height: 1.6;">
+                  <p style="margin: 0; padding-bottom: 12px;">Tidak sama sekali. 0% royalti selamanya — 100% keuntungan harian &amp; bulanan menjadi hak penuh Anda.</p>
                 </div>
-              </details>
-              <details class="cq-accordion-item" style="border-radius: 10px; border: 1px solid var(--cq-border-light); overflow: hidden;">
-                <summary class="cq-accordion-trigger" style="font-size: 12px; padding: 12px 16px;">
+              </div>
+              <div class="cq-accordion-item" style="border-radius: 12px;">
+                <button type="button" class="cq-accordion-trigger" aria-expanded="false" style="font-size: 13px; font-weight: 600; padding: 12px 14px; min-height: 42px;">
                   <span>Berapa lama estimasi setup hingga buka?</span>
-                  <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
-                </summary>
-                <div class="cq-accordion-content" style="font-size: 12px; padding: 12px 16px; padding-top: 0;">
-                  <p style="margin: 0;">Rata-rata 7–14 hari kerja setelah penandatanganan, tergantung kesiapan fisik lokasi.</p>
+                  <i class="ri-arrow-down-s-line cq-accordion-icon" aria-hidden="true" style="width: 24px; height: 24px; font-size: 14px; margin-left: 6px;"></i>
+                </button>
+                <div class="cq-accordion-content" style="font-size: 12.5px; padding: 0 14px; line-height: 1.6;">
+                  <p style="margin: 0; padding-bottom: 12px;">Rata-rata 7–14 hari kerja setelah penandatanganan, tergantung kesiapan fisik lokasi dan utilitas.</p>
                 </div>
-              </details>
-              <details class="cq-accordion-item" style="border-radius: 10px; border: 1px solid var(--cq-border-light); overflow: hidden;">
-                <summary class="cq-accordion-trigger" style="font-size: 12px; padding: 12px 16px;">
+              </div>
+              <div class="cq-accordion-item" style="border-radius: 12px;">
+                <button type="button" class="cq-accordion-trigger" aria-expanded="false" style="font-size: 13px; font-weight: 600; padding: 12px 14px; min-height: 42px;">
                   <span>Apakah tersedia pelatihan karyawan?</span>
-                  <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
-                </summary>
-                <div class="cq-accordion-content" style="font-size: 12px; padding: 12px 16px; padding-top: 0;">
-                  <p style="margin: 0;">Ya, termasuk pelatihan onsite/daring teknik cuci, kimia, dan operasional kasir POS.</p>
+                  <i class="ri-arrow-down-s-line cq-accordion-icon" aria-hidden="true" style="width: 24px; height: 24px; font-size: 14px; margin-left: 6px;"></i>
+                </button>
+                <div class="cq-accordion-content" style="font-size: 12.5px; padding: 0 14px; line-height: 1.6;">
+                  <p style="margin: 0; padding-bottom: 12px;">Ya, termasuk pelatihan onsite/daring teknik cuci, takaran formula chemical pabrik, dan operasional kasir POS.</p>
                 </div>
-              </details>
+              </div>
             </div>
-            <a href="<?php echo esc_url(home_url('/kemitraan/#faq')); ?>" style="display: inline-flex; align-items: center; gap: 4px; margin-top: 12px; font-size: 12px; font-weight: 700; color: var(--cq-primary); text-decoration: none;">
-              Lihat semua FAQ <i class="ri-arrow-right-line"></i>
+            <a href="<?php echo esc_url(home_url('/kemitraan/#faq')); ?>" style="display: inline-flex; align-items: center; gap: 4px; margin-top: 14px; font-size: 12.5px; font-weight: 700; color: var(--cq-primary); text-decoration: none;">
+              Lihat semua FAQ Kemitraan <i class="ri-arrow-right-line"></i>
             </a>
           </div>
 
