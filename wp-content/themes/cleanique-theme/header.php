@@ -168,9 +168,7 @@ $is_landing_page = $is_paket_usaha || $is_aplikasi_laundry;
         <a href="<?php echo esc_url(home_url('/')); ?>" class="cq-drawer-brand" aria-label="Beranda Cleanique Laundry">
           <?php echo cleanique_get_site_logo('cq-drawer-logo'); ?>
         </a>
-        <span class="cq-drawer-official-badge">
-          <i class="ri-checkbox-circle-fill" aria-hidden="true"></i> Resmi PT
-        </span>
+
       </div>
       <button class="cq-drawer-close" id="cq-drawer-close" type="button" aria-label="Tutup Menu">
         <i class="ri-close-line" aria-hidden="true"></i>
@@ -191,7 +189,45 @@ $is_landing_page = $is_paket_usaha || $is_aplikasi_laundry;
       </div>
 
 
-      <!-- Section 1: Core Business Solutions (Pilar Solusi & Kemitraan) -->
+      <!-- Section 1: Menu Utama & Navigasi Inti (2x2 Grid) -->
+      <div class="cq-drawer-group">
+        <div class="cq-drawer-group-header">
+          <span class="cq-drawer-group-title">Menu Utama</span>
+          <span class="cq-drawer-group-sub">Navigasi utama &amp; profil resmi Cleanique</span>
+        </div>
+        <div class="cq-drawer-nav-grid">
+          <a href="<?php echo esc_url(home_url('/')); ?>" class="cq-drawer-grid-item <?php echo is_front_page() ? 'active' : ''; ?>">
+            <span class="cq-drawer-grid-icon"><i class="ri-home-4-line" aria-hidden="true"></i></span>
+            <span class="cq-drawer-grid-text">
+              <span class="cq-drawer-grid-title">Beranda</span>
+              <span class="cq-drawer-grid-sub">Profil &amp; ringkasan</span>
+            </span>
+          </a>
+          <a href="<?php echo esc_url(home_url('/tentang-kami/')); ?>" class="cq-drawer-grid-item <?php echo (is_page('tentang-kami') || is_page_template('templates/page-tentang-kami.php')) ? 'active' : ''; ?>">
+            <span class="cq-drawer-grid-icon"><i class="ri-building-line" aria-hidden="true"></i></span>
+            <span class="cq-drawer-grid-text">
+              <span class="cq-drawer-grid-title">Tentang Kami</span>
+              <span class="cq-drawer-grid-sub">Profil legalitas PT</span>
+            </span>
+          </a>
+          <a href="<?php echo esc_url(home_url('/artikel/')); ?>" class="cq-drawer-grid-item <?php echo (!is_front_page() && (is_home() || is_singular('post') || is_archive() || is_category() || is_page('berita') || is_page('artikel') || is_page_template('templates/page-artikel.php'))) ? 'active' : ''; ?>">
+            <span class="cq-drawer-grid-icon"><i class="ri-newspaper-line" aria-hidden="true"></i></span>
+            <span class="cq-drawer-grid-text">
+              <span class="cq-drawer-grid-title">Artikel Bisnis</span>
+              <span class="cq-drawer-grid-sub">Edukasi &amp; SOP</span>
+            </span>
+          </a>
+          <a href="<?php echo esc_url(home_url('/kontak/')); ?>" class="cq-drawer-grid-item <?php echo (is_page('kontak') || is_page_template('templates/page-kontak.php')) ? 'active' : ''; ?>">
+            <span class="cq-drawer-grid-icon"><i class="ri-map-pin-line" aria-hidden="true"></i></span>
+            <span class="cq-drawer-grid-text">
+              <span class="cq-drawer-grid-title">Kontak &amp; Visit</span>
+              <span class="cq-drawer-grid-sub">Showroom Sleman</span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Section 2: Core Business Solutions (Pilar Solusi & Kemitraan) -->
       <div class="cq-drawer-group">
         <div class="cq-drawer-group-header">
           <span class="cq-drawer-group-title">Solusi &amp; Kemitraan Bisnis</span>
@@ -261,50 +297,13 @@ $is_landing_page = $is_paket_usaha || $is_aplikasi_laundry;
         </ul>
       </div>
 
-      <!-- Section 2: Value Proposition Banner Highlight -->
+      <!-- Section 3: Value Proposition Banner Highlight -->
       <div class="cq-drawer-highlight-card">
         <div class="cq-drawer-highlight-tag">
-          <i class="ri-fire-fill" aria-hidden="true"></i> Peluang Bisnis 2026 • 0% Royalti
+          <i class="ri-fire-fill" aria-hidden="true"></i> Peluang Bisnis 2026
         </div>
         <div class="cq-drawer-highlight-title">Buka Usaha Laundry Tanpa Biaya Franchise</div>
         <div class="cq-drawer-highlight-desc">100% keuntungan milik Anda, mesin komersial bergaransi, pasokan chemical tangan pertama pabrik Sleman DIY.</div>
-      </div>
-
-      <!-- Section 3: Corporate & Information Navigation (2x2 Grid) -->
-      <div class="cq-drawer-group">
-        <div class="cq-drawer-group-header">
-          <span class="cq-drawer-group-title">Informasi &amp; Profil Perusahaan</span>
-        </div>
-        <div class="cq-drawer-nav-grid">
-          <a href="<?php echo esc_url(home_url('/')); ?>" class="cq-drawer-grid-item <?php echo is_front_page() ? 'active' : ''; ?>">
-            <span class="cq-drawer-grid-icon"><i class="ri-home-4-line" aria-hidden="true"></i></span>
-            <span class="cq-drawer-grid-text">
-              <span class="cq-drawer-grid-title">Beranda</span>
-              <span class="cq-drawer-grid-sub">Profil &amp; ringkasan</span>
-            </span>
-          </a>
-          <a href="<?php echo esc_url(home_url('/tentang-kami/')); ?>" class="cq-drawer-grid-item <?php echo (is_page('tentang-kami') || is_page_template('templates/page-tentang-kami.php')) ? 'active' : ''; ?>">
-            <span class="cq-drawer-grid-icon"><i class="ri-building-line" aria-hidden="true"></i></span>
-            <span class="cq-drawer-grid-text">
-              <span class="cq-drawer-grid-title">Tentang Kami</span>
-              <span class="cq-drawer-grid-sub">Profil legalitas PT</span>
-            </span>
-          </a>
-          <a href="<?php echo esc_url(home_url('/artikel/')); ?>" class="cq-drawer-grid-item <?php echo (!is_front_page() && (is_home() || is_singular('post') || is_archive() || is_category() || is_page('berita') || is_page('artikel') || is_page_template('templates/page-artikel.php'))) ? 'active' : ''; ?>">
-            <span class="cq-drawer-grid-icon"><i class="ri-newspaper-line" aria-hidden="true"></i></span>
-            <span class="cq-drawer-grid-text">
-              <span class="cq-drawer-grid-title">Artikel Bisnis</span>
-              <span class="cq-drawer-grid-sub">Edukasi &amp; SOP</span>
-            </span>
-          </a>
-          <a href="<?php echo esc_url(home_url('/kontak/')); ?>" class="cq-drawer-grid-item <?php echo (is_page('kontak') || is_page_template('templates/page-kontak.php')) ? 'active' : ''; ?>">
-            <span class="cq-drawer-grid-icon"><i class="ri-map-pin-line" aria-hidden="true"></i></span>
-            <span class="cq-drawer-grid-text">
-              <span class="cq-drawer-grid-title">Kontak &amp; Visit</span>
-              <span class="cq-drawer-grid-sub">Showroom Sleman</span>
-            </span>
-          </a>
-        </div>
       </div>
 
       <!-- Section 4: Company Credentials & Showroom Card -->
@@ -317,21 +316,7 @@ $is_landing_page = $is_paket_usaha || $is_aplikasi_laundry;
           <div class="cq-drawer-corp-tagline">Produsen Mesin, Chemical Orchid &amp; Konsultan Bisnis</div>
         </div>
 
-        <!-- Trust Guarantees Grid -->
-        <div class="cq-drawer-trust-grid">
-          <div class="cq-drawer-trust-item">
-            <i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
-            <span>100% Hak Milik</span>
-          </div>
-          <div class="cq-drawer-trust-item">
-            <i class="ri-shield-flash-fill" aria-hidden="true"></i>
-            <span>Garansi Mesin</span>
-          </div>
-          <div class="cq-drawer-trust-item">
-            <i class="ri-team-fill" aria-hidden="true"></i>
-            <span>300+ Mitra</span>
-          </div>
-        </div>
+
 
         <div class="cq-drawer-credentials-list">
           <div class="cq-drawer-cred-item">
